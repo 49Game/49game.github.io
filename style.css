@@ -65,7 +65,14 @@ body {
 }
 img { max-width: 100%; height: auto; }
 a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
-h1, h2, h3 { font-family: var(--font); line-height: 1.1; letter-spacing: -.02em; margin: 0; }
+@font-face { font-family: "Russo One"; src: url("assets/fonts/RussoOne-Regular.ttf") format("truetype"); font-display: swap; }
+@font-face { font-family: "Barlow Condensed"; src: url("assets/fonts/BarlowCondensed-ExtraBoldItalic.ttf") format("truetype"); font-weight: 800; font-style: italic; font-display: swap; }
+@font-face { font-family: "DM Serif Display"; src: url("assets/fonts/DMSerifDisplay-Regular.ttf") format("truetype"); font-display: swap; }
+@font-face { font-family: "DM Serif Display"; src: url("assets/fonts/DMSerifDisplay-Italic.ttf") format("truetype"); font-style: italic; font-display: swap; }
+h1, h2, h3 {
+  font-family: var(--font-display, var(--font)); font-style: var(--display-style, normal);
+  line-height: 1.1; letter-spacing: -.02em; margin: 0;
+}
 h1 { font-size: clamp(42px, 7vw, 76px); font-weight: 800; }
 h2 { font-size: clamp(30px, 4.5vw, 46px); font-weight: 800; }
 h3 { font-size: 20px; font-weight: 700; }
@@ -102,7 +109,7 @@ p { margin: 0; }
 .button {
   display: inline-flex; align-items: center; justify-content: center; gap: 8px;
   min-height: 48px; padding: 0 22px; border-radius: 999px; border: 0;
-  background: var(--accent); color: var(--on-accent);
+  background: var(--button, var(--accent)); color: var(--on-button, var(--on-accent));
   font: 700 16px var(--font); text-decoration: none; cursor: pointer;
   transition: transform .15s ease, filter .15s ease;
 }
@@ -418,3 +425,21 @@ a.chip span { color: var(--muted); font-weight: 700; }
   .look-info { order: -1; }
   .look-shot { width: min(250px, 66vw); }
 }
+
+/* A chosen game theme: the page follows it, with a gentle transition. */
+html[data-theme] body { background-color: var(--bg); }
+html[data-theme] .sky { opacity: .55; }
+html[data-theme] body, html[data-theme] .card, html[data-theme] .benefit, html[data-theme] .mode, html[data-theme] .panel { transition: background-color .3s, color .3s; }
+html[data-theme] .chip[aria-pressed="true"], html[data-theme] .look-tabs button[aria-pressed="true"] { background: var(--button); color: var(--on-button); }
+html[data-theme] .nav { background: color-mix(in srgb, var(--bg) 85%, transparent); }
+.chip-ghost { background: transparent; box-shadow: inset 0 0 0 1.5px var(--line); }
+.chip[hidden] { display: none; }
+
+/* Neon Arcade: the app's dot grid behind everything, and glowing buttons in the dark. */
+html[data-look="arcade"] body {
+  background-image: radial-gradient(circle, color-mix(in srgb, var(--line) 50%, transparent) 1.2px, transparent 1.6px);
+  background-size: 28px 28px;
+}
+html[data-look="arcade"][data-theme="dark"] .button:not(.button-ghost) { box-shadow: 0 0 18px color-mix(in srgb, var(--button) 60%, transparent); }
+html[data-look="arcade"][data-theme="dark"] h1 em, html[data-look="arcade"][data-theme="dark"] h2 em { text-shadow: 0 0 14px color-mix(in srgb, var(--accent) 55%, transparent); }
+html[data-theme] .benefit-icon { background: var(--button); color: var(--on-button); }

@@ -1,0 +1,137 @@
+{
+  "classic": {
+    "font": {"display": "system", "family": "system", "design": "rounded", "width": "standard", "italic": false, "uppercase": false, "systemFallback": {"design": "rounded", "width": "standard", "italic": false, "weight": "bold"}, "counter": {"design": "rounded", "width": "standard", "italic": false, "weight": "heavy"}, "body": "default", "tileRadius": 10, "cardRadius": 18, "borders": false, "depth": 0, "foundOpacity": 0.15},
+    "palettes": {
+      "classicIndigo": {
+        "light": {"bg": "#FFFFFF", "bg2": "#FFFFFF", "surface": "#F2F2F7", "surface2": "#E8E8ED", "line": "#E5E5EA", "text": "#000000", "text2": "#6C6C70", "accent": "#5856D6", "fill": "#5856D6", "onFill": "#FFFFFF", "fill2": "#B83A0E", "onFill2": "#FFFFFF", "tile": "#F2F2F7", "tileText": "#000000", "tileLine": "#E5E5EA"},
+        "dark": {"bg": "#000000", "bg2": "#000000", "surface": "#1C1C1E", "surface2": "#2E2E30", "line": "#38383A", "text": "#FFFFFF", "text2": "#AEAEB2", "accent": "#8C8AFF", "fill": "#5E5CE6", "onFill": "#FFFFFF", "fill2": "#B83A0E", "onFill2": "#FFFFFF", "tile": "#1C1C1E", "tileText": "#FFFFFF", "tileLine": "#38383A"}
+      },
+      "classicBlue": {
+        "light": {"bg": "#FFFFFF", "bg2": "#FFFFFF", "surface": "#F2F2F7", "surface2": "#E8E8ED", "line": "#E5E5EA", "text": "#000000", "text2": "#6C6C70", "accent": "#0062CC", "fill": "#0062CC", "onFill": "#FFFFFF", "fill2": "#B83A0E", "onFill2": "#FFFFFF", "tile": "#F2F2F7", "tileText": "#000000", "tileLine": "#E5E5EA"},
+        "dark": {"bg": "#000000", "bg2": "#000000", "surface": "#1C1C1E", "surface2": "#2E2E30", "line": "#38383A", "text": "#FFFFFF", "text2": "#AEAEB2", "accent": "#5AA9FF", "fill": "#0A6FD6", "onFill": "#FFFFFF", "fill2": "#B83A0E", "onFill2": "#FFFFFF", "tile": "#1C1C1E", "tileText": "#FFFFFF", "tileLine": "#38383A"}
+      },
+      "classicTeal": {
+        "light": {"bg": "#FFFFFF", "bg2": "#FFFFFF", "surface": "#F2F2F7", "surface2": "#E8E8ED", "line": "#E5E5EA", "text": "#000000", "text2": "#6C6C70", "accent": "#0B7A6C", "fill": "#0B7A6C", "onFill": "#FFFFFF", "fill2": "#C2185B", "onFill2": "#FFFFFF", "tile": "#F2F2F7", "tileText": "#000000", "tileLine": "#E5E5EA"},
+        "dark": {"bg": "#000000", "bg2": "#000000", "surface": "#1C1C1E", "surface2": "#2E2E30", "line": "#38383A", "text": "#FFFFFF", "text2": "#AEAEB2", "accent": "#4FD1C0", "fill": "#0B7A6C", "onFill": "#FFFFFF", "fill2": "#C2185B", "onFill2": "#FFFFFF", "tile": "#1C1C1E", "tileText": "#FFFFFF", "tileLine": "#38383A"}
+      }
+    }
+  },
+  "focus": {
+    "font": {"display": "system", "family": "system", "design": "default", "width": "standard", "italic": false, "uppercase": false, "systemFallback": {"design": "default", "width": "standard", "italic": false, "weight": "semibold"}, "counter": {"design": "default", "width": "standard", "italic": false, "weight": "bold"}, "body": "default", "tileRadius": 7, "cardRadius": 12, "borders": true, "depth": 0, "foundOpacity": 0.06},
+    "palettes": {
+      "focusBlue": {
+        "light": {"bg": "#E9EAEC", "bg2": "#E9EAEC", "surface": "#F7F7F8", "surface2": "#EEEEEF", "line": "#CFD3D8", "text": "#111418", "text2": "#50555C", "accent": "#1F5FBF", "fill": "#1F5FBF", "onFill": "#FFFFFF", "fill2": "#2B3036", "onFill2": "#FFFFFF", "tile": "#FFFFFF", "tileText": "#111418", "tileLine": "#C4C9CF"},
+        "dark": {"bg": "#1B1C1E", "bg2": "#1B1C1E", "surface": "#242629", "surface2": "#343639", "line": "#3A3D42", "text": "#E8EAED", "text2": "#A9AEB5", "accent": "#8AB4F8", "fill": "#8AB4F8", "onFill": "#111315", "fill2": "#D7DADF", "onFill2": "#111315", "tile": "#2B2D31", "tileText": "#E8EAED", "tileLine": "#45484E"}
+      },
+      "focusGreen": {
+        "light": {"bg": "#E9EAEC", "bg2": "#E9EAEC", "surface": "#F7F7F8", "surface2": "#EEEEEF", "line": "#CFD3D8", "text": "#111418", "text2": "#50555C", "accent": "#1B6E46", "fill": "#1B6E46", "onFill": "#FFFFFF", "fill2": "#2B3036", "onFill2": "#FFFFFF", "tile": "#FFFFFF", "tileText": "#111418", "tileLine": "#C4C9CF"},
+        "dark": {"bg": "#1B1C1E", "bg2": "#1B1C1E", "surface": "#242629", "surface2": "#343639", "line": "#3A3D42", "text": "#E8EAED", "text2": "#A9AEB5", "accent": "#81C995", "fill": "#81C995", "onFill": "#111315", "fill2": "#D7DADF", "onFill2": "#111315", "tile": "#2B2D31", "tileText": "#E8EAED", "tileLine": "#45484E"}
+      },
+      "focusGraphite": {
+        "light": {"bg": "#E9EAEC", "bg2": "#E9EAEC", "surface": "#F7F7F8", "surface2": "#EEEEEF", "line": "#CFD3D8", "text": "#111418", "text2": "#50555C", "accent": "#3A3F47", "fill": "#3A3F47", "onFill": "#FFFFFF", "fill2": "#1F5FBF", "onFill2": "#FFFFFF", "tile": "#FFFFFF", "tileText": "#111418", "tileLine": "#C4C9CF"},
+        "dark": {"bg": "#1B1C1E", "bg2": "#1B1C1E", "surface": "#242629", "surface2": "#343639", "line": "#3A3D42", "text": "#E8EAED", "text2": "#A9AEB5", "accent": "#C9CED6", "fill": "#C9CED6", "onFill": "#111315", "fill2": "#8AB4F8", "onFill2": "#111315", "tile": "#2B2D31", "tileText": "#E8EAED", "tileLine": "#45484E"}
+      }
+    }
+  },
+  "arcade": {
+    "font": {"display": "RussoOne-Regular", "family": "Russo One", "design": "default", "width": "expanded", "italic": false, "uppercase": true, "systemFallback": {"design": "default", "width": "expanded", "italic": false, "weight": "heavy"}, "counter": {"design": "default", "width": "expanded", "italic": false, "weight": "black"}, "body": "default", "tileRadius": 10, "cardRadius": 18, "borders": true, "depth": 0, "foundOpacity": 0.15},
+    "palettes": {
+      "violet": {
+        "light": {"bg": "#F4F2FF", "bg2": "#F4F2FF", "surface": "#FFFFFF", "surface2": "#E9E5FF", "line": "#D8D2F5", "text": "#1B1440", "text2": "#51487E", "accent": "#6D28D9", "fill": "#6D28D9", "onFill": "#FFFFFF", "fill2": "#0E7490", "onFill2": "#FFFFFF", "tile": "#FFFFFF", "tileText": "#1B1440", "tileLine": "#C9C1F0"},
+        "dark": {"bg": "#0B0820", "bg2": "#0B0820", "surface": "#161036", "surface2": "#0C0922", "line": "#2E2559", "text": "#F5F3FF", "text2": "#CBC3F2", "accent": "#A78BFA", "fill": "#A78BFA", "onFill": "#0B0820", "fill2": "#22D3EE", "onFill2": "#0B0820", "tile": "#261E5C", "tileText": "#F5F3FF", "tileLine": "#5446AE"}
+      },
+      "lime": {
+        "light": {"bg": "#F4F2FF", "bg2": "#F4F2FF", "surface": "#FFFFFF", "surface2": "#E9E5FF", "line": "#D8D2F5", "text": "#1B1440", "text2": "#51487E", "accent": "#4D7C0F", "fill": "#4D7C0F", "onFill": "#FFFFFF", "fill2": "#0F766E", "onFill2": "#FFFFFF", "tile": "#FFFFFF", "tileText": "#1B1440", "tileLine": "#C9C1F0"},
+        "dark": {"bg": "#0B0820", "bg2": "#0B0820", "surface": "#161036", "surface2": "#0C0922", "line": "#2E2559", "text": "#F5F3FF", "text2": "#CBC3F2", "accent": "#A3E635", "fill": "#A3E635", "onFill": "#0B0820", "fill2": "#2DD4BF", "onFill2": "#0B0820", "tile": "#261E5C", "tileText": "#F5F3FF", "tileLine": "#5446AE"}
+      },
+      "sunset": {
+        "light": {"bg": "#F4F2FF", "bg2": "#F4F2FF", "surface": "#FFFFFF", "surface2": "#E9E5FF", "line": "#D8D2F5", "text": "#1B1440", "text2": "#51487E", "accent": "#C2410C", "fill": "#C2410C", "onFill": "#FFFFFF", "fill2": "#BE185D", "onFill2": "#FFFFFF", "tile": "#FFFFFF", "tileText": "#1B1440", "tileLine": "#C9C1F0"},
+        "dark": {"bg": "#0B0820", "bg2": "#0B0820", "surface": "#161036", "surface2": "#0C0922", "line": "#2E2559", "text": "#F5F3FF", "text2": "#CBC3F2", "accent": "#FB923C", "fill": "#FB923C", "onFill": "#0B0820", "fill2": "#F472B6", "onFill2": "#0B0820", "tile": "#261E5C", "tileText": "#F5F3FF", "tileLine": "#5446AE"}
+      },
+      "pinkNeon": {
+        "light": {"bg": "#F4F2FF", "bg2": "#F4F2FF", "surface": "#FFFFFF", "surface2": "#E9E5FF", "line": "#D8D2F5", "text": "#1B1440", "text2": "#51487E", "accent": "#BE185D", "fill": "#BE185D", "onFill": "#FFFFFF", "fill2": "#6D28D9", "onFill2": "#FFFFFF", "tile": "#FFFFFF", "tileText": "#1B1440", "tileLine": "#C9C1F0"},
+        "dark": {"bg": "#0B0820", "bg2": "#0B0820", "surface": "#161036", "surface2": "#0C0922", "line": "#2E2559", "text": "#F5F3FF", "text2": "#CBC3F2", "accent": "#F472B6", "fill": "#F472B6", "onFill": "#0B0820", "fill2": "#C4B5FD", "onFill2": "#0B0820", "tile": "#261E5C", "tileText": "#F5F3FF", "tileLine": "#5446AE"}
+      }
+    }
+  },
+  "zen": {
+    "font": {"display": "DMSerifDisplay-Regular", "family": "DM Serif Display", "design": "serif", "width": "standard", "italic": false, "uppercase": false, "systemFallback": {"design": "serif", "width": "standard", "italic": false, "weight": "bold"}, "counter": {"design": "serif", "width": "standard", "italic": false, "weight": "bold"}, "body": "default", "tileRadius": 4, "cardRadius": 6, "borders": true, "depth": 0, "foundOpacity": 0.15},
+    "palettes": {
+      "sumi": {
+        "light": {"bg": "#F3F1EC", "bg2": "#F3F1EC", "surface": "#FAF8F4", "surface2": "#F1EFEB", "line": "#D9D4CA", "text": "#1C1B19", "text2": "#6B675F", "accent": "#B8322A", "fill": "#C8372D", "onFill": "#FFFFFF", "fill2": "#1C1B19", "onFill2": "#F3F1EC", "tile": "#FBFAF7", "tileText": "#1C1B19", "tileLine": "#D9D4CA"},
+        "dark": {"bg": "#151513", "bg2": "#151513", "surface": "#1D1D1A", "surface2": "#2E2D2A", "line": "#34332E", "text": "#EDEAE2", "text2": "#A39E92", "accent": "#E5675C", "fill": "#E5675C", "onFill": "#151513", "fill2": "#EDEAE2", "onFill2": "#151513", "tile": "#1F1F1C", "tileText": "#EDEAE2", "tileLine": "#34332E"}
+      },
+      "matcha": {
+        "light": {"bg": "#F3F1EC", "bg2": "#F3F1EC", "surface": "#FAF8F4", "surface2": "#F1EFEB", "line": "#D9D4CA", "text": "#1C1B19", "text2": "#6B675F", "accent": "#47703A", "fill": "#47703A", "onFill": "#FFFFFF", "fill2": "#1C1B19", "onFill2": "#F3F1EC", "tile": "#FBFAF7", "tileText": "#1C1B19", "tileLine": "#D9D4CA"},
+        "dark": {"bg": "#151513", "bg2": "#151513", "surface": "#1D1D1A", "surface2": "#2E2D2A", "line": "#34332E", "text": "#EDEAE2", "text2": "#A39E92", "accent": "#8DBE6E", "fill": "#8DBE6E", "onFill": "#151513", "fill2": "#EDEAE2", "onFill2": "#151513", "tile": "#1F1F1C", "tileText": "#EDEAE2", "tileLine": "#34332E"}
+      },
+      "indigo": {
+        "light": {"bg": "#F3F1EC", "bg2": "#F3F1EC", "surface": "#FAF8F4", "surface2": "#F1EFEB", "line": "#D9D4CA", "text": "#1C1B19", "text2": "#6B675F", "accent": "#2F4A8A", "fill": "#2F4A8A", "onFill": "#FFFFFF", "fill2": "#1C1B19", "onFill2": "#F3F1EC", "tile": "#FBFAF7", "tileText": "#1C1B19", "tileLine": "#D9D4CA"},
+        "dark": {"bg": "#151513", "bg2": "#151513", "surface": "#1D1D1A", "surface2": "#2E2D2A", "line": "#34332E", "text": "#EDEAE2", "text2": "#A39E92", "accent": "#8CA6E6", "fill": "#8CA6E6", "onFill": "#151513", "fill2": "#EDEAE2", "onFill2": "#151513", "tile": "#1F1F1C", "tileText": "#EDEAE2", "tileLine": "#34332E"}
+      },
+      "sakura": {
+        "light": {"bg": "#F3F1EC", "bg2": "#F3F1EC", "surface": "#FAF8F4", "surface2": "#F1EFEB", "line": "#D9D4CA", "text": "#1C1B19", "text2": "#6B675F", "accent": "#A8325E", "fill": "#C2477A", "onFill": "#FFFFFF", "fill2": "#1C1B19", "onFill2": "#F3F1EC", "tile": "#FBFAF7", "tileText": "#1C1B19", "tileLine": "#D9D4CA"},
+        "dark": {"bg": "#151513", "bg2": "#151513", "surface": "#1D1D1A", "surface2": "#2E2D2A", "line": "#34332E", "text": "#EDEAE2", "text2": "#A39E92", "accent": "#F2A7C0", "fill": "#F2A7C0", "onFill": "#151513", "fill2": "#EDEAE2", "onFill2": "#151513", "tile": "#1F1F1C", "tileText": "#EDEAE2", "tileLine": "#34332E"}
+      }
+    }
+  },
+  "pitLane": {
+    "font": {"display": "BarlowCondensed-ExtraBoldItalic", "family": "Barlow Condensed", "design": "default", "width": "condensed", "italic": true, "uppercase": true, "systemFallback": {"design": "default", "width": "condensed", "italic": true, "weight": "heavy"}, "counter": {"design": "default", "width": "condensed", "italic": true, "weight": "black"}, "body": "default", "tileRadius": 6, "cardRadius": 10, "borders": true, "depth": 0, "foundOpacity": 0.15},
+    "palettes": {
+      "yellow": {
+        "light": {"bg": "#F2F3F5", "bg2": "#F2F3F5", "surface": "#FFFFFF", "surface2": "#F6F6F6", "line": "#D5D8DE", "text": "#121316", "text2": "#5A606B", "accent": "#7D6200", "fill": "#FFD400", "onFill": "#121316", "fill2": "#7E22CE", "onFill2": "#FFFFFF", "tile": "#FFFFFF", "tileText": "#121316", "tileLine": "#D5D8DE"},
+        "dark": {"bg": "#121316", "bg2": "#121316", "surface": "#1B1D22", "surface2": "#2C2E33", "line": "#2E3138", "text": "#F2F3F5", "text2": "#9DA3AE", "accent": "#FFD400", "fill": "#FFD400", "onFill": "#121316", "fill2": "#9333EA", "onFill2": "#FFFFFF", "tile": "#22252B", "tileText": "#F2F3F5", "tileLine": "#353943"}
+      },
+      "papaya": {
+        "light": {"bg": "#F2F3F5", "bg2": "#F2F3F5", "surface": "#FFFFFF", "surface2": "#F6F6F6", "line": "#D5D8DE", "text": "#121316", "text2": "#5A606B", "accent": "#B45309", "fill": "#FF8000", "onFill": "#121316", "fill2": "#7E22CE", "onFill2": "#FFFFFF", "tile": "#FFFFFF", "tileText": "#121316", "tileLine": "#D5D8DE"},
+        "dark": {"bg": "#121316", "bg2": "#121316", "surface": "#1B1D22", "surface2": "#2C2E33", "line": "#2E3138", "text": "#F2F3F5", "text2": "#9DA3AE", "accent": "#FF8A1F", "fill": "#FF8000", "onFill": "#121316", "fill2": "#9333EA", "onFill2": "#FFFFFF", "tile": "#22252B", "tileText": "#F2F3F5", "tileLine": "#353943"}
+      },
+      "green": {
+        "light": {"bg": "#F2F3F5", "bg2": "#F2F3F5", "surface": "#FFFFFF", "surface2": "#F6F6F6", "line": "#D5D8DE", "text": "#121316", "text2": "#5A606B", "accent": "#00754A", "fill": "#00875A", "onFill": "#FFFFFF", "fill2": "#7E22CE", "onFill2": "#FFFFFF", "tile": "#FFFFFF", "tileText": "#121316", "tileLine": "#D5D8DE"},
+        "dark": {"bg": "#121316", "bg2": "#121316", "surface": "#1B1D22", "surface2": "#2C2E33", "line": "#2E3138", "text": "#F2F3F5", "text2": "#9DA3AE", "accent": "#2BD38C", "fill": "#00A86B", "onFill": "#121316", "fill2": "#9333EA", "onFill2": "#FFFFFF", "tile": "#22252B", "tileText": "#F2F3F5", "tileLine": "#353943"}
+      },
+      "rosso": {
+        "light": {"bg": "#F2F3F5", "bg2": "#F2F3F5", "surface": "#FFFFFF", "surface2": "#F6F6F6", "line": "#D5D8DE", "text": "#121316", "text2": "#5A606B", "accent": "#C40A0A", "fill": "#D50A0A", "onFill": "#FFFFFF", "fill2": "#7E22CE", "onFill2": "#FFFFFF", "tile": "#FFFFFF", "tileText": "#121316", "tileLine": "#D5D8DE"},
+        "dark": {"bg": "#121316", "bg2": "#121316", "surface": "#1B1D22", "surface2": "#2C2E33", "line": "#2E3138", "text": "#F2F3F5", "text2": "#9DA3AE", "accent": "#FF5A4F", "fill": "#FF3B30", "onFill": "#121316", "fill2": "#9333EA", "onFill2": "#FFFFFF", "tile": "#22252B", "tileText": "#F2F3F5", "tileLine": "#353943"}
+      }
+    }
+  },
+  "candy": {
+    "font": {"display": "system", "family": "system", "design": "rounded", "width": "standard", "italic": false, "uppercase": false, "systemFallback": {"design": "rounded", "width": "standard", "italic": false, "weight": "bold"}, "counter": {"design": "rounded", "width": "standard", "italic": false, "weight": "heavy"}, "body": "rounded", "tileRadius": 12, "cardRadius": 22, "borders": false, "depth": 4, "foundOpacity": 0.15},
+    "palettes": {
+      "bubblegum": {
+        "light": {"bg": "#FFF6EE", "bg2": "#FFF6EE", "surface": "#FFFFFF", "surface2": "#F7F6F7", "line": "#F0DCCB", "text": "#2B1B3D", "text2": "#6E5A7C", "accent": "#C2185B", "fill": "#D42A62", "onFill": "#FFFFFF", "fill2": "#2F6FE0", "onFill2": "#FFFFFF", "tile": "#FFFFFF", "tileText": "#2B1B3D", "tileLine": "#EBD3BF"},
+        "dark": {"bg": "#1E1430", "bg2": "#1E1430", "surface": "#2B1F42", "surface2": "#3C3050", "line": "#150D24", "text": "#FFF6EE", "text2": "#C9B8DA", "accent": "#FF7AA8", "fill": "#D42A62", "onFill": "#FFFFFF", "fill2": "#2F6FE0", "onFill2": "#FFFFFF", "tile": "#33264D", "tileText": "#FFF6EE", "tileLine": "#1A1029"}
+      },
+      "ocean": {
+        "light": {"bg": "#FFF6EE", "bg2": "#FFF6EE", "surface": "#FFFFFF", "surface2": "#F7F6F7", "line": "#F0DCCB", "text": "#2B1B3D", "text2": "#6E5A7C", "accent": "#0A6E6E", "fill": "#0B7A7A", "onFill": "#FFFFFF", "fill2": "#4757D6", "onFill2": "#FFFFFF", "tile": "#FFFFFF", "tileText": "#2B1B3D", "tileLine": "#EBD3BF"},
+        "dark": {"bg": "#1E1430", "bg2": "#1E1430", "surface": "#2B1F42", "surface2": "#3C3050", "line": "#150D24", "text": "#FFF6EE", "text2": "#C9B8DA", "accent": "#3CC9C9", "fill": "#0B7A7A", "onFill": "#FFFFFF", "fill2": "#4757D6", "onFill2": "#FFFFFF", "tile": "#33264D", "tileText": "#FFF6EE", "tileLine": "#1A1029"}
+      },
+      "lemonade": {
+        "light": {"bg": "#FFF6EE", "bg2": "#FFF6EE", "surface": "#FFFFFF", "surface2": "#F7F6F7", "line": "#F0DCCB", "text": "#2B1B3D", "text2": "#6E5A7C", "accent": "#A84300", "fill": "#BF4C00", "onFill": "#FFFFFF", "fill2": "#2A7D38", "onFill2": "#FFFFFF", "tile": "#FFFFFF", "tileText": "#2B1B3D", "tileLine": "#EBD3BF"},
+        "dark": {"bg": "#1E1430", "bg2": "#1E1430", "surface": "#2B1F42", "surface2": "#3C3050", "line": "#150D24", "text": "#FFF6EE", "text2": "#C9B8DA", "accent": "#FF9A3C", "fill": "#BF4C00", "onFill": "#FFFFFF", "fill2": "#2A7D38", "onFill2": "#FFFFFF", "tile": "#33264D", "tileText": "#FFF6EE", "tileLine": "#1A1029"}
+      }
+    }
+  },
+  "blossom": {
+    "font": {"display": "DMSerifDisplay-Italic", "family": "DM Serif Display", "design": "serif", "width": "standard", "italic": true, "uppercase": false, "systemFallback": {"design": "serif", "width": "standard", "italic": true, "weight": "semibold"}, "counter": {"design": "serif", "width": "standard", "italic": true, "weight": "semibold"}, "body": "default", "tileRadius": 18, "cardRadius": 26, "borders": true, "depth": 0, "foundOpacity": 0.15},
+    "palettes": {
+      "rose": {
+        "light": {"bg": "#FFF5F7", "bg2": "#FFF5F7", "surface": "#FFFFFF", "surface2": "#F7F6F7", "line": "#F3D3DC", "text": "#3B1F2B", "text2": "#7A5262", "accent": "#B0285F", "fill": "#C73366", "onFill": "#FFFFFF", "fill2": "#8F6A1C", "onFill2": "#FFFFFF", "tile": "#FFFFFF", "tileText": "#3B1F2B", "tileLine": "#F0C6D2"},
+        "dark": {"bg": "#24141C", "bg2": "#24141C", "surface": "#301D27", "surface2": "#402E37", "line": "#4A2E3B", "text": "#FBEFF3", "text2": "#D3B3C0", "accent": "#F7A1C4", "fill": "#F7A1C4", "onFill": "#2A1220", "fill2": "#E6C27A", "onFill2": "#2A1220", "tile": "#382230", "tileText": "#FBEFF3", "tileLine": "#553544"}
+      },
+      "lavender": {
+        "light": {"bg": "#FFF5F7", "bg2": "#FFF5F7", "surface": "#FFFFFF", "surface2": "#F7F6F7", "line": "#F3D3DC", "text": "#3B1F2B", "text2": "#7A5262", "accent": "#6544A6", "fill": "#8463C9", "onFill": "#FFFFFF", "fill2": "#C2477A", "onFill2": "#FFFFFF", "tile": "#FFFFFF", "tileText": "#3B1F2B", "tileLine": "#F0C6D2"},
+        "dark": {"bg": "#24141C", "bg2": "#24141C", "surface": "#301D27", "surface2": "#402E37", "line": "#4A2E3B", "text": "#FBEFF3", "text2": "#D3B3C0", "accent": "#CDB6F5", "fill": "#CDB6F5", "onFill": "#22172F", "fill2": "#F5B3CF", "onFill2": "#22172F", "tile": "#382230", "tileText": "#FBEFF3", "tileLine": "#553544"}
+      },
+      "peach": {
+        "light": {"bg": "#FFF5F7", "bg2": "#FFF5F7", "surface": "#FFFFFF", "surface2": "#F7F6F7", "line": "#F3D3DC", "text": "#3B1F2B", "text2": "#7A5262", "accent": "#A4462C", "fill": "#BA5236", "onFill": "#FFFFFF", "fill2": "#8F6A1C", "onFill2": "#FFFFFF", "tile": "#FFFFFF", "tileText": "#3B1F2B", "tileLine": "#F0C6D2"},
+        "dark": {"bg": "#24141C", "bg2": "#24141C", "surface": "#301D27", "surface2": "#402E37", "line": "#4A2E3B", "text": "#FBEFF3", "text2": "#D3B3C0", "accent": "#FFBFA3", "fill": "#FFBFA3", "onFill": "#2A160F", "fill2": "#E6C27A", "onFill2": "#2A160F", "tile": "#382230", "tileText": "#FBEFF3", "tileLine": "#553544"}
+      },
+      "mint": {
+        "light": {"bg": "#FFF5F7", "bg2": "#FFF5F7", "surface": "#FFFFFF", "surface2": "#F7F6F7", "line": "#F3D3DC", "text": "#3B1F2B", "text2": "#7A5262", "accent": "#23705E", "fill": "#267A66", "onFill": "#FFFFFF", "fill2": "#C2477A", "onFill2": "#FFFFFF", "tile": "#FFFFFF", "tileText": "#3B1F2B", "tileLine": "#F0C6D2"},
+        "dark": {"bg": "#24141C", "bg2": "#24141C", "surface": "#301D27", "surface2": "#402E37", "line": "#4A2E3B", "text": "#FBEFF3", "text2": "#D3B3C0", "accent": "#9FE0CC", "fill": "#9FE0CC", "onFill": "#10241E", "fill2": "#F5B3CF", "onFill2": "#10241E", "tile": "#382230", "tileText": "#FBEFF3", "tileLine": "#553544"}
+      }
+    }
+  }
+}
