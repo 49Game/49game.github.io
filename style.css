@@ -171,62 +171,6 @@ main { overflow: hidden; }
 .mini-board span.next { box-shadow: inset 0 0 0 2px var(--accent); }
 .phone-bottom { margin-top: auto; display: flex; justify-content: center; gap: 8px; color: var(--muted); font: 600 12px var(--font); }
 
-/* Interactive demo */
-.demo-stage {
-  display: grid; grid-template-columns: minmax(0, 520px) minmax(0, 360px); gap: 40px; justify-content: center; align-items: start;
-}
-@media (max-width: 900px) { .demo-stage { grid-template-columns: minmax(0, 520px); gap: 16px; } .panel { order: -1; } }
-.board-wrap { position: relative; }
-.board {
-  display: grid; gap: 8px; padding: 14px; border-radius: 26px;
-  background: var(--surface); box-shadow: var(--shadow);
-  touch-action: manipulation; user-select: none; -webkit-user-select: none;
-}
-.tile {
-  aspect-ratio: 1; display: grid; place-items: center; border: 0; border-radius: 14px;
-  background: var(--tile); color: var(--tile-text); cursor: pointer;
-  font: 700 clamp(15px, 3.6vw, 24px) var(--font); font-variant-numeric: tabular-nums;
-  transition: background .2s, color .2s, transform .08s;
-  -webkit-tap-highlight-color: transparent;
-}
-.tile:active { transform: scale(.94); }
-.tile.found { background: var(--tile-found); color: var(--tile-found-text); cursor: default; }
-.tile.wrong { animation: shake .3s; background: color-mix(in srgb, var(--bad) 22%, var(--tile)); }
-.tile.hint { box-shadow: inset 0 0 0 3px var(--accent); }
-.board.red-black .tile.red:not(.found) { color: #e0383e; }
-@keyframes shake { 25% { transform: translateX(-4px); } 75% { transform: translateX(4px); } }
-@media (prefers-reduced-motion: reduce) { .tile.wrong { animation: none; } .tile { transition: none; } }
-
-.overlay {
-  position: absolute; inset: 0; border-radius: 26px; display: grid; place-items: center; text-align: center;
-  background: color-mix(in srgb, var(--surface) 86%, transparent); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
-  padding: 24px;
-}
-.overlay[hidden] { display: none; }
-.overlay h3 { font-size: 26px; margin-bottom: 8px; }
-.overlay p { color: var(--text-2); margin-bottom: 20px; }
-.overlay .big { font: 800 64px var(--font); color: var(--accent); font-variant-numeric: tabular-nums; margin: 4px 0; }
-.result-stats { display: flex; justify-content: center; gap: 24px; margin: 4px 0 22px; padding: 0; list-style: none; }
-.result-stats li { display: flex; flex-direction: column; }
-.result-stats b { font: 800 20px var(--font); }
-.result-stats span { color: var(--muted); font-size: 13px; }
-
-.panel { background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow); padding: 24px; }
-.hud { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; text-align: center; margin-bottom: 22px; }
-.hud small { display: block; color: var(--muted); font: 600 12px var(--font); text-transform: uppercase; letter-spacing: .06em; }
-.hud b { font: 800 30px var(--font); font-variant-numeric: tabular-nums; }
-.hud .find b { color: var(--accent); }
-.option-label { display: block; margin: 16px 0 8px; font: 700 14px var(--font); color: var(--text-2); }
-.chips { display: flex; flex-wrap: wrap; gap: 8px; }
-.chip {
-  min-height: 40px; padding: 0 14px; border-radius: 999px; border: 0; cursor: pointer;
-  background: var(--surface-2); color: var(--text); font: 600 14px var(--font);
-}
-.chip[aria-pressed="true"] { background: var(--accent); color: var(--on-accent); }
-.best { margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--text-2); font-size: 15px; }
-.best b { font-family: var(--font); color: var(--text); }
-.demo-note { margin-top: 14px; }
-
 /* Modes */
 .modes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 @media (max-width: 900px) { .modes { grid-template-columns: 1fr; } }
@@ -420,3 +364,11 @@ a.chip span { color: var(--muted); font-weight: 700; }
 .daily-themes b { display: block; font-family: var(--font); }
 .daily-themes span { color: var(--muted); font-size: 13px; }
 .page .ach-list { padding: 0; }
+
+/* Chips: appearance switch, achievement groups */
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip {
+  min-height: 40px; padding: 0 14px; border-radius: 999px; border: 0; cursor: pointer;
+  background: var(--surface-2); color: var(--text); font: 600 14px var(--font);
+}
+.chip[aria-pressed="true"] { background: var(--accent); color: var(--on-accent); }
