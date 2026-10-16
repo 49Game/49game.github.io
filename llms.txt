@@ -1,0 +1,24 @@
+# 49 - Focus Booster
+
+> 49 - Focus Booster is a Schulte table game for iPhone. Players find the numbers 1 to 49, shuffled on a 7 × 7 board, in order and as fast as they can. A game takes about a minute. It is free to play with ads between games; 49 Premium (weekly, monthly, yearly with a free week, or lifetime) removes the ads. Nothing is locked behind a purchase. Coming soon to the App Store.
+
+Key facts:
+
+- Platform: iPhone, iOS 17 or later.
+- Game types: Classic (one board, best time), Endless (boards keep coming), Beat the Clock (every find adds time, every miss costs time).
+- Styles: Normal (a plain time trial), Competitive (points, combos and a multiplier up to ×3), Relax (effects without points).
+- Boards: Numbers, Letters, Red & Black and Shifting, from 5 × 5 to 7 × 7, counting up or down.
+- Daily Challenge with streaks, ranks from Rookie to Legend, 482 achievements, Game Center leaderboards.
+- Insights: blind spots on the board, time of day, rhythm and the most common mistakes.
+- Seven looks (Classic, Focus, Neon Arcade, Zen Ink, Pit Lane, Candy Pop, Blossom) with matching app icons, a theme builder, and 16 sound styles.
+- Accessibility: VoiceOver, Reduce Motion, Bold Text, Audio Graphs.
+- Languages: English, Polish, German, French, Spanish, Brazilian Portuguese, Italian, Japanese, Korean.
+- Privacy: games stay on the device, no account. Game Center is optional. The free version shows ads from Google AdMob.
+- Not a medical product: a game for practising focus.
+- Support: https://github.com/49Game/49game.github.io/issues
+
+## Pages
+
+- [49 - Focus Booster](https://49game.github.io/): features, a playable Schulte table and FAQ
+- [Support](https://49game.github.io/support.html)
+- [Privacy policy](https://49game.github.io/privacy.html), [Terms of use](https://49game.github.io/terms.html)
