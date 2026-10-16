@@ -372,3 +372,29 @@ a.chip span { color: var(--muted); font-weight: 700; }
   background: var(--surface-2); color: var(--text); font: 600 14px var(--font);
 }
 .chip[aria-pressed="true"] { background: var(--accent); color: var(--on-accent); }
+
+/* Benefits */
+.benefits { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+@media (max-width: 900px) { .benefits { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .benefits { grid-template-columns: 1fr; } }
+.benefit { padding: 28px; border-radius: var(--radius); background: var(--surface); box-shadow: var(--shadow); }
+.benefit-icon { width: 52px; height: 52px; border-radius: 16px; display: grid; place-items: center; margin-bottom: 18px;
+  background: linear-gradient(150deg, var(--accent), var(--accent-2)); color: #fff; }
+.benefit-icon svg { width: 26px; height: 26px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.benefit h3 { font-size: 20px; }
+.benefit p { margin-top: 10px; color: var(--text-2); font-size: 16px; }
+.benefits-note { margin-top: 24px; text-align: center; }
+
+/* Daily routine */
+.routine { display: grid; grid-template-columns: 1.1fr .9fr; gap: 48px; align-items: center; }
+@media (max-width: 900px) { .routine { grid-template-columns: 1fr; } }
+.routine .explain-copy > p { margin-top: 14px; color: var(--text-2); }
+.routine-list { list-style: none; margin: 24px 0 0; padding: 0; display: grid; gap: 14px; }
+.routine-list li { padding-left: 18px; border-left: 3px solid var(--accent); }
+.routine-list b { display: block; font-family: var(--font); }
+.routine-list span { color: var(--text-2); font-size: 15px; }
+.moments { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.moments div { padding: 22px; border-radius: var(--radius); background: var(--surface); box-shadow: var(--shadow); }
+.moments b { display: block; font: 700 18px var(--font); }
+.moments span { display: block; margin-top: 6px; color: var(--text-2); font-size: 15px; }
+.hero h1 { font-size: clamp(40px, 5.4vw, 64px); }
