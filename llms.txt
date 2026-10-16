@@ -8,7 +8,8 @@ Key facts:
 - Game types: Classic (one board, best time), Endless (boards keep coming), Beat the Clock (every find adds time, every miss costs time).
 - Styles: Normal (a plain time trial), Competitive (points, combos and a multiplier up to ×3), Relax (effects without points).
 - Boards: Numbers, Letters, Red & Black and Shifting, from 5 × 5 to 7 × 7, counting up or down.
-- Daily Challenge with streaks, ranks from Rookie to Legend, 482 achievements, Game Center leaderboards.
+- Competitive scoring: 100 points per number plus up to 50 for speed; ×2 from a combo of 5, ×3 from 15; the combo is lost when its timer runs out and halved by a wrong tap.
+- Daily Challenge (14 rotating themes with goals) with streaks, ranks from Rookie to Legend, 482 achievements in 19 groups, 146 Game Center leaderboards (today, week, month, year, all time).
 - Insights: blind spots on the board, time of day, rhythm and the most common mistakes.
 - Seven looks (Classic, Focus, Neon Arcade, Zen Ink, Pit Lane, Candy Pop, Blossom) with matching app icons, a theme builder, and 16 sound styles.
 - Accessibility: VoiceOver, Reduce Motion, Bold Text, Audio Graphs.
@@ -20,5 +21,6 @@ Key facts:
 ## Pages
 
 - [49 - Focus Booster](https://49game.github.io/): features, a playable Schulte table and FAQ
+- [All 482 achievements](https://49game.github.io/achievements.html): the full catalog by group, with the medal ladder
 - [Support](https://49game.github.io/support.html)
 - [Privacy policy](https://49game.github.io/privacy.html), [Terms of use](https://49game.github.io/terms.html)
