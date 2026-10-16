@@ -317,7 +317,7 @@ a.chip span { color: var(--muted); font-weight: 700; }
 .look-tabs button { display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px 6px 6px; border-radius: 999px; border: 0; cursor: pointer; background: var(--surface); color: var(--text); font: 600 14px var(--font); box-shadow: var(--shadow); }
 .look-tabs button img { width: 30px; height: 30px; border-radius: 8px; }
 .look-tabs button[aria-pressed="true"] { background: var(--accent); color: var(--on-accent); }
-.look-stage { display: grid; grid-template-columns: auto minmax(0, 380px); gap: 48px; align-items: center; justify-content: center; }
+.look-stage { display: grid; grid-template-columns: auto minmax(0, 520px); gap: 48px; align-items: start; justify-content: center; }
 @media (max-width: 800px) { .look-stage { grid-template-columns: 1fr; gap: 24px; justify-items: center; text-align: center; } }
 .look-shot { width: min(300px, 80vw); border-radius: 36px; overflow: hidden; box-shadow: var(--shadow), 0 0 0 10px #0d0c18; background: #0d0c18; }
 .look-shot img { display: block; width: 100%; height: auto; }
@@ -398,3 +398,23 @@ a.chip span { color: var(--muted); font-weight: 700; }
 .moments b { display: block; font: 700 18px var(--font); }
 .moments span { display: block; margin-top: 6px; color: var(--text-2); font-size: 15px; }
 .hero h1 { font-size: clamp(40px, 5.4vw, 64px); }
+
+/* Theme preview */
+.look-info .option-label { display: block; margin: 18px 0 8px; font: 700 13px var(--font); color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
+.look-info .option-label:first-child { margin-top: 0; }
+.look-info .look-tabs { justify-content: flex-start; margin-bottom: 22px; }
+.look-info h3 { margin-top: 4px; }
+.swatches { display: flex; flex-wrap: wrap; gap: 10px; }
+.swatch {
+  display: inline-flex; align-items: center; gap: 8px; min-height: 40px; padding: 4px 14px 4px 4px; border-radius: 999px; border: 0; cursor: pointer;
+  background: var(--surface); color: var(--text); font: 600 14px var(--font); box-shadow: var(--shadow);
+}
+.swatch i { width: 32px; height: 32px; border-radius: 50%; box-shadow: inset 0 0 0 2px rgba(255, 255, 255, .25); }
+.swatch[aria-pressed="true"] { box-shadow: 0 0 0 2.5px var(--accent); }
+.look-shot img { transition: opacity .15s; }
+@media (max-width: 800px) {
+  .look-info .look-tabs, .swatches { justify-content: center; }
+  .look-stage { grid-template-columns: 1fr; }
+  .look-info { order: -1; }
+  .look-shot { width: min(250px, 66vw); }
+}

@@ -32,7 +32,7 @@
     <nav class="nav-links" aria-label="Sections">
       <a href="#benefits">Benefits</a>
       <a href="#styles">Styles</a>
-      <a href="#looks">Looks</a>
+      <a href="#looks">Themes</a>
       <a href="#achievements">Achievements</a>
       <a href="#leaderboards">Leaderboards</a>
       <a href="#faq">FAQ</a>
@@ -160,6 +160,33 @@
       </div>
     </section>
 
+    <!-- Looks -->
+    <section class="section" id="looks">
+      <div class="section-head">
+        <p class="eyebrow">Themes</p>
+        <h2>Pick your look. See it live.</h2>
+        <p>Choose a theme, a color palette and light or dark. The screen shows exactly how your game will look in the app.</p>
+      </div>
+      <div class="look-stage">
+        <div class="look-shot"><img id="look-img" src="assets/screens/p/classic-classicIndigo-light.webp" alt="The Classic look" width="300" height="584"></div>
+        <div class="look-info">
+          <span class="option-label" id="look-label">Theme</span>
+          <div class="look-tabs" role="group" aria-labelledby="look-label"><button type="button" data-look="classic" aria-pressed="true"><img src="assets/looks/classic.png" alt="" width="30" height="30">Classic</button><button type="button" data-look="focus" aria-pressed="false"><img src="assets/looks/focus.png" alt="" width="30" height="30">Focus</button><button type="button" data-look="arcade" aria-pressed="false"><img src="assets/looks/arcade.png" alt="" width="30" height="30">Neon Arcade</button><button type="button" data-look="zen" aria-pressed="false"><img src="assets/looks/zen.png" alt="" width="30" height="30">Zen Ink</button><button type="button" data-look="pitLane" aria-pressed="false"><img src="assets/looks/pitLane.png" alt="" width="30" height="30">Pit Lane</button><button type="button" data-look="candy" aria-pressed="false"><img src="assets/looks/candy.png" alt="" width="30" height="30">Candy Pop</button><button type="button" data-look="blossom" aria-pressed="false"><img src="assets/looks/blossom.png" alt="" width="30" height="30">Blossom</button></div>
+          <h3 id="look-name">Classic</h3>
+          <p id="look-tagline">The original 49: clean, simple and familiar.</p>
+          <span class="option-label" id="palette-label">Colors</span>
+          <div class="swatches" id="swatches" role="group" aria-labelledby="palette-label"></div>
+          <span class="option-label" id="appearance-label">Appearance</span>
+          <div class="chips" role="group" aria-labelledby="appearance-label">
+            <button class="chip" type="button" data-appearance="light" aria-pressed="true">Light</button>
+            <button class="chip" type="button" data-appearance="dark" aria-pressed="false">Dark</button>
+          </div>
+          <p class="look-extra">In the app you can tune every theme even further: accent, tile and number colors, tile shape, font and app icon. Or build your own theme from scratch in seven steps.</p>
+        </div>
+      </div>
+      <script type="application/json" id="looks-data">{"classic": {"name": "Classic", "tagline": "The original 49: clean, simple and familiar.", "palettes": [{"id": "classicIndigo", "name": "Indigo", "swatch": "#5856D6", "swatch2": "#B83A0E"}, {"id": "classicBlue", "name": "Blue", "swatch": "#0062CC", "swatch2": "#B83A0E"}, {"id": "classicTeal", "name": "Teal", "swatch": "#0B7A6C", "swatch2": "#C2185B"}]}, "focus": {"name": "Focus", "tagline": "Built for speed: high-contrast numbers, nothing to distract you. Best with Normal style.", "palettes": [{"id": "focusBlue", "name": "Blue", "swatch": "#1F5FBF", "swatch2": "#2B3036"}, {"id": "focusGreen", "name": "Green", "swatch": "#1B6E46", "swatch2": "#2B3036"}, {"id": "focusGraphite", "name": "Graphite", "swatch": "#3A3F47", "swatch2": "#1F5FBF"}]}, "arcade": {"name": "Neon Arcade", "tagline": "Glowing neon on a night-time grid.", "palettes": [{"id": "violet", "name": "Cyber Violet", "swatch": "#6D28D9", "swatch2": "#0E7490"}, {"id": "lime", "name": "Toxic Lime", "swatch": "#4D7C0F", "swatch2": "#0F766E"}, {"id": "sunset", "name": "Sunset", "swatch": "#C2410C", "swatch2": "#BE185D"}, {"id": "pinkNeon", "name": "Pink Neon", "swatch": "#BE185D", "swatch2": "#6D28D9"}]}, "zen": {"name": "Zen Ink", "tagline": "Paper, ink and calm. Nothing but focus.", "palettes": [{"id": "sumi", "name": "Sumi Red", "swatch": "#C8372D", "swatch2": "#1C1B19"}, {"id": "matcha", "name": "Matcha", "swatch": "#47703A", "swatch2": "#1C1B19"}, {"id": "indigo", "name": "Indigo", "swatch": "#2F4A8A", "swatch2": "#1C1B19"}, {"id": "sakura", "name": "Sakura", "swatch": "#C2477A", "swatch2": "#1C1B19"}]}, "pitLane": {"name": "Pit Lane", "tagline": "Timing screens, splits and race colors.", "palettes": [{"id": "yellow", "name": "Timing Yellow", "swatch": "#FFD400", "swatch2": "#7E22CE"}, {"id": "papaya", "name": "Papaya", "swatch": "#FF8000", "swatch2": "#7E22CE"}, {"id": "green", "name": "Racing Green", "swatch": "#00875A", "swatch2": "#7E22CE"}, {"id": "rosso", "name": "Rosso", "swatch": "#D50A0A", "swatch2": "#7E22CE"}]}, "candy": {"name": "Candy Pop", "tagline": "Chunky tiles, bright and bouncy.", "palettes": [{"id": "bubblegum", "name": "Bubblegum", "swatch": "#D42A62", "swatch2": "#2F6FE0"}, {"id": "ocean", "name": "Ocean", "swatch": "#0B7A7A", "swatch2": "#4757D6"}, {"id": "lemonade", "name": "Lemonade", "swatch": "#BF4C00", "swatch2": "#2A7D38"}]}, "blossom": {"name": "Blossom", "tagline": "Soft petals, pastel colors, elegant numbers.", "palettes": [{"id": "rose", "name": "Rose", "swatch": "#C73366", "swatch2": "#8F6A1C"}, {"id": "lavender", "name": "Lavender", "swatch": "#8463C9", "swatch2": "#C2477A"}, {"id": "peach", "name": "Peach", "swatch": "#BA5236", "swatch2": "#8F6A1C"}, {"id": "mint", "name": "Mint", "swatch": "#267A66", "swatch2": "#C2477A"}]}}</script>
+    </section>
+
     <!-- Modes -->
     <section class="section" id="modes">
       <div class="section-head">
@@ -277,30 +304,6 @@
           <p>No account. Your games, scores and stats are kept on your iPhone. Play as a guest whenever a friend wants a go.</p>
         </article>
       </div>
-    </section>
-
-    <!-- Looks -->
-    <section class="section" id="looks">
-      <div class="section-head">
-        <p class="eyebrow">Looks</p>
-        <h2>Make it yours.</h2>
-        <p>Seven looks, each with its own colors, fonts, board and app icon, in light and dark. Or build your own theme from scratch.</p>
-      </div>
-      <div class="look-tabs" role="group" aria-label="Looks"><button type="button" data-look="classic" aria-pressed="true"><img src="assets/looks/classic.png" alt="" width="30" height="30">Classic</button><button type="button" data-look="focus" aria-pressed="false"><img src="assets/looks/focus.png" alt="" width="30" height="30">Focus</button><button type="button" data-look="arcade" aria-pressed="false"><img src="assets/looks/arcade.png" alt="" width="30" height="30">Neon Arcade</button><button type="button" data-look="zen" aria-pressed="false"><img src="assets/looks/zen.png" alt="" width="30" height="30">Zen Ink</button><button type="button" data-look="pitLane" aria-pressed="false"><img src="assets/looks/pitLane.png" alt="" width="30" height="30">Pit Lane</button><button type="button" data-look="candy" aria-pressed="false"><img src="assets/looks/candy.png" alt="" width="30" height="30">Candy Pop</button><button type="button" data-look="blossom" aria-pressed="false"><img src="assets/looks/blossom.png" alt="" width="30" height="30">Blossom</button></div>
-      <div class="look-stage">
-        <div class="look-shot"><img id="look-img" src="assets/screens/classic-light.png" alt="The Classic look" width="300" height="584"></div>
-        <div class="look-info">
-          <h3 id="look-name">Classic</h3>
-          <p id="look-tagline">The original 49: clean, simple and familiar.</p>
-          <p class="look-extra" id="look-extra">Indigo, Blue and Teal palettes.</p>
-          <div class="chips" role="group" aria-label="Appearance">
-            <button class="chip" type="button" data-appearance="light" aria-pressed="true">Light</button>
-            <button class="chip" type="button" data-appearance="dark" aria-pressed="false">Dark</button>
-          </div>
-          <p class="look-extra">Every look can be tuned: accent, tile and number colors, tile shape, font and app icon. The theme builder walks you through making your own in seven steps.</p>
-        </div>
-      </div>
-      <script type="application/json" id="looks-data">{"classic": {"name": "Classic", "tagline": "The original 49: clean, simple and familiar.", "extra": "Indigo, Blue and Teal palettes."}, "focus": {"name": "Focus", "tagline": "Built for speed: high-contrast numbers, nothing to distract you. Best with Normal style.", "extra": "Blue, Green and Graphite palettes."}, "arcade": {"name": "Neon Arcade", "tagline": "Glowing neon on a night-time grid.", "extra": "Cyber Violet, Toxic Lime, Sunset and Pink Neon palettes, and a bold arcade font."}, "zen": {"name": "Zen Ink", "tagline": "Paper, ink and calm. Nothing but focus.", "extra": "Sumi Red, Matcha, Indigo and Sakura palettes, with elegant serif numbers."}, "pitLane": {"name": "Pit Lane", "tagline": "Timing screens, splits and race colors.", "extra": "Timing Yellow, Papaya, Racing Green and Rosso palettes, with a racing italic font."}, "candy": {"name": "Candy Pop", "tagline": "Chunky tiles, bright and bouncy.", "extra": "Bubblegum, Ocean and Lemonade palettes."}, "blossom": {"name": "Blossom", "tagline": "Soft petals, pastel colors, elegant numbers.", "extra": "Rose, Lavender, Peach and Mint palettes."}}</script>
     </section>
 
     <!-- Achievements and ranks -->
