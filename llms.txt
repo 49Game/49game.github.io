@@ -16,7 +16,7 @@ Key facts:
 - Languages: English, Polish, German, French, Spanish, Brazilian Portuguese, Italian, Japanese, Korean.
 - Privacy: games stay on the device, no account. Game Center is optional. The free version shows ads from Google AdMob.
 - Not a medical product: a game for practising focus.
-- Support: https://github.com/49Game/49game.github.io/issues
+- Support: contact49game@icloud.com (or https://github.com/49Game/49game.github.io/issues)
 
 ## Pages
 
