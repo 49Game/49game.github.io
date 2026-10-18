@@ -54,7 +54,8 @@ function showLook() {
     const button = document.createElement("button");
     button.type = "button";
     button.className = "swatch";
-    button.setAttribute("aria-pressed", String(p.id === palette.id));
+    // With the site's own colors back, no palette is "on".
+    button.setAttribute("aria-pressed", String(themed && p.id === palette.id));
     const dot = document.createElement("i");
     dot.style.background = p.swatch2 ? `linear-gradient(135deg, ${p.swatch} 50%, ${p.swatch2} 50%)` : p.swatch;
     button.append(dot, p.name);
@@ -62,7 +63,7 @@ function showLook() {
     swatches.appendChild(button);
   });
   document.querySelectorAll("[data-look]").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.look === state.look)));
-  document.querySelectorAll("[data-appearance]").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.appearance === state.appearance)));
+  document.querySelectorAll("[data-appearance]").forEach(b => b.setAttribute("aria-pressed", String(themed && b.dataset.appearance === state.appearance)));
   document.getElementById("theme-reset").hidden = !themed;
   if (themed) SiteTheme.apply({ look: state.look, palette: state.palette, appearance: state.appearance });
   preload();
@@ -87,3 +88,35 @@ document.getElementById("theme-reset").addEventListener("click", () => {
   showLook();
 });
 showLook();
+
+// Waiting list: the email goes to our inbox through Web3Forms (the key only says which inbox).
+document.querySelectorAll("form.waitlist").forEach(form => form.addEventListener("submit", async event => {
+  event.preventDefault();
+  const card = form.parentElement;
+  const button = form.querySelector("button");
+  const error = card.querySelector(".waitlist-error");
+  if (form.botcheck.checked) return;
+  button.disabled = true;
+  error.hidden = true;
+  try {
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: { "Content-Type": "application/json", Accept: "application/json" },
+      body: JSON.stringify({
+        access_key: form.dataset.key,
+        subject: "49 waiting list: " + document.documentElement.lang,
+        from_name: "49 website",
+        email: form.email.value.trim(),
+        language: document.documentElement.lang,
+        page: location.pathname,
+      }),
+    });
+    const result = await response.json();
+    if (!result.success) throw new Error(result.message || "failed");
+    form.hidden = true;
+    card.querySelector(".waitlist-done").hidden = false;
+  } catch (e) {
+    error.hidden = false;
+    button.disabled = false;
+  }
+}));

@@ -464,3 +464,31 @@ html[data-theme] .benefit-icon { background: var(--button); color: var(--on-butt
 .look-shots { display: flex; gap: 18px; justify-content: center; }
 .look-shots .look-shot { width: min(250px, 42vw); }
 @media (max-width: 800px) { .look-shots { gap: 12px; } .look-shots .look-shot { border-radius: 24px; box-shadow: var(--shadow), 0 0 0 6px #0d0c18; } }
+
+/* Waiting list */
+.waitlist { display: flex; gap: 10px; max-width: 460px; margin: 0 auto; }
+.waitlist input[type="email"] { flex: 1; min-width: 0; padding: 14px 18px; border-radius: 99px; border: 1px solid var(--line); background: var(--bg); color: var(--text); font: 500 16px var(--font); }
+.waitlist input[type="email"]:focus { outline: 2px solid var(--accent); outline-offset: 2px; }
+.waitlist .button { white-space: nowrap; }
+@media (max-width: 520px) { .waitlist { flex-direction: column; } }
+.waitlist-done { font-weight: 700; color: var(--accent) !important; }
+.updates-card .fineprint { margin: 18px 0 0; }
+
+/* Phones: the screens sit between the theme buttons and the color buttons, so every tap changes
+   what's right above it (below everything, the change happened off-screen). */
+@media (max-width: 800px) {
+  .look-stage { display: flex; flex-direction: column; align-items: center; gap: 0; }
+  .look-info { display: contents; }
+  .look-info > * { order: 3; }
+  .look-info > #look-label, .look-info > .look-tabs, .look-info > #look-name, .look-info > #look-tagline { order: 1; }
+  .look-info > #look-tagline { margin-bottom: 20px; }
+  .look-shots { order: 2; margin-bottom: 6px; }
+  .look-info > .look-extra { order: 4; }
+  .look-shots .look-shot { width: min(170px, 42vw); }
+}
+
+.nav .button-small { white-space: nowrap; }
+@media (max-width: 420px) { .lang summary { padding: 8px 14px; } }
+.waitlist-trap { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.waitlist-error { color: #dc2626 !important; font-weight: 600; }
+.waitlist .button:disabled { opacity: .6; }
