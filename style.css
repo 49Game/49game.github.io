@@ -449,7 +449,7 @@ html[data-theme] .benefit-icon { background: var(--button); color: var(--on-butt
 /* Language menu */
 .lang { position: relative; padding: 0; background: none; box-shadow: none; border-radius: 99px; }
 .lang summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 8px; padding: 8px 30px; border-radius: 99px; font-weight: 700; font-size: .85rem; background: var(--surface); box-shadow: var(--shadow); transition: background .15s; }
-.lang .flag { font-size: 1.15rem; line-height: 1; }
+.lang .flag { width: 20px; height: 15px; border-radius: 3px; object-fit: cover; box-shadow: 0 0 0 1px rgb(0 0 0 / .08); flex: none; }
 .lang-menu .flag { margin-right: 10px; }
 .lang summary::-webkit-details-marker { display: none; }
 .lang summary svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.8; }
