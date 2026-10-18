@@ -8,7 +8,7 @@
   --line: #dcd9f5;
   --text: #15132b;
   --text-2: #4b4870;
-  --muted: #6d6a90;
+  --muted: #5d5a82;
   --accent: #5b52f0;
   --accent-2: #3a2ba0;
   --accent-soft: #e3e0ff;
@@ -309,13 +309,14 @@ a.chip span { color: var(--muted); font-weight: 700; }
 .style-card li { padding-left: 22px; position: relative; color: var(--text-2); font-size: 15px; }
 .style-card li::before { content: ""; position: absolute; left: 4px; top: .55em; width: 8px; height: 8px; border-radius: 50%; background: var(--dot, var(--accent)); }
 .tag-normal { background: color-mix(in srgb, #64748b 20%, transparent); color: #4a5b7a; }
-.tag-competitive { background: color-mix(in srgb, #ef4444 16%, transparent); color: #dc2626; }
+.tag-competitive { background: color-mix(in srgb, #ef4444 16%, transparent); color: #b91c1c; }
 @media (prefers-color-scheme: dark) { .tag-normal { color: #b4c0d6; } .tag-competitive { color: #fca5a5; } }
 .multipliers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 16px; }
 .multipliers div { padding: 12px 8px; border-radius: 14px; background: var(--surface-2); text-align: center; }
 .multipliers b { display: block; font: 800 24px var(--font); }
-.multipliers div:nth-child(2) b { color: #f59e0b; }
-.multipliers div:nth-child(3) b { color: #ef4444; }
+.multipliers div:nth-child(2) b { color: #b45309; }
+.multipliers div:nth-child(3) b { color: #dc2626; }
+@media (prefers-color-scheme: dark) { .multipliers div:nth-child(2) b { color: #f59e0b; } .multipliers div:nth-child(3) b { color: #ef4444; } }
 .multipliers span { color: var(--muted); font-size: 13px; }
 .relax-note { margin-top: 20px; text-align: center; color: var(--text-2); }
 
@@ -343,7 +344,7 @@ a.chip span { color: var(--muted); font-weight: 700; }
 .rank-table th, .rank-table td { padding: 9px 8px; text-align: left; border-bottom: 1px solid var(--line); }
 .rank-table thead th { color: var(--muted); font: 700 12px var(--font); text-transform: uppercase; letter-spacing: .05em; }
 .rank-table tbody th { font-family: var(--font); white-space: nowrap; }
-.rank-table tbody th img { height: 22px; width: auto; vertical-align: middle; }
+.rank-table tbody th img { height: 22px; width: auto; max-width: none; object-fit: contain; vertical-align: middle; }
 .rank-table tr:last-child th, .rank-table tr:last-child td { border-bottom: 0; }
 .table-scroll { overflow-x: auto; }
 .medal-strip { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0 18px; }
