@@ -50,8 +50,8 @@
       <a href="#faq">FAQ</a>
     </nav>
     <details class="lang">
-      <summary aria-label="言語"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z"/></svg><span>JA</span></summary>
-      <div class="lang-menu"><a href="/" hreflang="en" lang="en" data-lang="en">English</a><a href="/pl/" hreflang="pl" lang="pl" data-lang="pl">Polski</a><a href="/de/" hreflang="de" lang="de" data-lang="de">Deutsch</a><a href="/fr/" hreflang="fr" lang="fr" data-lang="fr">Français</a><a href="/es/" hreflang="es" lang="es" data-lang="es">Español</a><a href="/pt-br/" hreflang="pt-BR" lang="pt-BR" data-lang="pt-BR">Português (Brasil)</a><a href="/it/" hreflang="it" lang="it" data-lang="it">Italiano</a><a href="/ja/" hreflang="ja" lang="ja" data-lang="ja" aria-current="page">日本語</a><a href="/ko/" hreflang="ko" lang="ko" data-lang="ko">한국어</a></div>
+      <summary aria-label="言語"><span class="flag" aria-hidden="true">🇯🇵</span><span>JA</span></summary>
+      <div class="lang-menu"><a href="/" hreflang="en" lang="en" data-lang="en"><span class="flag" aria-hidden="true">🇬🇧</span>English</a><a href="/pl/" hreflang="pl" lang="pl" data-lang="pl"><span class="flag" aria-hidden="true">🇵🇱</span>Polski</a><a href="/de/" hreflang="de" lang="de" data-lang="de"><span class="flag" aria-hidden="true">🇩🇪</span>Deutsch</a><a href="/fr/" hreflang="fr" lang="fr" data-lang="fr"><span class="flag" aria-hidden="true">🇫🇷</span>Français</a><a href="/es/" hreflang="es" lang="es" data-lang="es"><span class="flag" aria-hidden="true">🇪🇸</span>Español</a><a href="/pt-br/" hreflang="pt-BR" lang="pt-BR" data-lang="pt-BR"><span class="flag" aria-hidden="true">🇧🇷</span>Português (Brasil)</a><a href="/it/" hreflang="it" lang="it" data-lang="it"><span class="flag" aria-hidden="true">🇮🇹</span>Italiano</a><a href="/ja/" hreflang="ja" lang="ja" data-lang="ja" aria-current="page"><span class="flag" aria-hidden="true">🇯🇵</span>日本語</a><a href="/ko/" hreflang="ko" lang="ko" data-lang="ko"><span class="flag" aria-hidden="true">🇰🇷</span>한국어</a></div>
     </details>
     <a class="button button-small" href="#updates">通知を受け取る</a>
   </header>
@@ -186,7 +186,7 @@
         <p>テーマ、カラーパレット、ライトかダークかを選んでください。画面にはアプリでの見た目がそのまま表示され、このページ全体もそれに合わせて着替えます。</p>
       </div>
       <div class="look-stage">
-        <div class="look-shot"><img id="look-img" data-alt="{look}（{palette}・{appearance}）" src="../assets/screens/p/classic-classicIndigo-light.webp" alt="クラシックのデザイン" width="300" height="584"></div>
+        <div class="look-shots"><div class="look-shot"><img id="look-menu" data-alt="{look}（{palette}・{appearance}）" src="../assets/screens/p/classic-classicIndigo-dark-menu.webp" alt="クラシックのデザイン" width="600" height="1304"></div><div class="look-shot"><img id="look-img" data-alt="{look}（{palette}・{appearance}）" src="../assets/screens/p/classic-classicIndigo-dark-game.webp" alt="クラシックのデザイン" width="600" height="1304"></div></div>
         <div class="look-info">
           <span class="option-label" id="look-label">デザイン</span>
           <div class="look-tabs" role="group" aria-labelledby="look-label"><button type="button" data-look="classic" aria-pressed="true"><img src="../assets/looks/classic.png" alt="" width="30" height="30">クラシック</button><button type="button" data-look="focus" aria-pressed="false"><img src="../assets/looks/focus.png" alt="" width="30" height="30">Focus</button><button type="button" data-look="arcade" aria-pressed="false"><img src="../assets/looks/arcade.png" alt="" width="30" height="30">Neon Arcade</button><button type="button" data-look="zen" aria-pressed="false"><img src="../assets/looks/zen.png" alt="" width="30" height="30">Zen Ink</button><button type="button" data-look="pitLane" aria-pressed="false"><img src="../assets/looks/pitLane.png" alt="" width="30" height="30">Pit Lane</button><button type="button" data-look="candy" aria-pressed="false"><img src="../assets/looks/candy.png" alt="" width="30" height="30">Candy Pop</button><button type="button" data-look="blossom" aria-pressed="false"><img src="../assets/looks/blossom.png" alt="" width="30" height="30">Blossom</button></div>
@@ -411,7 +411,7 @@
         </article>
         <article class="card">
           <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></div>
-          <h3>スティール <span class="soon">近日公開</span></h3>
+          <h3>スティール</h3>
           <p>1つのボードで、リアルタイムの直接対決。先にタップした人がその数字の得点を獲得し、相手の画面からは消えます。</p>
         </article>
         <article class="card">

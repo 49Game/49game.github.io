@@ -447,13 +447,20 @@ html[data-theme] .benefit-icon { background: var(--button); color: var(--on-butt
 .soon { font-size: .7em; font-weight: 700; padding: 2px 8px; border-radius: 99px; background: color-mix(in srgb, #f97316 18%, transparent); color: #f97316; vertical-align: middle; margin-left: 6px; }
 
 /* Language menu */
-.lang { position: relative; }
-.lang summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 6px; padding: 8px 10px; border-radius: 99px; font-weight: 700; font-size: .85rem; }
+.lang { position: relative; padding: 0; background: none; box-shadow: none; border-radius: 99px; }
+.lang summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 8px; padding: 8px 30px; border-radius: 99px; font-weight: 700; font-size: .85rem; background: var(--surface); box-shadow: var(--shadow); transition: background .15s; }
+.lang .flag { font-size: 1.15rem; line-height: 1; }
+.lang-menu .flag { margin-right: 10px; }
 .lang summary::-webkit-details-marker { display: none; }
 .lang summary svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.8; }
-.lang summary:hover { background: color-mix(in srgb, currentColor 10%, transparent); }
+.lang summary:hover, .lang[open] summary { background: color-mix(in srgb, var(--accent) 12%, var(--surface)); }
 .lang-menu { position: absolute; right: 0; top: calc(100% + 6px); display: grid; min-width: 190px; padding: 6px; border-radius: 14px; background: var(--surface); color: var(--text); border: 1px solid color-mix(in srgb, currentColor 14%, transparent); box-shadow: 0 12px 30px rgb(0 0 0 / .25); z-index: 50; }
-.lang-menu a { padding: 9px 12px; border-radius: 10px; text-decoration: none; color: inherit; }
+.lang-menu a { white-space: nowrap; display: flex; align-items: center; padding: 9px 12px; border-radius: 10px; text-decoration: none; color: inherit; }
 .lang-menu a:hover, .lang-menu a[aria-current="page"] { background: color-mix(in srgb, currentColor 10%, transparent); }
 .lang summary::after, .lang summary::before { content: none; display: none; }
 .lang { margin-left: auto; }
+
+/* Themes: the main menu and a game, side by side */
+.look-shots { display: flex; gap: 18px; justify-content: center; }
+.look-shots .look-shot { width: min(250px, 42vw); }
+@media (max-width: 800px) { .look-shots { gap: 12px; } .look-shots .look-shot { border-radius: 24px; box-shadow: var(--shadow), 0 0 0 6px #0d0c18; } }

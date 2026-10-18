@@ -10,6 +10,12 @@ const ROOT = document.currentScript ? new URL(".", document.currentScript.src).h
   document.querySelectorAll(".lang-menu a").forEach(a => a.addEventListener("click", () => {
     try { localStorage.setItem("lang", a.dataset.lang); } catch (e) {}
   }));
+  // The menu closes on a click anywhere else, or Escape.
+  const menu = document.querySelector("details.lang");
+  if (menu) {
+    document.addEventListener("click", e => { if (menu.open && !menu.contains(e.target)) menu.open = false; });
+    document.addEventListener("keydown", e => { if (e.key === "Escape" && menu.open) { menu.open = false; menu.querySelector("summary").focus(); } });
+  }
   if (saved || document.documentElement.lang !== "en" || /bot|crawl|spider/i.test(navigator.userAgent)) return;
   const wanted = (navigator.languages || [navigator.language || "en"]).map(l => l.toLowerCase().split("-")[0]);
   const first = wanted.find(l => l === "en" || supported[l]);
@@ -18,6 +24,7 @@ const ROOT = document.currentScript ? new URL(".", document.currentScript.src).h
 
 const looks = JSON.parse(document.getElementById("looks-data").textContent);
 const lookImage = document.getElementById("look-img");
+const menuImage = document.getElementById("look-menu");
 const swatches = document.getElementById("swatches");
 const saved = SiteTheme.saved();
 const state = saved
@@ -26,17 +33,20 @@ const state = saved
 // The page only takes on a theme once the visitor picks something.
 let themed = Boolean(saved);
 
-const screenURL = (look, palette, appearance) => `${ROOT}assets/screens/p/${look}-${palette}-${appearance}.webp`;
+// Two real screens per look, palette and appearance: the main menu and a game.
+const screenURL = (look, palette, appearance, screen = "game") => `${ROOT}assets/screens/p/${look}-${palette}-${appearance}-${screen}.webp`;
 
 function showLook() {
   const info = looks[state.look];
   const palette = info.palettes.find(p => p.id === state.palette) || info.palettes[0];
   state.palette = palette.id;
   lookImage.src = screenURL(state.look, palette.id, state.appearance);
+  if (menuImage) menuImage.src = screenURL(state.look, palette.id, state.appearance, "menu");
   // The page can give its own wording (data-alt with {look}, {palette}, {appearance}), so translated pages stay translated.
   const appearanceName = document.querySelector(`[data-appearance="${state.appearance}"]`)?.textContent || state.appearance;
   lookImage.alt = (lookImage.dataset.alt || "The {look} theme in {palette}, {appearance}")
     .replace("{look}", info.name).replace("{palette}", palette.name).replace("{appearance}", appearanceName.toLowerCase());
+  if (menuImage) menuImage.alt = lookImage.alt;
   document.getElementById("look-name").textContent = info.name;
   document.getElementById("look-tagline").textContent = info.tagline;
   swatches.innerHTML = "";
@@ -66,7 +76,7 @@ function choose(change) {
 
 // Loads the other screens of the current look ahead of time, so switching is instant.
 function preload() {
-  looks[state.look].palettes.forEach(p => ["light", "dark"].forEach(a => { new Image().src = screenURL(state.look, p.id, a); }));
+  looks[state.look].palettes.forEach(p => ["light", "dark"].forEach(a => ["menu", "game"].forEach(s => { new Image().src = screenURL(state.look, p.id, a, s); })));
 }
 
 document.querySelectorAll("[data-look]").forEach(b => b.addEventListener("click", () => choose(() => { state.look = b.dataset.look; state.palette = null; })));

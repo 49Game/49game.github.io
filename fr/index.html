@@ -50,8 +50,8 @@
       <a href="#faq">FAQ</a>
     </nav>
     <details class="lang">
-      <summary aria-label="Langue"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9s-1.3 6.3-3.8 9c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z"/></svg><span>FR</span></summary>
-      <div class="lang-menu"><a href="/" hreflang="en" lang="en" data-lang="en">English</a><a href="/pl/" hreflang="pl" lang="pl" data-lang="pl">Polski</a><a href="/de/" hreflang="de" lang="de" data-lang="de">Deutsch</a><a href="/fr/" hreflang="fr" lang="fr" data-lang="fr" aria-current="page">Français</a><a href="/es/" hreflang="es" lang="es" data-lang="es">Español</a><a href="/pt-br/" hreflang="pt-BR" lang="pt-BR" data-lang="pt-BR">Português (Brasil)</a><a href="/it/" hreflang="it" lang="it" data-lang="it">Italiano</a><a href="/ja/" hreflang="ja" lang="ja" data-lang="ja">日本語</a><a href="/ko/" hreflang="ko" lang="ko" data-lang="ko">한국어</a></div>
+      <summary aria-label="Langue"><span class="flag" aria-hidden="true">🇫🇷</span><span>FR</span></summary>
+      <div class="lang-menu"><a href="/" hreflang="en" lang="en" data-lang="en"><span class="flag" aria-hidden="true">🇬🇧</span>English</a><a href="/pl/" hreflang="pl" lang="pl" data-lang="pl"><span class="flag" aria-hidden="true">🇵🇱</span>Polski</a><a href="/de/" hreflang="de" lang="de" data-lang="de"><span class="flag" aria-hidden="true">🇩🇪</span>Deutsch</a><a href="/fr/" hreflang="fr" lang="fr" data-lang="fr" aria-current="page"><span class="flag" aria-hidden="true">🇫🇷</span>Français</a><a href="/es/" hreflang="es" lang="es" data-lang="es"><span class="flag" aria-hidden="true">🇪🇸</span>Español</a><a href="/pt-br/" hreflang="pt-BR" lang="pt-BR" data-lang="pt-BR"><span class="flag" aria-hidden="true">🇧🇷</span>Português (Brasil)</a><a href="/it/" hreflang="it" lang="it" data-lang="it"><span class="flag" aria-hidden="true">🇮🇹</span>Italiano</a><a href="/ja/" hreflang="ja" lang="ja" data-lang="ja"><span class="flag" aria-hidden="true">🇯🇵</span>日本語</a><a href="/ko/" hreflang="ko" lang="ko" data-lang="ko"><span class="flag" aria-hidden="true">🇰🇷</span>한국어</a></div>
     </details>
     <a class="button button-small" href="#updates">Être prévenu</a>
   </header>
@@ -186,7 +186,7 @@
         <p>Choisis un thème, une palette de couleurs, et le mode clair ou sombre. L’écran montre exactement à quoi ressemblera ton jeu dans l’app, et toute cette page s’habille pour aller avec.</p>
       </div>
       <div class="look-stage">
-        <div class="look-shot"><img id="look-img" data-alt="Le thème {look} en {palette}, {appearance}" src="../assets/screens/p/classic-classicIndigo-light.webp" alt="Le look Classique" width="300" height="584"></div>
+        <div class="look-shots"><div class="look-shot"><img id="look-menu" data-alt="Le thème {look} en {palette}, {appearance}" src="../assets/screens/p/classic-classicIndigo-dark-menu.webp" alt="Le look Classique" width="600" height="1304"></div><div class="look-shot"><img id="look-img" data-alt="Le thème {look} en {palette}, {appearance}" src="../assets/screens/p/classic-classicIndigo-dark-game.webp" alt="Le look Classique" width="600" height="1304"></div></div>
         <div class="look-info">
           <span class="option-label" id="look-label">Thème</span>
           <div class="look-tabs" role="group" aria-labelledby="look-label"><button type="button" data-look="classic" aria-pressed="true"><img src="../assets/looks/classic.png" alt="" width="30" height="30">Classique</button><button type="button" data-look="focus" aria-pressed="false"><img src="../assets/looks/focus.png" alt="" width="30" height="30">Focus</button><button type="button" data-look="arcade" aria-pressed="false"><img src="../assets/looks/arcade.png" alt="" width="30" height="30">Neon Arcade</button><button type="button" data-look="zen" aria-pressed="false"><img src="../assets/looks/zen.png" alt="" width="30" height="30">Zen Ink</button><button type="button" data-look="pitLane" aria-pressed="false"><img src="../assets/looks/pitLane.png" alt="" width="30" height="30">Pit Lane</button><button type="button" data-look="candy" aria-pressed="false"><img src="../assets/looks/candy.png" alt="" width="30" height="30">Candy Pop</button><button type="button" data-look="blossom" aria-pressed="false"><img src="../assets/looks/blossom.png" alt="" width="30" height="30">Blossom</button></div>
@@ -411,7 +411,7 @@
         </article>
         <article class="card">
           <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></div>
-          <h3>Vol <span class="soon">Bientôt</span></h3>
+          <h3>Vol</h3>
           <p>Une seule grille, en direct, en face à face. Le premier qui touche un nombre le marque, et il disparaît pour l’autre joueur.</p>
         </article>
         <article class="card">
