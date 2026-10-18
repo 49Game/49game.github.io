@@ -99,18 +99,15 @@ document.querySelectorAll("form.waitlist").forEach(form => form.addEventListener
   button.disabled = true;
   error.hidden = true;
   try {
-    const response = await fetch("https://api.web3forms.com/submit", {
-      method: "POST",
-      headers: { "Content-Type": "application/json", Accept: "application/json" },
-      body: JSON.stringify({
-        access_key: form.dataset.key,
-        subject: "49 waiting list: " + document.documentElement.lang,
-        from_name: "49 website",
-        email: form.email.value.trim(),
-        language: document.documentElement.lang,
-        page: location.pathname,
-      }),
-    });
+    // Sent as a plain form (not JSON), so the browser needs no extra permission check first.
+    const data = new FormData();
+    data.append("access_key", form.dataset.key);
+    data.append("subject", "49 waiting list: " + document.documentElement.lang);
+    data.append("from_name", "49 website");
+    data.append("email", form.email.value.trim());
+    data.append("language", document.documentElement.lang);
+    data.append("page", location.pathname);
+    const response = await fetch("https://api.web3forms.com/submit", { method: "POST", body: data, headers: { Accept: "application/json" } });
     const result = await response.json();
     if (!result.success) throw new Error(result.message || "failed");
     form.hidden = true;
