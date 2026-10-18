@@ -473,6 +473,7 @@ html[data-theme] .benefit-icon { background: var(--button); color: var(--on-butt
 @media (max-width: 520px) { .waitlist { flex-direction: column; } }
 .waitlist-done { font-weight: 700; color: var(--accent) !important; }
 .updates-card .fineprint { margin: 18px 0 0; }
+.updates-card .waitlist-intro { margin: 32px 0 16px; padding-top: 28px; border-top: 1px solid var(--line); font-size: 15px; }
 
 /* Phones: the screens sit between the theme buttons and the color buttons, so every tap changes
    what's right above it (below everything, the change happened off-screen). */
