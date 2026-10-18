@@ -3,6 +3,8 @@
 
 const SiteTheme = (() => {
   const KEY = "site-theme";
+  // The site root, from this script's own address (pages in language folders load it as ../theme.js).
+  const ROOT = document.currentScript ? new URL(".", document.currentScript.src).href : "";
   const FONTS = {
     "RussoOne-Regular": '"Russo One"',
     "BarlowCondensed-ExtraBoldItalic": '"Barlow Condensed"',
@@ -15,7 +17,7 @@ const SiteTheme = (() => {
   const write = value => { try { value ? localStorage.setItem(KEY, JSON.stringify(value)) : localStorage.removeItem(KEY); } catch (e) {} };
 
   async function load() {
-    if (!themes) themes = await fetch("assets/themes.json").then(r => r.json());
+    if (!themes) themes = await fetch(ROOT + "assets/themes.json").then(r => r.json());
     return themes;
   }
 
@@ -25,7 +27,7 @@ const SiteTheme = (() => {
     root.removeAttribute("data-theme");
     root.removeAttribute("data-look");
     document.querySelector('meta[name="theme-color"]')?.setAttribute("content", "#0b0a1a");
-    icons("assets/icon-64.png");
+    icons(ROOT + "assets/icon-64.png");
   }
 
   function fontStack(font) {
@@ -63,7 +65,7 @@ const SiteTheme = (() => {
     root.dataset.theme = choice.appearance;
     root.dataset.look = choice.look;
     document.querySelector('meta[name="theme-color"]')?.setAttribute("content", bg);
-    icons(`assets/looks/${choice.look}.png`);
+    icons(`${ROOT}assets/looks/${choice.look}.png`);
   }
 
   // The logo in the menu bar and footer becomes the theme's app icon.

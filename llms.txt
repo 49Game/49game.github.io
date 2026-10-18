@@ -1,17 +1,19 @@
 # 49 - Focus Booster
 
-> 49 - Focus Booster is a focus-training game for iPhone built on the Schulte table, a classic attention exercise. A minute a day lets players practise sustained attention, faster reading (wider eye span), visual search and calm under pressure, and see their progress in Insights. It is a game, not a medical product. Players find the numbers 1 to 49, shuffled on a 7 × 7 board, in order and as fast as they can. A game takes about a minute. It is free to play with ads between games; 49 Premium (weekly, monthly, yearly with a free week, or lifetime) removes the ads. Nothing is locked behind a purchase. Coming soon to the App Store.
+> 49 - Focus Booster is a focus-training game for iPhone built on the Schulte table, a classic attention exercise. A minute a day lets players practise sustained attention, faster reading (wider eye span), visual search and calm under pressure, and see their progress in Insights. It is a game, not a medical product. Players find the numbers 1 to 49, shuffled on a 7 × 7 board, in order and as fast as they can. A game takes about a minute. It is free to play with ads between games; Premium (weekly, monthly, yearly with a free week, or lifetime) removes the ads. Nothing is locked behind a purchase. Coming soon to the App Store.
 
 Key facts:
 
 - Platform: iPhone, iOS 17 or later.
 - Game types: Classic (one board, best time), Endless (boards keep coming), Beat the Clock (every find adds time, every miss costs time).
 - Styles: Normal (a plain time trial), Competitive (points, combos and a multiplier up to ×3), Relax (effects without points).
-- Boards: Numbers, Letters, Red & Black and Shifting, from 5 × 5 to 7 × 7, counting up or down.
-- Competitive scoring: 100 points per number plus up to 50 for speed; ×2 from a combo of 5, ×3 from 15; the combo is lost when its timer runs out and halved by a wrong tap.
-- Daily Challenge (14 rotating themes with goals) with streaks, ranks from Rookie to Legend, 499 achievements in 20 groups, 146 Game Center leaderboards (today, week, month, year, all time).
+- Boards: Numbers, Letters, Red & Black and Shifting, from 5 × 5 to 7 × 7 plus 9 × 9 and 11 × 11, counting up or down.
+- Competitive scoring: 100 points per number plus a speed bonus of up to 50 that shrinks with time; ×2 from a combo of 5, ×3 from 15; the combo is lost when its timer runs out and halved by a wrong tap.
+- Daily Challenge (14 rotating themes with goals) with streaks, ranks from Rookie to Legend, 539 achievements in 20 groups, 170 Game Center leaderboards (today, week, month, year, all time).
+- Multiplayer: 1 v 1, 2 v 2 and group rooms (Race, Points battle, Knockout, Ghost race) on the same board for everyone, joined by code, QR code or link, with a nickname per game.
+- Hints: a few a day; each adds 5 seconds. After every game, one sentence on the biggest improvement.
 - Insights: blind spots on the board, time of day, rhythm and the most common mistakes.
-- Seven looks (Classic, Focus, Neon Arcade, Zen Ink, Pit Lane, Candy Pop, Blossom) with matching app icons, a theme builder, and 16 sound styles.
+- Seven looks (Classic, Focus, Neon Arcade, Zen Ink, Pit Lane, Candy Pop, Blossom) with matching app icons, a theme builder, and 42 sound styles.
 - Accessibility: VoiceOver, Reduce Motion, Bold Text, Audio Graphs.
 - Languages: English, Polish, German, French, Spanish, Brazilian Portuguese, Italian, Japanese, Korean.
 - Privacy: games stay on the device, no account. Game Center is optional. The free version shows ads from Google AdMob.
@@ -21,6 +23,6 @@ Key facts:
 ## Pages
 
 - [49 - Focus Booster](https://49game.github.io/): features, styles, looks, ranks, leaderboards and FAQ
-- [All 499 achievements](https://49game.github.io/achievements.html): the full catalog by group, with the medal ladder
+- [All 539 achievements](https://49game.github.io/achievements.html): the full catalog by group, with the medal ladder
 - [Support](https://49game.github.io/support.html)
 - [Privacy policy](https://49game.github.io/privacy.html), [Terms of use](https://49game.github.io/terms.html)
