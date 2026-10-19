@@ -161,3 +161,11 @@ html[data-theme] .chip[aria-pressed="true"], html[data-theme] .steps li::before 
   .rank-table tbody th img { height: 18px; }
   .medal-strip { gap: 4px; }
 }
+/* Side by side, both cards end on the same line: the ranks table spreads its rows, the button sits at the bottom */
+@media (min-width: 901px) {
+  .ranks-wrap { align-items: stretch; }
+  .ranks-wrap .panel { display: flex; flex-direction: column; }
+  .ranks-wrap .table-scroll { flex: 1; display: flex; }
+  .ranks-wrap .rank-table { height: 100%; }
+  .ranks-wrap .panel > .button { margin-top: auto; align-self: flex-start; }
+}
