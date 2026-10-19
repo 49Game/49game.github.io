@@ -140,3 +140,24 @@ html[data-theme] .button { background: var(--button); color: var(--on-button); b
 html[data-theme] .button-ghost { background: transparent; color: var(--text); box-shadow: inset 0 0 0 1.5px var(--line); }
 html[data-theme] h1 em, html[data-theme] h2 em { background: none; color: var(--accent); }
 html[data-theme] .chip[aria-pressed="true"], html[data-theme] .steps li::before { background: var(--button); color: var(--on-button); }
+
+/* Ranks and achievements: room to breathe inside the cards */
+.panel { padding: 32px 32px 34px; border-radius: var(--radius); }
+.panel h3 { font-size: 26px; margin-bottom: 10px; }
+.panel > p { margin-bottom: 26px; line-height: 1.6; }
+.ranks-wrap { gap: 32px; }
+.rank-table th, .rank-table td { padding: 15px 14px; }
+.rank-table thead th { padding-top: 0; padding-bottom: 12px; }
+.rank-table th:first-child, .rank-table td:first-child { padding-left: 4px; }
+.medal-strip { display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 8px; margin: 0 0 28px; justify-items: center; }
+.medal-strip img { width: 100%; max-width: 46px; height: auto; }
+.ach-groups { gap: 10px 12px; margin-bottom: 32px; }
+.ach-groups span { padding: 8px 15px; }
+@media (max-width: 600px) {
+  .panel { padding: 24px 20px 26px; }
+  .rank-table { font-size: 14px; }
+  .rank-table th, .rank-table td { padding: 12px 6px; }
+  .rank-table thead th { font-size: 11px; letter-spacing: .03em; }
+  .rank-table tbody th img { height: 18px; }
+  .medal-strip { gap: 4px; }
+}
