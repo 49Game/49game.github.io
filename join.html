@@ -29,7 +29,7 @@
   <main class="page">
     <h1>Join a game</h1>
     <div id="invite" hidden>
-      <p>You're invited to a multiplayer game. Your room code:</p>
+      <p id="kind">You're invited to a multiplayer game. Your room code:</p>
       <p class="join-code" id="code"></p>
       <div class="join-actions">
         <a class="button" id="open" href="index.html">Open in 49</a>
@@ -50,10 +50,13 @@
     (() => {
       let raw = location.hash.slice(1);
       try { raw = decodeURIComponent(raw); } catch (e) {}
-      const code = raw.toUpperCase().replace(/[\s-]/g, "");
+      // "steal-K7Q2M" is a Steal code (a 1 v 1 through Game Center); a plain code is a room.
+      const steal = /^steal-/i.test(raw);
+      const code = raw.replace(/^steal-/i, "").toUpperCase().replace(/[\s-]/g, "");
       if (/^[ABCDEFGHJKMNPQRSTUVWXYZ2-9]{5}$/.test(code)) {
         document.getElementById("code").textContent = code;
-        document.getElementById("open").href = "fortynine://join/" + code;
+        document.getElementById("open").href = (steal ? "fortynine://steal/" : "fortynine://join/") + code;
+        if (steal) document.getElementById("kind").textContent = "You're invited to a game of Steal: one board, whoever taps first scores. Your code:";
         document.getElementById("invite").hidden = false;
       } else {
         document.getElementById("no-code").hidden = false;
