@@ -104,6 +104,32 @@ p { margin: 0; }
 .nav-links a { color: var(--text-2); text-decoration: none; font-weight: 500; font-size: 15px; }
 .nav-links a:hover { color: var(--text); }
 @media (max-width: 760px) { .nav-links { display: none; } .nav .button { margin-left: auto; } }
+/* Phones: the page links open from the menu button (added by theme.js) */
+.nav-toggle { display: none; }
+@media (max-width: 760px) {
+  .nav { gap: 10px; }
+  .nav-toggle {
+    display: inline-grid; place-content: center; gap: 4px; flex: none;
+    width: 40px; height: 40px; padding: 0; border: 0; border-radius: 12px; cursor: pointer;
+    background: color-mix(in srgb, var(--text) 8%, transparent); color: var(--text);
+  }
+  .nav-toggle span { display: block; width: 18px; height: 2px; border-radius: 2px; background: currentColor; transition: transform .2s, opacity .2s; }
+  .nav.menu-open .nav-toggle span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+  .nav.menu-open .nav-toggle span:nth-child(2) { opacity: 0; }
+  .nav.menu-open .nav-toggle span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+  .nav.menu-open .nav-links {
+    display: flex; flex-direction: column; gap: 0;
+    position: absolute; top: 100%; left: 0; right: 0; margin: 0;
+    padding: 6px 16px 14px; max-height: calc(100vh - 80px); overflow-y: auto;
+    background: var(--bg); border-bottom: 1px solid var(--line);
+    box-shadow: 0 18px 30px rgb(0 0 0 / .18);
+  }
+  .nav.menu-open .nav-links a { padding: 13px 4px; font-size: 17px; color: var(--text); border-bottom: 1px solid color-mix(in srgb, var(--line) 70%, transparent); }
+  .nav.menu-open .nav-links a:last-child { border-bottom: 0; }
+}
+@media (prefers-reduced-motion: reduce) { .nav-toggle span { transition: none; } }
+/* The narrowest phones: the logo alone (its icon already says 49), so the header fits */
+@media (max-width: 400px) { .nav .brand span { display: none; } }
 
 /* Buttons */
 .button {

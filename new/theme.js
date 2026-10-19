@@ -106,3 +106,37 @@ const SiteTheme = (() => {
 
   return { apply, load, saved: () => read() };
 })();
+
+// Phones: the page links don't fit beside the logo, so they open from a menu button instead.
+(() => {
+  const LABELS = { en: "Menu", pl: "Menu", de: "Menü", fr: "Menu", es: "Menú", it: "Menu", "pt-BR": "Menu", ja: "メニュー", ko: "메뉴" };
+
+  function setup() {
+    const nav = document.querySelector("header.nav");
+    const links = nav && nav.querySelector(".nav-links");
+    if (!links || nav.querySelector(".nav-toggle")) return;
+    links.id = links.id || "site-menu";
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "nav-toggle";
+    button.setAttribute("aria-controls", links.id);
+    button.setAttribute("aria-expanded", "false");
+    button.setAttribute("aria-label", LABELS[document.documentElement.lang] || "Menu");
+    for (let i = 0; i < 3; i++) button.appendChild(document.createElement("span"));
+    nav.appendChild(button);
+
+    const set = open => {
+      nav.classList.toggle("menu-open", open);
+      button.setAttribute("aria-expanded", String(open));
+    };
+    button.addEventListener("click", () => set(!nav.classList.contains("menu-open")));
+    links.addEventListener("click", e => { if (e.target.closest("a")) set(false); });
+    document.addEventListener("click", e => { if (!nav.contains(e.target)) set(false); });
+    document.addEventListener("keydown", e => {
+      if (e.key === "Escape" && nav.classList.contains("menu-open")) { set(false); button.focus(); }
+    });
+  }
+
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", setup);
+  else setup();
+})();

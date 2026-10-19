@@ -171,3 +171,10 @@ html[data-theme] .chip[aria-pressed="true"], html[data-theme] .steps li::before 
 }
 /* The ranks table fits at every width (it wraps on phones), so it never scrolls sideways */
 .ranks-wrap .table-scroll { overflow: visible; }
+
+/* Menu button on phones, in gold */
+@media (max-width: 760px) {
+  .nav-toggle { background: rgb(216 183 122 / .1); color: var(--gold-2, #f3dcaa); box-shadow: inset 0 0 0 1px rgb(216 183 122 / .28); }
+  .nav.menu-open .nav-links { border-bottom-color: rgb(216 183 122 / .2); }
+  .nav.menu-open .nav-links a { border-bottom-color: rgb(216 183 122 / .12); }
+}
