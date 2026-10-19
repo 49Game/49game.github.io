@@ -133,7 +133,7 @@
     status.textContent = fill(text.finished, { t: format(ms), m: `${game.misses} ${missWord(game.misses)}` });
     showBest();
     result.hidden = false;
-    document.getElementById("again").focus({ preventScroll: true });
+    document.querySelector(".result-actions > :first-child").focus({ preventScroll: true });
   }
 
   board.addEventListener("pointerdown", event => {

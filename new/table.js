@@ -131,7 +131,7 @@
     document.getElementById("result-misses-label").textContent = missWord(game.misses);
     document.getElementById("result-best").textContent = best && !isBest ? fill(text.yourBest, { t: format(best) }) : "";
     // What the app adds, said for this moment: curiosity after a first game, progress worth keeping after
-    // more, momentum after a new best. The app button leads once the visitor has played more than once.
+    // more, momentum after a new best. Getting the app is always the main button; Play again comes second.
     let games = 1;
     try { games = Number(localStorage.getItem("table-games") || 0) + 1; localStorage.setItem("table-games", String(games)); } catch (e) {}
     if (text.first) {
@@ -140,10 +140,9 @@
       document.getElementById("result-app").textContent = moment.body;
       const cta = document.getElementById("result-cta"), again = document.getElementById("again");
       cta.textContent = moment.cta;
-      const appFirst = games > 1;
-      cta.classList.toggle("button-ghost", !appFirst);
-      again.classList.toggle("button-ghost", appFirst);
-      cta.parentElement.prepend(appFirst ? cta : again);
+      cta.classList.remove("button-ghost");
+      again.classList.add("button-ghost");
+      cta.parentElement.prepend(cta);
     }
     status.textContent = fill(text.finished, { t: format(ms), m: `${game.misses} ${missWord(game.misses)}` });
     showBest();
