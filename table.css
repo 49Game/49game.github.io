@@ -88,7 +88,9 @@
 @media (max-width: 520px) { .app-card { padding: 28px 20px; } .app-card-head img { width: 56px; height: 56px; } }
 
 /* The guide below the board */
-.guide { max-width: 760px; margin: 0 auto; }
+/* The section's side padding grows with the window; the guide keeps a 760 px column at any width
+   (a max-width on the padded section left no room for the text on wide screens). */
+.section.guide { max-width: none; margin: 0; padding-left: max(16px, calc((100vw - 760px) / 2)); padding-right: max(16px, calc((100vw - 760px) / 2)); }
 .guide h2 { font-size: clamp(24px, 3.4vw, 30px); margin: 44px 0 12px; }
 .guide h2:first-child { margin-top: 0; }
 .guide p, .guide li { color: var(--text-2); }
