@@ -17,7 +17,7 @@ Key facts:
 - Seven looks (Classic, Focus, Neon Arcade, Zen Ink, Pit Lane, Candy Pop, Blossom) with matching app icons, a theme builder, and 42 sound styles.
 - Accessibility: VoiceOver, Reduce Motion, Bold Text, Audio Graphs.
 - Languages: English, Polish, German, French, Spanish, Brazilian Portuguese, Italian, Japanese, Korean.
-- Privacy: games stay on the device, no account. Anonymous usage statistics (TelemetryDeck, no names or game history) can be turned off in Settings. Game Center is optional. The free version shows ads from Google AdMob. A waiting list for the TestFlight beta collects emails (sent through Web3Forms to the support inbox).
+- Privacy: games stay on the device, no account. Anonymous usage statistics (TelemetryDeck, no names or game history) can be turned off in Settings. Game Center is optional. The free version shows ads from Google AdMob. The TestFlight beta is open to everyone: https://testflight.apple.com/join/G4XsUyyB. A waiting list for the App Store launch collects emails (sent through Web3Forms to the support inbox).
 - Not a medical product: a game for practising focus.
 - Support: contact49game@icloud.com (or https://github.com/49Game/49game.github.io/issues)
 
