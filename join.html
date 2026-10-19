@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex">
+  <title>Join a game - 49 - Focus Booster</title>
+  <meta name="description" content="You're invited to a 49 multiplayer game. Open it in the app with the room code.">
+  <meta name="theme-color" content="#0b0a1a">
+  <meta property="og:title" content="Join my 49 game">
+  <meta property="og:image" content="https://49game.github.io/assets/og.jpg">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="style.css">
+  <script src="theme.js"></script>
+  <style>
+    .join-code { font: 800 clamp(44px, 14vw, 72px) var(--font); letter-spacing: .12em; color: var(--accent); margin: 8px 0 20px; }
+    .join-actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 24px 0; }
+  </style>
+</head>
+<body>
+  <div class="sky" aria-hidden="true"></div>
+  <header class="nav">
+    <a class="brand" href="index.html" aria-label="49 home">
+      <img src="assets/icon-64.png" alt="" width="32" height="32">
+      <span>49</span>
+    </a>
+  </header>
+  <main class="page">
+    <h1>Join a game</h1>
+    <div id="invite" hidden>
+      <p>You're invited to a multiplayer game. Your room code:</p>
+      <p class="join-code" id="code"></p>
+      <div class="join-actions">
+        <a class="button" id="open" href="index.html">Open in 49</a>
+      </div>
+      <p>Nothing happens? Open 49, tap Multiplayer, and type the code.</p>
+    </div>
+    <p id="no-code" hidden>This invite link has no room code. Ask your friend for the code, then open 49 and tap Multiplayer.</p>
+    <h2>Don't have 49 yet?</h2>
+    <p>49 is a focus game for iPhone. It's in open beta now: install it from TestFlight, then come back to this link.</p>
+    <p><a class="button beta-button" href="https://testflight.apple.com/join/G4XsUyyB" target="_blank" rel="noopener">Join the beta on TestFlight</a></p>
+  </main>
+  <footer class="footer">
+    <div class="footer-brand"><img src="assets/icon-64.png" alt="" width="24" height="24"> 49 - Focus Booster</div>
+    <p class="footer-links"><a href="index.html">Home</a> · <a href="support.html">Support</a> · <a href="privacy.html">Privacy</a></p>
+  </footer>
+  <script>
+    // join.html#K7Q2M: only a well-formed code (the app's alphabet and length) is shown or passed on.
+    (() => {
+      let raw = location.hash.slice(1);
+      try { raw = decodeURIComponent(raw); } catch (e) {}
+      const code = raw.toUpperCase().replace(/[\s-]/g, "");
+      if (/^[ABCDEFGHJKMNPQRSTUVWXYZ2-9]{5}$/.test(code)) {
+        document.getElementById("code").textContent = code;
+        document.getElementById("open").href = "fortynine://join/" + code;
+        document.getElementById("invite").hidden = false;
+      } else {
+        document.getElementById("no-code").hidden = false;
+      }
+    })();
+  </script>
+</body>
+</html>
