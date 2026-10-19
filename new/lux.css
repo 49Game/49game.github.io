@@ -169,3 +169,5 @@ html[data-theme] .chip[aria-pressed="true"], html[data-theme] .steps li::before 
   .ranks-wrap .rank-table { height: 100%; }
   .ranks-wrap .panel > .button { margin-top: auto; align-self: flex-start; }
 }
+/* The ranks table fits at every width (it wraps on phones), so it never scrolls sideways */
+.ranks-wrap .table-scroll { overflow: visible; }
