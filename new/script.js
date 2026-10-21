@@ -91,6 +91,22 @@ document.getElementById("theme-reset").addEventListener("click", () => {
 document.addEventListener("sitetheme:reset", () => { themed = false; showLook(); });
 showLook();
 
+// The Android waiting list opens from its button, from a link to #android (the FAQ) or from that address.
+const androidList = document.getElementById("android");
+function openAndroidList(focus) {
+  if (!androidList) return;
+  androidList.hidden = false;
+  document.querySelectorAll(".android-toggle").forEach(button => button.setAttribute("aria-expanded", "true"));
+  androidList.scrollIntoView({ behavior: "smooth", block: "center" });
+  if (focus) androidList.querySelector('input[type="email"]').focus({ preventScroll: true });
+}
+document.querySelectorAll(".android-toggle").forEach(button => button.addEventListener("click", () => openAndroidList(true)));
+document.querySelectorAll('a[href="#android"]').forEach(link => link.addEventListener("click", event => {
+  event.preventDefault();
+  openAndroidList(true);
+}));
+if (location.hash === "#android") openAndroidList(false);
+
 // Waiting list: the email goes to our inbox through Web3Forms (the key only says which inbox).
 document.querySelectorAll("form.waitlist").forEach(form => form.addEventListener("submit", async event => {
   event.preventDefault();
@@ -104,7 +120,10 @@ document.querySelectorAll("form.waitlist").forEach(form => form.addEventListener
     // Sent as a plain form (not JSON), so the browser needs no extra permission check first.
     const data = new FormData();
     data.append("access_key", form.dataset.key);
-    data.append("subject", "49 waiting list: " + document.documentElement.lang);
+    // The Android list has its own subject, so its emails are easy to tell apart in the inbox.
+    const list = form.dataset.list || "app-store";
+    data.append("subject", (list === "android" ? "49 Android waiting list: " : "49 waiting list: ") + document.documentElement.lang);
+    data.append("list", list);
     data.append("from_name", "49 website");
     data.append("email", form.email.value.trim());
     data.append("language", document.documentElement.lang);
