@@ -605,8 +605,18 @@ html[data-theme] .benefit-icon { background: var(--button); color: var(--on-butt
 }
 @media (prefers-reduced-motion: reduce) { .pro-button { transition: none; } }
 
-/* Android waiting list: a quiet link under the App Store list that opens the same email field. */
-.android-toggle { display: block; margin: 22px auto 0; padding: 6px 10px; background: none; border: none; color: var(--accent); font: 600 15px var(--font); text-decoration: underline; text-underline-offset: 3px; cursor: pointer; max-width: 100%; }
-.android-waitlist { margin-top: 12px; }
 .hero-android { margin: 14px 0 0; font-size: 15px; }
 .hero-android a { color: var(--accent); font-weight: 600; text-underline-offset: 3px; }
+
+/* Waiting lists: one box per platform, each labeled, so the two email fields can't be mixed up. */
+.waitlists { display: grid; gap: 14px; margin-top: 32px; padding-top: 28px; border-top: 1px solid var(--line); text-align: left; }
+.waitlist-box { padding: 18px 18px 20px; border-radius: 20px; border: 1px solid var(--line); background: var(--bg); }
+.waitlist-box .waitlist { max-width: none; margin: 0; }
+.waitlist-box .waitlist .button { min-width: 140px; }
+.updates-card .waitlist-box .waitlist-platform { margin: 0; }
+.updates-card .waitlist-box .waitlist-intro { margin: 10px 0 14px; padding-top: 0; border-top: none; }
+.waitlist-platform { display: inline-flex; align-items: center; gap: 6px; margin: 0; padding: 5px 12px; border-radius: 99px; font-size: 13px !important; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; color: var(--accent) !important; background: var(--accent-soft); }
+.waitlist-android { border-color: rgba(52, 168, 83, .45); }
+.waitlist-android .waitlist-platform { color: #1e7e3a !important; background: rgba(52, 168, 83, .14); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .waitlist-android .waitlist-platform { color: #5fd685 !important; } }
+:root[data-theme="dark"] .waitlist-android .waitlist-platform { color: #5fd685 !important; }

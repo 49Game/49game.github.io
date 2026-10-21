@@ -488,23 +488,29 @@
         <h2>지금 플레이하세요.</h2>
         <p>49는 Apple의 앱 테스트용 앱인 TestFlight에서 오픈 베타 중이에요. 무료예요. TestFlight를 설치한 다음 iPhone에서 아래 버튼을 눌러 주세요.</p>
         <a class="button beta-button" href="https://testflight.apple.com/join/G4XsUyyB" target="_blank" rel="noopener">TestFlight에서 베타 참여</a>
-        <p class="waitlist-intro">App Store 출시를 기다리고 싶다면 이메일을 남겨 주세요. 49가 나오면 알려 드릴게요. 그 외에는 아무것도 보내지 않아요.</p>
-        <form class="waitlist" data-key="be2021f9-fa01-4d43-9539-5df4bd62df36">
-          <input type="checkbox" name="botcheck" class="waitlist-trap" tabindex="-1" autocomplete="off" aria-hidden="true">
-          <input type="email" name="email" required autocomplete="email" placeholder="이메일 주소" aria-label="이메일 주소">
-          <button class="button button-ghost" type="submit">알림 받기</button>
-        </form>
-        <p class="waitlist-done" role="status" hidden>명단에 등록됐어요! 49가 App Store에 나오면 메일로 알려 드릴게요.</p>
-        <p class="waitlist-error" role="alert" hidden>전송하지 못했어요. 다시 시도하거나 contact49game@icloud.com 으로 메일 주세요.</p>
-        <button class="android-toggle" type="button" aria-expanded="false" aria-controls="android">Android를 쓰시나요? 49가 Android로 나오면 이메일로 알려드릴게요.</button>
-        <div class="android-waitlist" id="android" hidden>
-          <form class="waitlist" data-key="be2021f9-fa01-4d43-9539-5df4bd62df36" data-list="android">
-            <input type="checkbox" name="botcheck" class="waitlist-trap" tabindex="-1" autocomplete="off" aria-hidden="true">
-            <input type="email" name="email" required autocomplete="email" placeholder="이메일 주소" aria-label="이메일 주소">
-            <button class="button button-ghost" type="submit">알림 받기</button>
-          </form>
-          <p class="waitlist-done" role="status" hidden>Android 목록에 등록됐어요! 49가 Android로 나오면 이메일로 알려드릴게요.</p>
-          <p class="waitlist-error" role="alert" hidden>전송하지 못했어요. 다시 시도하거나 contact49game@icloud.com 으로 메일 주세요.</p>
+        <div class="waitlists">
+          <div class="waitlist-box">
+            <p class="waitlist-platform"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M8 2h8a3 3 0 0 1 3 3v14a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3V5a3 3 0 0 1 3-3zm0 2a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1H8zm2 14h4v1.5h-4z"/></svg> iPhone</p>
+            <p class="waitlist-intro">App Store 출시를 기다리고 싶다면 이메일을 남겨 주세요. 49가 나오면 알려 드릴게요. 그 외에는 아무것도 보내지 않아요.</p>
+            <form class="waitlist" data-key="be2021f9-fa01-4d43-9539-5df4bd62df36">
+              <input type="checkbox" name="botcheck" class="waitlist-trap" tabindex="-1" autocomplete="off" aria-hidden="true">
+              <input type="email" name="email" required autocomplete="email" placeholder="이메일 주소" aria-label="이메일 주소">
+              <button class="button button-ghost" type="submit">알림 받기</button>
+            </form>
+            <p class="waitlist-done" role="status" hidden>명단에 등록됐어요! 49가 App Store에 나오면 메일로 알려 드릴게요.</p>
+            <p class="waitlist-error" role="alert" hidden>전송하지 못했어요. 다시 시도하거나 contact49game@icloud.com 으로 메일 주세요.</p>
+          </div>
+          <div class="waitlist-box waitlist-android" id="android">
+            <p class="waitlist-platform"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M8 2h8a3 3 0 0 1 3 3v14a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3V5a3 3 0 0 1 3-3zm0 2a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1H8zm2 14h4v1.5h-4z"/></svg> Android</p>
+            <p class="waitlist-intro">Android를 쓰시나요? 49가 Android로 나오면 이메일로 알려드릴게요.</p>
+            <form class="waitlist" data-key="be2021f9-fa01-4d43-9539-5df4bd62df36" data-list="android">
+              <input type="checkbox" name="botcheck" class="waitlist-trap" tabindex="-1" autocomplete="off" aria-hidden="true">
+              <input type="email" name="email" required autocomplete="email" placeholder="이메일 주소" aria-label="이메일 주소">
+              <button class="button button-ghost" type="submit">알림 받기</button>
+              </form>
+            <p class="waitlist-done" role="status" hidden>Android 목록에 등록됐어요! 49가 Android로 나오면 이메일로 알려드릴게요.</p>
+            <p class="waitlist-error" role="alert" hidden>전송하지 못했어요. 다시 시도하거나 contact49game@icloud.com 으로 메일 주세요.</p>
+          </div>
         </div>
         <p class="fineprint">출시 소식만 보내 드리고, 요청하시면 언제든 명단에서 빼 드려요. <a href="../privacy.html">개인정보 처리방침</a></p>
       </div>

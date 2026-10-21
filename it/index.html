@@ -488,23 +488,29 @@
         <h2>Gioca subito.</h2>
         <p>49 è in beta aperta su TestFlight, l’app di Apple per provare le nuove app. È gratis: installa TestFlight, poi tocca il pulsante qui sotto sul tuo iPhone.</p>
         <a class="button beta-button" href="https://testflight.apple.com/join/G4XsUyyB" target="_blank" rel="noopener">Entra nella beta su TestFlight</a>
-        <p class="waitlist-intro">Preferisci aspettare l’App Store? Lascia la tua email e ti avviseremo quando esce 49. Nient’altro.</p>
-        <form class="waitlist" data-key="be2021f9-fa01-4d43-9539-5df4bd62df36">
-          <input type="checkbox" name="botcheck" class="waitlist-trap" tabindex="-1" autocomplete="off" aria-hidden="true">
-          <input type="email" name="email" required autocomplete="email" placeholder="La tua email" aria-label="La tua email">
-          <button class="button button-ghost" type="submit">Avvisami</button>
-        </form>
-        <p class="waitlist-done" role="status" hidden>Sei in lista! Ti scriveremo quando 49 sarà sull’App Store.</p>
-        <p class="waitlist-error" role="alert" hidden>L’invio non è riuscito. Riprova o scrivici a contact49game@icloud.com.</p>
-        <button class="android-toggle" type="button" aria-expanded="false" aria-controls="android">Usi Android? Ricevi un'email quando 49 arriverà su Android.</button>
-        <div class="android-waitlist" id="android" hidden>
-          <form class="waitlist" data-key="be2021f9-fa01-4d43-9539-5df4bd62df36" data-list="android">
-            <input type="checkbox" name="botcheck" class="waitlist-trap" tabindex="-1" autocomplete="off" aria-hidden="true">
-            <input type="email" name="email" required autocomplete="email" placeholder="La tua email" aria-label="La tua email">
-            <button class="button button-ghost" type="submit">Avvisami</button>
-          </form>
-          <p class="waitlist-done" role="status" hidden>Sei nella lista Android! Ti scriveremo quando 49 arriverà su Android.</p>
-          <p class="waitlist-error" role="alert" hidden>L’invio non è riuscito. Riprova o scrivici a contact49game@icloud.com.</p>
+        <div class="waitlists">
+          <div class="waitlist-box">
+            <p class="waitlist-platform"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M8 2h8a3 3 0 0 1 3 3v14a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3V5a3 3 0 0 1 3-3zm0 2a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1H8zm2 14h4v1.5h-4z"/></svg> iPhone</p>
+            <p class="waitlist-intro">Preferisci aspettare l’App Store? Lascia la tua email e ti avviseremo quando esce 49. Nient’altro.</p>
+            <form class="waitlist" data-key="be2021f9-fa01-4d43-9539-5df4bd62df36">
+              <input type="checkbox" name="botcheck" class="waitlist-trap" tabindex="-1" autocomplete="off" aria-hidden="true">
+              <input type="email" name="email" required autocomplete="email" placeholder="La tua email" aria-label="La tua email">
+              <button class="button button-ghost" type="submit">Avvisami</button>
+            </form>
+            <p class="waitlist-done" role="status" hidden>Sei in lista! Ti scriveremo quando 49 sarà sull’App Store.</p>
+            <p class="waitlist-error" role="alert" hidden>L’invio non è riuscito. Riprova o scrivici a contact49game@icloud.com.</p>
+          </div>
+          <div class="waitlist-box waitlist-android" id="android">
+            <p class="waitlist-platform"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M8 2h8a3 3 0 0 1 3 3v14a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3V5a3 3 0 0 1 3-3zm0 2a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1H8zm2 14h4v1.5h-4z"/></svg> Android</p>
+            <p class="waitlist-intro">Usi Android? Ricevi un'email quando 49 arriverà su Android.</p>
+            <form class="waitlist" data-key="be2021f9-fa01-4d43-9539-5df4bd62df36" data-list="android">
+              <input type="checkbox" name="botcheck" class="waitlist-trap" tabindex="-1" autocomplete="off" aria-hidden="true">
+              <input type="email" name="email" required autocomplete="email" placeholder="La tua email" aria-label="La tua email">
+              <button class="button button-ghost" type="submit">Avvisami</button>
+              </form>
+            <p class="waitlist-done" role="status" hidden>Sei nella lista Android! Ti scriveremo quando 49 arriverà su Android.</p>
+            <p class="waitlist-error" role="alert" hidden>L’invio non è riuscito. Riprova o scrivici a contact49game@icloud.com.</p>
+          </div>
         </div>
         <p class="fineprint">Ti scriveremo solo per il lancio, e ti toglieremo dalla lista quando vuoi. <a href="../privacy.html">Privacy</a></p>
       </div>

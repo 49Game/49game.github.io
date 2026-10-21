@@ -89,16 +89,13 @@ document.getElementById("theme-reset").addEventListener("click", () => {
 });
 showLook();
 
-// The Android waiting list opens from its button, from a link to #android (the FAQ) or from that address.
+// The Android waiting list: a link to #android (the hero, the FAQ) or that address takes you to its email field.
 const androidList = document.getElementById("android");
 function openAndroidList(focus) {
   if (!androidList) return;
-  androidList.hidden = false;
-  document.querySelectorAll(".android-toggle").forEach(button => button.setAttribute("aria-expanded", "true"));
   androidList.scrollIntoView({ behavior: "smooth", block: "center" });
   if (focus) androidList.querySelector('input[type="email"]').focus({ preventScroll: true });
 }
-document.querySelectorAll(".android-toggle").forEach(button => button.addEventListener("click", () => openAndroidList(true)));
 document.querySelectorAll('a[href="#android"]').forEach(link => link.addEventListener("click", event => {
   event.preventDefault();
   openAndroidList(true);
