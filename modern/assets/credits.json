@@ -1,27 +1,27 @@
 [
   {
-    "file": "cockpit-1958.jpg",
+    "file": "modern/assets/f1-wheel.jpg",
     "media": "image",
-    "ref": "commons:81810347",
-    "title": "Maserati 250 F, Bj. 1958, Cockpit (2011-08-13 Sp)",
-    "creator": "Lothar Spurzem",
+    "ref": "commons:127830093",
+    "title": "Alpine F1 steering wheel",
+    "creator": "Declan M Martin",
     "creatorUrl": null,
-    "date": "2011-08-13",
-    "license": "CC BY-SA 2.0",
-    "licenseCode": "by-sa",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/2.0/de/deed.en",
-    "creditRequired": true,
-    "page": "https://commons.wikimedia.org/wiki/File:Maserati_250_F,_Bj._1958,_Cockpit_(2011-08-13_Sp).JPG",
+    "date": "2021-10-22",
+    "license": "public domain",
+    "licenseCode": "pd",
+    "licenseUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+    "creditRequired": false,
+    "page": "https://commons.wikimedia.org/wiki/File:Alpine_F1_steering_wheel.jpg",
     "via": "Wikimedia Commons",
-    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/78/Maserati_250_F%2C_Bj._1958%2C_Cockpit_%282011-08-13_Sp%29.JPG/1920px-Maserati_250_F%2C_Bj._1958%2C_Cockpit_%282011-08-13_Sp%29.JPG",
+    "image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/Alpine_F1_steering_wheel.jpg/1920px-Alpine_F1_steering_wheel.jpg",
     "width": 1920,
-    "height": 1280,
-    "bytes": 453719,
-    "credit": "\"Maserati 250 F, Bj. 1958, Cockpit (2011-08-13 Sp)\" by Lothar Spurzem, CC BY-SA 2.0, via Wikimedia Commons",
+    "height": 1440,
+    "bytes": 668803,
+    "credit": "\"Alpine F1 steering wheel\" by Declan M Martin, public domain, via Wikimedia Commons",
     "notes": [
-      "Share-alike: an altered version (recoloured, combined with other pictures) must be shared under the same licence."
+      "Restrictions named on the source page (trademarked): personality rights, a trademark or similar. Read it before use."
     ],
-    "saved": "2026-10-22T15:31:03.458Z",
-    "note": "cropped to the wheel and dials"
+    "saved": "2026-10-22T18:08:50.061Z",
+    "note": "cropped square to the wheel"
   }
 ]
