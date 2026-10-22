@@ -45,15 +45,11 @@
 
       <div class="stage__layer is-on field-gold" data-layer="board">
         <div class="board" data-ui id="board">
-          <div class="board__size" role="group" aria-label="Board size">
-            <button type="button" data-size="5" aria-pressed="true">5 × 5</button>
-            <button type="button" data-size="7" aria-pressed="false">7 × 7</button>
-          </div>
           <div class="board__bar">
             <p class="board__find"><span id="board-label">Find</span> <b id="board-next">1</b></p>
             <p class="board__clock" id="board-clock" aria-hidden="true">0:00.0</p>
           </div>
-          <div class="board__grid" id="board-grid" role="group" aria-label="Schulte table, 7 by 7. Tap the numbers from 1 to 49 in order."><button class="tile" type="button">24</button><button class="tile" type="button">49</button><button class="tile" type="button">26</button><button class="tile" type="button">48</button><button class="tile" type="button">30</button><button class="tile" type="button">28</button><button class="tile" type="button">3</button><button class="tile" type="button">5</button><button class="tile" type="button">14</button><button class="tile" type="button">35</button><button class="tile" type="button">38</button><button class="tile" type="button">2</button><button class="tile" type="button">23</button><button class="tile" type="button">19</button><button class="tile" type="button">17</button><button class="tile" type="button">20</button><button class="tile" type="button">18</button><button class="tile" type="button">12</button><button class="tile" type="button">9</button><button class="tile" type="button">13</button><button class="tile" type="button">44</button><button class="tile" type="button">11</button><button class="tile" type="button">25</button><button class="tile" type="button">34</button><button class="tile" type="button">22</button><button class="tile" type="button">46</button><button class="tile" type="button">43</button><button class="tile" type="button">31</button><button class="tile" type="button">45</button><button class="tile" type="button">10</button><button class="tile" type="button">4</button><button class="tile" type="button">6</button><button class="tile" type="button">1</button><button class="tile" type="button">16</button><button class="tile" type="button">29</button><button class="tile" type="button">32</button><button class="tile" type="button">41</button><button class="tile" type="button">37</button><button class="tile" type="button">27</button><button class="tile" type="button">36</button><button class="tile" type="button">40</button><button class="tile" type="button">39</button><button class="tile" type="button">15</button><button class="tile" type="button">7</button><button class="tile" type="button">42</button><button class="tile" type="button">47</button><button class="tile" type="button">33</button><button class="tile" type="button">21</button><button class="tile" type="button">8</button></div>
+          <div class="board__grid" id="board-grid" role="group" aria-label="Schulte table, 4 by 4. Tap the numbers from 1 to 16 in order." style="--cols:4"><button class="tile" type="button">11</button><button class="tile" type="button">6</button><button class="tile" type="button">13</button><button class="tile" type="button">10</button><button class="tile" type="button">15</button><button class="tile" type="button">4</button><button class="tile" type="button">1</button><button class="tile" type="button">9</button><button class="tile" type="button">14</button><button class="tile" type="button">3</button><button class="tile" type="button">16</button><button class="tile" type="button">7</button><button class="tile" type="button">12</button><button class="tile" type="button">2</button><button class="tile" type="button">5</button><button class="tile" type="button">8</button></div>
           <div class="board__foot">
             <p class="board__hint" id="board-hint" aria-live="polite">Tap 1 to start. Keep your eyes near the center and let the numbers come to you.</p>
             <button class="board__again" id="board-again" type="button" hidden>Play again</button>
@@ -110,7 +106,7 @@
           <tr data-rank="Legend" data-under="35"><th scope="row"><img src="../assets/ranks/legend-dark.png" width="515" height="158" alt="Legend"></th><td>Under 0:35</td><td>65 a minute</td><td>140 numbers</td></tr>
         </tbody>
       </table>
-      <p class="ranks__you" id="ranks-you" aria-live="polite" data-reveal style="--i:3">Play the board to see where your time lands.</p>
+      <p class="ranks__you" data-reveal style="--i:3">The board up top is a 4&nbsp;×&nbsp;4 taster. Ranks start on the full boards, in the app.</p>
       <p data-reveal style="--i:4">On top of the ranks sit 170 global Game Center leaderboards: fastest time and most points for every board and direction, for today, this week, this month and all time. The Daily Challenge has its own board, and only your first attempt counts.</p>
     </section>
 
@@ -509,8 +505,8 @@
 <dialog class="done" id="done" aria-labelledby="done-title">
   <div class="done__body">
     <p class="done__time"><span id="done-time">0:00.0</span></p>
-    <h2 class="done__title" id="done-title">That is Rookie.</h2>
-    <p class="done__line" id="done-line">Every rank starts somewhere.</p>
+    <h2 class="done__title" id="done-title">Now try all 49.</h2>
+    <p class="done__line" id="done-line">The full boards are 5&nbsp;×&nbsp;5 and 7&nbsp;×&nbsp;7, with a rank for every time.</p>
     <p class="done__pitch">The app keeps every game: a new Daily Challenge each day, a rank for every mode and 539 achievements. It’s free in the open beta.</p>
     <div class="done__actions">
       <a class="button" href="https://testflight.apple.com/join/G4XsUyyB">Join the beta</a>

@@ -9,23 +9,13 @@ const shuffle = (list) => {
   return a;
 };
 
-// Classic rank thresholds in seconds, as in the app (a rank is "under" this time), for both board sizes.
-const ORDER = ["Rookie", "Bronze", "Silver", "Gold", "Platinum", "Diamond", "Legend"];
-const UNDER = {
-  5: { Bronze: 44, Silver: 33, Gold: 26, Platinum: 20, Diamond: 16, Legend: 13 },
-  7: { Bronze: 120, Silver: 90, Gold: 70, Platinum: 55, Diamond: 45, Legend: 35 },
-};
-const rankFor = (s, size) => [...ORDER].reverse().find((r) => r === "Rookie" || s < UNDER[size][r]);
 const fmt = (s) => {
   const m = Math.floor(s / 60);
   const rest = (s - m * 60).toFixed(1).padStart(4, "0");
   return `${m}:${rest}`;
 };
-const short = (s) => fmt(s).replace(/\.0$/, "");
-const SIZE_KEY = "49-board-size";
-const savedSize = () => { try { return localStorage.getItem(SIZE_KEY) === "7" ? 7 : 5; } catch (e) { return 5; } };
 
-// The live board: find 1 to 25 (or 1 to 49) in order.
+// The live board: a 4 x 4 taster, find 1 to 16 in order. The full boards are in the app.
 (() => {
   const grid = document.getElementById("board-grid");
   if (!grid) return;
@@ -33,12 +23,10 @@ const savedSize = () => { try { return localStorage.getItem(SIZE_KEY) === "7" ? 
   const clock = document.getElementById("board-clock");
   const hint = document.getElementById("board-hint");
   const again = document.getElementById("board-again");
-  const youLine = document.getElementById("ranks-you");
-  const rows = [...document.querySelectorAll(".ranks tbody tr")];
   const label = document.getElementById("board-label");
-  const sizeButtons = [...document.querySelectorAll(".board__size button")];
   const intro = hint.textContent;
-  let size = savedSize(), tiles = [], next = 1, start = 0, misses = 0, frame = 0, done = false;
+  const size = 4;
+  let tiles = [], next = 1, start = 0, misses = 0, frame = 0, done = false;
 
   const tick = () => {
     clock.textContent = fmt((performance.now() - start) / 1000);
@@ -52,7 +40,6 @@ const savedSize = () => { try { return localStorage.getItem(SIZE_KEY) === "7" ? 
     grid.innerHTML = shuffle(Array.from({ length: count }, (_, i) => i + 1))
       .map((n, i) => `<button class="tile" type="button" style="--t:${i}">${n}</button>`).join("");
     tiles = [...grid.children];
-    sizeButtons.forEach((b) => b.setAttribute("aria-pressed", String(+b.dataset.size === size)));
     next = 1; misses = 0; done = false; start = 0;
     cancelAnimationFrame(frame);
     label.textContent = "Find";
@@ -67,26 +54,20 @@ const savedSize = () => { try { return localStorage.getItem(SIZE_KEY) === "7" ? 
     done = true;
     const seconds = (performance.now() - start) / 1000;
     clock.textContent = fmt(seconds);
-    const rank = rankFor(seconds, size);
-    const up = ORDER[ORDER.indexOf(rank) + 1];
-    const upText = up ? `${up} starts under ${short(UNDER[size][up])}.` : "That is the top rank.";
-    const missText = misses === 0 ? "No misses" : misses === 1 ? "1 miss" : `${misses} misses`;
-    hint.innerHTML = `Done in <b>${fmt(seconds)}</b>. That is <b>${rank}</b> on ${size}&nbsp;×&nbsp;${size}. ${upText}`;
+    const missText = misses === 0 ? "no misses" : misses === 1 ? "1 miss" : `${misses} misses`;
+    hint.innerHTML = `Done in <b>${fmt(seconds)}</b>. That was 16 numbers. The app has the full boards, up to 49.`;
     label.textContent = "Found all";
     nextOut.textContent = size * size;
     again.hidden = false;
-    rows.forEach((r) => r.classList.toggle("is-you", r.dataset.rank === rank));
-    if (youLine) youLine.textContent = `Your ${fmt(seconds)} on the ${size} × ${size} board is ${rank}.`;
     again.focus({ preventScroll: true });
-    showDone(seconds, rank, `${missText}. ${upText}`);
+    showDone(seconds, `You found all 16 in ${fmt(seconds)}, with ${missText}. The full boards are 5 × 5 and 7 × 7, with a rank for every time.`);
   };
 
   // The pop-up after a finished board: the result, then the way to the app.
   const dialog = document.getElementById("done");
-  const showDone = (seconds, rank, line) => {
+  const showDone = (seconds, line) => {
     if (!dialog || typeof dialog.showModal !== "function") return;
     document.getElementById("done-time").textContent = fmt(seconds);
-    document.getElementById("done-title").textContent = `That is ${rank} on ${size} × ${size}.`;
     document.getElementById("done-line").textContent = line;
     setTimeout(() => { if (done && !dialog.open) dialog.showModal(); }, 700);
   };
@@ -115,11 +96,6 @@ const savedSize = () => { try { return localStorage.getItem(SIZE_KEY) === "7" ? 
       setTimeout(() => t.classList.remove("is-miss"), 260);
     }
   });
-  sizeButtons.forEach((b) => b.addEventListener("click", () => {
-    size = +b.dataset.size;
-    try { localStorage.setItem(SIZE_KEY, String(size)); } catch (e) {}
-    deal();
-  }));
   again.addEventListener("click", () => { deal(); tiles[0].focus({ preventScroll: true }); });
   deal();
 })();

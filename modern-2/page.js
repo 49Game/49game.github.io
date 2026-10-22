@@ -9,23 +9,13 @@ const shuffle = (list) => {
   return a;
 };
 
-// Classic rank thresholds in seconds, as in the app, for both board sizes.
-const ORDER = ["Rookie", "Bronze", "Silver", "Gold", "Platinum", "Diamond", "Legend"];
-const UNDER = {
-  5: { Bronze: 44, Silver: 33, Gold: 26, Platinum: 20, Diamond: 16, Legend: 13 },
-  7: { Bronze: 120, Silver: 90, Gold: 70, Platinum: 55, Diamond: 45, Legend: 35 },
-};
-const rankFor = (s, size) => [...ORDER].reverse().find((r) => r === "Rookie" || s < UNDER[size][r]);
-const SIZE_KEY = "49-board-size";
-const savedSize = () => { try { return localStorage.getItem(SIZE_KEY) === "7" ? 7 : 5; } catch (e) { return 5; } };
 const fmt = (s) => {
   const m = Math.floor(s / 60);
   return `${m}:${(s - m * 60).toFixed(1).padStart(4, "0")}`;
 };
-const short = (s) => fmt(s).replace(/\.0$/, "");
 
 // The departure board of ranks: one row open at a time.
-const board = (() => {
+(() => {
   const rows = [...document.querySelectorAll(".dep__row")];
   const open = (row) => rows.forEach((r) => {
     r.classList.toggle("is-open", r === row);
@@ -33,30 +23,14 @@ const board = (() => {
   });
   rows.forEach((r) => r.addEventListener("click", () => open(r)));
   rows.forEach((r) => r.setAttribute("aria-expanded", String(r.classList.contains("is-open"))));
-  const showResult = (seconds, rank, size) => {
-    const mine = ORDER.indexOf(rank);
-    rows.forEach((r) => {
-      const i = ORDER.indexOf(r.dataset.rank);
-      const status = r.querySelector(".dep__status");
-      const state = i < mine ? "beaten" : i === mine ? "you" : "ahead";
-      status.dataset.status = state;
-      status.textContent = state === "beaten" ? "Beaten" : state === "you" ? short(seconds) : "Ahead";
-    });
-    const row = rows[mine];
-    const next = ORDER[mine + 1];
-    row.querySelector(".dep__detail").textContent = `Your ${fmt(seconds)} on ${size} × ${size} lands here.` + (next ? ` On that board, ${next} starts under ${short(UNDER[size][next])}.` : " The top rank.");
-    open(row);
-  };
-  return { showResult };
 })();
 
-// The live board in the hero, and the pop-up when it is done.
+// The live board in the hero, a 4 x 4 taster (the full boards are in the app), and the pop-up when it is done.
 (() => {
   const grid = document.getElementById("board-grid");
   if (!grid) return;
   let tiles = [];
-  let size = savedSize();
-  const sizeButtons = [...document.querySelectorAll(".board__size button")];
+  const size = 4;
   const nextOut = document.getElementById("board-next");
   const label = document.getElementById("board-label");
   const clock = document.getElementById("board-clock");
@@ -74,7 +48,6 @@ const board = (() => {
     grid.innerHTML = shuffle(Array.from({ length: count }, (_, i) => i + 1))
       .map((n, i) => `<button class="tile" type="button" style="--t:${i}">${n}</button>`).join("");
     tiles = [...grid.children];
-    sizeButtons.forEach((b) => b.setAttribute("aria-pressed", String(+b.dataset.size === size)));
     next = 1; misses = 0; done = false; start = 0;
     cancelAnimationFrame(frame);
     label.textContent = "Find"; nextOut.textContent = "1"; clock.textContent = "0:00.0"; hint.textContent = intro;
@@ -84,18 +57,13 @@ const board = (() => {
     cancelAnimationFrame(frame);
     done = true;
     const seconds = (performance.now() - start) / 1000;
-    const rank = rankFor(seconds, size);
-    const next = ORDER[ORDER.indexOf(rank) + 1];
-    const upText = next ? `${next} starts under ${short(UNDER[size][next])}.` : "That is the top rank.";
-    const missText = misses === 0 ? "No misses" : misses === 1 ? "1 miss" : `${misses} misses`;
+    const missText = misses === 0 ? "no misses" : misses === 1 ? "1 miss" : `${misses} misses`;
     clock.textContent = fmt(seconds);
     label.textContent = "Found all"; nextOut.textContent = String(size * size);
-    hint.innerHTML = `Done in <b>${fmt(seconds)}</b>. That is <b>${rank}</b> on ${size}&nbsp;×&nbsp;${size}.`;
-    board.showResult(seconds, rank, size);
+    hint.innerHTML = `Done in <b>${fmt(seconds)}</b>. That was 16 numbers. The app has the full boards, up to 49.`;
     if (!dialog || typeof dialog.showModal !== "function") return;
     document.getElementById("done-time").textContent = fmt(seconds);
-    document.getElementById("done-title").textContent = `That is ${rank} on ${size} × ${size}.`;
-    document.getElementById("done-line").textContent = `${missText}. ${upText}`;
+    document.getElementById("done-line").textContent = `You found all 16 in ${fmt(seconds)}, with ${missText}. The full boards are 5 × 5 and 7 × 7, with a rank for every time.`;
     setTimeout(() => { if (done && !dialog.open) dialog.showModal(); }, 700);
   };
 
@@ -113,12 +81,6 @@ const board = (() => {
       setTimeout(() => t.classList.remove("is-miss"), 260);
     }
   });
-
-  sizeButtons.forEach((b) => b.addEventListener("click", () => {
-    size = +b.dataset.size;
-    try { localStorage.setItem(SIZE_KEY, String(size)); } catch (e) {}
-    deal();
-  }));
 
   if (dialog) {
     const close = () => dialog.close();
