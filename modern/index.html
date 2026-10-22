@@ -45,6 +45,10 @@
 
       <div class="stage__layer is-on field-gold" data-layer="board">
         <div class="board" data-ui id="board">
+          <div class="board__size" role="group" aria-label="Board size">
+            <button type="button" data-size="5" aria-pressed="true">5 × 5</button>
+            <button type="button" data-size="7" aria-pressed="false">7 × 7</button>
+          </div>
           <div class="board__bar">
             <p class="board__find"><span id="board-label">Find</span> <b id="board-next">1</b></p>
             <p class="board__clock" id="board-clock" aria-hidden="true">0:00.0</p>
@@ -66,7 +70,7 @@
       </div>
 
       <div class="stage__layer field-sage" data-layer="friends">
-        <img class="stage__shot" src="assets/ghost-race.webp" width="600" height="1298" alt="Setting up a Ghost race in 49: one friend or a group, Classic or Beat the Clock, and a board from 5 by 5 to 11 by 11." loading="lazy">
+        <img class="stage__shot" src="assets/match-summary.webp" width="600" height="1304" alt="The final results of a three-round group race in 49: Zoe wins with 53 points, Artur is second with 52 and Leo third with 49, above the fastest round and the full standings." loading="lazy">
       </div>
 
       <div class="stage__layer field-gold" data-layer="achievements">
@@ -80,7 +84,7 @@
 
     <section class="hero" data-stage="board" aria-labelledby="hero-title">
       <div class="hero__intro">
-        <p class="hero__line" data-rise style="--i:0">A one-minute focus game for iPhone. Find 1 to 49 in order, as fast as you&nbsp;can.</p>
+        <p class="hero__line" data-rise style="--i:0">A one-minute focus game for iPhone. Find the numbers in order, as fast as you&nbsp;can.</p>
         <div class="hero__actions" data-rise style="--i:1">
           <a class="button" href="https://testflight.apple.com/join/G4XsUyyB">Join the beta</a>
           <a class="link" href="#android">On Android? Join the waiting list</a>
@@ -155,7 +159,7 @@
     <section class="block" id="friends" data-stage="friends" aria-labelledby="friends-title">
       <h2 class="head" id="friends-title" data-reveal>Race your friends</h2>
       <p data-reveal style="--i:1">Play 1 v 1, 2 v 2 or with a whole group, from a class to a team at work. Everyone gets exactly the same board, so the only difference between you is focus.</p>
-      <figure class="inline-only inline-shot"><img src="assets/ghost-race.webp" width="600" height="1298" alt="Setting up a Ghost race in 49: one friend or a group, Classic or Beat the Clock, and a board from 5 by 5 to 11 by 11." loading="lazy"></figure>
+      <figure class="inline-only inline-shot"><img src="assets/match-summary.webp" width="600" height="1304" alt="The final results of a three-round group race in 49: Zoe wins with 53 points, Artur is second with 52 and Leo third with 49, above the fastest round and the full standings." loading="lazy"></figure>
       <dl class="rooms">
         <div data-reveal><dt>Race</dt><dd>Same board for everyone, round after round. The fastest wins each round, and the points add up to the final standings.</dd></div>
         <div data-reveal style="--i:1"><dt>Points battle</dt><dd>Ranked by Competitive points, so speed and combos both count. A clean streak can beat a quicker but messier run.</dd></div>

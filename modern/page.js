@@ -9,32 +9,26 @@ const shuffle = (list) => {
   return a;
 };
 
-// Classic 7 × 7 rank thresholds in seconds, the same as in the app (rank: "under" this time).
-const RANKS = [
-  { name: "Legend", under: 35 },
-  { name: "Diamond", under: 45 },
-  { name: "Platinum", under: 55 },
-  { name: "Gold", under: 70 },
-  { name: "Silver", under: 90 },
-  { name: "Bronze", under: 120 },
-];
-const rankFor = (seconds) => RANKS.find((r) => seconds < r.under)?.name || "Rookie";
-const nextRank = (name) => {
-  const order = ["Rookie", "Bronze", "Silver", "Gold", "Platinum", "Diamond", "Legend"];
-  const next = order[order.indexOf(name) + 1];
-  return next ? RANKS.find((r) => r.name === next) : null;
+// Classic rank thresholds in seconds, as in the app (a rank is "under" this time), for both board sizes.
+const ORDER = ["Rookie", "Bronze", "Silver", "Gold", "Platinum", "Diamond", "Legend"];
+const UNDER = {
+  5: { Bronze: 44, Silver: 33, Gold: 26, Platinum: 20, Diamond: 16, Legend: 13 },
+  7: { Bronze: 120, Silver: 90, Gold: 70, Platinum: 55, Diamond: 45, Legend: 35 },
 };
+const rankFor = (s, size) => [...ORDER].reverse().find((r) => r === "Rookie" || s < UNDER[size][r]);
 const fmt = (s) => {
   const m = Math.floor(s / 60);
   const rest = (s - m * 60).toFixed(1).padStart(4, "0");
   return `${m}:${rest}`;
 };
+const short = (s) => fmt(s).replace(/\.0$/, "");
+const SIZE_KEY = "49-board-size";
+const savedSize = () => { try { return localStorage.getItem(SIZE_KEY) === "7" ? 7 : 5; } catch (e) { return 5; } };
 
-// The live board: find 1 to 49 in order.
+// The live board: find 1 to 25 (or 1 to 49) in order.
 (() => {
   const grid = document.getElementById("board-grid");
   if (!grid) return;
-  const tiles = [...grid.querySelectorAll(".tile")];
   const nextOut = document.getElementById("board-next");
   const clock = document.getElementById("board-clock");
   const hint = document.getElementById("board-hint");
@@ -42,8 +36,9 @@ const fmt = (s) => {
   const youLine = document.getElementById("ranks-you");
   const rows = [...document.querySelectorAll(".ranks tbody tr")];
   const label = document.getElementById("board-label");
+  const sizeButtons = [...document.querySelectorAll(".board__size button")];
   const intro = hint.textContent;
-  let next = 1, start = 0, misses = 0, frame = 0, done = false;
+  let size = savedSize(), tiles = [], next = 1, start = 0, misses = 0, frame = 0, done = false;
 
   const tick = () => {
     clock.textContent = fmt((performance.now() - start) / 1000);
@@ -51,13 +46,13 @@ const fmt = (s) => {
   };
 
   const deal = () => {
-    shuffle(Array.from({ length: 49 }, (_, i) => i + 1)).forEach((n, i) => {
-      const t = tiles[i];
-      t.textContent = n;
-      t.className = "tile";
-      t.disabled = false;
-      t.style.setProperty("--t", i);
-    });
+    const count = size * size;
+    grid.style.setProperty("--cols", size);
+    grid.setAttribute("aria-label", `Schulte table, ${size} by ${size}. Tap the numbers from 1 to ${count} in order.`);
+    grid.innerHTML = shuffle(Array.from({ length: count }, (_, i) => i + 1))
+      .map((n, i) => `<button class="tile" type="button" style="--t:${i}">${n}</button>`).join("");
+    tiles = [...grid.children];
+    sizeButtons.forEach((b) => b.setAttribute("aria-pressed", String(+b.dataset.size === size)));
     next = 1; misses = 0; done = false; start = 0;
     cancelAnimationFrame(frame);
     label.textContent = "Find";
@@ -72,29 +67,27 @@ const fmt = (s) => {
     done = true;
     const seconds = (performance.now() - start) / 1000;
     clock.textContent = fmt(seconds);
-    const rank = rankFor(seconds);
-    const up = nextRank(rank);
-    const missText = misses === 0 ? "no misses" : misses === 1 ? "1 miss" : `${misses} misses`;
-    hint.innerHTML = `Done in <b>${fmt(seconds)}</b> with ${missText}. That is <b>${rank}</b>.` +
-      (up ? ` ${up.name} starts under ${fmt(up.under).replace(/\.0$/, "")}.` : " The top rank.");
+    const rank = rankFor(seconds, size);
+    const up = ORDER[ORDER.indexOf(rank) + 1];
+    const upText = up ? `${up} starts under ${short(UNDER[size][up])}.` : "That is the top rank.";
+    const missText = misses === 0 ? "No misses" : misses === 1 ? "1 miss" : `${misses} misses`;
+    hint.innerHTML = `Done in <b>${fmt(seconds)}</b>. That is <b>${rank}</b> on ${size}&nbsp;×&nbsp;${size}. ${upText}`;
     label.textContent = "Found all";
-    nextOut.textContent = "49";
+    nextOut.textContent = size * size;
     again.hidden = false;
     rows.forEach((r) => r.classList.toggle("is-you", r.dataset.rank === rank));
-    if (youLine) youLine.textContent = `Your ${fmt(seconds)} on this board is ${rank} in Classic.`;
+    if (youLine) youLine.textContent = `Your ${fmt(seconds)} on the ${size} × ${size} board is ${rank}.`;
     again.focus({ preventScroll: true });
-    showDone(seconds, rank, up, missText);
+    showDone(seconds, rank, `${missText}. ${upText}`);
   };
 
   // The pop-up after a finished board: the result, then the way to the app.
   const dialog = document.getElementById("done");
-  const showDone = (seconds, rank, up, missText) => {
+  const showDone = (seconds, rank, line) => {
     if (!dialog || typeof dialog.showModal !== "function") return;
     document.getElementById("done-time").textContent = fmt(seconds);
-    document.getElementById("done-title").textContent = `That is ${rank}.`;
-    document.getElementById("done-line").textContent = up
-      ? `${missText[0].toUpperCase() + missText.slice(1)}. ${up.name} starts under ${fmt(up.under).replace(/\.0$/, "")}.`
-      : `${missText[0].toUpperCase() + missText.slice(1)}. That is the top rank.`;
+    document.getElementById("done-title").textContent = `That is ${rank} on ${size} × ${size}.`;
+    document.getElementById("done-line").textContent = line;
     setTimeout(() => { if (done && !dialog.open) dialog.showModal(); }, 700);
   };
   if (dialog) {
@@ -114,7 +107,7 @@ const fmt = (s) => {
       t.classList.add("is-found");
       t.disabled = true;
       next += 1;
-      if (next > 49) finish();
+      if (next > size * size) finish();
       else nextOut.textContent = next;
     } else if (start) {
       misses += 1;
@@ -122,6 +115,11 @@ const fmt = (s) => {
       setTimeout(() => t.classList.remove("is-miss"), 260);
     }
   });
+  sizeButtons.forEach((b) => b.addEventListener("click", () => {
+    size = +b.dataset.size;
+    try { localStorage.setItem(SIZE_KEY, String(size)); } catch (e) {}
+    deal();
+  }));
   again.addEventListener("click", () => { deal(); tiles[0].focus({ preventScroll: true }); });
   deal();
 })();
@@ -132,7 +130,7 @@ document.querySelectorAll("[data-rb]").forEach((root) => {
     ...Array.from({ length: 25 }, (_, i) => ({ n: i + 1, red: true, done: i < 6 })),
     ...Array.from({ length: 24 }, (_, i) => ({ n: i + 1, red: false, done: i > 18 })),
   ];
-  root.innerHTML = shuffle(cells).map((c) => `<span class="${c.red ? "r" : ""}${c.done ? " done" : ""}">${c.n}</span>`).join("");
+  root.innerHTML = shuffle(cells).map((c) => `<span class="${c.red ? "r" : ""}${c.done ? " gone" : ""}">${c.n}</span>`).join("");
 });
 
 // The stage follows the reading column on wide screens.
