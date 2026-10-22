@@ -153,17 +153,6 @@ kbd { font-family: var(--font); }
 [data-ui] .bar__seg--4 .bar__time { background: var(--forest); color: var(--accent); }
 [data-ui] .bar__seg p { margin-top: 0.9rem; max-width: 22ch; font-size: var(--step-body); }
 
-/* Seven looks: prints dropped on the headline. */
-.prints { position: relative; min-height: 100svh; display: grid; place-items: center; overflow: hidden; background: var(--cyan); padding: var(--margin) var(--margin) 6rem; }
-.prints__title { display: grid; justify-items: center; font-size: var(--step-giant); line-height: 0.85; letter-spacing: -0.05em; text-align: center; }
-.print { position: absolute; z-index: 1; padding: 8px; border-radius: 18px; background: var(--surface); transition: transform 200ms var(--ease-out); }
-.print img { border-radius: 12px; }
-.print--a { width: 19vw; left: 3vw; top: 8svh; transform: rotate(-8deg); }
-.print--b { width: 19vw; right: 3vw; top: 22svh; transform: rotate(6deg); }
-.print--c { width: 11vw; left: 44.5vw; bottom: -30svh; transform: rotate(-3deg); }
-.print:hover { z-index: 3; transform: rotate(0deg) scale(1.02); }
-.prints__note { position: absolute; left: var(--margin); right: var(--margin); bottom: 1.5rem; max-width: 46ch; font-size: var(--step-small); font-weight: 600; z-index: 2; }
-
 /* Price: two fields on a hard edge. */
 .price { display: grid; grid-template-columns: 7fr 5fr; }
 .price__plan { min-height: 90svh; display: grid; grid-template-rows: auto auto 1fr; gap: 1rem; padding: 2.5rem var(--margin); }
@@ -260,11 +249,8 @@ kbd { font-family: var(--font); }
 @keyframes fade { from { opacity: 0; } }
 @supports (animation-timeline: view()) {
   @media (prefers-reduced-motion: no-preference) {
-    .print--a { animation: tilt-a linear both; animation-timeline: view(); }
-    .print--b { animation: tilt-b linear both; animation-timeline: view(); }
     @keyframes tilt-a { from { transform: rotate(-12deg) translateY(6%); } to { transform: rotate(-5deg) translateY(-6%); } }
     @keyframes tilt-b { from { transform: rotate(10deg) translateY(10%); } to { transform: rotate(4deg) translateY(-4%); } }
-    .print--a:hover, .print--b:hover { animation: none; transform: rotate(0deg) scale(1.02); }
   }
 }
 
@@ -318,13 +304,6 @@ kbd { font-family: var(--font); }
   [data-ui] .bar__seg { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 1rem; align-items: start; }
   [data-ui] .bar__seg p { max-width: none; margin-top: 0.75rem; }
   [data-ui] .bar__time { height: auto; min-height: calc(var(--grow) * 0.45svh + 4.5rem); }
-  .prints { display: grid; min-height: 0; place-items: start; gap: 2rem; padding: 4rem var(--margin) 2rem; }
-  .prints__title { font-size: 19vw; justify-items: start; text-align: left; }
-  .print { position: relative; left: auto; right: auto; top: auto; bottom: auto; width: 46vw; }
-  .print--a { justify-self: start; }
-  .print--b { justify-self: end; margin-top: -60vw; }
-  .print--c { display: none; }
-  .prints__note { position: static; }
   .price { grid-template-columns: 1fr; }
   .price__plan { min-height: 70svh; padding-block: 2.5rem; }
   .price__amount { font-size: 19vw; }

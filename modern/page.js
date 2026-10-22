@@ -165,11 +165,6 @@ document.querySelectorAll("[data-rb]").forEach((root) => {
   set(0);
 })();
 
-// Seven looks: tap to switch a look between light and dark.
-document.querySelectorAll(".looks__shot").forEach((b) => b.addEventListener("click", () => {
-  b.setAttribute("aria-pressed", b.getAttribute("aria-pressed") === "true" ? "false" : "true");
-}));
-
 // The phone menu closes after a link is chosen.
 document.querySelectorAll(".nav__sheet a").forEach((a) => a.addEventListener("click", () => a.closest("details").open = false));
 
