@@ -424,3 +424,38 @@ h1, h2, h3 { font-weight: 400; text-wrap: balance; }
   .foot__links { justify-content: flex-start; }
   .foot__legal { justify-self: start; }
 }
+
+/* The pop-up after a finished board: a gold sheet over a dark backdrop. */
+.done { width: min(44rem, calc(100vw - 2 * var(--margin))); max-height: calc(100svh - 2 * var(--margin)); padding: 0; border: 0; border-radius: 0; background: var(--gold); color: var(--field-ink); overflow: auto; }
+.done[open] { display: grid; grid-template-columns: minmax(0, 1fr) auto; }
+.done::backdrop { background: rgba(18, 17, 15, 0.78); }
+.done__body { padding: clamp(1.5rem, 4vw, 2.75rem); display: grid; gap: 1rem; align-content: start; }
+.done__time { font-size: var(--step-head); line-height: 1; letter-spacing: -0.03em; font-variant-numeric: tabular-nums; }
+.done__title { font-size: var(--step-lead); line-height: 1.2; font-weight: 600; }
+.done__pitch { max-width: 36ch; }
+.done__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem 1rem; margin-top: 0.5rem; }
+.done .button { background: var(--field-ink); color: var(--gold); }
+.done .button:hover { background: #2a2824; }
+.done__again { min-height: 3rem; padding: 0 1.25rem; border: 0; border-radius: 0; background: rgba(18, 17, 15, 0.12); color: var(--field-ink); font: 600 var(--step-body)/1 var(--font); cursor: pointer; transition: background-color 200ms ease, transform 140ms var(--ease-out); }
+.done__again:hover { background: rgba(18, 17, 15, 0.2); }
+.done__again:active, .done .button:active { transform: scale(0.97); }
+.done__android { font-size: var(--step-small); }
+.done__qr { padding: clamp(1.5rem, 4vw, 2.75rem) clamp(1.5rem, 4vw, 2.75rem) clamp(1.5rem, 4vw, 2.75rem) 0; display: grid; gap: 0.75rem; align-content: end; justify-items: start; }
+.done__qr svg { width: 10rem; }
+.done__qr figcaption { font-size: var(--step-small); max-width: 18ch; }
+.done__close { position: absolute; top: 0.75rem; right: 0.75rem; min-height: 2.75rem; padding: 0 0.9rem; border: 0; background: transparent; color: var(--field-ink); font: 600 var(--step-small)/1 var(--font); cursor: pointer; }
+.done__close:hover { text-decoration: underline; text-underline-offset: 0.2em; }
+.done :focus-visible { outline-color: var(--field-ink); }
+@media (prefers-reduced-motion: no-preference) {
+  .done[open] { animation: done-in 450ms var(--ease-out); }
+  .done[open]::backdrop { animation: fade-in 300ms ease; }
+}
+@keyframes done-in { from { opacity: 0; transform: translateY(24px) scale(0.98); } }
+@keyframes fade-in { from { opacity: 0; } }
+@media (max-width: 900px), (hover: none) {
+  .done[open] { grid-template-columns: 1fr; }
+  .done__qr { display: none; }
+}
+@media (max-width: 900px) {
+  .done .button, .done__again { flex: 1 1 100%; }
+}

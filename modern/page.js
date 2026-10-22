@@ -83,7 +83,27 @@ const fmt = (s) => {
     rows.forEach((r) => r.classList.toggle("is-you", r.dataset.rank === rank));
     if (youLine) youLine.textContent = `Your ${fmt(seconds)} on this board is ${rank} in Classic.`;
     again.focus({ preventScroll: true });
+    showDone(seconds, rank, up, missText);
   };
+
+  // The pop-up after a finished board: the result, then the way to the app.
+  const dialog = document.getElementById("done");
+  const showDone = (seconds, rank, up, missText) => {
+    if (!dialog || typeof dialog.showModal !== "function") return;
+    document.getElementById("done-time").textContent = fmt(seconds);
+    document.getElementById("done-title").textContent = `That is ${rank}.`;
+    document.getElementById("done-line").textContent = up
+      ? `${missText[0].toUpperCase() + missText.slice(1)}. ${up.name} starts under ${fmt(up.under).replace(/\.0$/, "")}.`
+      : `${missText[0].toUpperCase() + missText.slice(1)}. That is the top rank.`;
+    setTimeout(() => { if (done && !dialog.open) dialog.showModal(); }, 700);
+  };
+  if (dialog) {
+    const close = () => dialog.close();
+    document.getElementById("done-close").addEventListener("click", close);
+    document.getElementById("done-android").addEventListener("click", close);
+    document.getElementById("done-again").addEventListener("click", () => { close(); deal(); tiles[0].focus({ preventScroll: true }); });
+    dialog.addEventListener("click", (e) => { if (e.target === dialog) close(); });
+  }
 
   grid.addEventListener("click", (e) => {
     const t = e.target.closest(".tile");
