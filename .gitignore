@@ -1,1 +1,8 @@
 .DS_Store
+# Playwright CLI output (may contain credentials)
+.playwright-cli/
+# Local Claude Code skills (not published, site serves every file via .nojekyll)
+.claude/
+skills-lock.json
+# Design skill working files (screenshots, direction sheet)
+.taste-skill/

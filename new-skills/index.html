@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>49 - Focus Booster: a one-minute focus game for iPhone</title>
+  <meta name="description" content="49 is a one-minute focus game for iPhone. Find the numbers 1 to 49 in order on a shuffled 7 by 7 board, as fast as you can. Free, in open beta on TestFlight.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#12110f">
+  <link rel="icon" type="image/png" href="../assets/icon-lux-64.png">
+  <link rel="apple-touch-icon" href="../assets/icon-lux-touch.png">
+  <link rel="preload" href="fonts/archivo-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+<header class="nav">
+  <a class="nav__home" href="#top">49</a>
+  <details class="nav__menu">
+    <summary>Menu</summary>
+    <nav class="nav__sheet" aria-label="Sections">
+      <a href="#ranks">Ranks</a>
+      <a href="#modes">Modes</a>
+      <a href="#friends">Friends</a>
+      <a href="#price">Price</a>
+      <a href="#questions">Questions</a>
+    </nav>
+  </details>
+  <nav class="nav__links" aria-label="Sections">
+    <a href="#ranks">Ranks</a>
+    <a href="#modes">Modes</a>
+    <a href="#friends">Friends</a>
+    <a href="#price">Price</a>
+  </nav>
+  <a class="button nav__action" href="https://testflight.apple.com/join/G4XsUyyB">Join the beta</a>
+</header>
+
+<main id="top">
+
+<div class="chapter">
+
+  <aside class="stage" aria-label="The board and the app">
+    <div class="stage__frame">
+
+      <div class="stage__layer is-on field-gold" data-layer="board">
+        <div class="board" data-ui id="board">
+          <div class="board__bar">
+            <p class="board__find"><span id="board-label">Find</span> <b id="board-next">1</b></p>
+            <p class="board__clock" id="board-clock" aria-hidden="true">0:00.0</p>
+          </div>
+          <div class="board__grid" id="board-grid" role="group" aria-label="Schulte table, 7 by 7. Tap the numbers from 1 to 49 in order."><button class="tile" type="button">24</button><button class="tile" type="button">49</button><button class="tile" type="button">26</button><button class="tile" type="button">48</button><button class="tile" type="button">30</button><button class="tile" type="button">28</button><button class="tile" type="button">3</button><button class="tile" type="button">5</button><button class="tile" type="button">14</button><button class="tile" type="button">35</button><button class="tile" type="button">38</button><button class="tile" type="button">2</button><button class="tile" type="button">23</button><button class="tile" type="button">19</button><button class="tile" type="button">17</button><button class="tile" type="button">20</button><button class="tile" type="button">18</button><button class="tile" type="button">12</button><button class="tile" type="button">9</button><button class="tile" type="button">13</button><button class="tile" type="button">44</button><button class="tile" type="button">11</button><button class="tile" type="button">25</button><button class="tile" type="button">34</button><button class="tile" type="button">22</button><button class="tile" type="button">46</button><button class="tile" type="button">43</button><button class="tile" type="button">31</button><button class="tile" type="button">45</button><button class="tile" type="button">10</button><button class="tile" type="button">4</button><button class="tile" type="button">6</button><button class="tile" type="button">1</button><button class="tile" type="button">16</button><button class="tile" type="button">29</button><button class="tile" type="button">32</button><button class="tile" type="button">41</button><button class="tile" type="button">37</button><button class="tile" type="button">27</button><button class="tile" type="button">36</button><button class="tile" type="button">40</button><button class="tile" type="button">39</button><button class="tile" type="button">15</button><button class="tile" type="button">7</button><button class="tile" type="button">42</button><button class="tile" type="button">47</button><button class="tile" type="button">33</button><button class="tile" type="button">21</button><button class="tile" type="button">8</button></div>
+          <div class="board__foot">
+            <p class="board__hint" id="board-hint" aria-live="polite">Tap 1 to start. Keep your eyes near the center and let the numbers come to you.</p>
+            <button class="board__again" id="board-again" type="button" hidden>Play again</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="stage__layer field-slate" data-layer="modes">
+        <img class="stage__shot" src="../assets/screens/p/focus-focusBlue-light-menu.webp" width="600" height="1304" alt="The 49 main menu: a Daily Challenge card, the Normal, Competitive and Relax styles, and the Classic, Endless and Beat the Clock modes with their best results." loading="lazy">
+      </div>
+
+      <div class="stage__layer field-blush" data-layer="boards">
+        <div class="rb" data-ui aria-hidden="true" data-rb></div>
+      </div>
+
+      <div class="stage__layer field-sage" data-layer="friends">
+        <img class="stage__shot" src="assets/ghost-race.webp" width="600" height="1298" alt="Setting up a Ghost race in 49: one friend or a group, Classic or Beat the Clock, and a board from 5 by 5 to 11 by 11." loading="lazy">
+      </div>
+
+      <div class="stage__layer field-gold" data-layer="achievements">
+        <img class="stage__shot" src="assets/achievements.webp" width="600" height="1298" alt="The Classic speed achievements in 49, from Rocket at under 38 seconds to Warp Drive at under 31, each with its tier and progress." loading="lazy">
+      </div>
+
+    </div>
+  </aside>
+
+  <div class="read">
+
+    <section class="hero" data-stage="board" aria-labelledby="hero-title">
+      <div class="hero__intro">
+        <p class="hero__line" data-rise style="--i:0">A one-minute focus game for iPhone. Find 1 to 49 in order, as fast as you&nbsp;can.</p>
+        <div class="hero__actions" data-rise style="--i:1">
+          <a class="button" href="https://testflight.apple.com/join/G4XsUyyB">Join the beta</a>
+          <a class="link" href="#android">On Android? Join the waiting list</a>
+        </div>
+      </div>
+      <h1 class="wordmark" id="hero-title" data-rise style="--i:2"><span class="wordmark__name">49</span><span class="wordmark__sub">Focus Booster</span></h1>
+    </section>
+
+    <section class="block" id="ranks" data-stage="board" aria-labelledby="ranks-title">
+      <h2 class="head" id="ranks-title" data-reveal>What your time earns</h2>
+      <p data-reveal style="--i:1">Every mode, direction and style has its own rank, set by your best result there. This is what each one takes on the standard 7&nbsp;×&nbsp;7 board. Times scale for smaller, bigger and harder boards.</p>
+      <table class="ranks" data-reveal style="--i:2">
+        <thead>
+          <tr><th scope="col">Rank</th><th scope="col">Classic</th><th scope="col">Endless</th><th scope="col">Beat the Clock</th></tr>
+        </thead>
+        <tbody>
+          <tr data-rank="Rookie"><th scope="row"><img src="../assets/ranks/rookie-dark.png" width="515" height="158" alt="Rookie"></th><td>Finish a game</td><td>Finish a board</td><td>Play a run</td></tr>
+          <tr data-rank="Bronze" data-under="120"><th scope="row"><img src="../assets/ranks/bronze-dark.png" width="515" height="158" alt="Bronze"></th><td>Under 2:00</td><td>25 a minute</td><td>30 numbers</td></tr>
+          <tr data-rank="Silver" data-under="90"><th scope="row"><img src="../assets/ranks/silver-dark.png" width="515" height="158" alt="Silver"></th><td>Under 1:30</td><td>32 a minute</td><td>50 numbers</td></tr>
+          <tr data-rank="Gold" data-under="70"><th scope="row"><img src="../assets/ranks/gold-dark.png" width="515" height="158" alt="Gold"></th><td>Under 1:10</td><td>40 a minute</td><td>70 numbers</td></tr>
+          <tr data-rank="Platinum" data-under="55"><th scope="row"><img src="../assets/ranks/platinum-dark.png" width="515" height="158" alt="Platinum"></th><td>Under 0:55</td><td>48 a minute</td><td>90 numbers</td></tr>
+          <tr data-rank="Diamond" data-under="45"><th scope="row"><img src="../assets/ranks/diamond-dark.png" width="515" height="158" alt="Diamond"></th><td>Under 0:45</td><td>56 a minute</td><td>115 numbers</td></tr>
+          <tr data-rank="Legend" data-under="35"><th scope="row"><img src="../assets/ranks/legend-dark.png" width="515" height="158" alt="Legend"></th><td>Under 0:35</td><td>65 a minute</td><td>140 numbers</td></tr>
+        </tbody>
+      </table>
+      <p class="ranks__you" id="ranks-you" aria-live="polite" data-reveal style="--i:3">Play the board to see where your time lands.</p>
+      <p data-reveal style="--i:4">On top of the ranks sit 170 global Game Center leaderboards: fastest time and most points for every board and direction, for today, this week, this month and all time. The Daily Challenge has its own board, and only your first attempt counts.</p>
+    </section>
+
+    <section class="block" id="modes" data-stage="modes" aria-labelledby="modes-title">
+      <h2 class="head" id="modes-title" data-reveal>Three ways to play</h2>
+      <p data-reveal style="--i:1">Count up from 1 to 49 or down from 49 to 1. Each mode keeps its own records and its own rank.</p>
+      <div class="proofs">
+        <article class="proof" data-reveal>
+          <div class="proof__panel"><img src="assets/mode-classic.webp" width="560" height="106" alt="The Classic card: a best time of 57.03, Gold rank, 28 of 71 achievements." loading="lazy"></div>
+          <div class="proof__text">
+            <h3>Classic</h3>
+            <p>One board, one time. Beat your best, climb from Rookie to Legend and see exactly where the seconds went.</p>
+          </div>
+        </article>
+        <article class="proof" data-reveal>
+          <div class="proof__panel"><img src="assets/mode-endless.webp" width="560" height="106" alt="The Endless card: a pace of 56.5 numbers a minute, Diamond rank." loading="lazy"></div>
+          <div class="proof__text">
+            <h3>Endless</h3>
+            <p>Finish a board and the next one is already waiting. Your score is your pace in numbers a minute. Stop when you like.</p>
+          </div>
+        </article>
+        <article class="proof" data-reveal>
+          <div class="proof__panel"><img src="assets/mode-clock.webp" width="560" height="106" alt="The Beat the Clock card: 67 numbers, Silver rank." loading="lazy"></div>
+          <div class="proof__text">
+            <h3>Beat the Clock</h3>
+            <p>The clock runs down. Every number you find gives time back, and every miss takes some away. How far can you go?</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="block" id="boards" data-stage="boards" aria-labelledby="boards-title">
+      <h2 class="head" id="boards-title" data-reveal>Four kinds of board</h2>
+      <p class="figure-line" data-reveal style="--i:1">5&nbsp;×&nbsp;5 up to 11&nbsp;×&nbsp;11</p>
+      <p data-reveal style="--i:2">A quick 5&nbsp;×&nbsp;5, the standard 7&nbsp;×&nbsp;7, and 9&nbsp;×&nbsp;9 or 11&nbsp;×&nbsp;11 for tryhards.</p>
+      <div class="inline-only rb rb--inline" data-ui aria-hidden="true" data-rb></div>
+      <dl class="kinds">
+        <div data-reveal><dt>Numbers</dt><dd>The classic table. Find them in order, up or down.</dd></div>
+        <div data-reveal style="--i:1"><dt>Letters</dt><dd>A to Y on a 5&nbsp;×&nbsp;5 board, for when digits feel too easy.</dd></div>
+        <div data-reveal style="--i:2"><dt>Red &amp; Black</dt><dd>Count the red numbers up and the black ones down, switching with every tap. A playful drill for moving between tasks without losing track.</dd></div>
+        <div data-reveal style="--i:3"><dt>Shifting</dt><dd>Tiles swap places while you play. Keep up.</dd></div>
+      </dl>
+      <p data-reveal>Stuck? A hint shows where the next number is. You get a few each day, and each one adds 5 seconds, so hints help you learn but never set a record.</p>
+    </section>
+
+    <section class="block" id="friends" data-stage="friends" aria-labelledby="friends-title">
+      <h2 class="head" id="friends-title" data-reveal>Race your friends</h2>
+      <p data-reveal style="--i:1">Play 1 v 1, 2 v 2 or with a whole group, from a class to a team at work. Everyone gets exactly the same board, so the only difference between you is focus.</p>
+      <figure class="inline-only inline-shot"><img src="assets/ghost-race.webp" width="600" height="1298" alt="Setting up a Ghost race in 49: one friend or a group, Classic or Beat the Clock, and a board from 5 by 5 to 11 by 11." loading="lazy"></figure>
+      <dl class="rooms">
+        <div data-reveal><dt>Race</dt><dd>Same board for everyone, round after round. The fastest wins each round, and the points add up to the final standings.</dd></div>
+        <div data-reveal style="--i:1"><dt>Points battle</dt><dd>Ranked by Competitive points, so speed and combos both count. A clean streak can beat a quicker but messier run.</dd></div>
+        <div data-reveal style="--i:2"><dt>Knockout</dt><dd>For groups. The slowest player each round is out, until one is left standing.</dd></div>
+        <div data-reveal style="--i:3"><dt>Ghost race</dt><dd>You play first and your run becomes the ghost. Friends race it whenever they like that day, and see live whether they are ahead or behind.</dd></div>
+        <div data-reveal style="--i:4"><dt>Steal</dt><dd>One board, live, head to head. Whoever taps a number first scores it, and it disappears for the other player.</dd></div>
+      </dl>
+      <p data-reveal>Friends join with a four-character room code, a QR code or a link, and everyone picks a nickname for the game. No phone each? Pass yours around in guest mode.</p>
+    </section>
+
+    <section class="block block--last" id="achievements" data-stage="achievements" aria-labelledby="ach-title">
+      <h2 class="giant" id="ach-title" data-reveal><span class="giant__num">539</span><span class="giant__word">achievements</span></h2>
+      <p data-reveal style="--i:1">They reward speed, precision, focus, combos, streaks and curiosity. Tiered ones climb eight medals, from bronze to prismatic.</p>
+      <ul class="medals" aria-label="The eight medal tiers">
+        <li data-reveal style="--i:0"><img src="../assets/medals/medal-0.png" width="160" height="160" alt="" loading="lazy">Bronze</li>
+        <li data-reveal style="--i:1"><img src="../assets/medals/medal-1.png" width="160" height="160" alt="" loading="lazy">Silver</li>
+        <li data-reveal style="--i:2"><img src="../assets/medals/medal-2.png" width="160" height="160" alt="" loading="lazy">Gold</li>
+        <li data-reveal style="--i:3"><img src="../assets/medals/medal-3.png" width="160" height="160" alt="" loading="lazy">Platinum</li>
+        <li data-reveal style="--i:4"><img src="../assets/medals/medal-4.png" width="160" height="160" alt="" loading="lazy">Sapphire</li>
+        <li data-reveal style="--i:5"><img src="../assets/medals/medal-5.png" width="160" height="160" alt="" loading="lazy">Amethyst</li>
+        <li data-reveal style="--i:6"><img src="../assets/medals/medal-6.png" width="160" height="160" alt="" loading="lazy">Ruby</li>
+        <li data-reveal style="--i:7"><img src="../assets/medals/medal-7.png" width="160" height="160" alt="" loading="lazy">Prismatic</li>
+      </ul>
+      <figure class="inline-only inline-shot"><img src="assets/achievements.webp" width="600" height="1298" alt="The Classic speed achievements in 49, from Rocket at under 38 seconds to Warp Drive at under 31, each with its tier and progress." loading="lazy"></figure>
+      <div class="bars">
+        <details open>
+          <summary><span>Classic speed</span><span class="bars__n">30</span></summary>
+          <ul>
+            <li><span>Warming Up<small>Finish a Classic game in under 120 seconds.</small></span><b>Bronze</b></li>
+            <li><span>Century Breaker<small>Finish a Classic game in under 100 seconds.</small></span><b>Silver</b></li>
+            <li><span>Speedy<small>Finish a Classic game in under 70 seconds.</small></span><b>Gold</b></li>
+            <li><span>Speed Reader<small>Finish a Classic game in under 60 seconds.</small></span><b>Platinum</b></li>
+            <li><span>Lightning<small>Finish a Classic game in under 45 seconds.</small></span><b>Sapphire</b></li>
+            <li><span>Rocket<small>Finish a Classic game in under 38 seconds.</small></span><b>Amethyst</b></li>
+            <li><span>Superhuman<small>Finish a Classic game in under 35 seconds.</small></span><b>Ruby</b></li>
+          </ul>
+        </details>
+        <details>
+          <summary><span>Precision and focus</span><span class="bars__n">29</span></summary>
+          <ul>
+            <li><span>Flawless<small>Finish a Classic game without a single mistake.</small></span><b>Bronze</b></li>
+            <li><span>Locked In<small>Finish a Classic game without a single focus lapse.</small></span><b>Bronze</b></li>
+            <li><span>Unshakable<small>Finish 10 Classic games without a focus lapse.</small></span><b>Gold</b></li>
+            <li><span>Metronome IV<small>Score a Rhythm of 90 or more in a Classic game.</small></span><b>Tiered</b></li>
+          </ul>
+        </details>
+        <details>
+          <summary><span>Score and combos</span><span class="bars__n">36</span></summary>
+          <ul>
+            <li><span>High Scorer I<small>Score 2,000 points in one Classic game.</small></span><b>Bronze</b></li>
+            <li><span>High Scorer III<small>Score 6,000 points in one Classic game.</small></span><b>Gold</b></li>
+            <li><span>Triple Threat IV<small>Reach the ×3 multiplier in 100 games.</small></span><b>Tiered</b></li>
+          </ul>
+        </details>
+        <details>
+          <summary><span>Endless and Beat the Clock</span><span class="bars__n">64</span></summary>
+          <ul>
+            <li><span>Double Up<small>Finish 2 boards in one Endless run.</small></span><b>Bronze</b></li>
+            <li><span>Long Haul<small>Finish 4 boards in one Endless run.</small></span><b>Gold</b></li>
+            <li><span>Clock Stopper I<small>Find 25 numbers in one Beat the Clock run.</small></span><b>Bronze</b></li>
+            <li><span>Clock Stopper III<small>Find 75 numbers in one Beat the Clock run.</small></span><b>Gold</b></li>
+          </ul>
+        </details>
+        <details>
+          <summary><span>Board sizes</span><span class="bars__n">80</span></summary>
+          <ul>
+            <li><span>6 × 6 Regular I<small>Finish 10 games on 6 × 6, Dailies included.</small></span><b>Bronze</b></li>
+            <li><span>11 × 11 Legend<small>Reach Legend on 11 × 11: under 136 seconds.</small></span><b>Tiered</b></li>
+          </ul>
+        </details>
+        <details>
+          <summary><span>Red &amp; Black, Shifting and Letters</span><span class="bars__n">140</span></summary>
+          <ul>
+            <li><span>Red &amp; Black 5 × 5 Legend<small>Under 19 seconds on Red &amp; Black 5 × 5.</small></span><b>Tiered</b></li>
+            <li><span>Shifting 5 × 5 Legend<small>Under 15 seconds on Shifting 5 × 5.</small></span><b>Tiered</b></li>
+            <li><span>Letters 5 × 5 Legend<small>Under 13 seconds on Letters 5 × 5.</small></span><b>Tiered</b></li>
+          </ul>
+        </details>
+        <details>
+          <summary><span>Daily, streaks and dedication</span><span class="bars__n">51</span></summary>
+          <ul>
+            <li><span>Daily Debut<small>Finish a Daily Challenge.</small></span><b>Bronze</b></li>
+            <li><span>Back Again<small>Play 2 days in a row.</small></span><b>Bronze</b></li>
+            <li><span>Year of 49<small>Play 365 days in a row.</small></span><b>Tiered</b></li>
+            <li><span>Number Cruncher VI<small>Find 100,000 numbers in total.</small></span><b>Tiered</b></li>
+          </ul>
+        </details>
+        <details>
+          <summary><span>Normal, Competitive and Relax</span><span class="bars__n">51</span></summary>
+          <ul>
+            <li><span>Purist I<small>Play 10 games in Normal style.</small></span><b>Bronze</b></li>
+            <li><span>Showtime I<small>Play 10 games in Competitive style.</small></span><b>Bronze</b></li>
+            <li><span>Easy Breeze I<small>Play 10 games in Relax style.</small></span><b>Bronze</b></li>
+          </ul>
+        </details>
+        <details>
+          <summary><span>First steps, ranks and exploring</span><span class="bars__n">58</span></summary>
+          <ul>
+            <li><span>First Steps<small>Finish your first game.</small></span><b>Start</b></li>
+            <li><span>Both Ways<small>Finish a Classic game counting up and counting down.</small></span><b>Start</b></li>
+            <li><span>Classic Gold<small>Reach Gold in Classic 7 × 7: under 70 seconds.</small></span><b>Gold</b></li>
+            <li><span>Early Bird<small>Finish a game in the morning.</small></span><b>Explorer</b></li>
+          </ul>
+        </details>
+      </div>
+      <p data-reveal><a class="link-plain" href="../achievements.html">See all 539 achievements</a></p>
+    </section>
+
+  </div>
+</div>
+
+<section class="drill" aria-labelledby="drill-title">
+  <div class="drill__head">
+    <h2 class="head" id="drill-title" data-reveal>Trained like a racing driver</h2>
+    <p data-reveal style="--i:1">At racing speed, focus is everything. Professional drivers train attention, visual scanning and reactions as seriously as their fitness, and some use Schulte tables to do it. 49 turns that same drill into a minute a day.</p>
+  </div>
+  <div class="drill__mosaic">
+    <figure class="drill__photo">
+      <img class="drift" src="assets/cockpit-1958.jpg" width="1000" height="1000" alt="The wooden steering wheel and white dials of a 1958 Maserati 250 F racing car." loading="lazy">
+    </figure>
+    <div class="drill__tile field-gold" data-reveal>
+      <p class="drill__fig">300&nbsp;km/h</p>
+      <p>Where one glance has to take in everything around you.</p>
+    </div>
+    <div class="drill__tile field-slate" data-reveal style="--i:1">
+      <p class="drill__fig">1 minute</p>
+      <p>A day is enough for the same drill. No race car needed.</p>
+    </div>
+  </div>
+</section>
+
+<section class="styles" aria-labelledby="styles-title">
+  <div class="styles__field styles__field--normal">
+    <div class="styles__body">
+      <img class="styles__shot" src="../assets/screens/focus-normal-light.png" width="600" height="1169" alt="A Classic game in Normal style: the time 0:23.41, Find 18, and the numbers already found faded on the board." loading="lazy">
+      <div class="styles__text">
+        <p class="lead" data-reveal>A clean time trial.</p>
+        <p data-reveal style="--i:1">Just you, the board and the clock. No points and no effects, nothing to pull your eyes away from the numbers. This is the classic Schulte table, and the purest test of your focus.</p>
+        <p data-reveal style="--i:2">After each game you see your time, pace and misses, your focus lapses, and your Rhythm: how evenly you found each number.</p>
+      </div>
+    </div>
+  </div>
+  <div class="styles__field styles__field--comp field-blush">
+    <div class="styles__body">
+      <img class="styles__shot" src="../assets/screens/p/pitLane-yellow-dark-game.webp" width="600" height="1304" alt="A Classic game in Competitive style with the Pit Lane look: score 2,292, combo 10 at ×2, Find 10." loading="lazy">
+      <div class="styles__text">
+        <p class="lead" data-reveal>Points, combos, ×3.</p>
+        <p data-reveal style="--i:1">Every number is worth 100 points, plus up to 50 for speed. Find the next one before the combo timer runs out and the multiplier climbs: ×2 at a combo of 5, ×3 at 15.</p>
+        <p data-reveal style="--i:2">A wrong tap halves the combo but never takes points away. Want the effects without the pressure? Relax keeps the sounds and celebrations and drops the points.</p>
+      </div>
+    </div>
+  </div>
+  <h2 class="styles__title" id="styles-title"><span>Normal</span> <span>or Competitive</span></h2>
+</section>
+
+<section class="looks" aria-labelledby="looks-title">
+  <div class="looks__grid">
+    <div class="looks__cell looks__cell--word field-gold">
+      <h2 class="looks__title" id="looks-title">Seven looks</h2>
+      <p>Tap a look to see it light or dark. Every one comes in both.</p>
+    </div>
+    <div class="looks__cell looks__cell--word field-slate" data-reveal style="--i:0"><p class="looks__big">9</p><p class="looks__cap">languages</p></div>
+    <button class="looks__cell looks__shot" type="button" aria-pressed="false" aria-label="Classic in dark" data-name="Classic" data-reveal style="--i:1"><img class="is-light" src="assets/look-classic-light.webp" width="480" height="480" alt="" loading="lazy"><img class="is-dark" src="assets/look-classic-dark.webp" width="480" height="480" alt="" loading="lazy"><span class="looks__cap">Classic</span></button>
+    <button class="looks__cell looks__shot" type="button" aria-pressed="true" aria-label="Focus in dark" data-name="Focus" data-reveal style="--i:2"><img class="is-light" src="assets/look-focus-light.webp" width="480" height="480" alt="" loading="lazy"><img class="is-dark" src="assets/look-focus-dark.webp" width="480" height="480" alt="" loading="lazy"><span class="looks__cap">Focus</span></button>
+    <div class="looks__cell looks__cell--word field-blush" data-reveal style="--i:3"><p class="looks__big">25</p><p class="looks__cap">color palettes</p></div>
+    <button class="looks__cell looks__shot" type="button" aria-pressed="true" aria-label="Neon Arcade in dark" data-name="Neon Arcade" data-reveal style="--i:0"><img class="is-light" src="assets/look-arcade-light.webp" width="480" height="480" alt="" loading="lazy"><img class="is-dark" src="assets/look-arcade-dark.webp" width="480" height="480" alt="" loading="lazy"><span class="looks__cap">Neon Arcade</span></button>
+    <button class="looks__cell looks__shot" type="button" aria-pressed="false" aria-label="Zen Ink in dark" data-name="Zen Ink" data-reveal style="--i:1"><img class="is-light" src="assets/look-zen-light.webp" width="480" height="480" alt="" loading="lazy"><img class="is-dark" src="assets/look-zen-dark.webp" width="480" height="480" alt="" loading="lazy"><span class="looks__cap">Zen Ink</span></button>
+    <button class="looks__cell looks__shot" type="button" aria-pressed="true" aria-label="Pit Lane in dark" data-name="Pit Lane" data-reveal style="--i:2"><img class="is-light" src="assets/look-pitLane-light.webp" width="480" height="480" alt="" loading="lazy"><img class="is-dark" src="assets/look-pitLane-dark.webp" width="480" height="480" alt="" loading="lazy"><span class="looks__cap">Pit Lane</span></button>
+    <div class="looks__cell looks__cell--word field-sage" data-reveal style="--i:3"><p class="looks__big">42</p><p class="looks__cap">sound styles</p></div>
+    <button class="looks__cell looks__shot" type="button" aria-pressed="false" aria-label="Candy Pop in dark" data-name="Candy Pop" data-reveal style="--i:0"><img class="is-light" src="assets/look-candy-light.webp" width="480" height="480" alt="" loading="lazy"><img class="is-dark" src="assets/look-candy-dark.webp" width="480" height="480" alt="" loading="lazy"><span class="looks__cap">Candy Pop</span></button>
+    <button class="looks__cell looks__shot" type="button" aria-pressed="false" aria-label="Blossom in dark" data-name="Blossom" data-reveal style="--i:1"><img class="is-light" src="assets/look-blossom-light.webp" width="480" height="480" alt="" loading="lazy"><img class="is-dark" src="assets/look-blossom-dark.webp" width="480" height="480" alt="" loading="lazy"><span class="looks__cap">Blossom</span></button>
+    <div class="looks__cell looks__cell--word field-gold" data-reveal style="--i:2"><p class="looks__big looks__big--words">Yours</p><p class="looks__cap">build a theme in seven steps</p></div>
+  </div>
+</section>
+
+<section class="day" aria-labelledby="day-title">
+  <div class="day__fields">
+    <div class="day__words field-sage">
+      <h2 class="head" id="day-title">A minute a day</h2>
+      <ol class="day__clauses">
+        <li class="day__clause is-on" data-step="0"><button type="button">First, today’s challenge</button></li>
+        <li class="day__clause" data-step="1"><button type="button">Then three small quests</button></li>
+        <li class="day__clause" data-step="2"><button type="button">Next, see what improved</button></li>
+        <li class="day__clause" data-step="3"><button type="button">Last, keep the streak</button></li>
+      </ol>
+      <p class="day__note">Short enough to fit anywhere, and built so tomorrow’s game is easy to start.</p>
+    </div>
+    <div class="day__screen">
+      <div class="frag is-on" data-ui data-step="0">
+        <img src="assets/daily-card.webp" width="560" height="122" alt="Today’s Daily Challenge card: Countdown. Finish in under 2:30, with a personal target under 1:16.">
+        <p class="frag__title">Coming up this week</p>
+        <ul class="frag__list">
+          <li><span>Classic Sprint</span><span>Under 2:30</span></li>
+          <li><span>Seeing Red</span><span>Red down, black up</span></li>
+          <li><span>Alphabet Soup</span><span>Letters A to Y</span></li>
+          <li><span>Clean Sheet</span><span>No mistakes at all</span></li>
+          <li><span>Metronome</span><span>Rhythm of 50 or more</span></li>
+        </ul>
+        <p class="frag__foot">Everyone gets the same board, so you can compare with friends.</p>
+      </div>
+      <div class="frag" data-ui data-step="1">
+        <p class="frag__title">Today’s quests</p>
+        <ul class="frag__quests">
+          <li class="is-done"><span>Finish a game without a mistake</span><span>1 of 1</span><i style="--p:1"></i></li>
+          <li><span>Play 3 games</span><span>2 of 3</span><i style="--p:.667"></i></li>
+          <li><span>Reach a ×2 combo</span><span>0 of 1</span><i style="--p:0"></i></li>
+        </ul>
+        <p class="frag__foot">Finish all three for bonus XP.</p>
+      </div>
+      <div class="frag" data-ui data-step="2">
+        <p class="frag__title">Insights</p>
+        <p class="frag__big">Your top row got faster.</p>
+        <p class="frag__foot">Numbers there now take you 0.3 seconds less than last week.</p>
+        <svg class="frag__chart" viewBox="0 0 280 120" role="img" aria-label="Your Classic times over seven days, from 1:21 down to 1:09.">
+          <polyline points="10,22 55,36 100,31 145,60 190,70 235,65 270,92" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+          <circle cx="270" cy="92" r="6" fill="currentColor"/>
+        </svg>
+        <ul class="frag__axis"><li>1:21</li><li>1:18</li><li>1:19</li><li>1:14</li><li>1:12</li><li>1:13</li><li>1:09</li></ul>
+      </div>
+      <div class="frag" data-ui data-step="3">
+        <p class="frag__title">Streak</p>
+        <p class="frag__big">12 days in a row</p>
+        <ol class="frag__week">
+          <li class="is-done">Mon</li><li class="is-done">Tue</li><li class="is-done">Wed</li><li class="is-freeze">Thu</li><li class="is-done">Fri</li><li class="is-done">Sat</li><li>Sun</li>
+        </ol>
+        <p class="frag__foot">Streak freezes are earned as your streak grows, and save it on a day you miss. An optional reminder makes sure it never breaks by accident.</p>
+      </div>
+    </div>
+  </div>
+  <div class="day__control">
+    <label class="sr-only" for="day-range">Step through a day with 49</label>
+    <div class="day__track" style="--v:0"><input class="day__range" id="day-range" type="range" min="0" max="3" step="1" value="0"></div>
+    <ol class="day__stops">
+      <li class="is-on">Daily</li><li>Quests</li><li>Insights</li><li>Streak</li>
+    </ol>
+  </div>
+</section>
+
+<section class="letter" aria-labelledby="letter-title">
+  <div class="letter__col">
+    <img class="letter__icon" src="../assets/icon-lux-64.png" width="64" height="64" alt="">
+    <h2 class="head" id="letter-title" data-reveal>Why we made 49</h2>
+    <p data-reveal style="--i:1">All day, apps compete for your attention, and they are very good at winning. Feeds, notifications and autoplay are built to take it. Almost nothing is built to give it back.</p>
+    <p data-reveal style="--i:2">We think that is backwards. Focus is what lets you read a page without drifting, study without reaching for your phone and do your best work. Like strength or speed, it is something you can practise.</p>
+    <p data-reveal style="--i:3">So we took the Schulte table, a paper drill used for decades to train attention, visual search and speed reading, and made it a game you want to come back to. A minute a game, a new board every day, and after each one a sentence on what got better.</p>
+    <p data-reveal style="--i:4">It is a game, not a medical product, and it won’t diagnose or treat anything. What it gives you is <mark>one minute a day that trains your focus instead of draining it</mark>.</p>
+    <p class="letter__sign" data-reveal style="--i:5">The makers of 49<small><a class="link-plain" href="mailto:contact49game@icloud.com">contact49game@icloud.com</a></small></p>
+  </div>
+</section>
+
+<section class="price" id="price" aria-labelledby="price-title">
+  <div class="price__plan price__plan--free field-gold">
+    <h2 class="price__name" id="price-title">Free</h2>
+    <p class="price__for">For everyone. Every mode, board, look and sound, with nothing locked.</p>
+    <div class="price__foot">
+      <div>
+        <p class="price__amount">$0</p>
+        <p class="price__inc">Ads show between games, never during one, and not in your first games. Watch one ad for 30 minutes without any.</p>
+      </div>
+      <a class="button button--ink" href="https://testflight.apple.com/join/G4XsUyyB">Join the beta</a>
+    </div>
+  </div>
+  <div class="price__plan price__plan--premium field-slate">
+    <h3 class="price__name">Premium</h3>
+    <p class="price__for">For no ads at all, bought inside the app.</p>
+    <div class="price__foot">
+      <div>
+        <p class="price__amount price__amount--words">No ads</p>
+        <p class="price__inc">Weekly, monthly, yearly or lifetime. Yearly starts with a free week, and lifetime works with Family Sharing. It also keeps a small independent game going.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="join" id="join" aria-labelledby="join-title">
+  <div class="join__now">
+    <h2 class="head" id="join-title" data-reveal>Play it now</h2>
+    <p class="join__line" data-reveal style="--i:1">49 is in open beta on TestFlight, Apple’s app for testing new apps. Install TestFlight, then tap the button on your iPhone.</p>
+    <div class="join__go" data-reveal style="--i:2">
+      <a class="button" href="https://testflight.apple.com/join/G4XsUyyB">Join the beta</a>
+      <figure class="join__qr">
+    <svg viewBox="-2 -2 33 33" width="200" height="200" shape-rendering="crispEdges" role="img" aria-label="QR code that opens the 49 beta on TestFlight"><rect x="-2" y="-2" width="33" height="33" fill="#fff"/><path fill="#000" d="M0 0h7v1h-7zM9 0h1v1h-1zM13 0h1v1h-1zM17 0h3v1h-3zM22 0h7v1h-7zM0 1h1v1h-1zM6 1h1v1h-1zM10 1h1v1h-1zM12 1h1v1h-1zM15 1h4v1h-4zM22 1h1v1h-1zM28 1h1v1h-1zM0 2h1v1h-1zM2 2h3v1h-3zM6 2h1v1h-1zM10 2h1v1h-1zM12 2h1v1h-1zM17 2h2v1h-2zM22 2h1v1h-1zM24 2h3v1h-3zM28 2h1v1h-1zM0 3h1v1h-1zM2 3h3v1h-3zM6 3h1v1h-1zM9 3h1v1h-1zM11 3h2v1h-2zM14 3h3v1h-3zM18 3h3v1h-3zM22 3h1v1h-1zM24 3h3v1h-3zM28 3h1v1h-1zM0 4h1v1h-1zM2 4h3v1h-3zM6 4h1v1h-1zM9 4h2v1h-2zM12 4h2v1h-2zM15 4h1v1h-1zM18 4h1v1h-1zM22 4h1v1h-1zM24 4h3v1h-3zM28 4h1v1h-1zM0 5h1v1h-1zM6 5h1v1h-1zM8 5h3v1h-3zM14 5h3v1h-3zM18 5h3v1h-3zM22 5h1v1h-1zM28 5h1v1h-1zM0 6h7v1h-7zM8 6h1v1h-1zM10 6h1v1h-1zM12 6h1v1h-1zM14 6h1v1h-1zM16 6h1v1h-1zM18 6h1v1h-1zM20 6h1v1h-1zM22 6h7v1h-7zM11 7h1v1h-1zM14 7h1v1h-1zM17 7h2v1h-2zM0 8h1v1h-1zM3 8h1v1h-1zM5 8h2v1h-2zM8 8h1v1h-1zM10 8h1v1h-1zM14 8h1v1h-1zM16 8h1v1h-1zM18 8h1v1h-1zM20 8h2v1h-2zM23 8h1v1h-1zM1 9h3v1h-3zM8 9h9v1h-9zM20 9h3v1h-3zM25 9h1v1h-1zM28 9h1v1h-1zM0 10h1v1h-1zM3 10h2v1h-2zM6 10h3v1h-3zM10 10h1v1h-1zM13 10h1v1h-1zM16 10h2v1h-2zM19 10h1v1h-1zM21 10h1v1h-1zM24 10h4v1h-4zM2 11h1v1h-1zM4 11h1v1h-1zM9 11h1v1h-1zM11 11h3v1h-3zM16 11h1v1h-1zM19 11h5v1h-5zM26 11h2v1h-2zM0 12h2v1h-2zM6 12h2v1h-2zM11 12h3v1h-3zM15 12h3v1h-3zM20 12h4v1h-4zM25 12h1v1h-1zM27 12h2v1h-2zM0 13h1v1h-1zM2 13h1v1h-1zM5 13h1v1h-1zM7 13h1v1h-1zM13 13h2v1h-2zM16 13h2v1h-2zM19 13h3v1h-3zM2 14h5v1h-5zM8 14h3v1h-3zM12 14h1v1h-1zM16 14h1v1h-1zM18 14h1v1h-1zM21 14h1v1h-1zM25 14h4v1h-4zM0 15h2v1h-2zM5 15h1v1h-1zM7 15h2v1h-2zM11 15h4v1h-4zM16 15h3v1h-3zM20 15h2v1h-2zM23 15h1v1h-1zM25 15h1v1h-1zM27 15h1v1h-1zM2 16h1v1h-1zM4 16h1v1h-1zM6 16h2v1h-2zM10 16h3v1h-3zM15 16h1v1h-1zM17 16h1v1h-1zM20 16h2v1h-2zM23 16h1v1h-1zM27 16h1v1h-1zM4 17h1v1h-1zM7 17h1v1h-1zM9 17h4v1h-4zM16 17h2v1h-2zM20 17h4v1h-4zM25 17h1v1h-1zM28 17h1v1h-1zM0 18h1v1h-1zM2 18h2v1h-2zM5 18h3v1h-3zM10 18h2v1h-2zM14 18h1v1h-1zM17 18h1v1h-1zM20 18h1v1h-1zM23 18h2v1h-2zM27 18h2v1h-2zM2 19h2v1h-2zM10 19h1v1h-1zM14 19h5v1h-5zM20 19h1v1h-1zM22 19h1v1h-1zM27 19h2v1h-2zM0 20h1v1h-1zM2 20h1v1h-1zM4 20h3v1h-3zM12 20h1v1h-1zM14 20h3v1h-3zM20 20h5v1h-5zM26 20h1v1h-1zM8 21h1v1h-1zM13 21h1v1h-1zM16 21h1v1h-1zM20 21h1v1h-1zM24 21h1v1h-1zM26 21h3v1h-3zM0 22h7v1h-7zM9 22h1v1h-1zM12 22h1v1h-1zM14 22h1v1h-1zM16 22h1v1h-1zM20 22h1v1h-1zM22 22h1v1h-1zM24 22h1v1h-1zM27 22h1v1h-1zM0 23h1v1h-1zM6 23h1v1h-1zM8 23h1v1h-1zM13 23h2v1h-2zM16 23h1v1h-1zM18 23h1v1h-1zM20 23h1v1h-1zM24 23h5v1h-5zM0 24h1v1h-1zM2 24h3v1h-3zM6 24h1v1h-1zM12 24h1v1h-1zM14 24h5v1h-5zM20 24h5v1h-5zM0 25h1v1h-1zM2 25h3v1h-3zM6 25h1v1h-1zM8 25h1v1h-1zM10 25h1v1h-1zM12 25h1v1h-1zM22 25h6v1h-6zM0 26h1v1h-1zM2 26h3v1h-3zM6 26h1v1h-1zM9 26h1v1h-1zM11 26h3v1h-3zM16 26h1v1h-1zM20 26h1v1h-1zM24 26h3v1h-3zM28 26h1v1h-1zM0 27h1v1h-1zM6 27h1v1h-1zM9 27h2v1h-2zM14 27h1v1h-1zM17 27h4v1h-4zM23 27h1v1h-1zM27 27h1v1h-1zM0 28h7v1h-7zM8 28h1v1h-1zM11 28h2v1h-2zM14 28h2v1h-2zM17 28h1v1h-1zM20 28h5v1h-5zM27 28h1v1h-1z"/></svg>
+    <figcaption>On a computer? Scan this with your iPhone camera to join.</figcaption>
+  </figure>
+    </div>
+  </div>
+  <div class="join__lists">
+    <h3 class="join__wait">Rather wait for the App Store?</h3>
+    <div class="wait" id="android-wait">
+      <div class="wait__card">
+        <p class="wait__label">iPhone</p>
+        <p>Leave your email and we’ll tell you when 49 is on the App Store. Nothing else.</p>
+        <form class="waitlist" data-key="be2021f9-fa01-4d43-9539-5df4bd62df36">
+          <input type="checkbox" name="botcheck" class="waitlist-trap" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <label class="sr-only" for="wait-ios">Email for the App Store list</label>
+          <input class="field" id="wait-ios" type="email" name="email" required autocomplete="email" placeholder="you@example.com">
+          <button class="button button--quiet" type="submit">Notify me</button>
+        </form>
+        <p class="waitlist-done" role="status" hidden>You’re on the list. We’ll email you when 49 is on the App Store.</p>
+        <p class="waitlist-error" role="alert" hidden>That didn’t go through. Please try again, or email us at contact49game@icloud.com.</p>
+      </div>
+      <div class="wait__card" id="android">
+        <p class="wait__label">Android</p>
+        <p>On Android? Get one email when 49 comes to Android.</p>
+        <form class="waitlist" data-key="be2021f9-fa01-4d43-9539-5df4bd62df36" data-list="android">
+          <input type="checkbox" name="botcheck" class="waitlist-trap" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <label class="sr-only" for="wait-android">Email for the Android list</label>
+          <input class="field" id="wait-android" type="email" name="email" required autocomplete="email" placeholder="you@example.com">
+          <button class="button button--quiet" type="submit">Notify me</button>
+        </form>
+        <p class="waitlist-done" role="status" hidden>You’re on the Android list. We’ll email you when 49 comes to Android.</p>
+        <p class="waitlist-error" role="alert" hidden>That didn’t go through. Please try again, or email us at contact49game@icloud.com.</p>
+      </div>
+    </div>
+    <p class="small muted">We only email you about the launch, and remove you whenever you ask. <a class="link-plain" href="../privacy.html">Privacy policy</a></p>
+  </div>
+</section>
+
+<section class="faq" id="questions" aria-labelledby="faq-title">
+  <h2 class="head" id="faq-title" data-reveal>Questions</h2>
+  <div class="faq__text">
+    <p data-reveal><b>When does 49 come out?</b> Soon. It is in open beta on TestFlight right now, and the App Store for iPhone comes next.</p>
+    <p data-reveal><b>What do I need to play?</b> An iPhone with iOS 17 or later.</p>
+    <p data-reveal><b>Is it really free?</b> Yes. Every mode, board, look and feature is free. Free players see an ad between some games, never during one. Premium removes the ads, and one rewarded ad gives you 30 minutes without any.</p>
+    <p data-reveal><b>What is a Schulte table?</b> A grid of shuffled numbers that you find in order as fast as you can. It is a classic exercise for attention, visual search and speed reading, named after the German psychiatrist Walter Schulte.</p>
+    <p data-reveal><b>What is the difference between Normal and Competitive?</b> Normal is a plain time trial: no effects and no points, just your time. Competitive adds points, combos and a multiplier up to ×3, with effects and sounds that build as you go. Each style keeps its own records and ranks.</p>
+    <p data-reveal><b>How does scoring work in Competitive?</b> Each number is worth 100 points plus a speed bonus of up to 50 that shrinks the longer you take. A combo of 5 doubles your points and a combo of 15 triples them. If the combo timer runs out the combo is lost, and a wrong tap halves it. Numbers slowly lose value as a game goes on, so studying the board before you start never pays.</p>
+    <p data-reveal><b>Can I play with friends?</b> Yes. Multiplayer has 1 v 1, 2 v 2 and group rooms with Race, Points battle, Knockout, Ghost race and Steal. Friends join with a code, a QR code or a link. You can also pass your phone around in guest mode.</p>
+    <p data-reveal><b>Will it improve my focus?</b> You will see your own times, pace and accuracy improve as you play, and Insights shows you where. 49 is a game for practising focus, not a medical product. It does not diagnose, treat or prevent any condition.</p>
+    <p data-reveal><b>Is it accessible?</b> Yes. It has full VoiceOver support, Reduce Motion, Bold Text and charts you can hear as Audio Graphs. You can turn off confetti, flashes or haptics in the Accessibility settings.</p>
+    <p data-reveal><b>Which languages does it speak?</b> English, Polish, German, French, Spanish, Brazilian Portuguese, Italian, Japanese and Korean.</p>
+    <p data-reveal><b>Does it collect my data?</b> Your games, scores and stats stay on your iPhone, and there is no account. The app sends anonymous usage statistics with no names and no game history, and you can turn them off in Settings. Game Center is optional. The ads in the free version come from an ad network that may collect some data to show them, and Premium removes them. The <a class="link-plain" href="../privacy.html">privacy policy</a> has the details.</p>
+    <p data-reveal><b>How do I restore Premium on a new iPhone?</b> In the app, open Settings, then Premium, and tap Restore purchases while signed in with the Apple Account you bought it with.</p>
+    <p data-reveal><b>Is there an Android version?</b> Not yet. 49 is made for iPhone for now. Join the <a class="link-plain" href="#android">Android waiting list</a> and we will email you when it is out.</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <p class="foot__what">49, a focus game for iPhone</p>
+  <p class="foot__links"><a href="../schulte-table/">Schulte table online</a><a href="../achievements.html">Achievements</a><a href="../support.html">Support</a><a href="../terms.html">Terms</a></p>
+  <p class="foot__legal">© 2026 <a href="../privacy.html">Privacy</a></p>
+  <p class="foot__credits">Cockpit photograph: “Maserati 250 F, Bj. 1958, Cockpit” by Lothar Spurzem, <a href="https://creativecommons.org/licenses/by-sa/2.0/de/deed.en">CC BY-SA 2.0</a>, via <a href="https://commons.wikimedia.org/wiki/File:Maserati_250_F,_Bj._1958,_Cockpit_(2011-08-13_Sp).JPG">Wikimedia Commons</a>, cropped. iPhone, Game Center and VoiceOver are trademarks of Apple Inc. 49 is not affiliated with Apple.</p>
+</footer>
+
+<script src="page.js" defer></script>
+</body>
+</html>
