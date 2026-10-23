@@ -342,6 +342,8 @@ h1, h2, h3 { font-weight: 400; text-wrap: balance; }
 .letter .head { margin-bottom: 0.5rem; }
 .letter mark { background: var(--gold); color: var(--field-ink); padding: 0 0.15em; }
 .letter__sign { font-style: italic; font-size: var(--step-lead); margin-top: 0.75rem; }
+.letter__sign > a { text-decoration: none; transition: color 200ms ease; }
+.letter__sign > a:hover { color: var(--gold); }
 .letter__sign small { display: block; font-style: normal; font-size: var(--step-small); color: var(--muted); margin-top: 0.25rem; }
 
 /* Price: two fields on a hard edge, the wider one first. */
