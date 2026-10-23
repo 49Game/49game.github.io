@@ -292,6 +292,26 @@ document.querySelectorAll(".chapter").forEach((chapter) => {
   dialog.addEventListener("click", (e) => { if (e.target === dialog) dialog.close(); });
 })();
 
+// The Android waiting list opens in a window wherever it's offered, instead of sending you to the foot of the page.
+(() => {
+  const dialog = document.getElementById("android-pop");
+  if (!dialog || typeof dialog.showModal !== "function") return;
+  dialog.tabIndex = -1;
+  const open = () => {
+    document.querySelectorAll("dialog[open]").forEach((d) => d.close());
+    dialog.showModal();
+    dialog.focus();
+  };
+  document.addEventListener("click", (e) => {
+    const link = e.target.closest('a[href="#android"]');
+    if (!link || dialog.contains(link)) return;
+    e.preventDefault();
+    open();
+  });
+  dialog.querySelector("[data-close]").addEventListener("click", () => dialog.close());
+  dialog.addEventListener("click", (e) => { if (e.target === dialog) dialog.close(); });
+})();
+
 // The phone menu closes after a link is chosen.
 document.querySelectorAll(".nav__sheet a").forEach((a) => a.addEventListener("click", () => a.closest("details").open = false));
 
