@@ -146,6 +146,46 @@ document.querySelectorAll(".chapter").forEach((chapter) => {
   sections.forEach((s) => io.observe(s));
 });
 
+// Where you are: a small label at the bottom left names the section on screen, from its own heading
+// (so every language page names it in its language). Hidden on the first screen.
+(() => {
+  if (!("IntersectionObserver" in window)) return;
+  const priceName = document.querySelector('.nav__links a[href="#price"]')?.textContent.trim();
+  const sections = [...document.querySelectorAll("main section")].filter((s) => !s.classList.contains("hero"));
+  const nameOf = (s) => {
+    if (s.id === "price" && priceName) return priceName;
+    const h = s.querySelector("h1, h2");
+    return h ? (h.innerText || h.textContent).replace(/\s+/g, " ").trim() : "";
+  };
+  const label = document.createElement("p");
+  label.className = "where";
+  label.setAttribute("aria-hidden", "true");
+  label.innerHTML = '<span class="where__dot"></span><span class="where__name"></span>';
+  document.body.append(label);
+  const name = label.querySelector(".where__name");
+  const show = (s) => {
+    const text = s ? nameOf(s) : "";
+    label.classList.toggle("is-on", Boolean(text));
+    if (text && name.textContent !== text) name.textContent = text;
+  };
+  let current = null;
+  const io = new IntersectionObserver((entries) => {
+    for (const e of entries) if (e.isIntersecting) current = e.target;
+    show(current);
+  }, { rootMargin: "-50% 0px -50% 0px" });
+  sections.forEach((s) => io.observe(s));
+  // Phones show it only while scrolling (it would cover the text you are reading).
+  let still = 0;
+  addEventListener("scroll", () => {
+    label.classList.add("is-moving");
+    clearTimeout(still);
+    still = setTimeout(() => label.classList.remove("is-moving"), 1500);
+  }, { passive: true });
+  // Back on the first screen, the label steps aside.
+  const hero = document.querySelector(".hero");
+  if (hero) new IntersectionObserver(([e]) => { if (e.isIntersecting) { current = null; show(null); } }, { rootMargin: "-50% 0px -50% 0px" }).observe(hero);
+})();
+
 // Screen recordings play only while on screen, and never for people who asked for less motion.
 (() => {
   const videos = [...document.querySelectorAll("video[autoplay]")];

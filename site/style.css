@@ -144,6 +144,14 @@ h1, h2, h3 { font-weight: 400; text-wrap: balance; }
 .stage__layer.is-on .stage__phone { transform: none; }
 .styles__phone { width: 100%; }
 .inline-phone { width: min(70vw, 18rem); margin: 2rem 0; }
+/* Where you are on the page: a small label at the bottom left. */
+.where { position: fixed; left: calc(var(--margin) + 0.75rem); bottom: calc(var(--margin) + 0.75rem); z-index: 30; display: flex; align-items: center; gap: 0.55rem; max-width: min(22rem, calc(100vw - 2 * var(--margin) - 1.5rem)); padding: 0.5rem 0.9rem; background: var(--surface); color: var(--ink); font-size: var(--step-small); line-height: 1.2; opacity: 0; transform: translateY(0.5rem); transition: opacity 250ms ease, transform 250ms var(--ease-out); pointer-events: none; }
+.where.is-on { opacity: 1; transform: none; }
+/* On phones it sits over the text, so it shows only while you scroll. */
+@media (max-width: 900px) { .where.is-on:not(.is-moving) { opacity: 0; transform: translateY(0.5rem); } }
+.where__dot { flex: none; width: 0.5rem; height: 0.5rem; border-radius: 50%; background: var(--gold); }
+.where__name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+@media (prefers-reduced-motion: reduce) { .where { transition: none; } }
 .card-video { display: block; width: 100%; height: auto; border-radius: 14px; }
 .block > .head { margin-bottom: 0.5rem; }
 .figure-line { font-size: var(--step-head); line-height: 1.05; letter-spacing: -0.02em; color: var(--gold); }
