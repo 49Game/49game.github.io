@@ -146,6 +146,40 @@ document.querySelectorAll(".chapter").forEach((chapter) => {
   sections.forEach((s) => io.observe(s));
 });
 
+// The way in stays in reach: once the hero's own buttons scroll away, a slim bar at the top carries
+// the same "Join the beta" (and, on computers, the QR code), in the page's language.
+(() => {
+  const heroActions = document.querySelector(".hero__actions");
+  const join = heroActions?.querySelector('a.button[href*="testflight"]');
+  if (!heroActions || !join || !("IntersectionObserver" in window)) return;
+  const bar = document.createElement("div");
+  bar.className = "topbar";
+  const home = document.createElement("a");
+  home.className = "topbar__home";
+  home.href = "#top";
+  home.textContent = "49";
+  home.setAttribute("aria-label", document.querySelector(".nav__home")?.textContent.trim() || "49");
+  const actions = document.createElement("div");
+  actions.className = "topbar__actions";
+  const qr = heroActions.querySelector(".hero__qr");
+  if (qr) {
+    const qrCopy = qr.cloneNode(true);
+    qrCopy.addEventListener("click", () => document.getElementById("qr")?.showModal());
+    actions.append(qrCopy);
+  }
+  actions.append(join.cloneNode(true));
+  bar.append(home, actions);
+  document.body.append(bar);
+  const links = [...bar.querySelectorAll("a, button")];
+  const show = (on) => {
+    bar.classList.toggle("is-on", on);
+    links.forEach((l) => (on ? l.removeAttribute("tabindex") : l.setAttribute("tabindex", "-1")));
+    bar.toggleAttribute("inert", !on);
+  };
+  show(false);
+  new IntersectionObserver(([e]) => show(!e.isIntersecting && e.boundingClientRect.top < 0)).observe(heroActions);
+})();
+
 // Where you are: a small label at the bottom left names the section on screen, from its own heading
 // (so every language page names it in its language). Hidden on the first screen.
 (() => {
