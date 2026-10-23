@@ -146,78 +146,81 @@ document.querySelectorAll(".chapter").forEach((chapter) => {
   sections.forEach((s) => io.observe(s));
 });
 
-// The way in stays in reach: once the hero's own buttons scroll away, a slim bar at the top carries
-// the same "Join the beta" (and, on computers, the QR code), in the page's language.
+// The way in stays in reach: once the hero's own buttons scroll away, a bar slides down at the top with
+// the section you are in (a one-word name from the page's strings, tap it for every section), the
+// language menu and "Join the beta" (with the QR code on computers), all in the page's language.
 (() => {
   const heroActions = document.querySelector(".hero__actions");
   const join = heroActions?.querySelector('a.button[href*="testflight"]');
   if (!heroActions || !join || !("IntersectionObserver" in window)) return;
+  const sections = [...document.querySelectorAll("main section[id]")].filter((s) => T["s_" + s.id]);
   const bar = document.createElement("div");
   bar.className = "topbar";
+
   const home = document.createElement("a");
   home.className = "topbar__home";
   home.href = "#top";
   home.textContent = "49";
-  home.setAttribute("aria-label", document.querySelector(".nav__home")?.textContent.trim() || "49");
+
+  // The section button is the menu: it names where you are and opens the list of every section.
+  const menu = document.createElement("details");
+  menu.className = "topbar__menu";
+  const summary = document.createElement("summary");
+  summary.innerHTML = '<span class="topbar__dot"></span><span class="topbar__name"></span><span class="topbar__caret"></span>';
+  const name = summary.querySelector(".topbar__name");
+  name.textContent = document.querySelector(".nav__menu summary")?.textContent.trim() || "";
+  const list = document.createElement("nav");
+  list.className = "topbar__list";
+  list.setAttribute("aria-label", document.querySelector(".nav__sheet")?.getAttribute("aria-label") || "");
+  const items = sections.map((s) => {
+    const a = document.createElement("a");
+    a.href = "#" + s.id;
+    a.textContent = T["s_" + s.id];
+    a.addEventListener("click", () => { menu.open = false; });
+    list.append(a);
+    return a;
+  });
+  menu.append(summary, list);
+
   const actions = document.createElement("div");
   actions.className = "topbar__actions";
+  const lang = document.querySelector(".nav details.lang");
+  if (lang) actions.append(lang.cloneNode(true));
   const qr = heroActions.querySelector(".hero__qr");
   if (qr) {
-    const qrCopy = qr.cloneNode(true);
-    qrCopy.addEventListener("click", () => document.getElementById("qr")?.showModal());
-    actions.append(qrCopy);
+    // The copy keeps aria-controls="qr", so the QR script below opens the window from it too.
+    actions.append(qr.cloneNode(true));
   }
   actions.append(join.cloneNode(true));
-  bar.append(home, actions);
+  bar.append(home, menu, actions);
   document.body.append(bar);
-  const links = [...bar.querySelectorAll("a, button")];
+
+  // Both menus in the bar close on a click elsewhere or Escape, like the ones in the header.
+  const menus = [...bar.querySelectorAll("details")];
+  document.addEventListener("click", (e) => menus.forEach((m) => { if (m.open && !m.contains(e.target)) m.open = false; }));
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape") menus.forEach((m) => { m.open = false; }); });
+  bar.querySelectorAll("a[data-lang]").forEach((a) => a.addEventListener("click", () => {
+    try { localStorage.setItem("lang", a.dataset.lang); } catch (e) {}
+  }));
+
   const show = (on) => {
     bar.classList.toggle("is-on", on);
-    links.forEach((l) => (on ? l.removeAttribute("tabindex") : l.setAttribute("tabindex", "-1")));
     bar.toggleAttribute("inert", !on);
+    if (!on) menus.forEach((m) => { m.open = false; });
   };
   show(false);
   new IntersectionObserver(([e]) => show(!e.isIntersecting && e.boundingClientRect.top < 0)).observe(heroActions);
-})();
 
-// Where you are: a small label at the bottom left names the section on screen, from its own heading
-// (so every language page names it in its language). Hidden on the first screen.
-(() => {
-  if (!("IntersectionObserver" in window)) return;
-  const priceName = document.querySelector('.nav__links a[href="#price"]')?.textContent.trim();
-  const sections = [...document.querySelectorAll("main section")].filter((s) => !s.classList.contains("hero"));
-  const nameOf = (s) => {
-    if (s.id === "price" && priceName) return priceName;
-    const h = s.querySelector("h1, h2");
-    return h ? (h.innerText || h.textContent).replace(/\s+/g, " ").trim() : "";
-  };
-  const label = document.createElement("p");
-  label.className = "where";
-  label.setAttribute("aria-hidden", "true");
-  label.innerHTML = '<span class="where__dot"></span><span class="where__name"></span>';
-  document.body.append(label);
-  const name = label.querySelector(".where__name");
-  const show = (s) => {
-    const text = s ? nameOf(s) : "";
-    label.classList.toggle("is-on", Boolean(text));
-    if (text && name.textContent !== text) name.textContent = text;
-  };
-  let current = null;
+  // The name follows the section crossing the middle of the screen.
   const io = new IntersectionObserver((entries) => {
-    for (const e of entries) if (e.isIntersecting) current = e.target;
-    show(current);
+    for (const e of entries) {
+      if (!e.isIntersecting) continue;
+      const i = sections.indexOf(e.target);
+      name.textContent = T["s_" + e.target.id];
+      items.forEach((a, k) => a.toggleAttribute("aria-current", k === i));
+    }
   }, { rootMargin: "-50% 0px -50% 0px" });
   sections.forEach((s) => io.observe(s));
-  // Phones show it only while scrolling (it would cover the text you are reading).
-  let still = 0;
-  addEventListener("scroll", () => {
-    label.classList.add("is-moving");
-    clearTimeout(still);
-    still = setTimeout(() => label.classList.remove("is-moving"), 1500);
-  }, { passive: true });
-  // Back on the first screen, the label steps aside.
-  const hero = document.querySelector(".hero");
-  if (hero) new IntersectionObserver(([e]) => { if (e.isIntersecting) { current = null; show(null); } }, { rootMargin: "-50% 0px -50% 0px" }).observe(hero);
 })();
 
 // Screen recordings play only while on screen, and never for people who asked for less motion.
@@ -281,7 +284,10 @@ document.querySelectorAll(".chapter").forEach((chapter) => {
 (() => {
   const dialog = document.getElementById("qr");
   if (!dialog || typeof dialog.showModal !== "function") return;
-  document.querySelectorAll('[aria-controls="qr"]').forEach((b) => b.addEventListener("click", () => dialog.showModal()));
+  // Focus goes to the window itself, so its Close button doesn't light up the moment it opens.
+  dialog.tabIndex = -1;
+  const open = () => { dialog.showModal(); dialog.focus(); };
+  document.querySelectorAll('[aria-controls="qr"]').forEach((b) => b.addEventListener("click", open));
   dialog.querySelector("[data-close]").addEventListener("click", () => dialog.close());
   dialog.addEventListener("click", (e) => { if (e.target === dialog) dialog.close(); });
 })();

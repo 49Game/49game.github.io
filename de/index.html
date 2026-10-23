@@ -42,7 +42,7 @@
     <nav class="nav__sheet" aria-label="Abschnitte">
       <a href="schulte-tabelle/">Online spielen</a>
       <a href="#modes">Modi</a>
-      <a href="#friends">Freunde</a>
+      <a href="#friends">Mehrspieler</a>
       <a href="#ranks">Ränge</a>
       <a href="#price">Preis</a>
       <a href="#questions">Fragen</a>
@@ -51,7 +51,7 @@
   <nav class="nav__links" aria-label="Abschnitte">
     <a href="schulte-tabelle/">Online spielen</a>
     <a href="#modes">Modi</a>
-    <a href="#friends">Freunde</a>
+    <a href="#friends">Mehrspieler</a>
     <a href="#ranks">Ränge</a>
     <a href="#price">Preis</a>
   </nav>
@@ -120,7 +120,7 @@
   </div>
 </div>
 
-<section class="drill" aria-labelledby="drill-title">
+<section class="drill" id="racing" aria-labelledby="drill-title">
   <div class="drill__head">
     <h2 class="head" id="drill-title" data-reveal>Training wie im Rennsport</h2>
     <p data-reveal style="--i:1">Bei Renntempo ist Konzentration alles. Profifahrer trainieren Aufmerksamkeit, visuelles Erfassen und Reaktion so ernsthaft wie ihre Fitness, und manche nutzen dafür Schulte-Tabellen. 49 macht aus genau dieser Übung eine Minute am Tag.</p>
@@ -140,7 +140,7 @@
   </div>
 </section>
 
-<section class="day" aria-labelledby="day-title">
+<section class="day" id="daily" aria-labelledby="day-title">
   <div class="day__fields">
     <div class="day__words field-sage">
       <h2 class="head" id="day-title">Eine Minute am Tag</h2>
@@ -203,7 +203,7 @@
   </div>
 </section>
 
-<section class="styles" aria-labelledby="styles-title">
+<section class="styles" id="styles" aria-labelledby="styles-title">
   <div class="styles__field styles__field--normal">
     <div class="styles__body">
       <figure class="phone styles__phone"><video class="phone__screen" autoplay muted loop playsinline preload="metadata" poster="../site/assets/game-normal.webp" width="600" height="1304" aria-label="Ein Spiel im Modus Klassisch im Stil Normal: nur die Uhr und die Tafel."><source src="../site/assets/game-normal.mp4" type="video/mp4"></video></figure>
@@ -439,7 +439,7 @@
   </div>
 </div>
 
-<section class="letter" aria-labelledby="letter-title">
+<section class="letter" id="mission" aria-labelledby="letter-title">
   <div class="letter__col">
     <img class="letter__icon" src="../assets/app-icon-64.png" width="64" height="64" alt="">
     <h2 class="head" id="letter-title" data-reveal>Warum es 49 gibt</h2>
@@ -582,7 +582,7 @@
   <button class="done__close" type="button" id="done-close" aria-label="Schließen">Schließen</button>
 </dialog>
 
-<script type="application/json" id="strings">{"boardLabel": "Schulte-Tabelle, 4 mal 4. Tippe die Zahlen von 1 bis 16 der Reihe nach an.", "find": "Finde", "foundAll": "Alle gefunden:", "going": "Weiter so. Ein Fehler kostet dich hier nichts, in der App aber schon.", "doneHint": "Geschafft in <b>{time}</b>. Das waren 16 Zahlen. Die App hat die vollen Tafeln, bis 49.", "doneLine": "Alle 16 in {time} gefunden, {misses}. Die vollen Tafeln sind 5 × 5 und 7 × 7, mit einem Rang für jede Zeit.", "missNone": "ohne Fehler", "missOne": "mit 1 Fehler", "missMany": "mit {n} Fehlern"}</script>
+<script type="application/json" id="strings">{"boardLabel": "Schulte-Tabelle, 4 mal 4. Tippe die Zahlen von 1 bis 16 der Reihe nach an.", "find": "Finde", "foundAll": "Alle gefunden:", "going": "Weiter so. Ein Fehler kostet dich hier nichts, in der App aber schon.", "doneHint": "Geschafft in <b>{time}</b>. Das waren 16 Zahlen. Die App hat die vollen Tafeln, bis 49.", "doneLine": "Alle 16 in {time} gefunden, {misses}. Die vollen Tafeln sind 5 × 5 und 7 × 7, mit einem Rang für jede Zeit.", "missNone": "ohne Fehler", "missOne": "mit 1 Fehler", "missMany": "mit {n} Fehlern", "s_needs": "Vorteile", "s_racing": "Rennsport", "s_daily": "Täglich", "s_styles": "Stile", "s_modes": "Modi", "s_friends": "Mehrspieler", "s_steal": "Klauen", "s_boards": "Tafeln", "s_ranks": "Ränge", "s_achievements": "Erfolge", "s_mission": "Mission", "s_price": "Preis", "s_join": "Spielen", "s_questions": "Fragen"}</script>
 <script src="../site/page.js" defer></script>
 </body>
 </html>

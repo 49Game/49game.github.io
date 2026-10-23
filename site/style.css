@@ -148,18 +148,32 @@ h1, h2, h3 { font-weight: 400; text-wrap: balance; }
 .topbar { position: fixed; top: 0; left: 0; right: 0; z-index: 25; display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: 0.6rem var(--margin); padding-top: max(0.6rem, env(safe-area-inset-top)); background: var(--bg); transform: translateY(-100%); transition: transform 300ms var(--ease-out); }
 .topbar.is-on { transform: none; }
 .topbar__home { font-size: var(--step-lead); line-height: 1; text-decoration: none; }
-.topbar__actions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 0.5rem; }
+.topbar__actions { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 0.5rem 1rem; margin-left: auto; }
+.topbar__menu { position: relative; min-width: 0; }
+.topbar__menu summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 0.5rem; min-height: 2.75rem; padding: 0 0.85rem; background: var(--surface); font-size: var(--step-small); }
+.topbar__menu summary::-webkit-details-marker { display: none; }
+.topbar__menu summary:hover { color: var(--gold); }
+.topbar__dot { flex: none; width: 0.5rem; height: 0.5rem; border-radius: 50%; background: var(--gold); }
+.topbar__name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 34vw; }
+.topbar__caret { flex: none; width: 0.45rem; height: 0.45rem; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: translateY(-2px) rotate(45deg); transition: transform 200ms ease; }
+.topbar__menu[open] .topbar__caret { transform: translateY(2px) rotate(225deg); }
+.topbar__list { position: absolute; left: 0; top: calc(100% + 0.4rem); width: max-content; min-width: 12rem; max-height: calc(100svh - 6rem); overflow-y: auto; display: grid; padding: 0.5rem 0; background: var(--surface); }
+.topbar__list a { padding: 0.55rem 1.25rem; text-decoration: none; }
+.topbar__list a:hover, .topbar__list a[aria-current] { color: var(--gold); }
+.topbar__home { margin-right: 0.25rem; }
+/* Phones: one row. The section button is the way around, so the wordmark steps aside for its name. */
+@media (max-width: 480px) {
+  .topbar { gap: 0.6rem; }
+  .topbar__home { display: none; }
+  .topbar__menu { flex: 0 1 auto; }
+  .topbar__menu summary { gap: 0.4rem; padding: 0 0.65rem; }
+  .topbar__name { max-width: none; flex: 0 1 auto; min-width: 0; }
+  .topbar__actions { flex-wrap: nowrap; gap: 0.6rem; }
+  .topbar .button { padding: 0 0.85rem; }
+}
 .topbar .button { min-height: 2.75rem; font-size: var(--step-small); }
 @media (prefers-reduced-motion: reduce) { .topbar { transition: none; } }
 
-/* Where you are on the page: a small label at the bottom left. */
-.where { position: fixed; left: calc(var(--margin) + 0.75rem); bottom: calc(var(--margin) + 0.75rem); z-index: 30; display: flex; align-items: center; gap: 0.55rem; max-width: min(22rem, calc(100vw - 2 * var(--margin) - 1.5rem)); padding: 0.5rem 0.9rem; background: var(--surface); color: var(--ink); font-size: var(--step-small); line-height: 1.2; opacity: 0; transform: translateY(0.5rem); transition: opacity 250ms ease, transform 250ms var(--ease-out); pointer-events: none; }
-.where.is-on { opacity: 1; transform: none; }
-/* On phones it sits over the text, so it shows only while you scroll. */
-@media (max-width: 900px) { .where.is-on:not(.is-moving) { opacity: 0; transform: translateY(0.5rem); } }
-.where__dot { flex: none; width: 0.5rem; height: 0.5rem; border-radius: 50%; background: var(--gold); }
-.where__name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-@media (prefers-reduced-motion: reduce) { .where { transition: none; } }
 .card-video { display: block; width: 100%; height: auto; border-radius: 14px; }
 .block > .head { margin-bottom: 0.5rem; }
 .figure-line { font-size: var(--step-head); line-height: 1.05; letter-spacing: -0.02em; color: var(--gold); }
@@ -473,6 +487,7 @@ h1, h2, h3 { font-weight: 400; text-wrap: balance; }
 /* The QR code for the beta, from the hero (computers only: on an iPhone the button opens TestFlight itself). */
 .qr { padding: 3.75rem clamp(2rem, 4vw, 3rem) clamp(2rem, 4vw, 3rem); border: 0; border-radius: 0; background: var(--gold); color: var(--field-ink); }
 .qr::backdrop { background: rgba(18, 17, 15, 0.78); }
+.qr:focus { outline: none; }
 .qr__body { display: grid; justify-items: center; gap: 1rem; }
 .qr__body svg { width: 15rem; }
 .qr__body figcaption { max-width: 22ch; text-align: center; font-size: var(--step-body); }

@@ -42,7 +42,7 @@
     <nav class="nav__sheet" aria-label="Sekcje">
       <a href="tablica-schultego/">Zagraj online</a>
       <a href="#modes">Tryby</a>
-      <a href="#friends">Znajomi</a>
+      <a href="#friends">Gra wieloosobowa</a>
       <a href="#ranks">Rangi</a>
       <a href="#price">Cena</a>
       <a href="#questions">Pytania</a>
@@ -51,7 +51,7 @@
   <nav class="nav__links" aria-label="Sekcje">
     <a href="tablica-schultego/">Zagraj online</a>
     <a href="#modes">Tryby</a>
-    <a href="#friends">Znajomi</a>
+    <a href="#friends">Gra wieloosobowa</a>
     <a href="#ranks">Rangi</a>
     <a href="#price">Cena</a>
   </nav>
@@ -120,7 +120,7 @@
   </div>
 </div>
 
-<section class="drill" aria-labelledby="drill-title">
+<section class="drill" id="racing" aria-labelledby="drill-title">
   <div class="drill__head">
     <h2 class="head" id="drill-title" data-reveal>Trenuj jak kierowca wyścigowy</h2>
     <p data-reveal style="--i:1">Przy wyścigowych prędkościach skupienie jest wszystkim. Zawodowi kierowcy trenują uwagę, skanowanie wzrokiem i refleks tak samo poważnie jak kondycję, a niektórzy używają do tego tablic Schultego. 49 zamienia to samo ćwiczenie w minutę dziennie.</p>
@@ -140,7 +140,7 @@
   </div>
 </section>
 
-<section class="day" aria-labelledby="day-title">
+<section class="day" id="daily" aria-labelledby="day-title">
   <div class="day__fields">
     <div class="day__words field-sage">
       <h2 class="head" id="day-title">Minuta dziennie</h2>
@@ -203,7 +203,7 @@
   </div>
 </section>
 
-<section class="styles" aria-labelledby="styles-title">
+<section class="styles" id="styles" aria-labelledby="styles-title">
   <div class="styles__field styles__field--normal">
     <div class="styles__body">
       <figure class="phone styles__phone"><video class="phone__screen" autoplay muted loop playsinline preload="metadata" poster="../site/assets/game-normal.webp" width="600" height="1304" aria-label="Gra w trybie Klasycznym w stylu Normalnym: tylko zegar i plansza."><source src="../site/assets/game-normal.mp4" type="video/mp4"></video></figure>
@@ -439,7 +439,7 @@
   </div>
 </div>
 
-<section class="letter" aria-labelledby="letter-title">
+<section class="letter" id="mission" aria-labelledby="letter-title">
   <div class="letter__col">
     <img class="letter__icon" src="../assets/app-icon-64.png" width="64" height="64" alt="">
     <h2 class="head" id="letter-title" data-reveal>Dlaczego powstało 49</h2>
@@ -582,7 +582,7 @@
   <button class="done__close" type="button" id="done-close" aria-label="Zamknij">Zamknij</button>
 </dialog>
 
-<script type="application/json" id="strings">{"boardLabel": "Tablica Schultego 4 na 4. Dotykaj liczb od 1 do 16 po kolei.", "find": "Znajdź", "foundAll": "Znaleziono wszystkie", "going": "Tak trzymaj. Tutaj pomyłka nic nie kosztuje, ale w aplikacji już tak.", "doneHint": "Gotowe w <b>{time}</b>. To było 16 liczb. W aplikacji są pełne plansze, aż do 49.", "doneLine": "Wszystkie 16 znalezione w {time}, {misses}. Pełne plansze to 5 × 5 i 7 × 7, a każdy czas daje Ci rangę.", "missNone": "bez pomyłek", "missOne": "z 1 pomyłką", "missMany": "z {n} pomyłkami"}</script>
+<script type="application/json" id="strings">{"boardLabel": "Tablica Schultego 4 na 4. Dotykaj liczb od 1 do 16 po kolei.", "find": "Znajdź", "foundAll": "Znaleziono wszystkie", "going": "Tak trzymaj. Tutaj pomyłka nic nie kosztuje, ale w aplikacji już tak.", "doneHint": "Gotowe w <b>{time}</b>. To było 16 liczb. W aplikacji są pełne plansze, aż do 49.", "doneLine": "Wszystkie 16 znalezione w {time}, {misses}. Pełne plansze to 5 × 5 i 7 × 7, a każdy czas daje Ci rangę.", "missNone": "bez pomyłek", "missOne": "z 1 pomyłką", "missMany": "z {n} pomyłkami", "s_needs": "Korzyści", "s_racing": "Wyścigi", "s_daily": "Codziennie", "s_styles": "Style", "s_modes": "Tryby", "s_friends": "Multiplayer", "s_steal": "Kradzież", "s_boards": "Plansze", "s_ranks": "Rangi", "s_achievements": "Osiągnięcia", "s_mission": "Misja", "s_price": "Cena", "s_join": "Graj", "s_questions": "Pytania"}</script>
 <script src="../site/page.js" defer></script>
 </body>
 </html>

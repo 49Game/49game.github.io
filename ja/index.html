@@ -42,7 +42,7 @@
     <nav class="nav__sheet" aria-label="セクション">
       <a href="schulte-table/">オンラインで遊ぶ</a>
       <a href="#modes">モード</a>
-      <a href="#friends">友達</a>
+      <a href="#friends">マルチプレイ</a>
       <a href="#ranks">ランク</a>
       <a href="#price">価格</a>
       <a href="#questions">よくある質問</a>
@@ -51,7 +51,7 @@
   <nav class="nav__links" aria-label="セクション">
     <a href="schulte-table/">オンラインで遊ぶ</a>
     <a href="#modes">モード</a>
-    <a href="#friends">友達</a>
+    <a href="#friends">マルチプレイ</a>
     <a href="#ranks">ランク</a>
     <a href="#price">価格</a>
   </nav>
@@ -120,7 +120,7 @@
   </div>
 </div>
 
-<section class="drill" aria-labelledby="drill-title">
+<section class="drill" id="racing" aria-labelledby="drill-title">
   <div class="drill__head">
     <h2 class="head" id="drill-title" data-reveal>レーサーのように鍛える</h2>
     <p data-reveal style="--i:1">レースのスピードでは、集中力がすべてです。プロのドライバーは注意力、視覚的なスキャン、反応速度を体力と同じくらい真剣に鍛えていて、そのためにシュルテテーブルを使う人もいます。49は、それと同じトレーニングを1日1分にしました。</p>
@@ -140,7 +140,7 @@
   </div>
 </section>
 
-<section class="day" aria-labelledby="day-title">
+<section class="day" id="daily" aria-labelledby="day-title">
   <div class="day__fields">
     <div class="day__words field-sage">
       <h2 class="head" id="day-title">1日1分</h2>
@@ -203,7 +203,7 @@
   </div>
 </section>
 
-<section class="styles" aria-labelledby="styles-title">
+<section class="styles" id="styles" aria-labelledby="styles-title">
   <div class="styles__field styles__field--normal">
     <div class="styles__body">
       <figure class="phone styles__phone"><video class="phone__screen" autoplay muted loop playsinline preload="metadata" poster="../site/assets/game-normal.webp" width="600" height="1304" aria-label="ノーマルスタイルのクラシック：タイマーと盤面だけ。"><source src="../site/assets/game-normal.mp4" type="video/mp4"></video></figure>
@@ -439,7 +439,7 @@
   </div>
 </div>
 
-<section class="letter" aria-labelledby="letter-title">
+<section class="letter" id="mission" aria-labelledby="letter-title">
   <div class="letter__col">
     <img class="letter__icon" src="../assets/app-icon-64.png" width="64" height="64" alt="">
     <h2 class="head" id="letter-title" data-reveal>49を作った理由</h2>
@@ -582,7 +582,7 @@
   <button class="done__close" type="button" id="done-close" aria-label="閉じる">閉じる</button>
 </dialog>
 
-<script type="application/json" id="strings">{"boardLabel": "シュルテテーブル（4 × 4）。1から16までの数字を順番にタップしてください。", "find": "探して", "foundAll": "すべて発見", "going": "その調子。ここではミスしてもペナルティはありませんが、アプリではタイムに響きます。", "doneHint": "<b>{time}</b>でクリア。今回は16個でした。アプリには49個までのフルボードがあります。", "doneLine": "{time}、{misses}で16個すべてを見つけました。アプリのフルボードは5 × 5と7 × 7で、どのタイムにもランクがつきます。", "missNone": "ミスなし", "missOne": "ミス1回", "missMany": "ミス{n}回"}</script>
+<script type="application/json" id="strings">{"boardLabel": "シュルテテーブル（4 × 4）。1から16までの数字を順番にタップしてください。", "find": "探して", "foundAll": "すべて発見", "going": "その調子。ここではミスしてもペナルティはありませんが、アプリではタイムに響きます。", "doneHint": "<b>{time}</b>でクリア。今回は16個でした。アプリには49個までのフルボードがあります。", "doneLine": "{time}、{misses}で16個すべてを見つけました。アプリのフルボードは5 × 5と7 × 7で、どのタイムにもランクがつきます。", "missNone": "ミスなし", "missOne": "ミス1回", "missMany": "ミス{n}回", "s_needs": "メリット", "s_racing": "レース", "s_daily": "毎日", "s_styles": "スタイル", "s_modes": "モード", "s_friends": "マルチプレイ", "s_steal": "スティール", "s_boards": "盤面", "s_ranks": "ランク", "s_achievements": "実績", "s_mission": "ミッション", "s_price": "価格", "s_join": "プレイ", "s_questions": "質問"}</script>
 <script src="../site/page.js" defer></script>
 </body>
 </html>

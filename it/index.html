@@ -42,7 +42,7 @@
     <nav class="nav__sheet" aria-label="Sezioni">
       <a href="tabella-di-schulte/">Gioca online</a>
       <a href="#modes">Modalità</a>
-      <a href="#friends">Amici</a>
+      <a href="#friends">Multigiocatore</a>
       <a href="#ranks">Gradi</a>
       <a href="#price">Prezzo</a>
       <a href="#questions">Domande</a>
@@ -51,7 +51,7 @@
   <nav class="nav__links" aria-label="Sezioni">
     <a href="tabella-di-schulte/">Gioca online</a>
     <a href="#modes">Modalità</a>
-    <a href="#friends">Amici</a>
+    <a href="#friends">Multigiocatore</a>
     <a href="#ranks">Gradi</a>
     <a href="#price">Prezzo</a>
   </nav>
@@ -120,7 +120,7 @@
   </div>
 </div>
 
-<section class="drill" aria-labelledby="drill-title">
+<section class="drill" id="racing" aria-labelledby="drill-title">
   <div class="drill__head">
     <h2 class="head" id="drill-title" data-reveal>Allenati come un pilota</h2>
     <p data-reveal style="--i:1">A velocità da gara, la concentrazione è tutto. I piloti professionisti allenano attenzione, scansione visiva e riflessi con la stessa serietà della forma fisica, e alcuni lo fanno con le tabelle di Schulte. 49 trasforma lo stesso esercizio in un minuto al giorno.</p>
@@ -140,7 +140,7 @@
   </div>
 </section>
 
-<section class="day" aria-labelledby="day-title">
+<section class="day" id="daily" aria-labelledby="day-title">
   <div class="day__fields">
     <div class="day__words field-sage">
       <h2 class="head" id="day-title">Un minuto al giorno</h2>
@@ -203,7 +203,7 @@
   </div>
 </section>
 
-<section class="styles" aria-labelledby="styles-title">
+<section class="styles" id="styles" aria-labelledby="styles-title">
   <div class="styles__field styles__field--normal">
     <div class="styles__body">
       <figure class="phone styles__phone"><video class="phone__screen" autoplay muted loop playsinline preload="metadata" poster="../site/assets/game-normal.webp" width="600" height="1304" aria-label="Una partita Classica in stile Normale: solo il cronometro e la griglia."><source src="../site/assets/game-normal.mp4" type="video/mp4"></video></figure>
@@ -439,7 +439,7 @@
   </div>
 </div>
 
-<section class="letter" aria-labelledby="letter-title">
+<section class="letter" id="mission" aria-labelledby="letter-title">
   <div class="letter__col">
     <img class="letter__icon" src="../assets/app-icon-64.png" width="64" height="64" alt="">
     <h2 class="head" id="letter-title" data-reveal>Perché abbiamo creato 49</h2>
@@ -582,7 +582,7 @@
   <button class="done__close" type="button" id="done-close" aria-label="Chiudi">Chiudi</button>
 </dialog>
 
-<script type="application/json" id="strings">{"boardLabel": "Tabella di Schulte, 4 per 4. Tocca i numeri da 1 a 16 in ordine.", "find": "Trova", "foundAll": "Trovati tutti", "going": "Continua così. Qui un errore non ti costa nulla, ma nell’app sì.", "doneHint": "Fatto in <b>{time}</b>. Erano 16 numeri. L’app ha le griglie complete, fino a 49.", "doneLine": "Hai trovato tutti e 16 in {time}, con {misses}. Le griglie complete sono 5 × 5 e 7 × 7, con un grado per ogni tempo.", "missNone": "zero errori", "missOne": "1 errore", "missMany": "{n} errori"}</script>
+<script type="application/json" id="strings">{"boardLabel": "Tabella di Schulte, 4 per 4. Tocca i numeri da 1 a 16 in ordine.", "find": "Trova", "foundAll": "Trovati tutti", "going": "Continua così. Qui un errore non ti costa nulla, ma nell’app sì.", "doneHint": "Fatto in <b>{time}</b>. Erano 16 numeri. L’app ha le griglie complete, fino a 49.", "doneLine": "Hai trovato tutti e 16 in {time}, con {misses}. Le griglie complete sono 5 × 5 e 7 × 7, con un grado per ogni tempo.", "missNone": "zero errori", "missOne": "1 errore", "missMany": "{n} errori", "s_needs": "Benefici", "s_racing": "Corse", "s_daily": "Quotidiano", "s_styles": "Stili", "s_modes": "Modalità", "s_friends": "Multigiocatore", "s_steal": "Furto", "s_boards": "Griglie", "s_ranks": "Gradi", "s_achievements": "Obiettivi", "s_mission": "Missione", "s_price": "Prezzo", "s_join": "Gioca", "s_questions": "Domande"}</script>
 <script src="../site/page.js" defer></script>
 </body>
 </html>

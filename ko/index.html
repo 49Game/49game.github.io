@@ -42,7 +42,7 @@
     <nav class="nav__sheet" aria-label="섹션">
       <a href="schulte-table/">온라인 플레이</a>
       <a href="#modes">모드</a>
-      <a href="#friends">친구</a>
+      <a href="#friends">멀티플레이</a>
       <a href="#ranks">랭크</a>
       <a href="#price">가격</a>
       <a href="#questions">질문</a>
@@ -51,7 +51,7 @@
   <nav class="nav__links" aria-label="섹션">
     <a href="schulte-table/">온라인 플레이</a>
     <a href="#modes">모드</a>
-    <a href="#friends">친구</a>
+    <a href="#friends">멀티플레이</a>
     <a href="#ranks">랭크</a>
     <a href="#price">가격</a>
   </nav>
@@ -120,7 +120,7 @@
   </div>
 </div>
 
-<section class="drill" aria-labelledby="drill-title">
+<section class="drill" id="racing" aria-labelledby="drill-title">
   <div class="drill__head">
     <h2 class="head" id="drill-title" data-reveal>레이싱 드라이버처럼 훈련해요</h2>
     <p data-reveal style="--i:1">레이싱 속도에서는 집중력이 전부예요. 프로 드라이버는 주의력, 시각 탐색, 반응 속도를 체력만큼 진지하게 훈련하고, 그중에는 슐테 테이블을 쓰는 선수도 있어요. 49는 그 훈련을 하루 1분으로 바꿨어요.</p>
@@ -140,7 +140,7 @@
   </div>
 </section>
 
-<section class="day" aria-labelledby="day-title">
+<section class="day" id="daily" aria-labelledby="day-title">
   <div class="day__fields">
     <div class="day__words field-sage">
       <h2 class="head" id="day-title">하루 1분</h2>
@@ -203,7 +203,7 @@
   </div>
 </section>
 
-<section class="styles" aria-labelledby="styles-title">
+<section class="styles" id="styles" aria-labelledby="styles-title">
   <div class="styles__field styles__field--normal">
     <div class="styles__body">
       <figure class="phone styles__phone"><video class="phone__screen" autoplay muted loop playsinline preload="metadata" poster="../site/assets/game-normal.webp" width="600" height="1304" aria-label="일반 스타일의 클래식 게임: 시계와 판만 있어요."><source src="../site/assets/game-normal.mp4" type="video/mp4"></video></figure>
@@ -439,7 +439,7 @@
   </div>
 </div>
 
-<section class="letter" aria-labelledby="letter-title">
+<section class="letter" id="mission" aria-labelledby="letter-title">
   <div class="letter__col">
     <img class="letter__icon" src="../assets/app-icon-64.png" width="64" height="64" alt="">
     <h2 class="head" id="letter-title" data-reveal>49를 만든 이유</h2>
@@ -582,7 +582,7 @@
   <button class="done__close" type="button" id="done-close" aria-label="닫기">닫기</button>
 </dialog>
 
-<script type="application/json" id="strings">{"boardLabel": "슐테 테이블, 4 × 4. 1부터 16까지 숫자를 순서대로 탭하세요.", "find": "찾기", "foundAll": "찾은 숫자", "going": "계속하세요. 여기서는 실수해도 손해가 없지만, 앱에서는 달라요.", "doneHint": "<b>{time}</b> 만에 완료했어요. 숫자 16개였어요. 앱에는 49까지 전체 보드가 있어요.", "doneLine": "{misses} 16개를 모두 {time} 만에 찾았어요. 전체 보드는 5 × 5와 7 × 7이고, 모든 기록에 랭크가 매겨져요.", "missNone": "실수 없이", "missOne": "실수 1번 하고", "missMany": "실수 {n}번 하고"}</script>
+<script type="application/json" id="strings">{"boardLabel": "슐테 테이블, 4 × 4. 1부터 16까지 숫자를 순서대로 탭하세요.", "find": "찾기", "foundAll": "찾은 숫자", "going": "계속하세요. 여기서는 실수해도 손해가 없지만, 앱에서는 달라요.", "doneHint": "<b>{time}</b> 만에 완료했어요. 숫자 16개였어요. 앱에는 49까지 전체 보드가 있어요.", "doneLine": "{misses} 16개를 모두 {time} 만에 찾았어요. 전체 보드는 5 × 5와 7 × 7이고, 모든 기록에 랭크가 매겨져요.", "missNone": "실수 없이", "missOne": "실수 1번 하고", "missMany": "실수 {n}번 하고", "s_needs": "효과", "s_racing": "레이싱", "s_daily": "매일", "s_styles": "스타일", "s_modes": "모드", "s_friends": "멀티플레이", "s_steal": "스틸", "s_boards": "판", "s_ranks": "랭크", "s_achievements": "업적", "s_mission": "미션", "s_price": "가격", "s_join": "플레이", "s_questions": "질문"}</script>
 <script src="../site/page.js" defer></script>
 </body>
 </html>

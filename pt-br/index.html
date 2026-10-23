@@ -42,7 +42,7 @@
     <nav class="nav__sheet" aria-label="Seções">
       <a href="tabela-de-schulte/">Jogar online</a>
       <a href="#modes">Modos</a>
-      <a href="#friends">Amigos</a>
+      <a href="#friends">Multijogador</a>
       <a href="#ranks">Patentes</a>
       <a href="#price">Preço</a>
       <a href="#questions">Perguntas</a>
@@ -51,7 +51,7 @@
   <nav class="nav__links" aria-label="Seções">
     <a href="tabela-de-schulte/">Jogar online</a>
     <a href="#modes">Modos</a>
-    <a href="#friends">Amigos</a>
+    <a href="#friends">Multijogador</a>
     <a href="#ranks">Patentes</a>
     <a href="#price">Preço</a>
   </nav>
@@ -120,7 +120,7 @@
   </div>
 </div>
 
-<section class="drill" aria-labelledby="drill-title">
+<section class="drill" id="racing" aria-labelledby="drill-title">
   <div class="drill__head">
     <h2 class="head" id="drill-title" data-reveal>Treine como um piloto</h2>
     <p data-reveal style="--i:1">Na velocidade de uma corrida, o foco é tudo. Pilotos profissionais treinam atenção, varredura visual e reflexos com a mesma seriedade que o preparo físico, e alguns usam tabelas de Schulte para isso. O 49 transforma esse mesmo treino em um minuto por dia.</p>
@@ -140,7 +140,7 @@
   </div>
 </section>
 
-<section class="day" aria-labelledby="day-title">
+<section class="day" id="daily" aria-labelledby="day-title">
   <div class="day__fields">
     <div class="day__words field-sage">
       <h2 class="head" id="day-title">Um minuto por dia</h2>
@@ -203,7 +203,7 @@
   </div>
 </section>
 
-<section class="styles" aria-labelledby="styles-title">
+<section class="styles" id="styles" aria-labelledby="styles-title">
   <div class="styles__field styles__field--normal">
     <div class="styles__body">
       <figure class="phone styles__phone"><video class="phone__screen" autoplay muted loop playsinline preload="metadata" poster="../site/assets/game-normal.webp" width="600" height="1304" aria-label="Uma partida no Clássico no estilo Normal: só o relógio e o tabuleiro."><source src="../site/assets/game-normal.mp4" type="video/mp4"></video></figure>
@@ -439,7 +439,7 @@
   </div>
 </div>
 
-<section class="letter" aria-labelledby="letter-title">
+<section class="letter" id="mission" aria-labelledby="letter-title">
   <div class="letter__col">
     <img class="letter__icon" src="../assets/app-icon-64.png" width="64" height="64" alt="">
     <h2 class="head" id="letter-title" data-reveal>Por que fizemos o 49</h2>
@@ -582,7 +582,7 @@
   <button class="done__close" type="button" id="done-close" aria-label="Fechar">Fechar</button>
 </dialog>
 
-<script type="application/json" id="strings">{"boardLabel": "Tabela de Schulte, 4 por 4. Toque nos números de 1 a 16 em ordem.", "find": "Encontre", "foundAll": "Achou todos os", "going": "Continue. Aqui um erro não custa nada, mas no app custa.", "doneHint": "Feito em <b>{time}</b>. Foram 16 números. O app tem os tabuleiros completos, até 49.", "doneLine": "Você achou todos os 16 em {time}, {misses}. Os tabuleiros completos são 5 × 5 e 7 × 7, com uma patente para cada tempo.", "missNone": "sem nenhum erro", "missOne": "com 1 erro", "missMany": "com {n} erros"}</script>
+<script type="application/json" id="strings">{"boardLabel": "Tabela de Schulte, 4 por 4. Toque nos números de 1 a 16 em ordem.", "find": "Encontre", "foundAll": "Achou todos os", "going": "Continue. Aqui um erro não custa nada, mas no app custa.", "doneHint": "Feito em <b>{time}</b>. Foram 16 números. O app tem os tabuleiros completos, até 49.", "doneLine": "Você achou todos os 16 em {time}, {misses}. Os tabuleiros completos são 5 × 5 e 7 × 7, com uma patente para cada tempo.", "missNone": "sem nenhum erro", "missOne": "com 1 erro", "missMany": "com {n} erros", "s_needs": "Benefícios", "s_racing": "Corrida", "s_daily": "Diário", "s_styles": "Estilos", "s_modes": "Modos", "s_friends": "Multijogador", "s_steal": "Roubo", "s_boards": "Tabuleiros", "s_ranks": "Patentes", "s_achievements": "Conquistas", "s_mission": "Missão", "s_price": "Preço", "s_join": "Jogar", "s_questions": "Perguntas"}</script>
 <script src="../site/page.js" defer></script>
 </body>
 </html>

@@ -42,7 +42,7 @@
     <nav class="nav__sheet" aria-label="Sections">
       <a href="table-de-schulte/">Jouer en ligne</a>
       <a href="#modes">Modes</a>
-      <a href="#friends">Amis</a>
+      <a href="#friends">Multijoueur</a>
       <a href="#ranks">Rangs</a>
       <a href="#price">Prix</a>
       <a href="#questions">Questions</a>
@@ -51,7 +51,7 @@
   <nav class="nav__links" aria-label="Sections">
     <a href="table-de-schulte/">Jouer en ligne</a>
     <a href="#modes">Modes</a>
-    <a href="#friends">Amis</a>
+    <a href="#friends">Multijoueur</a>
     <a href="#ranks">Rangs</a>
     <a href="#price">Prix</a>
   </nav>
@@ -120,7 +120,7 @@
   </div>
 </div>
 
-<section class="drill" aria-labelledby="drill-title">
+<section class="drill" id="racing" aria-labelledby="drill-title">
   <div class="drill__head">
     <h2 class="head" id="drill-title" data-reveal>Entraîne-toi comme un pilote</h2>
     <p data-reveal style="--i:1">À la vitesse d’une course, la concentration est tout. Les pilotes professionnels entraînent leur attention, leur balayage visuel et leurs réflexes aussi sérieusement que leur condition physique, et certains utilisent pour cela des tables de Schulte. 49 transforme ce même exercice en une minute par jour.</p>
@@ -140,7 +140,7 @@
   </div>
 </section>
 
-<section class="day" aria-labelledby="day-title">
+<section class="day" id="daily" aria-labelledby="day-title">
   <div class="day__fields">
     <div class="day__words field-sage">
       <h2 class="head" id="day-title">Une minute par jour</h2>
@@ -203,7 +203,7 @@
   </div>
 </section>
 
-<section class="styles" aria-labelledby="styles-title">
+<section class="styles" id="styles" aria-labelledby="styles-title">
   <div class="styles__field styles__field--normal">
     <div class="styles__body">
       <figure class="phone styles__phone"><video class="phone__screen" autoplay muted loop playsinline preload="metadata" poster="../site/assets/game-normal.webp" width="600" height="1304" aria-label="Une partie Classique en style Normal : juste le chrono et la grille."><source src="../site/assets/game-normal.mp4" type="video/mp4"></video></figure>
@@ -439,7 +439,7 @@
   </div>
 </div>
 
-<section class="letter" aria-labelledby="letter-title">
+<section class="letter" id="mission" aria-labelledby="letter-title">
   <div class="letter__col">
     <img class="letter__icon" src="../assets/app-icon-64.png" width="64" height="64" alt="">
     <h2 class="head" id="letter-title" data-reveal>Pourquoi nous avons créé 49</h2>
@@ -582,7 +582,7 @@
   <button class="done__close" type="button" id="done-close" aria-label="Fermer">Fermer</button>
 </dialog>
 
-<script type="application/json" id="strings">{"boardLabel": "Table de Schulte, 4 sur 4. Touche les nombres de 1 à 16 dans l’ordre.", "find": "Trouve", "foundAll": "Tout trouvé", "going": "Continue. Ici, une erreur ne te coûte rien, mais dans l’app, si.", "doneHint": "Terminé en <b>{time}</b>. C’était 16 nombres. L’app a les grilles complètes, jusqu’à 49.", "doneLine": "Tu as trouvé les 16 en {time}, avec {misses}. Les grilles complètes font 5 × 5 et 7 × 7, avec un rang pour chaque temps.", "missNone": "zéro erreur", "missOne": "1 erreur", "missMany": "{n} erreurs"}</script>
+<script type="application/json" id="strings">{"boardLabel": "Table de Schulte, 4 sur 4. Touche les nombres de 1 à 16 dans l’ordre.", "find": "Trouve", "foundAll": "Tout trouvé", "going": "Continue. Ici, une erreur ne te coûte rien, mais dans l’app, si.", "doneHint": "Terminé en <b>{time}</b>. C’était 16 nombres. L’app a les grilles complètes, jusqu’à 49.", "doneLine": "Tu as trouvé les 16 en {time}, avec {misses}. Les grilles complètes font 5 × 5 et 7 × 7, avec un rang pour chaque temps.", "missNone": "zéro erreur", "missOne": "1 erreur", "missMany": "{n} erreurs", "s_needs": "Bienfaits", "s_racing": "Course", "s_daily": "Quotidien", "s_styles": "Styles", "s_modes": "Modes", "s_friends": "Multijoueur", "s_steal": "Vol", "s_boards": "Grilles", "s_ranks": "Rangs", "s_achievements": "Succès", "s_mission": "Mission", "s_price": "Prix", "s_join": "Jouer", "s_questions": "Questions"}</script>
 <script src="../site/page.js" defer></script>
 </body>
 </html>

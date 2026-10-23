@@ -42,7 +42,7 @@
     <nav class="nav__sheet" aria-label="Secciones">
       <a href="tabla-de-schulte/">Jugar online</a>
       <a href="#modes">Modos</a>
-      <a href="#friends">Amigos</a>
+      <a href="#friends">Multijugador</a>
       <a href="#ranks">Rangos</a>
       <a href="#price">Precio</a>
       <a href="#questions">Preguntas</a>
@@ -51,7 +51,7 @@
   <nav class="nav__links" aria-label="Secciones">
     <a href="tabla-de-schulte/">Jugar online</a>
     <a href="#modes">Modos</a>
-    <a href="#friends">Amigos</a>
+    <a href="#friends">Multijugador</a>
     <a href="#ranks">Rangos</a>
     <a href="#price">Precio</a>
   </nav>
@@ -120,7 +120,7 @@
   </div>
 </div>
 
-<section class="drill" aria-labelledby="drill-title">
+<section class="drill" id="racing" aria-labelledby="drill-title">
   <div class="drill__head">
     <h2 class="head" id="drill-title" data-reveal>Entrena como un piloto</h2>
     <p data-reveal style="--i:1">A velocidad de carrera, la concentración lo es todo. Los pilotos profesionales entrenan la atención, la exploración visual y los reflejos tan en serio como su forma física, y algunos lo hacen con tablas de Schulte. 49 convierte ese mismo ejercicio en un minuto al día.</p>
@@ -140,7 +140,7 @@
   </div>
 </section>
 
-<section class="day" aria-labelledby="day-title">
+<section class="day" id="daily" aria-labelledby="day-title">
   <div class="day__fields">
     <div class="day__words field-sage">
       <h2 class="head" id="day-title">Un minuto al día</h2>
@@ -203,7 +203,7 @@
   </div>
 </section>
 
-<section class="styles" aria-labelledby="styles-title">
+<section class="styles" id="styles" aria-labelledby="styles-title">
   <div class="styles__field styles__field--normal">
     <div class="styles__body">
       <figure class="phone styles__phone"><video class="phone__screen" autoplay muted loop playsinline preload="metadata" poster="../site/assets/game-normal.webp" width="600" height="1304" aria-label="Una partida de Clásico en estilo Normal: solo el reloj y el tablero."><source src="../site/assets/game-normal.mp4" type="video/mp4"></video></figure>
@@ -439,7 +439,7 @@
   </div>
 </div>
 
-<section class="letter" aria-labelledby="letter-title">
+<section class="letter" id="mission" aria-labelledby="letter-title">
   <div class="letter__col">
     <img class="letter__icon" src="../assets/app-icon-64.png" width="64" height="64" alt="">
     <h2 class="head" id="letter-title" data-reveal>Por qué creamos 49</h2>
@@ -582,7 +582,7 @@
   <button class="done__close" type="button" id="done-close" aria-label="Cerrar">Cerrar</button>
 </dialog>
 
-<script type="application/json" id="strings">{"boardLabel": "Tabla de Schulte de 4 por 4. Toca los números del 1 al 16 en orden.", "find": "Busca", "foundAll": "Encontrados", "going": "Sigue. Aquí un fallo no te cuesta nada, pero en la app sí.", "doneHint": "Hecho en <b>{time}</b>. Eran 16 números. La app tiene los tableros completos, hasta 49.", "doneLine": "Encontraste los 16 en {time} {misses}. Los tableros completos son de 5 × 5 y 7 × 7, con un rango para cada tiempo.", "missNone": "sin ningún fallo", "missOne": "con 1 fallo", "missMany": "con {n} fallos"}</script>
+<script type="application/json" id="strings">{"boardLabel": "Tabla de Schulte de 4 por 4. Toca los números del 1 al 16 en orden.", "find": "Busca", "foundAll": "Encontrados", "going": "Sigue. Aquí un fallo no te cuesta nada, pero en la app sí.", "doneHint": "Hecho en <b>{time}</b>. Eran 16 números. La app tiene los tableros completos, hasta 49.", "doneLine": "Encontraste los 16 en {time} {misses}. Los tableros completos son de 5 × 5 y 7 × 7, con un rango para cada tiempo.", "missNone": "sin ningún fallo", "missOne": "con 1 fallo", "missMany": "con {n} fallos", "s_needs": "Beneficios", "s_racing": "Carreras", "s_daily": "Diario", "s_styles": "Estilos", "s_modes": "Modos", "s_friends": "Multijugador", "s_steal": "Robo", "s_boards": "Tableros", "s_ranks": "Rangos", "s_achievements": "Logros", "s_mission": "Misión", "s_price": "Precio", "s_join": "Jugar", "s_questions": "Preguntas"}</script>
 <script src="../site/page.js" defer></script>
 </body>
 </html>
