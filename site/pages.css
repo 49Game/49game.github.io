@@ -5,6 +5,7 @@
 /* The header stays on top while you scroll, with its way into the app. */
 .doc .nav--page { position: sticky; top: 0; z-index: 25; left: auto; padding: var(--margin); background: var(--bg); }
 .doc .nav__home { display: block; margin-right: auto; font-size: var(--step-lead); line-height: 1; text-decoration: none; }
+.nav__icon { display: block; width: 2rem; height: 2rem; }
 .doc .nav__links { margin-left: 0; }
 .doc .foot { margin-top: clamp(6rem, 12vw, 10rem); }
 
