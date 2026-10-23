@@ -87,6 +87,12 @@ h1, h2, h3 { font-weight: 400; text-wrap: balance; }
 .nav__links a:hover { color: var(--gold); }
 .nav__action { min-height: 2.75rem; font-size: var(--step-small); }
 .nav__menu { display: none; }
+/* When the links don't fit beside the board (a narrower window, a longer language), the menu button stands in. */
+.nav.is-compact .nav__links { display: none; }
+.nav.is-compact .nav__menu { display: block; position: relative; margin-left: auto; }
+.nav.is-compact .nav__menu summary { list-style: none; cursor: pointer; min-height: 2.75rem; display: flex; align-items: center; padding: 0 0.25rem; }
+.nav.is-compact .nav__menu summary::-webkit-details-marker { display: none; }
+.nav.is-compact .nav__sheet { position: absolute; right: -6rem; top: 3rem; z-index: 6; width: min(16rem, 80vw); display: grid; padding: 0.75rem 1.25rem; background: var(--surface); }
 .lang { position: relative; }
 .lang summary { list-style: none; cursor: pointer; min-height: 2.75rem; display: flex; align-items: center; padding: 0 0.25rem; transition: color 200ms ease; }
 .lang summary::-webkit-details-marker { display: none; }
@@ -157,14 +163,20 @@ h1, h2, h3 { font-weight: 400; text-wrap: balance; }
 .topbar__name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 34vw; }
 .topbar__caret { flex: none; width: 0.45rem; height: 0.45rem; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: translateY(-2px) rotate(45deg); transition: transform 200ms ease; }
 .topbar__menu[open] .topbar__caret { transform: translateY(2px) rotate(225deg); }
-.topbar__list { position: absolute; left: 0; top: calc(100% + 0.4rem); width: max-content; min-width: 12rem; max-height: calc(100svh - 6rem); overflow-y: auto; display: grid; padding: 0.5rem 0; background: var(--surface); }
+.topbar__list { position: absolute; right: 0; top: calc(100% + 0.4rem); width: max-content; min-width: 12rem; max-height: calc(100svh - 6rem); overflow-y: auto; display: grid; padding: 0.5rem 0; background: var(--surface); }
 .topbar__list a { padding: 0.55rem 1.25rem; text-decoration: none; }
 .topbar__list a:hover, .topbar__list a[aria-current] { color: var(--gold); }
 .topbar__home { margin-right: 0.25rem; }
+/* Wide screens: every section in the bar; the one on screen is gold. */
+.topbar__links { flex: 1 1 auto; min-width: 0; display: flex; flex-wrap: nowrap; justify-content: center; gap: 0.25rem 1.1rem; overflow: hidden; font-size: var(--step-small); white-space: nowrap; }
+.topbar__links a { flex: none; padding: 0.55rem 0; color: var(--muted); text-decoration: none; transition: color 200ms ease; }
+.topbar__links a:hover { color: var(--ink); }
+.topbar__links a[aria-current] { color: var(--gold); }
+.topbar:not(.is-compact) .topbar__menu { display: none; }
+.topbar.is-compact .topbar__links { display: none; }
 /* Phones: one row. The section button is the way around, so the wordmark steps aside for its name. */
 @media (max-width: 480px) {
   .topbar { gap: 0.6rem; }
-  .topbar__home { display: none; }
   .topbar__menu { flex: 0 1 auto; }
   .topbar__menu summary { gap: 0.4rem; padding: 0 0.65rem; }
   .topbar__name { max-width: none; flex: 0 1 auto; min-width: 0; }

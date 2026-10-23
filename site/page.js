@@ -146,6 +146,21 @@ document.querySelectorAll(".chapter").forEach((chapter) => {
   sections.forEach((s) => io.observe(s));
 });
 
+// The header shows every link when they fit beside the board, else its menu button.
+(() => {
+  const nav = document.querySelector("header.nav");
+  if (!nav || !nav.querySelector(".nav__links")) return;
+  const fit = () => {
+    nav.classList.remove("is-compact");
+    if (innerWidth <= 900) return;
+    const right = Math.max(...[...nav.children].map((c) => c.getBoundingClientRect().right));
+    nav.classList.toggle("is-compact", nav.scrollWidth > nav.clientWidth + 1 || right > innerWidth + 1);
+  };
+  fit();
+  addEventListener("resize", fit);
+  document.fonts?.ready.then(fit);
+})();
+
 // The way in stays in reach: once the hero's own buttons scroll away, a bar slides down at the top with
 // the section you are in (a one-word name from the page's strings, tap it for every section), the
 // language menu and "Join the beta" (with the QR code on computers), all in the page's language.
@@ -182,8 +197,21 @@ document.querySelectorAll(".chapter").forEach((chapter) => {
   });
   menu.append(summary, list);
 
+  // On a wide screen every section sits in the bar itself, and the one you are in lights up.
+  const links = document.createElement("nav");
+  links.className = "topbar__links";
+  links.setAttribute("aria-label", list.getAttribute("aria-label"));
+  const inline = sections.map((s) => {
+    const a = document.createElement("a");
+    a.href = "#" + s.id;
+    a.textContent = T["s_" + s.id];
+    links.append(a);
+    return a;
+  });
+
   const actions = document.createElement("div");
   actions.className = "topbar__actions";
+  actions.append(menu);
   const lang = document.querySelector(".nav details.lang");
   if (lang) actions.append(lang.cloneNode(true));
   const qr = heroActions.querySelector(".hero__qr");
@@ -192,8 +220,17 @@ document.querySelectorAll(".chapter").forEach((chapter) => {
     actions.append(qr.cloneNode(true));
   }
   actions.append(join.cloneNode(true));
-  bar.append(home, menu, actions);
+  bar.append(home, links, actions);
   document.body.append(bar);
+
+  // The full list when it fits on one row, the compact button when it doesn't (a narrow window, a long language).
+  const fit = () => {
+    bar.classList.remove("is-compact");
+    bar.classList.toggle("is-compact", links.scrollWidth > links.clientWidth + 1 || innerWidth <= 900);
+  };
+  fit();
+  addEventListener("resize", fit);
+  document.fonts?.ready.then(fit);
 
   // Both menus in the bar close on a click elsewhere or Escape, like the ones in the header.
   const menus = [...bar.querySelectorAll("details")];
@@ -218,6 +255,7 @@ document.querySelectorAll(".chapter").forEach((chapter) => {
       const i = sections.indexOf(e.target);
       name.textContent = T["s_" + e.target.id];
       items.forEach((a, k) => a.toggleAttribute("aria-current", k === i));
+      inline.forEach((a, k) => a.toggleAttribute("aria-current", k === i));
     }
   }, { rootMargin: "-50% 0px -50% 0px" });
   sections.forEach((s) => io.observe(s));
