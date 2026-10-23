@@ -338,7 +338,7 @@ h1, h2, h3 { font-weight: 400; text-wrap: balance; }
 /* Letter. */
 .letter { padding: var(--section) var(--margin); display: grid; justify-items: center; }
 .letter__col { width: min(100%, 34rem); display: grid; gap: 1.25rem; }
-.letter__icon { width: 44px; height: 44px; border-radius: 50%; }
+.letter__icon { width: 44px; height: 44px; }
 .letter .head { margin-bottom: 0.5rem; }
 .letter mark { background: var(--gold); color: var(--field-ink); padding: 0 0.15em; }
 .letter__sign { font-style: italic; font-size: var(--step-lead); margin-top: 0.75rem; }
