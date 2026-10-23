@@ -175,7 +175,14 @@ document.querySelectorAll(".chapter").forEach((chapter) => {
   const home = document.createElement("a");
   home.className = "topbar__home";
   home.href = "#top";
-  home.textContent = "49";
+  // The app icon, as in the page's own header (the same file, so the path fits every language's folder).
+  const icon = document.createElement("img");
+  icon.className = "nav__icon";
+  icon.src = document.querySelector(".nav__icon")?.getAttribute("src") || "assets/tab-49-64.png?v=4";
+  icon.width = 32;
+  icon.height = 32;
+  icon.alt = "49";
+  home.append(icon);
 
   // The section button is the menu: it names where you are and opens the list of every section.
   const menu = document.createElement("details");
