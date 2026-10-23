@@ -8,15 +8,16 @@
   const fill = (template, values) => template.replace(/\{(\w+)\}/g, (_, key) => values[key]);
   const missWord = count => text.misses[plural.select(count)] || text.misses.other;
 
-  // The language menu closes on a click anywhere else, or Escape.
-  const menu = document.querySelector("details.lang");
-  if (menu) {
-    document.addEventListener("click", e => { if (menu.open && !menu.contains(e.target)) menu.open = false; });
-    document.addEventListener("keydown", e => { if (e.key === "Escape" && menu.open) { menu.open = false; menu.querySelector("summary").focus(); } });
-    menu.querySelectorAll("a[data-lang]").forEach(a => a.addEventListener("click", () => {
-      try { localStorage.setItem("lang", a.dataset.lang); } catch (e) {}
-    }));
-  }
+  // The menus (sections on a phone, language) close on a click anywhere else, or Escape.
+  const menus = [...document.querySelectorAll("details.nav__menu, details.lang")];
+  document.addEventListener("click", e => menus.forEach(m => { if (m.open && !m.contains(e.target)) m.open = false; }));
+  document.addEventListener("keydown", e => {
+    if (e.key !== "Escape") return;
+    menus.forEach(m => { if (m.open) { m.open = false; m.querySelector("summary").focus(); } });
+  });
+  document.querySelectorAll("a[data-lang]").forEach(a => a.addEventListener("click", () => {
+    try { localStorage.setItem("lang", a.dataset.lang); } catch (e) {}
+  }));
   // The phone menu closes after a link is chosen.
   document.querySelectorAll(".nav__sheet a").forEach(a => a.addEventListener("click", () => { a.closest("details").open = false; }));
 

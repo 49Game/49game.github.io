@@ -430,6 +430,13 @@ h1, h2, h3 { font-weight: 400; text-wrap: balance; }
 .done { width: min(44rem, calc(100vw - 2 * var(--margin))); max-height: calc(100svh - 2 * var(--margin)); padding: 0; border: 0; border-radius: 0; background: var(--gold); color: var(--field-ink); overflow: auto; }
 .done[open] { display: grid; grid-template-columns: minmax(0, 1fr) auto; }
 .done::backdrop { background: rgba(18, 17, 15, 0.78); }
+/* The QR code for the beta, from the hero (computers only: on an iPhone the button opens TestFlight itself). */
+.qr { padding: 3.75rem clamp(2rem, 4vw, 3rem) clamp(2rem, 4vw, 3rem); border: 0; border-radius: 0; background: var(--gold); color: var(--field-ink); }
+.qr::backdrop { background: rgba(18, 17, 15, 0.78); }
+.qr__body { display: grid; justify-items: center; gap: 1rem; }
+.qr__body svg { width: 15rem; }
+.qr__body figcaption { max-width: 22ch; text-align: center; font-size: var(--step-body); }
+@media (max-width: 900px), (hover: none) { .hero__qr { display: none; } }
 .done__body { padding: clamp(1.5rem, 4vw, 2.75rem); display: grid; gap: 1rem; align-content: start; }
 .done__time { font-size: var(--step-head); line-height: 1; letter-spacing: -0.03em; font-variant-numeric: tabular-nums; }
 .done__title { font-size: var(--step-lead); line-height: 1.2; font-weight: 600; }

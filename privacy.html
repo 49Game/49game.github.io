@@ -90,6 +90,15 @@
   <p class="foot__legal">© 2026 <a href="privacy.html">Privacy</a></p>
   <p class="foot__credits">iPhone, Game Center and VoiceOver are trademarks of Apple Inc. 49 is not affiliated with Apple.</p>
 </footer>
-<script>document.querySelectorAll(".nav__sheet a").forEach((a) => a.addEventListener("click", () => a.closest("details").open = false))</script>
+<script>
+  // The phone menu closes after a link is chosen, on a click anywhere else, or Escape.
+  (() => {
+    const menu = document.querySelector("details.nav__menu");
+    if (!menu) return;
+    menu.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => { menu.open = false; }));
+    document.addEventListener("click", (e) => { if (menu.open && !menu.contains(e.target)) menu.open = false; });
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape" && menu.open) { menu.open = false; menu.querySelector("summary").focus(); } });
+  })();
+</script>
 </body>
 </html>

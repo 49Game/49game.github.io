@@ -19,11 +19,13 @@ const say = (key, values = {}) => (T[key] || key).replace(/\{(\w+)\}/g, (_, k) =
   document.querySelectorAll("a[data-lang]").forEach((a) => a.addEventListener("click", () => {
     try { localStorage.setItem("lang", a.dataset.lang); } catch (e) {}
   }));
-  const menu = document.querySelector("details.lang");
-  if (menu) {
-    document.addEventListener("click", (e) => { if (menu.open && !menu.contains(e.target)) menu.open = false; });
-    document.addEventListener("keydown", (e) => { if (e.key === "Escape" && menu.open) { menu.open = false; menu.querySelector("summary").focus(); } });
-  }
+  // The menus (sections on a phone, language) close on a click anywhere else, or Escape.
+  const menus = [...document.querySelectorAll("details.nav__menu, details.lang")];
+  document.addEventListener("click", (e) => menus.forEach((m) => { if (m.open && !m.contains(e.target)) m.open = false; }));
+  document.addEventListener("keydown", (e) => {
+    if (e.key !== "Escape") return;
+    menus.forEach((m) => { if (m.open) { m.open = false; m.querySelector("summary").focus(); } });
+  });
   let saved = null;
   try { saved = localStorage.getItem("lang"); } catch (e) {}
   if (saved || document.documentElement.lang !== "en" || /bot|crawl|spider/i.test(navigator.userAgent)) return;
@@ -186,6 +188,15 @@ document.querySelectorAll("[data-rb]").forEach((root) => {
   range.addEventListener("input", () => set(Number(range.value)));
   stops.forEach((el, k) => el.addEventListener("click", () => set(k)));
   set(0);
+})();
+
+// The QR code for the beta: opened from the hero, closed by its button, Escape or a click outside.
+(() => {
+  const dialog = document.getElementById("qr");
+  if (!dialog || typeof dialog.showModal !== "function") return;
+  document.querySelectorAll('[aria-controls="qr"]').forEach((b) => b.addEventListener("click", () => dialog.showModal()));
+  dialog.querySelector("[data-close]").addEventListener("click", () => dialog.close());
+  dialog.addEventListener("click", (e) => { if (e.target === dialog) dialog.close(); });
 })();
 
 // The phone menu closes after a link is chosen.
