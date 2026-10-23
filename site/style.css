@@ -156,29 +156,26 @@ h1, h2, h3 { font-weight: 400; text-wrap: balance; }
 .topbar__home { font-size: var(--step-lead); line-height: 1; text-decoration: none; }
 .topbar__actions { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 0.5rem 1rem; margin-left: auto; }
 .topbar__menu { position: relative; min-width: 0; }
-.topbar__menu summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 0.5rem; min-height: 2.75rem; padding: 0 0.85rem; background: var(--surface); font-size: var(--step-small); }
+.topbar__menu summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 0.5rem; min-height: 2.75rem; padding: 0 0.25rem; font-size: var(--step-body); transition: color 200ms ease; }
 .topbar__menu summary::-webkit-details-marker { display: none; }
 .topbar__menu summary:hover { color: var(--gold); }
 .topbar__dot { flex: none; width: 0.5rem; height: 0.5rem; border-radius: 50%; background: var(--gold); }
 .topbar__name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 34vw; }
 .topbar__caret { flex: none; width: 0.45rem; height: 0.45rem; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: translateY(-2px) rotate(45deg); transition: transform 200ms ease; }
 .topbar__menu[open] .topbar__caret { transform: translateY(2px) rotate(225deg); }
-.topbar__list { position: absolute; right: 0; top: calc(100% + 0.4rem); width: max-content; min-width: 12rem; max-height: calc(100svh - 6rem); overflow-y: auto; display: grid; padding: 0.5rem 0; background: var(--surface); }
-.topbar__list a { padding: 0.55rem 1.25rem; text-decoration: none; }
-.topbar__list a:hover, .topbar__list a[aria-current] { color: var(--gold); }
+.topbar__list { position: absolute; right: -0.75rem; top: calc(100% + 0.6rem); width: max-content; min-width: 13rem; max-height: calc(100svh - 6rem); overflow-y: auto; display: grid; padding: 0.25rem 0 0.75rem; background: var(--bg); }
+.topbar__menu[open] .topbar__list { animation: unroll 320ms var(--ease-out); }
+@keyframes unroll { from { clip-path: inset(0 0 100% 0); opacity: 0; } to { clip-path: inset(0 0 0 0); opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .topbar__menu[open] .topbar__list { animation: none; } }
+.topbar__list a { padding: 0.5rem 1.25rem; text-align: right; color: var(--muted); text-decoration: none; transition: color 200ms ease; }
+.topbar__list a:hover { color: var(--ink); }
+.topbar__list a[aria-current] { color: var(--gold); }
 .topbar__home { margin-right: 0.25rem; }
-/* Wide screens: every section in the bar; the one on screen is gold. */
-.topbar__links { flex: 1 1 auto; min-width: 0; display: flex; flex-wrap: nowrap; justify-content: center; gap: 0.25rem 1.1rem; overflow: hidden; font-size: var(--step-small); white-space: nowrap; }
-.topbar__links a { flex: none; padding: 0.55rem 0; color: var(--muted); text-decoration: none; transition: color 200ms ease; }
-.topbar__links a:hover { color: var(--ink); }
-.topbar__links a[aria-current] { color: var(--gold); }
-.topbar:not(.is-compact) .topbar__menu { display: none; }
-.topbar.is-compact .topbar__links { display: none; }
 /* Phones: one row. The section button is the way around, so the wordmark steps aside for its name. */
 @media (max-width: 480px) {
   .topbar { gap: 0.6rem; }
   .topbar__menu { flex: 0 1 auto; }
-  .topbar__menu summary { gap: 0.4rem; padding: 0 0.65rem; }
+  .topbar__menu summary { gap: 0.4rem; font-size: var(--step-small); }
   .topbar__name { max-width: none; flex: 0 1 auto; min-width: 0; }
   .topbar__actions { flex-wrap: nowrap; gap: 0.6rem; }
   .topbar .button { padding: 0 0.85rem; }

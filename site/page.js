@@ -191,23 +191,10 @@ document.querySelectorAll(".chapter").forEach((chapter) => {
     const a = document.createElement("a");
     a.href = "#" + s.id;
     a.textContent = T["s_" + s.id];
-    a.addEventListener("click", () => { menu.open = false; });
     list.append(a);
     return a;
   });
   menu.append(summary, list);
-
-  // On a wide screen every section sits in the bar itself, and the one you are in lights up.
-  const links = document.createElement("nav");
-  links.className = "topbar__links";
-  links.setAttribute("aria-label", list.getAttribute("aria-label"));
-  const inline = sections.map((s) => {
-    const a = document.createElement("a");
-    a.href = "#" + s.id;
-    a.textContent = T["s_" + s.id];
-    links.append(a);
-    return a;
-  });
 
   const actions = document.createElement("div");
   actions.className = "topbar__actions";
@@ -220,22 +207,23 @@ document.querySelectorAll(".chapter").forEach((chapter) => {
     actions.append(qr.cloneNode(true));
   }
   actions.append(join.cloneNode(true));
-  bar.append(home, links, actions);
+  bar.append(home, actions);
   document.body.append(bar);
 
-  // The full list when it fits on one row, the compact button when it doesn't (a narrow window, a long language).
-  const fit = () => {
-    bar.classList.remove("is-compact");
-    bar.classList.toggle("is-compact", links.scrollWidth > links.clientWidth + 1 || innerWidth <= 900);
+  // The section list unrolls from the button and rolls back up when it closes.
+  const still = matchMedia("(prefers-reduced-motion: reduce)");
+  const shut = () => {
+    if (!menu.open) return;
+    if (still.matches || !list.animate) { menu.open = false; return; }
+    list.animate([{ clipPath: "inset(0 0 0 0)", opacity: 1 }, { clipPath: "inset(0 0 100% 0)", opacity: 0 }],
+      { duration: 220, easing: "cubic-bezier(0.65, 0, 0.35, 1)" }).onfinish = () => { menu.open = false; };
   };
-  fit();
-  addEventListener("resize", fit);
-  document.fonts?.ready.then(fit);
-
+  summary.addEventListener("click", (e) => { if (menu.open) { e.preventDefault(); shut(); } });
+  items.forEach((a) => a.addEventListener("click", shut));
   // Both menus in the bar close on a click elsewhere or Escape, like the ones in the header.
   const menus = [...bar.querySelectorAll("details")];
-  document.addEventListener("click", (e) => menus.forEach((m) => { if (m.open && !m.contains(e.target)) m.open = false; }));
-  document.addEventListener("keydown", (e) => { if (e.key === "Escape") menus.forEach((m) => { m.open = false; }); });
+  document.addEventListener("click", (e) => menus.forEach((m) => { if (m.open && !m.contains(e.target)) (m === menu ? shut() : (m.open = false)); }));
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape") menus.forEach((m) => (m === menu ? shut() : (m.open = false))); });
   bar.querySelectorAll("a[data-lang]").forEach((a) => a.addEventListener("click", () => {
     try { localStorage.setItem("lang", a.dataset.lang); } catch (e) {}
   }));
@@ -255,7 +243,6 @@ document.querySelectorAll(".chapter").forEach((chapter) => {
       const i = sections.indexOf(e.target);
       name.textContent = T["s_" + e.target.id];
       items.forEach((a, k) => a.toggleAttribute("aria-current", k === i));
-      inline.forEach((a, k) => a.toggleAttribute("aria-current", k === i));
     }
   }, { rootMargin: "-50% 0px -50% 0px" });
   sections.forEach((s) => io.observe(s));
