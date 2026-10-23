@@ -40,18 +40,18 @@
     <summary>Menu</summary>
     <nav class="nav__sheet" aria-label="Sekcje">
       <a href="tablica-schultego/">Zagraj online</a>
-      <a href="#ranks">Rangi</a>
       <a href="#modes">Tryby</a>
       <a href="#friends">Znajomi</a>
+      <a href="#ranks">Rangi</a>
       <a href="#price">Cena</a>
       <a href="#questions">Pytania</a>
     </nav>
   </details>
   <nav class="nav__links" aria-label="Sekcje">
     <a href="tablica-schultego/">Zagraj online</a>
-    <a href="#ranks">Rangi</a>
     <a href="#modes">Tryby</a>
     <a href="#friends">Znajomi</a>
+    <a href="#ranks">Rangi</a>
     <a href="#price">Cena</a>
   </nav>
   <details class="lang">
@@ -82,22 +82,6 @@
         </div>
       </div>
 
-      <div class="stage__layer field-slate" data-layer="modes">
-        <img class="stage__shot" src="../assets/screens/p/focus-focusBlue-light-menu.webp" width="600" height="1304" alt="Menu główne 49: karta Wyzwania Dnia, style Normalny, Rywalizacja i Relaks oraz tryby Klasyczny, Bez końca i Wyścig z czasem z najlepszymi wynikami." loading="lazy">
-      </div>
-
-      <div class="stage__layer field-blush" data-layer="boards">
-        <div class="rb" data-ui aria-hidden="true" data-rb></div>
-      </div>
-
-      <div class="stage__layer field-sage" data-layer="friends">
-        <img class="stage__shot" src="../site/assets/match-summary.webp" width="600" height="1304" alt="Końcowe wyniki trzyrundowego wyścigu grupowego w 49: wygrywa Zoe z 53 punktami, Artur jest drugi z 52, a Leo trzeci z 49. Poniżej najszybsza runda i pełna klasyfikacja." loading="lazy">
-      </div>
-
-      <div class="stage__layer field-gold" data-layer="achievements">
-        <img class="stage__shot" src="../site/assets/achievements.webp" width="600" height="1298" alt="Osiągnięcia za szybkość w trybie Klasyczny w 49, od Rakiety poniżej 38 sekund do Napędu warp poniżej 31, każde z poziomem i postępem." loading="lazy">
-      </div>
-
     </div>
   </aside>
 
@@ -115,7 +99,224 @@
       <h1 class="wordmark" id="hero-title" data-rise style="--i:2"><span class="wordmark__name">49</span><span class="wordmark__sub">Focus Booster</span></h1>
     </section>
 
-    <section class="block" id="ranks" data-stage="board" aria-labelledby="ranks-title">
+    <section class="block block--last needs" id="needs" data-stage="board" aria-labelledby="needs-title">
+      <h2 class="head" id="needs-title" data-reveal>Trenuj koncentrację</h2>
+      <p class="lead" data-reveal style="--i:1">Odpływasz myślami przy czytaniu, nauce albo pracy? Tablica Schultego trenuje właśnie tę uwagę, a 49 robi z niej grę, do której chce się wracać.</p>
+      <dl class="needs__list">
+        <div data-reveal><dt>Dłuższe skupienie</dt><dd>Zostań przy zadaniu, wykładzie czy długim rozdziale, nie rozpraszając się.</dd></div>
+        <div data-reveal style="--i:1"><dt>Czytaj szybciej</dt><dd>Ogarniaj wzrokiem więcej tekstu naraz, z mniejszą liczbą skoków oczu.</dd></div>
+        <div data-reveal style="--i:2"><dt>Reaguj szybciej</dt><dd>Wyłapuj to, co ważne, w gąszczu bodźców i działaj.</dd></div>
+      </dl>
+      <h3 class="needs__how" data-reveal>Jak się gra</h3>
+      <ol class="needs__steps">
+        <li data-reveal>Znajdź liczby od 1 do 49 po kolei na wymieszanej planszy.</li>
+        <li data-reveal style="--i:1">Pobijaj swój czas i awansuj od Nowicjusza do Legendy.</li>
+        <li data-reveal style="--i:2">Po każdej grze zobacz, co się poprawiło.</li>
+      </ol>
+      <p class="needs__note" data-reveal>49 to gra do ćwiczenia skupienia, a nie produkt medyczny.</p>
+    </section>
+
+  </div>
+</div>
+
+<section class="drill" aria-labelledby="drill-title">
+  <div class="drill__head">
+    <h2 class="head" id="drill-title" data-reveal>Trenuj jak kierowca wyścigowy</h2>
+    <p data-reveal style="--i:1">Przy wyścigowych prędkościach skupienie jest wszystkim. Zawodowi kierowcy trenują uwagę, skanowanie wzrokiem i refleks tak samo poważnie jak kondycję, a niektórzy używają do tego tablic Schultego. 49 zamienia to samo ćwiczenie w minutę dziennie.</p>
+  </div>
+  <div class="drill__mosaic">
+    <figure class="drill__photo">
+      <img class="drift" src="../site/assets/f1-wheel.jpg" width="1000" height="1000" alt="Kierownica bolidu Formuły 1 Alpine z 2021 roku: ekran, rząd lampek zmiany biegów i ponad dwadzieścia przycisków i pokręteł." loading="lazy">
+    </figure>
+    <div class="drill__tile field-gold" data-reveal>
+      <p class="drill__fig">300&nbsp;km/h</p>
+      <p>Tam jedno spojrzenie musi ogarnąć wszystko dookoła.</p>
+    </div>
+    <div class="drill__tile field-slate" data-reveal style="--i:1">
+      <p class="drill__fig">1 minuta</p>
+      <p>Dziennie wystarczy na to samo ćwiczenie. Bolid niepotrzebny.</p>
+    </div>
+  </div>
+</section>
+
+<section class="day" aria-labelledby="day-title">
+  <div class="day__fields">
+    <div class="day__words field-sage">
+      <h2 class="head" id="day-title">Minuta dziennie</h2>
+      <ol class="day__clauses">
+        <li class="day__clause is-on" data-step="0"><button type="button">Najpierw dzisiejsze wyzwanie</button></li>
+        <li class="day__clause" data-step="1"><button type="button">Potem trzy małe zadania</button></li>
+        <li class="day__clause" data-step="2"><button type="button">Dalej zobacz, co się poprawiło</button></li>
+        <li class="day__clause" data-step="3"><button type="button">Na koniec podtrzymaj serię</button></li>
+      </ol>
+      <p class="day__note">Na tyle krótko, by zmieścić się wszędzie, i tak pomyślane, by jutro łatwo było zacząć kolejną grę.</p>
+    </div>
+    <div class="day__screen">
+      <div class="frag is-on" data-ui data-step="0">
+        <video class="card-video" autoplay muted loop playsinline preload="metadata" poster="../site/assets/daily-card.webp" width="560" height="204" aria-label="Karta dzisiejszego Wyzwania Dnia w aplikacji, z celem i Twoim osobistym progiem do pobicia."><source src="../site/assets/daily-card.mp4" type="video/mp4"></video>
+        <p class="frag__title">Dalej w tym tygodniu</p>
+        <ul class="frag__list">
+          <li><span>Klasyczny sprint</span><span>Poniżej 2:30</span></li>
+          <li><span>Czerwona mgła</span><span>Czerwone w dół, czarne w górę</span></li>
+          <li><span>Zupa z literkami</span><span>Litery od A do Y</span></li>
+          <li><span>Czysta karta</span><span>Zero błędów</span></li>
+          <li><span>Metronom</span><span>Rytm 50 lub więcej</span></li>
+        </ul>
+        <p class="frag__foot">Wszyscy dostają tę samą planszę, więc możesz porównać się ze znajomymi.</p>
+      </div>
+      <div class="frag" data-ui data-step="1">
+        <p class="frag__title">Dzisiejsze zadania</p>
+        <ul class="frag__quests">
+          <li class="is-done"><span>Ukończ grę bez błędu</span><span>1 z 1</span><i style="--p:1"></i></li>
+          <li><span>Zagraj 3 gry</span><span>2 z 3</span><i style="--p:.667"></i></li>
+          <li><span>Osiągnij combo ×2</span><span>0 z 1</span><i style="--p:0"></i></li>
+        </ul>
+        <p class="frag__foot">Wykonaj wszystkie trzy, a dostaniesz bonus XP.</p>
+      </div>
+      <div class="frag" data-ui data-step="2">
+        <p class="frag__title">Statystyki</p>
+        <p class="frag__big">Twój górny rząd przyspieszył.</p>
+        <p class="frag__foot">Liczby w nim zajmują Ci teraz o 0,3 sekundy mniej niż w zeszłym tygodniu.</p>
+        <svg class="frag__chart" viewBox="0 0 280 120" role="img" aria-label="Twoje czasy w trybie Klasyczny z siedmiu dni, od 1:21 do 1:09.">
+          <polyline points="10,22 55,36 100,31 145,60 190,70 235,65 270,92" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+          <circle cx="270" cy="92" r="6" fill="currentColor"/>
+        </svg>
+        <ul class="frag__axis"><li>1:21</li><li>1:18</li><li>1:19</li><li>1:14</li><li>1:12</li><li>1:13</li><li>1:09</li></ul>
+      </div>
+      <div class="frag" data-ui data-step="3">
+        <p class="frag__title">Seria</p>
+        <p class="frag__big">12 dni z rzędu</p>
+        <ol class="frag__week">
+          <li class="is-done">Pn</li><li class="is-done">Wt</li><li class="is-done">Śr</li><li class="is-freeze">Cz</li><li class="is-done">Pt</li><li class="is-done">So</li><li>Nd</li>
+        </ol>
+        <p class="frag__foot">Zamrożenia serii zdobywasz, gdy seria rośnie, a one ratują ją w dniu, w którym nie zagrasz. Opcjonalne przypomnienie sprawi, że seria nigdy nie przerwie się przez przypadek.</p>
+      </div>
+    </div>
+  </div>
+  <div class="day__control">
+    <label class="sr-only" for="day-range">Przejdź przez dzień z 49</label>
+    <div class="day__track" style="--v:0"><input class="day__range" id="day-range" type="range" min="0" max="3" step="1" value="0"></div>
+    <ol class="day__stops">
+      <li class="is-on">Wyzwanie</li><li>Zadania</li><li>Statystyki</li><li>Seria</li>
+    </ol>
+  </div>
+</section>
+
+<section class="styles" aria-labelledby="styles-title">
+  <div class="styles__field styles__field--normal">
+    <div class="styles__body">
+      <figure class="phone styles__phone"><video class="phone__screen" autoplay muted loop playsinline preload="metadata" poster="../site/assets/game-normal.webp" width="600" height="1304" aria-label="Gra w trybie Klasycznym w stylu Normalnym: tylko zegar i plansza."><source src="../site/assets/game-normal.mp4" type="video/mp4"></video></figure>
+      <div class="styles__text">
+        <p class="lead" data-reveal>Czysta próba czasowa.</p>
+        <p data-reveal style="--i:1">Tylko Ty, plansza i zegar. Bez punktów i bez efektów, nic nie odciąga wzroku od liczb. To klasyczna tablica Schultego i najczystszy test Twojego skupienia.</p>
+        <p data-reveal style="--i:2">Po każdej grze widzisz swój czas, tempo i pomyłki, chwile nieuwagi oraz Rytm: jak równo znajdujesz kolejne liczby.</p>
+      </div>
+    </div>
+  </div>
+  <div class="styles__field styles__field--comp field-blush">
+    <div class="styles__body">
+      <figure class="phone styles__phone"><video class="phone__screen" autoplay muted loop playsinline preload="metadata" poster="../site/assets/game.webp" width="600" height="1304" aria-label="Gra w trybie Klasycznym w stylu Rywalizacja: wynik, combo i mnożnik nad planszą."><source src="../site/assets/game.mp4" type="video/mp4"></video></figure>
+      <div class="styles__text">
+        <p class="lead" data-reveal>Punkty, combo, ×3.</p>
+        <p data-reveal style="--i:1">Każda liczba to 100 punktów plus do 50 za szybkość. Znajdź kolejną, zanim skończy się czas combo, a mnożnik pójdzie w górę: ×2 przy combo 5, ×3 przy 15.</p>
+        <p data-reveal style="--i:2">Błędne dotknięcie zmniejsza combo o połowę, ale nigdy nie odbiera punktów. Chcesz efektów bez presji? Relaks zachowuje dźwięki i celebracje, ale rezygnuje z punktów.</p>
+      </div>
+    </div>
+  </div>
+  <h2 class="styles__title" id="styles-title"><span>Normalny</span> <span>czy Rywalizacja</span></h2>
+</section>
+
+<div class="chapter chapter--app">
+
+  <aside class="stage" aria-label="Plansza i aplikacja">
+    <div class="stage__frame">
+
+      <div class="stage__layer is-on field-slate" data-layer="modes">
+        <figure class="phone stage__phone"><video class="phone__screen" autoplay muted loop playsinline preload="metadata" poster="../site/assets/menu.webp" width="600" height="1304" aria-label="Menu główne 49: karta Wyzwania Dnia, style Normalny, Rywalizacja i Relaks oraz tryby Klasyczny, Bez końca i Wyścig z czasem z najlepszymi wynikami."><source src="../site/assets/menu.mp4" type="video/mp4"></video></figure>
+      </div>
+      <div class="stage__layer field-sage" data-layer="friends">
+        <figure class="phone stage__phone"><video class="phone__screen" autoplay muted loop playsinline preload="metadata" poster="../site/assets/match.webp" width="600" height="1304" aria-label="Wyniki końcowe trzyrundowego wyścigu w grupie: podium, najszybsza runda i klasyfikacja."><source src="../site/assets/match.mp4" type="video/mp4"></video></figure>
+      </div>
+      <div class="stage__layer field-gold" data-layer="steal">
+        <figure class="phone stage__phone"><video class="phone__screen" autoplay muted loop playsinline preload="metadata" poster="../site/assets/steal.webp" width="600" height="1304" aria-label="Partia Kradzieży w 49: jedna plansza, dwóch graczy, a każda liczba trafia do tego, kto dotknie jej pierwszy."><source src="../site/assets/steal.mp4" type="video/mp4"></video></figure>
+      </div>
+      <div class="stage__layer field-blush" data-layer="boards">
+        <div class="rb" data-ui aria-hidden="true" data-rb></div>
+      </div>
+      <div class="stage__layer field-sage" data-layer="ranks">
+        <figure class="phone stage__phone"><video class="phone__screen" autoplay muted loop playsinline preload="metadata" poster="../site/assets/ranks.webp" width="600" height="1304" aria-label="Ekran rang w 49: każda ranga na własnej animowanej tabliczce, od Nowicjusza do Legendy."><source src="../site/assets/ranks.mp4" type="video/mp4"></video></figure>
+      </div>
+      <div class="stage__layer field-gold" data-layer="achievements">
+        <figure class="phone stage__phone"><img class="phone__screen" src="../site/assets/achievements.webp" width="600" height="1304" alt="Ekran osiągnięć w 49: 88 z 547 odblokowanych, z filtrami według typu gry, rozmiaru, kierunku i stylu." loading="lazy"></figure>
+      </div>
+
+    </div>
+  </aside>
+
+  <div class="read">
+
+    <section class="block" id="modes" data-stage="modes" aria-labelledby="modes-title">
+      <h2 class="head" id="modes-title" data-reveal>Trzy sposoby gry</h2>
+      <p data-reveal style="--i:1">Licz w górę od 1 do 49 albo w dół od 49 do 1. Każdy tryb ma własne rekordy i własną rangę.</p>
+      <div class="proofs">
+        <article class="proof" data-reveal>
+          <div class="proof__panel"><video class="card-video" autoplay muted loop playsinline preload="metadata" poster="../site/assets/mode-classic.webp" width="560" height="114" aria-label="Karta trybu Klasyczny: najlepszy czas 57.03, ranga Złoto, 28 z 71 osiągnięć."><source src="../site/assets/mode-classic.mp4" type="video/mp4"></video></div>
+          <div class="proof__text">
+            <h3>Klasyczny</h3>
+            <p>Jedna plansza, jeden czas. Pobijaj swoje rekordy, awansuj od Nowicjusza do Legendy i sprawdzaj, gdzie dokładnie uciekły sekundy.</p>
+          </div>
+        </article>
+        <article class="proof" data-reveal>
+          <div class="proof__panel"><video class="card-video" autoplay muted loop playsinline preload="metadata" poster="../site/assets/mode-endless.webp" width="560" height="112" aria-label="Karta trybu Bez końca: tempo 42,7 liczby na minutę, ranga Złoto."><source src="../site/assets/mode-endless.mp4" type="video/mp4"></video></div>
+          <div class="proof__text">
+            <h3>Bez końca</h3>
+            <p>Kończysz planszę, a następna już czeka. Twój wynik to tempo w liczbach na minutę. Przestajesz, kiedy chcesz.</p>
+          </div>
+        </article>
+        <article class="proof" data-reveal>
+          <div class="proof__panel"><video class="card-video" autoplay muted loop playsinline preload="metadata" poster="../site/assets/mode-clock.webp" width="560" height="112" aria-label="Karta trybu Wyścig z czasem: 67 liczb, ranga Srebro."><source src="../site/assets/mode-clock.mp4" type="video/mp4"></video></div>
+          <div class="proof__text">
+            <h3>Wyścig z czasem</h3>
+            <p>Zegar odlicza w dół. Każda znaleziona liczba oddaje Ci trochę czasu, a każda pomyłka trochę zabiera. Jak daleko zajdziesz?</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="block" id="friends" data-stage="friends" aria-labelledby="friends-title">
+      <h2 class="head" id="friends-title" data-reveal>Ścigaj się ze znajomymi</h2>
+      <p data-reveal style="--i:1">Graj 1 na 1, 2 na 2 albo w całej grupie, od klasy szkolnej po zespół w pracy. Wszyscy dostają dokładnie tę samą planszę, więc różnicę robi tylko skupienie.</p>
+      <figure class="phone inline-only inline-phone"><video class="phone__screen" autoplay muted loop playsinline preload="metadata" poster="../site/assets/match.webp" width="600" height="1304" aria-label="Wyniki końcowe trzyrundowego wyścigu w grupie: podium, najszybsza runda i klasyfikacja."><source src="../site/assets/match.mp4" type="video/mp4"></video></figure>
+      <dl class="rooms">
+        <div data-reveal><dt>Wyścig</dt><dd>Ta sama plansza dla wszystkich, runda po rundzie. Najszybszy wygrywa rundę, a punkty sumują się w końcowej klasyfikacji.</dd></div>
+        <div data-reveal style="--i:1"><dt>Bitwa na punkty</dt><dd>Liczą się punkty z Rywalizacji, więc ważna jest zarówno szybkość, jak i combo. Czysta seria może pokonać szybsze, ale chaotyczne przejście.</dd></div>
+        <div data-reveal style="--i:2"><dt>Eliminacje</dt><dd>Dla grup. W każdej rundzie odpada najwolniejszy gracz, aż na placu boju zostanie tylko jeden.</dd></div>
+        <div data-reveal style="--i:3"><dt>Wyścig z duchem</dt><dd>Najpierw grasz Ty, a Twoje przejście staje się duchem. Znajomi ścigają się z nim, kiedy chcą tego samego dnia, i widzą na żywo, czy są przed nim, czy za nim.</dd></div>
+      </dl>
+      <p data-reveal>Znajomi dołączają czteroznakowym kodem pokoju, kodem QR lub linkiem, a każdy wybiera pseudonim na tę grę. Jeden telefon na wszystkich? Podawajcie go sobie w trybie gościa.</p>
+    </section>
+
+    <section class="block" id="steal" data-stage="steal" aria-labelledby="steal-title">
+      <h2 class="head" id="steal-title" data-reveal>Kradzież</h2>
+      <p class="lead" data-reveal style="--i:1">Jedna plansza, na żywo, łeb w łeb. Kto pierwszy dotknie liczby, zgarnia ją, a ona znika u przeciwnika.</p>
+      <figure class="phone inline-only inline-phone"><video class="phone__screen" autoplay muted loop playsinline preload="metadata" poster="../site/assets/steal.webp" width="600" height="1304" aria-label="Partia Kradzieży w 49: jedna plansza, dwóch graczy, a każda liczba trafia do tego, kto dotknie jej pierwszy."><source src="../site/assets/steal.mp4" type="video/mp4"></video></figure>
+    </section>
+
+    <section class="block" id="boards" data-stage="boards" aria-labelledby="boards-title">
+      <h2 class="head" id="boards-title" data-reveal>Cztery rodzaje plansz</h2>
+      <p class="figure-line" data-reveal style="--i:1">Od 5&nbsp;×&nbsp;5 do 11&nbsp;×&nbsp;11</p>
+      <p data-reveal style="--i:2">Szybka 5&nbsp;×&nbsp;5, standardowa 7&nbsp;×&nbsp;7, a dla zawziętych 9&nbsp;×&nbsp;9 lub 11&nbsp;×&nbsp;11.</p>
+      <div class="inline-only rb rb--inline" data-ui aria-hidden="true" data-rb></div>
+      <dl class="kinds">
+        <div data-reveal><dt>Liczby</dt><dd>Klasyczna tablica. Znajduj liczby po kolei, w górę lub w dół.</dd></div>
+        <div data-reveal style="--i:1"><dt>Litery</dt><dd>Od A do Y na planszy 5&nbsp;×&nbsp;5, gdy cyfry wydają się zbyt łatwe.</dd></div>
+        <div data-reveal style="--i:2"><dt>Czerwone i Czarne</dt><dd>Czerwone liczby liczysz w górę, a czarne w dół, zmieniając kierunek przy każdym dotknięciu. Zabawne ćwiczenie przechodzenia między zadaniami bez gubienia wątku.</dd></div>
+        <div data-reveal style="--i:3"><dt>Ruchoma</dt><dd>Płytki zamieniają się miejscami w trakcie gry. Nadążysz?</dd></div>
+      </dl>
+      <p data-reveal>Nie widzisz kolejnej liczby? Podpowiedź pokaże, gdzie jest. Codziennie dostajesz kilka, a każda dodaje 5 sekund, więc podpowiedzi pomagają się uczyć, ale nigdy nie dają rekordu.</p>
+    </section>
+
+    <section class="block" id="ranks" data-stage="ranks" aria-labelledby="ranks-title">
       <h2 class="head" id="ranks-title" data-reveal>Twój czas, Twoja ranga</h2>
       <p data-reveal style="--i:1">Każdy tryb, kierunek i styl ma własną rangę, wyznaczaną przez Twój najlepszy wynik. Oto czego wymaga każda z nich na standardowej planszy 7&nbsp;×&nbsp;7. Na mniejszych, większych i trudniejszych planszach progi czasowe są odpowiednio przeliczane.</p>
       <table class="ranks" data-reveal style="--i:2">
@@ -136,62 +337,6 @@
       <p data-reveal style="--i:4">Do tego dochodzi 170 globalnych rankingów Game Center: najlepszy czas i najwięcej punktów na każdej planszy i w każdym kierunku, dziś, w tym tygodniu, w tym miesiącu i od początku. Wyzwanie Dnia ma własny ranking, a liczy się tylko Twoja pierwsza próba.</p>
     </section>
 
-    <section class="block" id="modes" data-stage="modes" aria-labelledby="modes-title">
-      <h2 class="head" id="modes-title" data-reveal>Trzy sposoby gry</h2>
-      <p data-reveal style="--i:1">Licz w górę od 1 do 49 albo w dół od 49 do 1. Każdy tryb ma własne rekordy i własną rangę.</p>
-      <div class="proofs">
-        <article class="proof" data-reveal>
-          <div class="proof__panel"><img src="../site/assets/mode-classic.webp" width="560" height="106" alt="Karta trybu Klasyczny: najlepszy czas 57.03, ranga Złoto, 28 z 71 osiągnięć." loading="lazy"></div>
-          <div class="proof__text">
-            <h3>Klasyczny</h3>
-            <p>Jedna plansza, jeden czas. Pobijaj swoje rekordy, awansuj od Nowicjusza do Legendy i sprawdzaj, gdzie dokładnie uciekły sekundy.</p>
-          </div>
-        </article>
-        <article class="proof" data-reveal>
-          <div class="proof__panel"><img src="../site/assets/mode-endless.webp" width="560" height="106" alt="Karta trybu Bez końca: tempo 56,5 liczby na minutę, ranga Diament." loading="lazy"></div>
-          <div class="proof__text">
-            <h3>Bez końca</h3>
-            <p>Kończysz planszę, a następna już czeka. Twój wynik to tempo w liczbach na minutę. Przestajesz, kiedy chcesz.</p>
-          </div>
-        </article>
-        <article class="proof" data-reveal>
-          <div class="proof__panel"><img src="../site/assets/mode-clock.webp" width="560" height="106" alt="Karta trybu Wyścig z czasem: 67 liczb, ranga Srebro." loading="lazy"></div>
-          <div class="proof__text">
-            <h3>Wyścig z czasem</h3>
-            <p>Zegar odlicza w dół. Każda znaleziona liczba oddaje Ci trochę czasu, a każda pomyłka trochę zabiera. Jak daleko zajdziesz?</p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="block" id="boards" data-stage="boards" aria-labelledby="boards-title">
-      <h2 class="head" id="boards-title" data-reveal>Cztery rodzaje plansz</h2>
-      <p class="figure-line" data-reveal style="--i:1">Od 5&nbsp;×&nbsp;5 do 11&nbsp;×&nbsp;11</p>
-      <p data-reveal style="--i:2">Szybka 5&nbsp;×&nbsp;5, standardowa 7&nbsp;×&nbsp;7, a dla zawziętych 9&nbsp;×&nbsp;9 lub 11&nbsp;×&nbsp;11.</p>
-      <div class="inline-only rb rb--inline" data-ui aria-hidden="true" data-rb></div>
-      <dl class="kinds">
-        <div data-reveal><dt>Liczby</dt><dd>Klasyczna tablica. Znajduj liczby po kolei, w górę lub w dół.</dd></div>
-        <div data-reveal style="--i:1"><dt>Litery</dt><dd>Od A do Y na planszy 5&nbsp;×&nbsp;5, gdy cyfry wydają się zbyt łatwe.</dd></div>
-        <div data-reveal style="--i:2"><dt>Czerwone i Czarne</dt><dd>Czerwone liczby liczysz w górę, a czarne w dół, zmieniając kierunek przy każdym dotknięciu. Zabawne ćwiczenie przechodzenia między zadaniami bez gubienia wątku.</dd></div>
-        <div data-reveal style="--i:3"><dt>Ruchoma</dt><dd>Płytki zamieniają się miejscami w trakcie gry. Nadążysz?</dd></div>
-      </dl>
-      <p data-reveal>Nie widzisz kolejnej liczby? Podpowiedź pokaże, gdzie jest. Codziennie dostajesz kilka, a każda dodaje 5 sekund, więc podpowiedzi pomagają się uczyć, ale nigdy nie dają rekordu.</p>
-    </section>
-
-    <section class="block" id="friends" data-stage="friends" aria-labelledby="friends-title">
-      <h2 class="head" id="friends-title" data-reveal>Ścigaj się ze znajomymi</h2>
-      <p data-reveal style="--i:1">Graj 1 na 1, 2 na 2 albo w całej grupie, od klasy szkolnej po zespół w pracy. Wszyscy dostają dokładnie tę samą planszę, więc różnicę robi tylko skupienie.</p>
-      <figure class="inline-only inline-shot"><img src="../site/assets/match-summary.webp" width="600" height="1304" alt="Końcowe wyniki trzyrundowego wyścigu grupowego w 49: wygrywa Zoe z 53 punktami, Artur jest drugi z 52, a Leo trzeci z 49. Poniżej najszybsza runda i pełna klasyfikacja." loading="lazy"></figure>
-      <dl class="rooms">
-        <div data-reveal><dt>Wyścig</dt><dd>Ta sama plansza dla wszystkich, runda po rundzie. Najszybszy wygrywa rundę, a punkty sumują się w końcowej klasyfikacji.</dd></div>
-        <div data-reveal style="--i:1"><dt>Bitwa na punkty</dt><dd>Liczą się punkty z Rywalizacji, więc ważna jest zarówno szybkość, jak i combo. Czysta seria może pokonać szybsze, ale chaotyczne przejście.</dd></div>
-        <div data-reveal style="--i:2"><dt>Eliminacje</dt><dd>Dla grup. W każdej rundzie odpada najwolniejszy gracz, aż na placu boju zostanie tylko jeden.</dd></div>
-        <div data-reveal style="--i:3"><dt>Wyścig z duchem</dt><dd>Najpierw grasz Ty, a Twoje przejście staje się duchem. Znajomi ścigają się z nim, kiedy chcą tego samego dnia, i widzą na żywo, czy są przed nim, czy za nim.</dd></div>
-        <div data-reveal style="--i:4"><dt>Kradzież</dt><dd>Jedna plansza, na żywo, łeb w łeb. Kto pierwszy dotknie liczby, zgarnia ją, a ona znika u przeciwnika.</dd></div>
-      </dl>
-      <p data-reveal>Znajomi dołączają czteroznakowym kodem pokoju, kodem QR lub linkiem, a każdy wybiera pseudonim na tę grę. Jeden telefon na wszystkich? Podawajcie go sobie w trybie gościa.</p>
-    </section>
-
     <section class="block block--last" id="achievements" data-stage="achievements" aria-labelledby="ach-title">
       <h2 class="giant" id="ach-title" data-reveal><span class="giant__num">547</span><span class="giant__word">osiągnięć</span></h2>
       <p data-reveal style="--i:1">Nagradzają szybkość, precyzję, skupienie, combo, serie i ciekawość. Stopniowane prowadzą przez osiem medali, od brązowego do pryzmatycznego.</p>
@@ -205,7 +350,7 @@
         <li data-reveal style="--i:6"><img src="../assets/medals/medal-6.png" width="160" height="160" alt="" loading="lazy">Rubin</li>
         <li data-reveal style="--i:7"><img src="../assets/medals/medal-7.png" width="160" height="160" alt="" loading="lazy">Pryzmatyczny</li>
       </ul>
-      <figure class="inline-only inline-shot"><img src="../site/assets/achievements.webp" width="600" height="1298" alt="Osiągnięcia za szybkość w trybie Klasyczny w 49, od Rakiety poniżej 38 sekund do Napędu warp poniżej 31, każde z poziomem i postępem." loading="lazy"></figure>
+      <figure class="phone inline-only inline-phone"><img class="phone__screen" src="../site/assets/achievements.webp" width="600" height="1304" alt="Ekran osiągnięć w 49: 88 z 547 odblokowanych, z filtrami według typu gry, rozmiaru, kierunku i stylu." loading="lazy"></figure>
       <div class="bars">
         <details open>
           <summary><span>Klasyczny: szybkość</span><span class="bars__n">36</span></summary>
@@ -292,113 +437,6 @@
 
   </div>
 </div>
-
-<section class="drill" aria-labelledby="drill-title">
-  <div class="drill__head">
-    <h2 class="head" id="drill-title" data-reveal>Trenuj jak kierowca wyścigowy</h2>
-    <p data-reveal style="--i:1">Przy wyścigowych prędkościach skupienie jest wszystkim. Zawodowi kierowcy trenują uwagę, skanowanie wzrokiem i refleks tak samo poważnie jak kondycję, a niektórzy używają do tego tablic Schultego. 49 zamienia to samo ćwiczenie w minutę dziennie.</p>
-  </div>
-  <div class="drill__mosaic">
-    <figure class="drill__photo">
-      <img class="drift" src="../site/assets/f1-wheel.jpg" width="1000" height="1000" alt="Kierownica bolidu Formuły 1 Alpine z 2021 roku: ekran, rząd lampek zmiany biegów i ponad dwadzieścia przycisków i pokręteł." loading="lazy">
-    </figure>
-    <div class="drill__tile field-gold" data-reveal>
-      <p class="drill__fig">300&nbsp;km/h</p>
-      <p>Tam jedno spojrzenie musi ogarnąć wszystko dookoła.</p>
-    </div>
-    <div class="drill__tile field-slate" data-reveal style="--i:1">
-      <p class="drill__fig">1 minuta</p>
-      <p>Dziennie wystarczy na to samo ćwiczenie. Bolid niepotrzebny.</p>
-    </div>
-  </div>
-</section>
-
-<section class="styles" aria-labelledby="styles-title">
-  <div class="styles__field styles__field--normal">
-    <div class="styles__body">
-      <img class="styles__shot" src="../assets/screens/focus-normal-light.png" width="600" height="1169" alt="Gra w trybie Klasyczny w stylu Normalny: czas 0:23.41, Znajdź 18, a już znalezione liczby są wyblakłe na planszy." loading="lazy">
-      <div class="styles__text">
-        <p class="lead" data-reveal>Czysta próba czasowa.</p>
-        <p data-reveal style="--i:1">Tylko Ty, plansza i zegar. Bez punktów i bez efektów, nic nie odciąga wzroku od liczb. To klasyczna tablica Schultego i najczystszy test Twojego skupienia.</p>
-        <p data-reveal style="--i:2">Po każdej grze widzisz swój czas, tempo i pomyłki, chwile nieuwagi oraz Rytm: jak równo znajdujesz kolejne liczby.</p>
-      </div>
-    </div>
-  </div>
-  <div class="styles__field styles__field--comp field-blush">
-    <div class="styles__body">
-      <img class="styles__shot" src="../site/assets/pitlane-competitive.webp" width="600" height="1169" alt="Gra w trybie Klasyczny w stylu Rywalizacja z wyglądem Pit Lane: wynik 2292, combo 10 przy ×2, Znajdź 10." loading="lazy">
-      <div class="styles__text">
-        <p class="lead" data-reveal>Punkty, combo, ×3.</p>
-        <p data-reveal style="--i:1">Każda liczba to 100 punktów plus do 50 za szybkość. Znajdź kolejną, zanim skończy się czas combo, a mnożnik pójdzie w górę: ×2 przy combo 5, ×3 przy 15.</p>
-        <p data-reveal style="--i:2">Błędne dotknięcie zmniejsza combo o połowę, ale nigdy nie odbiera punktów. Chcesz efektów bez presji? Relaks zachowuje dźwięki i celebracje, ale rezygnuje z punktów.</p>
-      </div>
-    </div>
-  </div>
-  <h2 class="styles__title" id="styles-title"><span>Normalny</span> <span>czy Rywalizacja</span></h2>
-</section>
-
-<section class="day" aria-labelledby="day-title">
-  <div class="day__fields">
-    <div class="day__words field-sage">
-      <h2 class="head" id="day-title">Minuta dziennie</h2>
-      <ol class="day__clauses">
-        <li class="day__clause is-on" data-step="0"><button type="button">Najpierw dzisiejsze wyzwanie</button></li>
-        <li class="day__clause" data-step="1"><button type="button">Potem trzy małe zadania</button></li>
-        <li class="day__clause" data-step="2"><button type="button">Dalej zobacz, co się poprawiło</button></li>
-        <li class="day__clause" data-step="3"><button type="button">Na koniec podtrzymaj serię</button></li>
-      </ol>
-      <p class="day__note">Na tyle krótko, by zmieścić się wszędzie, i tak pomyślane, by jutro łatwo było zacząć kolejną grę.</p>
-    </div>
-    <div class="day__screen">
-      <div class="frag is-on" data-ui data-step="0">
-        <img src="../site/assets/daily-card.webp" width="560" height="122" alt="Karta dzisiejszego Wyzwania Dnia: Odliczanie. Ukończ w czasie poniżej 2:30, z osobistym celem poniżej 1:16.">
-        <p class="frag__title">Dalej w tym tygodniu</p>
-        <ul class="frag__list">
-          <li><span>Klasyczny sprint</span><span>Poniżej 2:30</span></li>
-          <li><span>Czerwona mgła</span><span>Czerwone w dół, czarne w górę</span></li>
-          <li><span>Zupa z literkami</span><span>Litery od A do Y</span></li>
-          <li><span>Czysta karta</span><span>Zero błędów</span></li>
-          <li><span>Metronom</span><span>Rytm 50 lub więcej</span></li>
-        </ul>
-        <p class="frag__foot">Wszyscy dostają tę samą planszę, więc możesz porównać się ze znajomymi.</p>
-      </div>
-      <div class="frag" data-ui data-step="1">
-        <p class="frag__title">Dzisiejsze zadania</p>
-        <ul class="frag__quests">
-          <li class="is-done"><span>Ukończ grę bez błędu</span><span>1 z 1</span><i style="--p:1"></i></li>
-          <li><span>Zagraj 3 gry</span><span>2 z 3</span><i style="--p:.667"></i></li>
-          <li><span>Osiągnij combo ×2</span><span>0 z 1</span><i style="--p:0"></i></li>
-        </ul>
-        <p class="frag__foot">Wykonaj wszystkie trzy, a dostaniesz bonus XP.</p>
-      </div>
-      <div class="frag" data-ui data-step="2">
-        <p class="frag__title">Statystyki</p>
-        <p class="frag__big">Twój górny rząd przyspieszył.</p>
-        <p class="frag__foot">Liczby w nim zajmują Ci teraz o 0,3 sekundy mniej niż w zeszłym tygodniu.</p>
-        <svg class="frag__chart" viewBox="0 0 280 120" role="img" aria-label="Twoje czasy w trybie Klasyczny z siedmiu dni, od 1:21 do 1:09.">
-          <polyline points="10,22 55,36 100,31 145,60 190,70 235,65 270,92" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
-          <circle cx="270" cy="92" r="6" fill="currentColor"/>
-        </svg>
-        <ul class="frag__axis"><li>1:21</li><li>1:18</li><li>1:19</li><li>1:14</li><li>1:12</li><li>1:13</li><li>1:09</li></ul>
-      </div>
-      <div class="frag" data-ui data-step="3">
-        <p class="frag__title">Seria</p>
-        <p class="frag__big">12 dni z rzędu</p>
-        <ol class="frag__week">
-          <li class="is-done">Pn</li><li class="is-done">Wt</li><li class="is-done">Śr</li><li class="is-freeze">Cz</li><li class="is-done">Pt</li><li class="is-done">So</li><li>Nd</li>
-        </ol>
-        <p class="frag__foot">Zamrożenia serii zdobywasz, gdy seria rośnie, a one ratują ją w dniu, w którym nie zagrasz. Opcjonalne przypomnienie sprawi, że seria nigdy nie przerwie się przez przypadek.</p>
-      </div>
-    </div>
-  </div>
-  <div class="day__control">
-    <label class="sr-only" for="day-range">Przejdź przez dzień z 49</label>
-    <div class="day__track" style="--v:0"><input class="day__range" id="day-range" type="range" min="0" max="3" step="1" value="0"></div>
-    <ol class="day__stops">
-      <li class="is-on">Wyzwanie</li><li>Zadania</li><li>Statystyki</li><li>Seria</li>
-    </ol>
-  </div>
-</section>
 
 <section class="letter" aria-labelledby="letter-title">
   <div class="letter__col">

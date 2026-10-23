@@ -40,18 +40,18 @@
     <summary>Menu</summary>
     <nav class="nav__sheet" aria-label="Sections">
       <a href="table-de-schulte/">Jouer en ligne</a>
-      <a href="#ranks">Rangs</a>
       <a href="#modes">Modes</a>
       <a href="#friends">Amis</a>
+      <a href="#ranks">Rangs</a>
       <a href="#price">Prix</a>
       <a href="#questions">Questions</a>
     </nav>
   </details>
   <nav class="nav__links" aria-label="Sections">
     <a href="table-de-schulte/">Jouer en ligne</a>
-    <a href="#ranks">Rangs</a>
     <a href="#modes">Modes</a>
     <a href="#friends">Amis</a>
+    <a href="#ranks">Rangs</a>
     <a href="#price">Prix</a>
   </nav>
   <details class="lang">
@@ -82,22 +82,6 @@
         </div>
       </div>
 
-      <div class="stage__layer field-slate" data-layer="modes">
-        <img class="stage__shot" src="../assets/screens/p/focus-focusBlue-light-menu.webp" width="600" height="1304" alt="Le menu principal de 49 : une carte Défi du jour, les styles Normal, Compétition et Détente, et les modes Classique, Infini et Contre la montre avec leurs meilleurs résultats." loading="lazy">
-      </div>
-
-      <div class="stage__layer field-blush" data-layer="boards">
-        <div class="rb" data-ui aria-hidden="true" data-rb></div>
-      </div>
-
-      <div class="stage__layer field-sage" data-layer="friends">
-        <img class="stage__shot" src="../site/assets/match-summary.webp" width="600" height="1304" alt="Les résultats finaux d’une course en groupe en trois manches dans 49 : Zoe gagne avec 53 points, Artur est deuxième avec 52 et Leo troisième avec 49, au-dessus de la manche la plus rapide et du classement complet." loading="lazy">
-      </div>
-
-      <div class="stage__layer field-gold" data-layer="achievements">
-        <img class="stage__shot" src="../site/assets/achievements.webp" width="600" height="1298" alt="Les succès de vitesse en Classique dans 49, de Fusée en moins de 38 secondes à Distorsion en moins de 31, chacun avec son palier et sa progression." loading="lazy">
-      </div>
-
     </div>
   </aside>
 
@@ -115,7 +99,224 @@
       <h1 class="wordmark" id="hero-title" data-rise style="--i:2"><span class="wordmark__name">49</span><span class="wordmark__sub">Focus Booster</span></h1>
     </section>
 
-    <section class="block" id="ranks" data-stage="board" aria-labelledby="ranks-title">
+    <section class="block block--last needs" id="needs" data-stage="board" aria-labelledby="needs-title">
+      <h2 class="head" id="needs-title" data-reveal>Entraîne ta concentration</h2>
+      <p class="lead" data-reveal style="--i:1">Tu décroches quand tu lis, étudies ou travailles ? Une table de Schulte entraîne précisément cette attention, et 49 en fait un jeu auquel on a envie de revenir.</p>
+      <dl class="needs__list">
+        <div data-reveal><dt>Concentre-toi plus longtemps</dt><dd>Reste sur une tâche, un cours ou un long chapitre sans décrocher.</dd></div>
+        <div data-reveal style="--i:1"><dt>Lis plus vite</dt><dd>Saisis davantage de la page d’un coup d’œil, avec moins de sauts des yeux.</dd></div>
+        <div data-reveal style="--i:2"><dt>Réagis plus vite</dt><dd>Repère l’essentiel dans une scène chargée et agis.</dd></div>
+      </dl>
+      <h3 class="needs__how" data-reveal>Comment on joue</h3>
+      <ol class="needs__steps">
+        <li data-reveal>Trouve les nombres de 1 à 49, dans l’ordre, sur une grille mélangée.</li>
+        <li data-reveal style="--i:1">Bats ton temps et grimpe de Débutant à Légende.</li>
+        <li data-reveal style="--i:2">Après chaque partie, vois ce qui s’est amélioré.</li>
+      </ol>
+      <p class="needs__note" data-reveal>49 est un jeu pour entraîner sa concentration, pas un produit médical.</p>
+    </section>
+
+  </div>
+</div>
+
+<section class="drill" aria-labelledby="drill-title">
+  <div class="drill__head">
+    <h2 class="head" id="drill-title" data-reveal>Entraîne-toi comme un pilote</h2>
+    <p data-reveal style="--i:1">À la vitesse d’une course, la concentration est tout. Les pilotes professionnels entraînent leur attention, leur balayage visuel et leurs réflexes aussi sérieusement que leur condition physique, et certains utilisent pour cela des tables de Schulte. 49 transforme ce même exercice en une minute par jour.</p>
+  </div>
+  <div class="drill__mosaic">
+    <figure class="drill__photo">
+      <img class="drift" src="../site/assets/f1-wheel.jpg" width="1000" height="1000" alt="Le volant d’une Formule 1 Alpine de 2021 : un écran, une rangée de témoins de changement de rapport et plus de vingt boutons et molettes." loading="lazy">
+    </figure>
+    <div class="drill__tile field-gold" data-reveal>
+      <p class="drill__fig">300&nbsp;km/h</p>
+      <p>Là où un seul regard doit tout saisir autour de toi.</p>
+    </div>
+    <div class="drill__tile field-slate" data-reveal style="--i:1">
+      <p class="drill__fig">1 minute</p>
+      <p>Par jour, c’est assez pour le même exercice. Pas besoin de voiture de course.</p>
+    </div>
+  </div>
+</section>
+
+<section class="day" aria-labelledby="day-title">
+  <div class="day__fields">
+    <div class="day__words field-sage">
+      <h2 class="head" id="day-title">Une minute par jour</h2>
+      <ol class="day__clauses">
+        <li class="day__clause is-on" data-step="0"><button type="button">D’abord, le défi du jour</button></li>
+        <li class="day__clause" data-step="1"><button type="button">Puis trois petites quêtes</button></li>
+        <li class="day__clause" data-step="2"><button type="button">Ensuite, vois tes progrès</button></li>
+        <li class="day__clause" data-step="3"><button type="button">Enfin, garde ta série</button></li>
+      </ol>
+      <p class="day__note">Assez court pour se glisser n’importe où, et pensé pour que la partie de demain soit facile à lancer.</p>
+    </div>
+    <div class="day__screen">
+      <div class="frag is-on" data-ui data-step="0">
+        <video class="card-video" autoplay muted loop playsinline preload="metadata" poster="../site/assets/daily-card.webp" width="560" height="204" aria-label="La carte du Défi du jour dans l’app, avec son objectif et ton record perso à battre."><source src="../site/assets/daily-card.mp4" type="video/mp4"></video>
+        <p class="frag__title">À venir cette semaine</p>
+        <ul class="frag__list">
+          <li><span>Sprint classique</span><span>Moins de 2:30</span></li>
+          <li><span>Voir rouge</span><span>Rouges en descendant, noirs en montant</span></li>
+          <li><span>Soupe à l’alphabet</span><span>Les lettres de A à Y</span></li>
+          <li><span>Sans faute</span><span>Aucune erreur</span></li>
+          <li><span>Métronome</span><span>Régularité de 50 ou plus</span></li>
+        </ul>
+        <p class="frag__foot">Tout le monde a la même grille, alors tu peux te comparer à tes amis.</p>
+      </div>
+      <div class="frag" data-ui data-step="1">
+        <p class="frag__title">Quêtes du jour</p>
+        <ul class="frag__quests">
+          <li class="is-done"><span>Termine une partie sans erreur</span><span>1 sur 1</span><i style="--p:1"></i></li>
+          <li><span>Joue 3 parties</span><span>2 sur 3</span><i style="--p:.667"></i></li>
+          <li><span>Atteins un combo ×2</span><span>0 sur 1</span><i style="--p:0"></i></li>
+        </ul>
+        <p class="frag__foot">Termine les trois pour gagner des XP bonus.</p>
+      </div>
+      <div class="frag" data-ui data-step="2">
+        <p class="frag__title">Statistiques</p>
+        <p class="frag__big">Ta ligne du haut est plus rapide.</p>
+        <p class="frag__foot">Les nombres de cette ligne te prennent maintenant 0,3 seconde de moins que la semaine dernière.</p>
+        <svg class="frag__chart" viewBox="0 0 280 120" role="img" aria-label="Tes temps en Classique sur sept jours, de 1:21 à 1:09.">
+          <polyline points="10,22 55,36 100,31 145,60 190,70 235,65 270,92" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+          <circle cx="270" cy="92" r="6" fill="currentColor"/>
+        </svg>
+        <ul class="frag__axis"><li>1:21</li><li>1:18</li><li>1:19</li><li>1:14</li><li>1:12</li><li>1:13</li><li>1:09</li></ul>
+      </div>
+      <div class="frag" data-ui data-step="3">
+        <p class="frag__title">Série</p>
+        <p class="frag__big">12 jours d’affilée</p>
+        <ol class="frag__week">
+          <li class="is-done">Lun</li><li class="is-done">Mar</li><li class="is-done">Mer</li><li class="is-freeze">Jeu</li><li class="is-done">Ven</li><li class="is-done">Sam</li><li>Dim</li>
+        </ol>
+        <p class="frag__foot">Tu gagnes des gels de série à mesure que ta série grandit, et ils la sauvent le jour où tu ne joues pas. Un rappel facultatif fait en sorte qu’elle ne s’arrête jamais par accident.</p>
+      </div>
+    </div>
+  </div>
+  <div class="day__control">
+    <label class="sr-only" for="day-range">Parcours une journée avec 49</label>
+    <div class="day__track" style="--v:0"><input class="day__range" id="day-range" type="range" min="0" max="3" step="1" value="0"></div>
+    <ol class="day__stops">
+      <li class="is-on">Défi</li><li>Quêtes</li><li>Statistiques</li><li>Série</li>
+    </ol>
+  </div>
+</section>
+
+<section class="styles" aria-labelledby="styles-title">
+  <div class="styles__field styles__field--normal">
+    <div class="styles__body">
+      <figure class="phone styles__phone"><video class="phone__screen" autoplay muted loop playsinline preload="metadata" poster="../site/assets/game-normal.webp" width="600" height="1304" aria-label="Une partie Classique en style Normal : juste le chrono et la grille."><source src="../site/assets/game-normal.mp4" type="video/mp4"></video></figure>
+      <div class="styles__text">
+        <p class="lead" data-reveal>Un contre-la-montre épuré.</p>
+        <p data-reveal style="--i:1">Juste toi, la grille et le chrono. Pas de points, pas d’effets, rien pour détourner tes yeux des nombres. C’est la table de Schulte classique, et le test le plus pur de ta concentration.</p>
+        <p data-reveal style="--i:2">Après chaque partie, tu vois ton temps, ton rythme et tes erreurs, tes décrochages, et ta Régularité : à quel point tu as trouvé chaque nombre de façon régulière.</p>
+      </div>
+    </div>
+  </div>
+  <div class="styles__field styles__field--comp field-blush">
+    <div class="styles__body">
+      <figure class="phone styles__phone"><video class="phone__screen" autoplay muted loop playsinline preload="metadata" poster="../site/assets/game.webp" width="600" height="1304" aria-label="Une partie Classique en style Compétition : score, combo et multiplicateur au-dessus de la grille."><source src="../site/assets/game.mp4" type="video/mp4"></video></figure>
+      <div class="styles__text">
+        <p class="lead" data-reveal>Points, combos et ×3.</p>
+        <p data-reveal style="--i:1">Chaque nombre vaut 100 points, plus jusqu’à 50 pour la vitesse. Trouve le suivant avant la fin du chrono de combo et le multiplicateur grimpe : ×2 à un combo de 5, ×3 à 15.</p>
+        <p data-reveal style="--i:2">Une erreur divise le combo par deux, mais ne te retire jamais de points. Tu veux les effets sans la pression ? Détente garde les sons et les célébrations, sans les points.</p>
+      </div>
+    </div>
+  </div>
+  <h2 class="styles__title" id="styles-title"><span>Normal</span> <span>ou Compétition</span></h2>
+</section>
+
+<div class="chapter chapter--app">
+
+  <aside class="stage" aria-label="La grille et l’app">
+    <div class="stage__frame">
+
+      <div class="stage__layer is-on field-slate" data-layer="modes">
+        <figure class="phone stage__phone"><video class="phone__screen" autoplay muted loop playsinline preload="metadata" poster="../site/assets/menu.webp" width="600" height="1304" aria-label="Le menu principal de 49 : une carte Défi du jour, les styles Normal, Compétition et Détente, et les modes Classique, Infini et Contre la montre avec leurs meilleurs résultats."><source src="../site/assets/menu.mp4" type="video/mp4"></video></figure>
+      </div>
+      <div class="stage__layer field-sage" data-layer="friends">
+        <figure class="phone stage__phone"><video class="phone__screen" autoplay muted loop playsinline preload="metadata" poster="../site/assets/match.webp" width="600" height="1304" aria-label="Les résultats finaux d’une course de groupe en trois manches : le podium, la manche la plus rapide et le classement."><source src="../site/assets/match.mp4" type="video/mp4"></video></figure>
+      </div>
+      <div class="stage__layer field-gold" data-layer="steal">
+        <figure class="phone stage__phone"><video class="phone__screen" autoplay muted loop playsinline preload="metadata" poster="../site/assets/steal.webp" width="600" height="1304" aria-label="Une partie de Vol dans 49 : une grille, deux joueurs, et chaque nombre revient à celui qui le touche en premier."><source src="../site/assets/steal.mp4" type="video/mp4"></video></figure>
+      </div>
+      <div class="stage__layer field-blush" data-layer="boards">
+        <div class="rb" data-ui aria-hidden="true" data-rb></div>
+      </div>
+      <div class="stage__layer field-sage" data-layer="ranks">
+        <figure class="phone stage__phone"><video class="phone__screen" autoplay muted loop playsinline preload="metadata" poster="../site/assets/ranks.webp" width="600" height="1304" aria-label="L’écran des rangs dans 49 : chaque rang sur sa propre plaque animée, de Débutant à Légende."><source src="../site/assets/ranks.mp4" type="video/mp4"></video></figure>
+      </div>
+      <div class="stage__layer field-gold" data-layer="achievements">
+        <figure class="phone stage__phone"><img class="phone__screen" src="../site/assets/achievements.webp" width="600" height="1304" alt="L’écran des succès dans 49 : 88 sur 547 débloqués, avec des filtres par type de partie, taille, sens et style." loading="lazy"></figure>
+      </div>
+
+    </div>
+  </aside>
+
+  <div class="read">
+
+    <section class="block" id="modes" data-stage="modes" aria-labelledby="modes-title">
+      <h2 class="head" id="modes-title" data-reveal>Trois façons de jouer</h2>
+      <p data-reveal style="--i:1">Compte de 1 à 49 en montant, ou de 49 à 1 en descendant. Chaque mode a ses propres records et son propre rang.</p>
+      <div class="proofs">
+        <article class="proof" data-reveal>
+          <div class="proof__panel"><video class="card-video" autoplay muted loop playsinline preload="metadata" poster="../site/assets/mode-classic.webp" width="560" height="114" aria-label="La carte Classique : un meilleur temps de 57.03, rang Or, 28 succès sur 71."><source src="../site/assets/mode-classic.mp4" type="video/mp4"></video></div>
+          <div class="proof__text">
+            <h3>Classique</h3>
+            <p>Une grille, un temps. Bats ton record, grimpe de Débutant à Légende et vois exactement où sont passées les secondes.</p>
+          </div>
+        </article>
+        <article class="proof" data-reveal>
+          <div class="proof__panel"><video class="card-video" autoplay muted loop playsinline preload="metadata" poster="../site/assets/mode-endless.webp" width="560" height="112" aria-label="La carte Infini : un rythme de 42,7 nombres par minute, rang Or."><source src="../site/assets/mode-endless.mp4" type="video/mp4"></video></div>
+          <div class="proof__text">
+            <h3>Infini</h3>
+            <p>Termine une grille et la suivante t’attend déjà. Ton score, c’est ton rythme en nombres par minute. Arrête quand tu veux.</p>
+          </div>
+        </article>
+        <article class="proof" data-reveal>
+          <div class="proof__panel"><video class="card-video" autoplay muted loop playsinline preload="metadata" poster="../site/assets/mode-clock.webp" width="560" height="112" aria-label="La carte Contre la montre : 67 nombres, rang Argent."><source src="../site/assets/mode-clock.mp4" type="video/mp4"></video></div>
+          <div class="proof__text">
+            <h3>Contre la montre</h3>
+            <p>Le chrono tourne à rebours. Chaque nombre trouvé te rend du temps, chaque erreur t’en retire. Jusqu’où iras-tu ?</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="block" id="friends" data-stage="friends" aria-labelledby="friends-title">
+      <h2 class="head" id="friends-title" data-reveal>Défie tes amis</h2>
+      <p data-reveal style="--i:1">Joue en 1 contre 1, en 2 contre 2 ou avec tout un groupe, d’une classe à une équipe au bureau. Tout le monde a exactement la même grille, alors seule la concentration fait la différence.</p>
+      <figure class="phone inline-only inline-phone"><video class="phone__screen" autoplay muted loop playsinline preload="metadata" poster="../site/assets/match.webp" width="600" height="1304" aria-label="Les résultats finaux d’une course de groupe en trois manches : le podium, la manche la plus rapide et le classement."><source src="../site/assets/match.mp4" type="video/mp4"></video></figure>
+      <dl class="rooms">
+        <div data-reveal><dt>Course</dt><dd>La même grille pour tout le monde, manche après manche. Le plus rapide gagne chaque manche, et les points s’additionnent jusqu’au classement final.</dd></div>
+        <div data-reveal style="--i:1"><dt>Bataille de points</dt><dd>Classement selon les points du style Compétition, donc la vitesse et les combos comptent tous les deux. Une série sans faute peut battre une partie plus rapide mais brouillonne.</dd></div>
+        <div data-reveal style="--i:2"><dt>Élimination</dt><dd>Pour les groupes. Le joueur le plus lent de chaque manche est éliminé, jusqu’à ce qu’il n’en reste qu’un.</dd></div>
+        <div data-reveal style="--i:3"><dt>Course fantôme</dt><dd>Tu joues en premier et ta partie devient le fantôme. Tes amis l’affrontent quand ils veulent dans la journée, et voient en direct s’ils sont en avance ou en retard.</dd></div>
+      </dl>
+      <p data-reveal>Tes amis rejoignent avec un code de salle à quatre caractères, un QR code ou un lien, et chacun choisit un pseudo pour la partie. Pas un téléphone chacun ? Fais passer le tien en mode invité.</p>
+    </section>
+
+    <section class="block" id="steal" data-stage="steal" aria-labelledby="steal-title">
+      <h2 class="head" id="steal-title" data-reveal>Vol</h2>
+      <p class="lead" data-reveal style="--i:1">Une seule grille, en direct, en face à face. Le premier qui touche un nombre le marque, et il disparaît pour l’autre joueur.</p>
+      <figure class="phone inline-only inline-phone"><video class="phone__screen" autoplay muted loop playsinline preload="metadata" poster="../site/assets/steal.webp" width="600" height="1304" aria-label="Une partie de Vol dans 49 : une grille, deux joueurs, et chaque nombre revient à celui qui le touche en premier."><source src="../site/assets/steal.mp4" type="video/mp4"></video></figure>
+    </section>
+
+    <section class="block" id="boards" data-stage="boards" aria-labelledby="boards-title">
+      <h2 class="head" id="boards-title" data-reveal>Quatre types de grille</h2>
+      <p class="figure-line" data-reveal style="--i:1">De 5&nbsp;×&nbsp;5 à 11&nbsp;×&nbsp;11</p>
+      <p data-reveal style="--i:2">Une 5&nbsp;×&nbsp;5 rapide, la 7&nbsp;×&nbsp;7 standard, et la 9&nbsp;×&nbsp;9 ou la 11&nbsp;×&nbsp;11 pour les acharnés.</p>
+      <div class="inline-only rb rb--inline" data-ui aria-hidden="true" data-rb></div>
+      <dl class="kinds">
+        <div data-reveal><dt>Nombres</dt><dd>La table classique. Trouve-les dans l’ordre, en montant ou en descendant.</dd></div>
+        <div data-reveal style="--i:1"><dt>Lettres</dt><dd>De A à Y sur une grille 5&nbsp;×&nbsp;5, pour quand les chiffres te semblent trop faciles.</dd></div>
+        <div data-reveal style="--i:2"><dt>Rouge et Noir</dt><dd>Compte les nombres rouges en montant et les noirs en descendant, en alternant à chaque touche. Un exercice ludique pour passer d’une tâche à l’autre sans perdre le fil.</dd></div>
+        <div data-reveal style="--i:3"><dt>Mouvante</dt><dd>Les cases changent de place pendant que tu joues. Accroche-toi.</dd></div>
+      </dl>
+      <p data-reveal>Tu bloques ? Un indice montre où se trouve le nombre suivant. Tu en reçois quelques-uns chaque jour, et chacun ajoute 5 secondes : les indices t’aident à apprendre, mais ne battent jamais un record.</p>
+    </section>
+
+    <section class="block" id="ranks" data-stage="ranks" aria-labelledby="ranks-title">
       <h2 class="head" id="ranks-title" data-reveal>Ce que vaut ton temps</h2>
       <p data-reveal style="--i:1">Chaque mode, sens et style a son propre rang, fixé par ton meilleur résultat. Voici ce qu’il faut pour chacun sur la grille standard 7&nbsp;×&nbsp;7. Les temps s’adaptent aux grilles plus petites, plus grandes et plus difficiles.</p>
       <table class="ranks" data-reveal style="--i:2">
@@ -136,62 +337,6 @@
       <p data-reveal style="--i:4">En plus des rangs, il y a 170 classements mondiaux Game Center : meilleur temps et plus de points pour chaque grille et chaque sens, pour aujourd’hui, cette semaine, ce mois-ci et depuis toujours. Le Défi du jour a son propre classement, et seul ton premier essai compte.</p>
     </section>
 
-    <section class="block" id="modes" data-stage="modes" aria-labelledby="modes-title">
-      <h2 class="head" id="modes-title" data-reveal>Trois façons de jouer</h2>
-      <p data-reveal style="--i:1">Compte de 1 à 49 en montant, ou de 49 à 1 en descendant. Chaque mode a ses propres records et son propre rang.</p>
-      <div class="proofs">
-        <article class="proof" data-reveal>
-          <div class="proof__panel"><img src="../site/assets/mode-classic.webp" width="560" height="106" alt="La carte Classique : un meilleur temps de 57.03, rang Or, 28 succès sur 71." loading="lazy"></div>
-          <div class="proof__text">
-            <h3>Classique</h3>
-            <p>Une grille, un temps. Bats ton record, grimpe de Débutant à Légende et vois exactement où sont passées les secondes.</p>
-          </div>
-        </article>
-        <article class="proof" data-reveal>
-          <div class="proof__panel"><img src="../site/assets/mode-endless.webp" width="560" height="106" alt="La carte Infini : un rythme de 56,5 nombres par minute, rang Diamant." loading="lazy"></div>
-          <div class="proof__text">
-            <h3>Infini</h3>
-            <p>Termine une grille et la suivante t’attend déjà. Ton score, c’est ton rythme en nombres par minute. Arrête quand tu veux.</p>
-          </div>
-        </article>
-        <article class="proof" data-reveal>
-          <div class="proof__panel"><img src="../site/assets/mode-clock.webp" width="560" height="106" alt="La carte Contre la montre : 67 nombres, rang Argent." loading="lazy"></div>
-          <div class="proof__text">
-            <h3>Contre la montre</h3>
-            <p>Le chrono tourne à rebours. Chaque nombre trouvé te rend du temps, chaque erreur t’en retire. Jusqu’où iras-tu ?</p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="block" id="boards" data-stage="boards" aria-labelledby="boards-title">
-      <h2 class="head" id="boards-title" data-reveal>Quatre types de grille</h2>
-      <p class="figure-line" data-reveal style="--i:1">De 5&nbsp;×&nbsp;5 à 11&nbsp;×&nbsp;11</p>
-      <p data-reveal style="--i:2">Une 5&nbsp;×&nbsp;5 rapide, la 7&nbsp;×&nbsp;7 standard, et la 9&nbsp;×&nbsp;9 ou la 11&nbsp;×&nbsp;11 pour les acharnés.</p>
-      <div class="inline-only rb rb--inline" data-ui aria-hidden="true" data-rb></div>
-      <dl class="kinds">
-        <div data-reveal><dt>Nombres</dt><dd>La table classique. Trouve-les dans l’ordre, en montant ou en descendant.</dd></div>
-        <div data-reveal style="--i:1"><dt>Lettres</dt><dd>De A à Y sur une grille 5&nbsp;×&nbsp;5, pour quand les chiffres te semblent trop faciles.</dd></div>
-        <div data-reveal style="--i:2"><dt>Rouge et Noir</dt><dd>Compte les nombres rouges en montant et les noirs en descendant, en alternant à chaque touche. Un exercice ludique pour passer d’une tâche à l’autre sans perdre le fil.</dd></div>
-        <div data-reveal style="--i:3"><dt>Mouvante</dt><dd>Les cases changent de place pendant que tu joues. Accroche-toi.</dd></div>
-      </dl>
-      <p data-reveal>Tu bloques ? Un indice montre où se trouve le nombre suivant. Tu en reçois quelques-uns chaque jour, et chacun ajoute 5 secondes : les indices t’aident à apprendre, mais ne battent jamais un record.</p>
-    </section>
-
-    <section class="block" id="friends" data-stage="friends" aria-labelledby="friends-title">
-      <h2 class="head" id="friends-title" data-reveal>Défie tes amis</h2>
-      <p data-reveal style="--i:1">Joue en 1 contre 1, en 2 contre 2 ou avec tout un groupe, d’une classe à une équipe au bureau. Tout le monde a exactement la même grille, alors seule la concentration fait la différence.</p>
-      <figure class="inline-only inline-shot"><img src="../site/assets/match-summary.webp" width="600" height="1304" alt="Les résultats finaux d’une course en groupe en trois manches dans 49 : Zoe gagne avec 53 points, Artur est deuxième avec 52 et Leo troisième avec 49, au-dessus de la manche la plus rapide et du classement complet." loading="lazy"></figure>
-      <dl class="rooms">
-        <div data-reveal><dt>Course</dt><dd>La même grille pour tout le monde, manche après manche. Le plus rapide gagne chaque manche, et les points s’additionnent jusqu’au classement final.</dd></div>
-        <div data-reveal style="--i:1"><dt>Bataille de points</dt><dd>Classement selon les points du style Compétition, donc la vitesse et les combos comptent tous les deux. Une série sans faute peut battre une partie plus rapide mais brouillonne.</dd></div>
-        <div data-reveal style="--i:2"><dt>Élimination</dt><dd>Pour les groupes. Le joueur le plus lent de chaque manche est éliminé, jusqu’à ce qu’il n’en reste qu’un.</dd></div>
-        <div data-reveal style="--i:3"><dt>Course fantôme</dt><dd>Tu joues en premier et ta partie devient le fantôme. Tes amis l’affrontent quand ils veulent dans la journée, et voient en direct s’ils sont en avance ou en retard.</dd></div>
-        <div data-reveal style="--i:4"><dt>Vol</dt><dd>Une seule grille, en direct, en face à face. Le premier qui touche un nombre le marque, et il disparaît pour l’autre joueur.</dd></div>
-      </dl>
-      <p data-reveal>Tes amis rejoignent avec un code de salle à quatre caractères, un QR code ou un lien, et chacun choisit un pseudo pour la partie. Pas un téléphone chacun ? Fais passer le tien en mode invité.</p>
-    </section>
-
     <section class="block block--last" id="achievements" data-stage="achievements" aria-labelledby="ach-title">
       <h2 class="giant" id="ach-title" data-reveal><span class="giant__num">547</span><span class="giant__word">succès</span></h2>
       <p data-reveal style="--i:1">Ils récompensent la vitesse, la précision, la concentration, les combos, les séries et la curiosité. Les succès à paliers grimpent sur huit médailles, du bronze au prismatique.</p>
@@ -205,7 +350,7 @@
         <li data-reveal style="--i:6"><img src="../assets/medals/medal-6.png" width="160" height="160" alt="" loading="lazy">Rubis</li>
         <li data-reveal style="--i:7"><img src="../assets/medals/medal-7.png" width="160" height="160" alt="" loading="lazy">Prismatique</li>
       </ul>
-      <figure class="inline-only inline-shot"><img src="../site/assets/achievements.webp" width="600" height="1298" alt="Les succès de vitesse en Classique dans 49, de Fusée en moins de 38 secondes à Distorsion en moins de 31, chacun avec son palier et sa progression." loading="lazy"></figure>
+      <figure class="phone inline-only inline-phone"><img class="phone__screen" src="../site/assets/achievements.webp" width="600" height="1304" alt="L’écran des succès dans 49 : 88 sur 547 débloqués, avec des filtres par type de partie, taille, sens et style." loading="lazy"></figure>
       <div class="bars">
         <details open>
           <summary><span>Classique : Vitesse</span><span class="bars__n">36</span></summary>
@@ -292,113 +437,6 @@
 
   </div>
 </div>
-
-<section class="drill" aria-labelledby="drill-title">
-  <div class="drill__head">
-    <h2 class="head" id="drill-title" data-reveal>Entraîne-toi comme un pilote</h2>
-    <p data-reveal style="--i:1">À la vitesse d’une course, la concentration est tout. Les pilotes professionnels entraînent leur attention, leur balayage visuel et leurs réflexes aussi sérieusement que leur condition physique, et certains utilisent pour cela des tables de Schulte. 49 transforme ce même exercice en une minute par jour.</p>
-  </div>
-  <div class="drill__mosaic">
-    <figure class="drill__photo">
-      <img class="drift" src="../site/assets/f1-wheel.jpg" width="1000" height="1000" alt="Le volant d’une Formule 1 Alpine de 2021 : un écran, une rangée de témoins de changement de rapport et plus de vingt boutons et molettes." loading="lazy">
-    </figure>
-    <div class="drill__tile field-gold" data-reveal>
-      <p class="drill__fig">300&nbsp;km/h</p>
-      <p>Là où un seul regard doit tout saisir autour de toi.</p>
-    </div>
-    <div class="drill__tile field-slate" data-reveal style="--i:1">
-      <p class="drill__fig">1 minute</p>
-      <p>Par jour, c’est assez pour le même exercice. Pas besoin de voiture de course.</p>
-    </div>
-  </div>
-</section>
-
-<section class="styles" aria-labelledby="styles-title">
-  <div class="styles__field styles__field--normal">
-    <div class="styles__body">
-      <img class="styles__shot" src="../assets/screens/focus-normal-light.png" width="600" height="1169" alt="Une partie Classique en style Normal : le temps 0:23.41, Trouve 18, et les nombres déjà trouvés estompés sur la grille." loading="lazy">
-      <div class="styles__text">
-        <p class="lead" data-reveal>Un contre-la-montre épuré.</p>
-        <p data-reveal style="--i:1">Juste toi, la grille et le chrono. Pas de points, pas d’effets, rien pour détourner tes yeux des nombres. C’est la table de Schulte classique, et le test le plus pur de ta concentration.</p>
-        <p data-reveal style="--i:2">Après chaque partie, tu vois ton temps, ton rythme et tes erreurs, tes décrochages, et ta Régularité : à quel point tu as trouvé chaque nombre de façon régulière.</p>
-      </div>
-    </div>
-  </div>
-  <div class="styles__field styles__field--comp field-blush">
-    <div class="styles__body">
-      <img class="styles__shot" src="../site/assets/pitlane-competitive.webp" width="600" height="1169" alt="Une partie Classique en style Compétition avec le look Pit Lane : score 2 292, combo 10 à ×2, Trouve 10." loading="lazy">
-      <div class="styles__text">
-        <p class="lead" data-reveal>Points, combos et ×3.</p>
-        <p data-reveal style="--i:1">Chaque nombre vaut 100 points, plus jusqu’à 50 pour la vitesse. Trouve le suivant avant la fin du chrono de combo et le multiplicateur grimpe : ×2 à un combo de 5, ×3 à 15.</p>
-        <p data-reveal style="--i:2">Une erreur divise le combo par deux, mais ne te retire jamais de points. Tu veux les effets sans la pression ? Détente garde les sons et les célébrations, sans les points.</p>
-      </div>
-    </div>
-  </div>
-  <h2 class="styles__title" id="styles-title"><span>Normal</span> <span>ou Compétition</span></h2>
-</section>
-
-<section class="day" aria-labelledby="day-title">
-  <div class="day__fields">
-    <div class="day__words field-sage">
-      <h2 class="head" id="day-title">Une minute par jour</h2>
-      <ol class="day__clauses">
-        <li class="day__clause is-on" data-step="0"><button type="button">D’abord, le défi du jour</button></li>
-        <li class="day__clause" data-step="1"><button type="button">Puis trois petites quêtes</button></li>
-        <li class="day__clause" data-step="2"><button type="button">Ensuite, vois tes progrès</button></li>
-        <li class="day__clause" data-step="3"><button type="button">Enfin, garde ta série</button></li>
-      </ol>
-      <p class="day__note">Assez court pour se glisser n’importe où, et pensé pour que la partie de demain soit facile à lancer.</p>
-    </div>
-    <div class="day__screen">
-      <div class="frag is-on" data-ui data-step="0">
-        <img src="../site/assets/daily-card.webp" width="560" height="122" alt="La carte du Défi du jour : Compte à rebours. Termine en moins de 2:30, avec un objectif perso sous 1:16.">
-        <p class="frag__title">À venir cette semaine</p>
-        <ul class="frag__list">
-          <li><span>Sprint classique</span><span>Moins de 2:30</span></li>
-          <li><span>Voir rouge</span><span>Rouges en descendant, noirs en montant</span></li>
-          <li><span>Soupe à l’alphabet</span><span>Les lettres de A à Y</span></li>
-          <li><span>Sans faute</span><span>Aucune erreur</span></li>
-          <li><span>Métronome</span><span>Régularité de 50 ou plus</span></li>
-        </ul>
-        <p class="frag__foot">Tout le monde a la même grille, alors tu peux te comparer à tes amis.</p>
-      </div>
-      <div class="frag" data-ui data-step="1">
-        <p class="frag__title">Quêtes du jour</p>
-        <ul class="frag__quests">
-          <li class="is-done"><span>Termine une partie sans erreur</span><span>1 sur 1</span><i style="--p:1"></i></li>
-          <li><span>Joue 3 parties</span><span>2 sur 3</span><i style="--p:.667"></i></li>
-          <li><span>Atteins un combo ×2</span><span>0 sur 1</span><i style="--p:0"></i></li>
-        </ul>
-        <p class="frag__foot">Termine les trois pour gagner des XP bonus.</p>
-      </div>
-      <div class="frag" data-ui data-step="2">
-        <p class="frag__title">Statistiques</p>
-        <p class="frag__big">Ta ligne du haut est plus rapide.</p>
-        <p class="frag__foot">Les nombres de cette ligne te prennent maintenant 0,3 seconde de moins que la semaine dernière.</p>
-        <svg class="frag__chart" viewBox="0 0 280 120" role="img" aria-label="Tes temps en Classique sur sept jours, de 1:21 à 1:09.">
-          <polyline points="10,22 55,36 100,31 145,60 190,70 235,65 270,92" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
-          <circle cx="270" cy="92" r="6" fill="currentColor"/>
-        </svg>
-        <ul class="frag__axis"><li>1:21</li><li>1:18</li><li>1:19</li><li>1:14</li><li>1:12</li><li>1:13</li><li>1:09</li></ul>
-      </div>
-      <div class="frag" data-ui data-step="3">
-        <p class="frag__title">Série</p>
-        <p class="frag__big">12 jours d’affilée</p>
-        <ol class="frag__week">
-          <li class="is-done">Lun</li><li class="is-done">Mar</li><li class="is-done">Mer</li><li class="is-freeze">Jeu</li><li class="is-done">Ven</li><li class="is-done">Sam</li><li>Dim</li>
-        </ol>
-        <p class="frag__foot">Tu gagnes des gels de série à mesure que ta série grandit, et ils la sauvent le jour où tu ne joues pas. Un rappel facultatif fait en sorte qu’elle ne s’arrête jamais par accident.</p>
-      </div>
-    </div>
-  </div>
-  <div class="day__control">
-    <label class="sr-only" for="day-range">Parcours une journée avec 49</label>
-    <div class="day__track" style="--v:0"><input class="day__range" id="day-range" type="range" min="0" max="3" step="1" value="0"></div>
-    <ol class="day__stops">
-      <li class="is-on">Défi</li><li>Quêtes</li><li>Statistiques</li><li>Série</li>
-    </ol>
-  </div>
-</section>
 
 <section class="letter" aria-labelledby="letter-title">
   <div class="letter__col">

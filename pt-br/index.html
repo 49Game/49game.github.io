@@ -40,18 +40,18 @@
     <summary>Menu</summary>
     <nav class="nav__sheet" aria-label="Seções">
       <a href="tabela-de-schulte/">Jogar online</a>
-      <a href="#ranks">Patentes</a>
       <a href="#modes">Modos</a>
       <a href="#friends">Amigos</a>
+      <a href="#ranks">Patentes</a>
       <a href="#price">Preço</a>
       <a href="#questions">Perguntas</a>
     </nav>
   </details>
   <nav class="nav__links" aria-label="Seções">
     <a href="tabela-de-schulte/">Jogar online</a>
-    <a href="#ranks">Patentes</a>
     <a href="#modes">Modos</a>
     <a href="#friends">Amigos</a>
+    <a href="#ranks">Patentes</a>
     <a href="#price">Preço</a>
   </nav>
   <details class="lang">
@@ -82,22 +82,6 @@
         </div>
       </div>
 
-      <div class="stage__layer field-slate" data-layer="modes">
-        <img class="stage__shot" src="../assets/screens/p/focus-focusBlue-light-menu.webp" width="600" height="1304" alt="O menu principal do 49: um cartão do Desafio Diário, os estilos Normal, Competitivo e Relax, e os modos Clássico, Infinito e Contra o Relógio com seus melhores resultados." loading="lazy">
-      </div>
-
-      <div class="stage__layer field-blush" data-layer="boards">
-        <div class="rb" data-ui aria-hidden="true" data-rb></div>
-      </div>
-
-      <div class="stage__layer field-sage" data-layer="friends">
-        <img class="stage__shot" src="../site/assets/match-summary.webp" width="600" height="1304" alt="O resultado final de uma corrida em grupo de três rodadas no 49: Zoe vence com 53 pontos, Artur fica em segundo com 52 e Leo em terceiro com 49, acima da rodada mais rápida e da classificação completa." loading="lazy">
-      </div>
-
-      <div class="stage__layer field-gold" data-layer="achievements">
-        <img class="stage__shot" src="../site/assets/achievements.webp" width="600" height="1298" alt="As conquistas de velocidade do Clássico no 49, de Foguete, com menos de 38 segundos, a Dobra Espacial, com menos de 31, cada uma com seu nível e seu progresso." loading="lazy">
-      </div>
-
     </div>
   </aside>
 
@@ -115,7 +99,224 @@
       <h1 class="wordmark" id="hero-title" data-rise style="--i:2"><span class="wordmark__name">49</span><span class="wordmark__sub">Focus Booster</span></h1>
     </section>
 
-    <section class="block" id="ranks" data-stage="board" aria-labelledby="ranks-title">
+    <section class="block block--last needs" id="needs" data-stage="board" aria-labelledby="needs-title">
+      <h2 class="head" id="needs-title" data-reveal>Treine seu foco</h2>
+      <p class="lead" data-reveal style="--i:1">Você se distrai ao ler, estudar ou trabalhar? Uma tabela de Schulte treina justamente essa atenção, e o 49 transforma isso num jogo que dá vontade de voltar.</p>
+      <dl class="needs__list">
+        <div data-reveal><dt>Foque por mais tempo</dt><dd>Fique numa tarefa, aula ou capítulo longo sem se distrair.</dd></div>
+        <div data-reveal style="--i:1"><dt>Leia mais rápido</dt><dd>Capte mais da página num relance, com menos saltos dos olhos.</dd></div>
+        <div data-reveal style="--i:2"><dt>Reaja mais rápido</dt><dd>Perceba o que importa numa cena cheia e aja.</dd></div>
+      </dl>
+      <h3 class="needs__how" data-reveal>Como se joga</h3>
+      <ol class="needs__steps">
+        <li data-reveal>Encontre os números de 1 a 49, em ordem, num tabuleiro embaralhado.</li>
+        <li data-reveal style="--i:1">Bata seu tempo e suba de Novato a Lenda.</li>
+        <li data-reveal style="--i:2">Depois de cada partida, veja o que melhorou.</li>
+      </ol>
+      <p class="needs__note" data-reveal>O 49 é um jogo para praticar o foco, não um produto médico.</p>
+    </section>
+
+  </div>
+</div>
+
+<section class="drill" aria-labelledby="drill-title">
+  <div class="drill__head">
+    <h2 class="head" id="drill-title" data-reveal>Treine como um piloto</h2>
+    <p data-reveal style="--i:1">Na velocidade de uma corrida, o foco é tudo. Pilotos profissionais treinam atenção, varredura visual e reflexos com a mesma seriedade que o preparo físico, e alguns usam tabelas de Schulte para isso. O 49 transforma esse mesmo treino em um minuto por dia.</p>
+  </div>
+  <div class="drill__mosaic">
+    <figure class="drill__photo">
+      <img class="drift" src="../site/assets/f1-wheel.jpg" width="1000" height="1000" alt="O volante de um carro de Fórmula 1 da Alpine de 2021: uma tela, uma fileira de luzes de troca de marcha e mais de vinte botões e seletores." loading="lazy">
+    </figure>
+    <div class="drill__tile field-gold" data-reveal>
+      <p class="drill__fig">300&nbsp;km/h</p>
+      <p>Onde um único olhar precisa captar tudo ao seu redor.</p>
+    </div>
+    <div class="drill__tile field-slate" data-reveal style="--i:1">
+      <p class="drill__fig">1 minuto</p>
+      <p>Por dia já basta para o mesmo treino. Sem precisar de carro de corrida.</p>
+    </div>
+  </div>
+</section>
+
+<section class="day" aria-labelledby="day-title">
+  <div class="day__fields">
+    <div class="day__words field-sage">
+      <h2 class="head" id="day-title">Um minuto por dia</h2>
+      <ol class="day__clauses">
+        <li class="day__clause is-on" data-step="0"><button type="button">Primeiro, o desafio de hoje</button></li>
+        <li class="day__clause" data-step="1"><button type="button">Depois, três pequenas missões</button></li>
+        <li class="day__clause" data-step="2"><button type="button">Em seguida, veja o que melhorou</button></li>
+        <li class="day__clause" data-step="3"><button type="button">Por fim, mantenha a sequência</button></li>
+      </ol>
+      <p class="day__note">Curto o bastante para caber em qualquer lugar, e feito para que a partida de amanhã seja fácil de começar.</p>
+    </div>
+    <div class="day__screen">
+      <div class="frag is-on" data-ui data-step="0">
+        <video class="card-video" autoplay muted loop playsinline preload="metadata" poster="../site/assets/daily-card.webp" width="560" height="204" aria-label="O cartão do Desafio Diário de hoje no app, com a meta e seu recorde pessoal."><source src="../site/assets/daily-card.mp4" type="video/mp4"></video>
+        <p class="frag__title">Ainda nesta semana</p>
+        <ul class="frag__list">
+          <li><span>Sprint Clássico</span><span>Menos de 2:30</span></li>
+          <li><span>Vendo Vermelho</span><span>Vermelho desce, preto sobe</span></li>
+          <li><span>Sopa de Letrinhas</span><span>Letras de A a Y</span></li>
+          <li><span>Ficha Limpa</span><span>Nenhum erro</span></li>
+          <li><span>Metrônomo</span><span>Cadência de 50 ou mais</span></li>
+        </ul>
+        <p class="frag__foot">Todos recebem o mesmo tabuleiro, então você pode comparar com os amigos.</p>
+      </div>
+      <div class="frag" data-ui data-step="1">
+        <p class="frag__title">Missões de hoje</p>
+        <ul class="frag__quests">
+          <li class="is-done"><span>Termine uma partida sem erros</span><span>1 de 1</span><i style="--p:1"></i></li>
+          <li><span>Jogue 3 partidas</span><span>2 de 3</span><i style="--p:.667"></i></li>
+          <li><span>Alcance um combo ×2</span><span>0 de 1</span><i style="--p:0"></i></li>
+        </ul>
+        <p class="frag__foot">Complete as três para ganhar XP de bônus.</p>
+      </div>
+      <div class="frag" data-ui data-step="2">
+        <p class="frag__title">Estatísticas</p>
+        <p class="frag__big">Sua linha de cima ficou mais rápida.</p>
+        <p class="frag__foot">Os números dali agora levam 0,3 segundo a menos que na semana passada.</p>
+        <svg class="frag__chart" viewBox="0 0 280 120" role="img" aria-label="Seus tempos no Clássico ao longo de sete dias, de 1:21 até 1:09.">
+          <polyline points="10,22 55,36 100,31 145,60 190,70 235,65 270,92" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+          <circle cx="270" cy="92" r="6" fill="currentColor"/>
+        </svg>
+        <ul class="frag__axis"><li>1:21</li><li>1:18</li><li>1:19</li><li>1:14</li><li>1:12</li><li>1:13</li><li>1:09</li></ul>
+      </div>
+      <div class="frag" data-ui data-step="3">
+        <p class="frag__title">Sequência</p>
+        <p class="frag__big">12 dias seguidos</p>
+        <ol class="frag__week">
+          <li class="is-done">Seg</li><li class="is-done">Ter</li><li class="is-done">Qua</li><li class="is-freeze">Qui</li><li class="is-done">Sex</li><li class="is-done">Sáb</li><li>Dom</li>
+        </ol>
+        <p class="frag__foot">Você ganha protetores de sequência conforme ela cresce, e eles a salvam no dia em que você não jogar. Um lembrete opcional garante que ela nunca se quebre por descuido.</p>
+      </div>
+    </div>
+  </div>
+  <div class="day__control">
+    <label class="sr-only" for="day-range">Percorra um dia com o 49</label>
+    <div class="day__track" style="--v:0"><input class="day__range" id="day-range" type="range" min="0" max="3" step="1" value="0"></div>
+    <ol class="day__stops">
+      <li class="is-on">Diário</li><li>Missões</li><li>Estatísticas</li><li>Sequência</li>
+    </ol>
+  </div>
+</section>
+
+<section class="styles" aria-labelledby="styles-title">
+  <div class="styles__field styles__field--normal">
+    <div class="styles__body">
+      <figure class="phone styles__phone"><video class="phone__screen" autoplay muted loop playsinline preload="metadata" poster="../site/assets/game-normal.webp" width="600" height="1304" aria-label="Uma partida no Clássico no estilo Normal: só o relógio e o tabuleiro."><source src="../site/assets/game-normal.mp4" type="video/mp4"></video></figure>
+      <div class="styles__text">
+        <p class="lead" data-reveal>Uma prova de tempo pura.</p>
+        <p data-reveal style="--i:1">Só você, o tabuleiro e o relógio. Sem pontos e sem efeitos, nada para tirar seus olhos dos números. Esta é a tabela de Schulte clássica, e o teste mais puro do seu foco.</p>
+        <p data-reveal style="--i:2">Depois de cada partida, você vê seu tempo, ritmo e erros, seus lapsos de foco e sua Cadência: a regularidade com que você encontrou cada número.</p>
+      </div>
+    </div>
+  </div>
+  <div class="styles__field styles__field--comp field-blush">
+    <div class="styles__body">
+      <figure class="phone styles__phone"><video class="phone__screen" autoplay muted loop playsinline preload="metadata" poster="../site/assets/game.webp" width="600" height="1304" aria-label="Uma partida no Clássico no estilo Competitivo: pontos, combo e multiplicador acima do tabuleiro."><source src="../site/assets/game.mp4" type="video/mp4"></video></figure>
+      <div class="styles__text">
+        <p class="lead" data-reveal>Pontos, combos, ×3.</p>
+        <p data-reveal style="--i:1">Cada número vale 100 pontos, mais até 50 pela velocidade. Encontre o próximo antes que o tempo do combo acabe e o multiplicador sobe: ×2 com um combo de 5, ×3 com 15.</p>
+        <p data-reveal style="--i:2">Um toque errado corta o combo pela metade, mas nunca tira pontos. Quer os efeitos sem a pressão? O Relax mantém os sons e as comemorações e deixa os pontos de lado.</p>
+      </div>
+    </div>
+  </div>
+  <h2 class="styles__title" id="styles-title"><span>Normal</span> <span>ou Competitivo</span></h2>
+</section>
+
+<div class="chapter chapter--app">
+
+  <aside class="stage" aria-label="O tabuleiro e o app">
+    <div class="stage__frame">
+
+      <div class="stage__layer is-on field-slate" data-layer="modes">
+        <figure class="phone stage__phone"><video class="phone__screen" autoplay muted loop playsinline preload="metadata" poster="../site/assets/menu.webp" width="600" height="1304" aria-label="O menu principal do 49: um cartão do Desafio Diário, os estilos Normal, Competitivo e Relax, e os modos Clássico, Infinito e Contra o Relógio com seus melhores resultados."><source src="../site/assets/menu.mp4" type="video/mp4"></video></figure>
+      </div>
+      <div class="stage__layer field-sage" data-layer="friends">
+        <figure class="phone stage__phone"><video class="phone__screen" autoplay muted loop playsinline preload="metadata" poster="../site/assets/match.webp" width="600" height="1304" aria-label="Os resultados finais de uma corrida em grupo de três rodadas: o pódio, a rodada mais rápida e a classificação."><source src="../site/assets/match.mp4" type="video/mp4"></video></figure>
+      </div>
+      <div class="stage__layer field-gold" data-layer="steal">
+        <figure class="phone stage__phone"><video class="phone__screen" autoplay muted loop playsinline preload="metadata" poster="../site/assets/steal.webp" width="600" height="1304" aria-label="Uma partida de Roubo no 49: um tabuleiro, dois jogadores, e cada número fica com quem tocar nele primeiro."><source src="../site/assets/steal.mp4" type="video/mp4"></video></figure>
+      </div>
+      <div class="stage__layer field-blush" data-layer="boards">
+        <div class="rb" data-ui aria-hidden="true" data-rb></div>
+      </div>
+      <div class="stage__layer field-sage" data-layer="ranks">
+        <figure class="phone stage__phone"><video class="phone__screen" autoplay muted loop playsinline preload="metadata" poster="../site/assets/ranks.webp" width="600" height="1304" aria-label="A tela de patentes do 49: cada patente na sua própria placa animada, de Novato a Lenda."><source src="../site/assets/ranks.mp4" type="video/mp4"></video></figure>
+      </div>
+      <div class="stage__layer field-gold" data-layer="achievements">
+        <figure class="phone stage__phone"><img class="phone__screen" src="../site/assets/achievements.webp" width="600" height="1304" alt="A tela de conquistas do 49: 88 de 547 desbloqueadas, com filtros por tipo de jogo, tamanho, ordem e estilo." loading="lazy"></figure>
+      </div>
+
+    </div>
+  </aside>
+
+  <div class="read">
+
+    <section class="block" id="modes" data-stage="modes" aria-labelledby="modes-title">
+      <h2 class="head" id="modes-title" data-reveal>Três formas de jogar</h2>
+      <p data-reveal style="--i:1">Conte de 1 a 49 ou, ao contrário, de 49 a 1. Cada modo guarda seus próprios recordes e sua própria patente.</p>
+      <div class="proofs">
+        <article class="proof" data-reveal>
+          <div class="proof__panel"><video class="card-video" autoplay muted loop playsinline preload="metadata" poster="../site/assets/mode-classic.webp" width="560" height="114" aria-label="O cartão do Clássico: melhor tempo de 57,03, patente Ouro, 28 de 71 conquistas."><source src="../site/assets/mode-classic.mp4" type="video/mp4"></video></div>
+          <div class="proof__text">
+            <h3>Clássico</h3>
+            <p>Um tabuleiro, um tempo. Supere seu recorde, suba de Novato a Lenda e veja exatamente onde os segundos foram parar.</p>
+          </div>
+        </article>
+        <article class="proof" data-reveal>
+          <div class="proof__panel"><video class="card-video" autoplay muted loop playsinline preload="metadata" poster="../site/assets/mode-endless.webp" width="560" height="112" aria-label="O cartão do Infinito: ritmo de 42,7 números por minuto, patente Ouro."><source src="../site/assets/mode-endless.mp4" type="video/mp4"></video></div>
+          <div class="proof__text">
+            <h3>Infinito</h3>
+            <p>Termine um tabuleiro e o próximo já está esperando. Sua pontuação é o seu ritmo em números por minuto. Pare quando quiser.</p>
+          </div>
+        </article>
+        <article class="proof" data-reveal>
+          <div class="proof__panel"><video class="card-video" autoplay muted loop playsinline preload="metadata" poster="../site/assets/mode-clock.webp" width="560" height="112" aria-label="O cartão do Contra o Relógio: 67 números, patente Prata."><source src="../site/assets/mode-clock.mp4" type="video/mp4"></video></div>
+          <div class="proof__text">
+            <h3>Contra o Relógio</h3>
+            <p>O relógio corre contra você. Cada número que você encontra devolve tempo, e cada erro tira um pouco. Até onde você vai?</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="block" id="friends" data-stage="friends" aria-labelledby="friends-title">
+      <h2 class="head" id="friends-title" data-reveal>Desafie seus amigos</h2>
+      <p data-reveal style="--i:1">Jogue 1 contra 1, 2 contra 2 ou com um grupo inteiro, de uma turma da escola a uma equipe do trabalho. Todos recebem exatamente o mesmo tabuleiro, então a única diferença entre vocês é o foco.</p>
+      <figure class="phone inline-only inline-phone"><video class="phone__screen" autoplay muted loop playsinline preload="metadata" poster="../site/assets/match.webp" width="600" height="1304" aria-label="Os resultados finais de uma corrida em grupo de três rodadas: o pódio, a rodada mais rápida e a classificação."><source src="../site/assets/match.mp4" type="video/mp4"></video></figure>
+      <dl class="rooms">
+        <div data-reveal><dt>Corrida</dt><dd>O mesmo tabuleiro para todos, rodada após rodada. O mais rápido vence cada rodada, e os pontos se somam na classificação final.</dd></div>
+        <div data-reveal style="--i:1"><dt>Batalha de pontos</dt><dd>A classificação é pelos pontos do Competitivo, então velocidade e combos contam. Uma sequência limpa pode vencer uma partida mais rápida, mas cheia de erros.</dd></div>
+        <div data-reveal style="--i:2"><dt>Eliminatória</dt><dd>Para grupos. O jogador mais lento de cada rodada é eliminado, até restar só um.</dd></div>
+        <div data-reveal style="--i:3"><dt>Corrida fantasma</dt><dd>Você joga primeiro, e sua partida vira o fantasma. Seus amigos correm contra ele quando quiserem naquele dia e veem ao vivo se estão à frente ou atrás.</dd></div>
+      </dl>
+      <p data-reveal>Os amigos entram com um código de sala de quatro caracteres, um QR code ou um link, e cada um escolhe um apelido para a partida. Não tem um celular para cada um? Passe o seu de mão em mão no modo convidado.</p>
+    </section>
+
+    <section class="block" id="steal" data-stage="steal" aria-labelledby="steal-title">
+      <h2 class="head" id="steal-title" data-reveal>Roubo</h2>
+      <p class="lead" data-reveal style="--i:1">Um tabuleiro, ao vivo, cara a cara. Quem tocar um número primeiro marca o ponto, e ele some para o outro jogador.</p>
+      <figure class="phone inline-only inline-phone"><video class="phone__screen" autoplay muted loop playsinline preload="metadata" poster="../site/assets/steal.webp" width="600" height="1304" aria-label="Uma partida de Roubo no 49: um tabuleiro, dois jogadores, e cada número fica com quem tocar nele primeiro."><source src="../site/assets/steal.mp4" type="video/mp4"></video></figure>
+    </section>
+
+    <section class="block" id="boards" data-stage="boards" aria-labelledby="boards-title">
+      <h2 class="head" id="boards-title" data-reveal>Quatro tipos de tabuleiro</h2>
+      <p class="figure-line" data-reveal style="--i:1">De 5&nbsp;×&nbsp;5 a 11&nbsp;×&nbsp;11</p>
+      <p data-reveal style="--i:2">Um 5&nbsp;×&nbsp;5 rápido, o 7&nbsp;×&nbsp;7 padrão, e 9&nbsp;×&nbsp;9 ou 11&nbsp;×&nbsp;11 para quem leva a sério.</p>
+      <div class="inline-only rb rb--inline" data-ui aria-hidden="true" data-rb></div>
+      <dl class="kinds">
+        <div data-reveal><dt>Números</dt><dd>A tabela clássica. Encontre os números em ordem, crescente ou decrescente.</dd></div>
+        <div data-reveal style="--i:1"><dt>Letras</dt><dd>De A a Y em um tabuleiro 5&nbsp;×&nbsp;5, para quando os números parecerem fáceis demais.</dd></div>
+        <div data-reveal style="--i:2"><dt>Vermelho e Preto</dt><dd>Conte os números vermelhos em ordem crescente e os pretos em ordem decrescente, alternando a cada toque. Um treino divertido para passar de uma tarefa a outra sem perder o fio.</dd></div>
+        <div data-reveal style="--i:3"><dt>Móvel</dt><dd>As peças trocam de lugar enquanto você joga. Não fique para trás.</dd></div>
+      </dl>
+      <p data-reveal>Travou? Uma dica mostra onde está o próximo número. Você ganha algumas por dia, e cada uma soma 5 segundos, então as dicas ajudam a aprender, mas nunca rendem um recorde.</p>
+    </section>
+
+    <section class="block" id="ranks" data-stage="ranks" aria-labelledby="ranks-title">
       <h2 class="head" id="ranks-title" data-reveal>O que seu tempo vale</h2>
       <p data-reveal style="--i:1">Cada modo, direção e estilo tem sua própria patente, definida pelo seu melhor resultado ali. Veja o que cada uma exige no tabuleiro padrão 7&nbsp;×&nbsp;7. Os tempos se ajustam para tabuleiros menores, maiores e mais difíceis.</p>
       <table class="ranks" data-reveal style="--i:2">
@@ -136,62 +337,6 @@
       <p data-reveal style="--i:4">Além das patentes, há 170 rankings globais do Game Center: menor tempo e mais pontos em cada tabuleiro e direção, de hoje, desta semana, deste mês e de todos os tempos. O Desafio Diário tem seu próprio ranking, e só a sua primeira tentativa conta.</p>
     </section>
 
-    <section class="block" id="modes" data-stage="modes" aria-labelledby="modes-title">
-      <h2 class="head" id="modes-title" data-reveal>Três formas de jogar</h2>
-      <p data-reveal style="--i:1">Conte de 1 a 49 ou, ao contrário, de 49 a 1. Cada modo guarda seus próprios recordes e sua própria patente.</p>
-      <div class="proofs">
-        <article class="proof" data-reveal>
-          <div class="proof__panel"><img src="../site/assets/mode-classic.webp" width="560" height="106" alt="O cartão do Clássico: melhor tempo de 57,03, patente Ouro, 28 de 71 conquistas." loading="lazy"></div>
-          <div class="proof__text">
-            <h3>Clássico</h3>
-            <p>Um tabuleiro, um tempo. Supere seu recorde, suba de Novato a Lenda e veja exatamente onde os segundos foram parar.</p>
-          </div>
-        </article>
-        <article class="proof" data-reveal>
-          <div class="proof__panel"><img src="../site/assets/mode-endless.webp" width="560" height="106" alt="O cartão do Infinito: ritmo de 56,5 números por minuto, patente Diamante." loading="lazy"></div>
-          <div class="proof__text">
-            <h3>Infinito</h3>
-            <p>Termine um tabuleiro e o próximo já está esperando. Sua pontuação é o seu ritmo em números por minuto. Pare quando quiser.</p>
-          </div>
-        </article>
-        <article class="proof" data-reveal>
-          <div class="proof__panel"><img src="../site/assets/mode-clock.webp" width="560" height="106" alt="O cartão do Contra o Relógio: 67 números, patente Prata." loading="lazy"></div>
-          <div class="proof__text">
-            <h3>Contra o Relógio</h3>
-            <p>O relógio corre contra você. Cada número que você encontra devolve tempo, e cada erro tira um pouco. Até onde você vai?</p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="block" id="boards" data-stage="boards" aria-labelledby="boards-title">
-      <h2 class="head" id="boards-title" data-reveal>Quatro tipos de tabuleiro</h2>
-      <p class="figure-line" data-reveal style="--i:1">De 5&nbsp;×&nbsp;5 a 11&nbsp;×&nbsp;11</p>
-      <p data-reveal style="--i:2">Um 5&nbsp;×&nbsp;5 rápido, o 7&nbsp;×&nbsp;7 padrão, e 9&nbsp;×&nbsp;9 ou 11&nbsp;×&nbsp;11 para quem leva a sério.</p>
-      <div class="inline-only rb rb--inline" data-ui aria-hidden="true" data-rb></div>
-      <dl class="kinds">
-        <div data-reveal><dt>Números</dt><dd>A tabela clássica. Encontre os números em ordem, crescente ou decrescente.</dd></div>
-        <div data-reveal style="--i:1"><dt>Letras</dt><dd>De A a Y em um tabuleiro 5&nbsp;×&nbsp;5, para quando os números parecerem fáceis demais.</dd></div>
-        <div data-reveal style="--i:2"><dt>Vermelho e Preto</dt><dd>Conte os números vermelhos em ordem crescente e os pretos em ordem decrescente, alternando a cada toque. Um treino divertido para passar de uma tarefa a outra sem perder o fio.</dd></div>
-        <div data-reveal style="--i:3"><dt>Móvel</dt><dd>As peças trocam de lugar enquanto você joga. Não fique para trás.</dd></div>
-      </dl>
-      <p data-reveal>Travou? Uma dica mostra onde está o próximo número. Você ganha algumas por dia, e cada uma soma 5 segundos, então as dicas ajudam a aprender, mas nunca rendem um recorde.</p>
-    </section>
-
-    <section class="block" id="friends" data-stage="friends" aria-labelledby="friends-title">
-      <h2 class="head" id="friends-title" data-reveal>Desafie seus amigos</h2>
-      <p data-reveal style="--i:1">Jogue 1 contra 1, 2 contra 2 ou com um grupo inteiro, de uma turma da escola a uma equipe do trabalho. Todos recebem exatamente o mesmo tabuleiro, então a única diferença entre vocês é o foco.</p>
-      <figure class="inline-only inline-shot"><img src="../site/assets/match-summary.webp" width="600" height="1304" alt="O resultado final de uma corrida em grupo de três rodadas no 49: Zoe vence com 53 pontos, Artur fica em segundo com 52 e Leo em terceiro com 49, acima da rodada mais rápida e da classificação completa." loading="lazy"></figure>
-      <dl class="rooms">
-        <div data-reveal><dt>Corrida</dt><dd>O mesmo tabuleiro para todos, rodada após rodada. O mais rápido vence cada rodada, e os pontos se somam na classificação final.</dd></div>
-        <div data-reveal style="--i:1"><dt>Batalha de pontos</dt><dd>A classificação é pelos pontos do Competitivo, então velocidade e combos contam. Uma sequência limpa pode vencer uma partida mais rápida, mas cheia de erros.</dd></div>
-        <div data-reveal style="--i:2"><dt>Eliminatória</dt><dd>Para grupos. O jogador mais lento de cada rodada é eliminado, até restar só um.</dd></div>
-        <div data-reveal style="--i:3"><dt>Corrida fantasma</dt><dd>Você joga primeiro, e sua partida vira o fantasma. Seus amigos correm contra ele quando quiserem naquele dia e veem ao vivo se estão à frente ou atrás.</dd></div>
-        <div data-reveal style="--i:4"><dt>Roubo</dt><dd>Um tabuleiro, ao vivo, cara a cara. Quem tocar um número primeiro marca o ponto, e ele some para o outro jogador.</dd></div>
-      </dl>
-      <p data-reveal>Os amigos entram com um código de sala de quatro caracteres, um QR code ou um link, e cada um escolhe um apelido para a partida. Não tem um celular para cada um? Passe o seu de mão em mão no modo convidado.</p>
-    </section>
-
     <section class="block block--last" id="achievements" data-stage="achievements" aria-labelledby="ach-title">
       <h2 class="giant" id="ach-title" data-reveal><span class="giant__num">547</span><span class="giant__word">conquistas</span></h2>
       <p data-reveal style="--i:1">Elas recompensam velocidade, precisão, foco, combos, sequências e curiosidade. As conquistas em níveis passam por oito medalhas, do bronze ao prismático.</p>
@@ -205,7 +350,7 @@
         <li data-reveal style="--i:6"><img src="../assets/medals/medal-6.png" width="160" height="160" alt="" loading="lazy">Rubi</li>
         <li data-reveal style="--i:7"><img src="../assets/medals/medal-7.png" width="160" height="160" alt="" loading="lazy">Prismático</li>
       </ul>
-      <figure class="inline-only inline-shot"><img src="../site/assets/achievements.webp" width="600" height="1298" alt="As conquistas de velocidade do Clássico no 49, de Foguete, com menos de 38 segundos, a Dobra Espacial, com menos de 31, cada uma com seu nível e seu progresso." loading="lazy"></figure>
+      <figure class="phone inline-only inline-phone"><img class="phone__screen" src="../site/assets/achievements.webp" width="600" height="1304" alt="A tela de conquistas do 49: 88 de 547 desbloqueadas, com filtros por tipo de jogo, tamanho, ordem e estilo." loading="lazy"></figure>
       <div class="bars">
         <details open>
           <summary><span>Clássico: Velocidade</span><span class="bars__n">36</span></summary>
@@ -292,113 +437,6 @@
 
   </div>
 </div>
-
-<section class="drill" aria-labelledby="drill-title">
-  <div class="drill__head">
-    <h2 class="head" id="drill-title" data-reveal>Treine como um piloto</h2>
-    <p data-reveal style="--i:1">Na velocidade de uma corrida, o foco é tudo. Pilotos profissionais treinam atenção, varredura visual e reflexos com a mesma seriedade que o preparo físico, e alguns usam tabelas de Schulte para isso. O 49 transforma esse mesmo treino em um minuto por dia.</p>
-  </div>
-  <div class="drill__mosaic">
-    <figure class="drill__photo">
-      <img class="drift" src="../site/assets/f1-wheel.jpg" width="1000" height="1000" alt="O volante de um carro de Fórmula 1 da Alpine de 2021: uma tela, uma fileira de luzes de troca de marcha e mais de vinte botões e seletores." loading="lazy">
-    </figure>
-    <div class="drill__tile field-gold" data-reveal>
-      <p class="drill__fig">300&nbsp;km/h</p>
-      <p>Onde um único olhar precisa captar tudo ao seu redor.</p>
-    </div>
-    <div class="drill__tile field-slate" data-reveal style="--i:1">
-      <p class="drill__fig">1 minuto</p>
-      <p>Por dia já basta para o mesmo treino. Sem precisar de carro de corrida.</p>
-    </div>
-  </div>
-</section>
-
-<section class="styles" aria-labelledby="styles-title">
-  <div class="styles__field styles__field--normal">
-    <div class="styles__body">
-      <img class="styles__shot" src="../assets/screens/focus-normal-light.png" width="600" height="1169" alt="Uma partida no Clássico no estilo Normal: o tempo 0:23,41, Encontre 18, e os números já encontrados apagados no tabuleiro." loading="lazy">
-      <div class="styles__text">
-        <p class="lead" data-reveal>Uma prova de tempo pura.</p>
-        <p data-reveal style="--i:1">Só você, o tabuleiro e o relógio. Sem pontos e sem efeitos, nada para tirar seus olhos dos números. Esta é a tabela de Schulte clássica, e o teste mais puro do seu foco.</p>
-        <p data-reveal style="--i:2">Depois de cada partida, você vê seu tempo, ritmo e erros, seus lapsos de foco e sua Cadência: a regularidade com que você encontrou cada número.</p>
-      </div>
-    </div>
-  </div>
-  <div class="styles__field styles__field--comp field-blush">
-    <div class="styles__body">
-      <img class="styles__shot" src="../site/assets/pitlane-competitive.webp" width="600" height="1169" alt="Uma partida no Clássico no estilo Competitivo com o visual Pit Lane: pontuação 2.292, combo 10 no ×2, Encontre 10." loading="lazy">
-      <div class="styles__text">
-        <p class="lead" data-reveal>Pontos, combos, ×3.</p>
-        <p data-reveal style="--i:1">Cada número vale 100 pontos, mais até 50 pela velocidade. Encontre o próximo antes que o tempo do combo acabe e o multiplicador sobe: ×2 com um combo de 5, ×3 com 15.</p>
-        <p data-reveal style="--i:2">Um toque errado corta o combo pela metade, mas nunca tira pontos. Quer os efeitos sem a pressão? O Relax mantém os sons e as comemorações e deixa os pontos de lado.</p>
-      </div>
-    </div>
-  </div>
-  <h2 class="styles__title" id="styles-title"><span>Normal</span> <span>ou Competitivo</span></h2>
-</section>
-
-<section class="day" aria-labelledby="day-title">
-  <div class="day__fields">
-    <div class="day__words field-sage">
-      <h2 class="head" id="day-title">Um minuto por dia</h2>
-      <ol class="day__clauses">
-        <li class="day__clause is-on" data-step="0"><button type="button">Primeiro, o desafio de hoje</button></li>
-        <li class="day__clause" data-step="1"><button type="button">Depois, três pequenas missões</button></li>
-        <li class="day__clause" data-step="2"><button type="button">Em seguida, veja o que melhorou</button></li>
-        <li class="day__clause" data-step="3"><button type="button">Por fim, mantenha a sequência</button></li>
-      </ol>
-      <p class="day__note">Curto o bastante para caber em qualquer lugar, e feito para que a partida de amanhã seja fácil de começar.</p>
-    </div>
-    <div class="day__screen">
-      <div class="frag is-on" data-ui data-step="0">
-        <img src="../site/assets/daily-card.webp" width="560" height="122" alt="O cartão do Desafio Diário de hoje: Contagem Regressiva. Termine em menos de 2:30, com uma meta pessoal abaixo de 1:16.">
-        <p class="frag__title">Ainda nesta semana</p>
-        <ul class="frag__list">
-          <li><span>Sprint Clássico</span><span>Menos de 2:30</span></li>
-          <li><span>Vendo Vermelho</span><span>Vermelho desce, preto sobe</span></li>
-          <li><span>Sopa de Letrinhas</span><span>Letras de A a Y</span></li>
-          <li><span>Ficha Limpa</span><span>Nenhum erro</span></li>
-          <li><span>Metrônomo</span><span>Cadência de 50 ou mais</span></li>
-        </ul>
-        <p class="frag__foot">Todos recebem o mesmo tabuleiro, então você pode comparar com os amigos.</p>
-      </div>
-      <div class="frag" data-ui data-step="1">
-        <p class="frag__title">Missões de hoje</p>
-        <ul class="frag__quests">
-          <li class="is-done"><span>Termine uma partida sem erros</span><span>1 de 1</span><i style="--p:1"></i></li>
-          <li><span>Jogue 3 partidas</span><span>2 de 3</span><i style="--p:.667"></i></li>
-          <li><span>Alcance um combo ×2</span><span>0 de 1</span><i style="--p:0"></i></li>
-        </ul>
-        <p class="frag__foot">Complete as três para ganhar XP de bônus.</p>
-      </div>
-      <div class="frag" data-ui data-step="2">
-        <p class="frag__title">Estatísticas</p>
-        <p class="frag__big">Sua linha de cima ficou mais rápida.</p>
-        <p class="frag__foot">Os números dali agora levam 0,3 segundo a menos que na semana passada.</p>
-        <svg class="frag__chart" viewBox="0 0 280 120" role="img" aria-label="Seus tempos no Clássico ao longo de sete dias, de 1:21 até 1:09.">
-          <polyline points="10,22 55,36 100,31 145,60 190,70 235,65 270,92" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
-          <circle cx="270" cy="92" r="6" fill="currentColor"/>
-        </svg>
-        <ul class="frag__axis"><li>1:21</li><li>1:18</li><li>1:19</li><li>1:14</li><li>1:12</li><li>1:13</li><li>1:09</li></ul>
-      </div>
-      <div class="frag" data-ui data-step="3">
-        <p class="frag__title">Sequência</p>
-        <p class="frag__big">12 dias seguidos</p>
-        <ol class="frag__week">
-          <li class="is-done">Seg</li><li class="is-done">Ter</li><li class="is-done">Qua</li><li class="is-freeze">Qui</li><li class="is-done">Sex</li><li class="is-done">Sáb</li><li>Dom</li>
-        </ol>
-        <p class="frag__foot">Você ganha protetores de sequência conforme ela cresce, e eles a salvam no dia em que você não jogar. Um lembrete opcional garante que ela nunca se quebre por descuido.</p>
-      </div>
-    </div>
-  </div>
-  <div class="day__control">
-    <label class="sr-only" for="day-range">Percorra um dia com o 49</label>
-    <div class="day__track" style="--v:0"><input class="day__range" id="day-range" type="range" min="0" max="3" step="1" value="0"></div>
-    <ol class="day__stops">
-      <li class="is-on">Diário</li><li>Missões</li><li>Estatísticas</li><li>Sequência</li>
-    </ol>
-  </div>
-</section>
 
 <section class="letter" aria-labelledby="letter-title">
   <div class="letter__col">

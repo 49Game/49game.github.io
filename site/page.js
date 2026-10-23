@@ -134,16 +134,29 @@ document.querySelectorAll("[data-rb]").forEach((root) => {
   root.innerHTML = shuffle(cells).map((c) => `<span class="${c.red ? "r" : ""}${c.done ? " gone" : ""}">${c.n}</span>`).join("");
 });
 
-// The stage follows the reading column on wide screens.
-(() => {
-  const layers = [...document.querySelectorAll(".stage__layer")];
-  const sections = [...document.querySelectorAll(".read [data-stage]")];
+// Each chapter's stage follows its own reading column on wide screens.
+document.querySelectorAll(".chapter").forEach((chapter) => {
+  const layers = [...chapter.querySelectorAll(".stage__layer")];
+  const sections = [...chapter.querySelectorAll(".read [data-stage]")];
   if (!layers.length || !("IntersectionObserver" in window)) return;
   const show = (name) => layers.forEach((l) => l.classList.toggle("is-on", l.dataset.layer === name));
   const io = new IntersectionObserver((entries) => {
     for (const e of entries) if (e.isIntersecting) show(e.target.dataset.stage);
   }, { rootMargin: "-45% 0px -45% 0px" });
   sections.forEach((s) => io.observe(s));
+});
+
+// Screen recordings play only while on screen, and never for people who asked for less motion.
+(() => {
+  const videos = [...document.querySelectorAll("video[autoplay]")];
+  const still = matchMedia("(prefers-reduced-motion: reduce)");
+  const stop = () => videos.forEach((v) => { v.pause(); v.removeAttribute("autoplay"); });
+  if (still.matches) return stop();
+  if (!("IntersectionObserver" in window)) return;
+  const io = new IntersectionObserver((entries) => {
+    for (const e of entries) e.isIntersecting ? e.target.play().catch(() => {}) : e.target.pause();
+  });
+  videos.forEach((v) => io.observe(v));
 })();
 
 // Reveal once as a section enters. Never leaves content hidden: anything already above the

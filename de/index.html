@@ -40,18 +40,18 @@
     <summary>Menü</summary>
     <nav class="nav__sheet" aria-label="Abschnitte">
       <a href="schulte-tabelle/">Online spielen</a>
-      <a href="#ranks">Ränge</a>
       <a href="#modes">Modi</a>
       <a href="#friends">Freunde</a>
+      <a href="#ranks">Ränge</a>
       <a href="#price">Preis</a>
       <a href="#questions">Fragen</a>
     </nav>
   </details>
   <nav class="nav__links" aria-label="Abschnitte">
     <a href="schulte-tabelle/">Online spielen</a>
-    <a href="#ranks">Ränge</a>
     <a href="#modes">Modi</a>
     <a href="#friends">Freunde</a>
+    <a href="#ranks">Ränge</a>
     <a href="#price">Preis</a>
   </nav>
   <details class="lang">
@@ -82,22 +82,6 @@
         </div>
       </div>
 
-      <div class="stage__layer field-slate" data-layer="modes">
-        <img class="stage__shot" src="../assets/screens/p/focus-focusBlue-light-menu.webp" width="600" height="1304" alt="Das Hauptmenü von 49: eine Karte der Tages-Challenge, die Stile Normal, Wettkampf und Entspannt und die Modi Klassisch, Endlos und Gegen die Uhr mit ihren Bestwerten." loading="lazy">
-      </div>
-
-      <div class="stage__layer field-blush" data-layer="boards">
-        <div class="rb" data-ui aria-hidden="true" data-rb></div>
-      </div>
-
-      <div class="stage__layer field-sage" data-layer="friends">
-        <img class="stage__shot" src="../site/assets/match-summary.webp" width="600" height="1304" alt="Die Endwertung eines Gruppenrennens über drei Runden in 49: Zoe gewinnt mit 53 Punkten, Artur wird Zweiter mit 52 und Leo Dritter mit 49, darunter die schnellste Runde und die komplette Wertung." loading="lazy">
-      </div>
-
-      <div class="stage__layer field-gold" data-layer="achievements">
-        <img class="stage__shot" src="../site/assets/achievements.webp" width="600" height="1298" alt="Die Tempo-Erfolge in Klassisch in 49, von Rakete unter 38 Sekunden bis Warpantrieb unter 31, jeweils mit Stufe und Fortschritt." loading="lazy">
-      </div>
-
     </div>
   </aside>
 
@@ -115,7 +99,224 @@
       <h1 class="wordmark" id="hero-title" data-rise style="--i:2"><span class="wordmark__name">49</span><span class="wordmark__sub">Focus Booster</span></h1>
     </section>
 
-    <section class="block" id="ranks" data-stage="board" aria-labelledby="ranks-title">
+    <section class="block block--last needs" id="needs" data-stage="board" aria-labelledby="needs-title">
+      <h2 class="head" id="needs-title" data-reveal>Trainiere deinen Fokus</h2>
+      <p class="lead" data-reveal style="--i:1">Schweifst du beim Lesen, Lernen oder Arbeiten ab? Eine Schulte-Tabelle trainiert genau diese Aufmerksamkeit, und 49 macht daraus ein Spiel, zu dem du gern zurückkommst.</p>
+      <dl class="needs__list">
+        <div data-reveal><dt>Länger konzentriert</dt><dd>Bleib bei einer Aufgabe, einem Vortrag oder einem langen Kapitel, ohne abzuschweifen.</dd></div>
+        <div data-reveal style="--i:1"><dt>Schneller lesen</dt><dd>Erfasse mehr von der Seite auf einen Blick, mit weniger Augensprüngen.</dd></div>
+        <div data-reveal style="--i:2"><dt>Schneller reagieren</dt><dd>Erkenne das Wichtige in einer vollen Szene und handle.</dd></div>
+      </dl>
+      <h3 class="needs__how" data-reveal>So wird gespielt</h3>
+      <ol class="needs__steps">
+        <li data-reveal>Finde die Zahlen von 1 bis 49 der Reihe nach auf einer gemischten Tafel.</li>
+        <li data-reveal style="--i:1">Schlag deine Zeit und steig vom Neuling zur Legende auf.</li>
+        <li data-reveal style="--i:2">Sieh nach jedem Spiel, was besser geworden ist.</li>
+      </ol>
+      <p class="needs__note" data-reveal>49 ist ein Spiel zum Üben von Konzentration, kein Medizinprodukt.</p>
+    </section>
+
+  </div>
+</div>
+
+<section class="drill" aria-labelledby="drill-title">
+  <div class="drill__head">
+    <h2 class="head" id="drill-title" data-reveal>Training wie im Rennsport</h2>
+    <p data-reveal style="--i:1">Bei Renntempo ist Konzentration alles. Profifahrer trainieren Aufmerksamkeit, visuelles Erfassen und Reaktion so ernsthaft wie ihre Fitness, und manche nutzen dafür Schulte-Tabellen. 49 macht aus genau dieser Übung eine Minute am Tag.</p>
+  </div>
+  <div class="drill__mosaic">
+    <figure class="drill__photo">
+      <img class="drift" src="../site/assets/f1-wheel.jpg" width="1000" height="1000" alt="Das Lenkrad eines Alpine-Formel-1-Wagens von 2021: ein Display, eine Reihe Schaltleuchten und mehr als zwanzig Knöpfe und Drehregler." loading="lazy">
+    </figure>
+    <div class="drill__tile field-gold" data-reveal>
+      <p class="drill__fig">300&nbsp;km/h</p>
+      <p>Wo ein einziger Blick alles um dich herum erfassen muss.</p>
+    </div>
+    <div class="drill__tile field-slate" data-reveal style="--i:1">
+      <p class="drill__fig">1 Minute</p>
+      <p>Am Tag reicht für dieselbe Übung. Ganz ohne Rennwagen.</p>
+    </div>
+  </div>
+</section>
+
+<section class="day" aria-labelledby="day-title">
+  <div class="day__fields">
+    <div class="day__words field-sage">
+      <h2 class="head" id="day-title">Eine Minute am Tag</h2>
+      <ol class="day__clauses">
+        <li class="day__clause is-on" data-step="0"><button type="button">Zuerst die Challenge des Tages</button></li>
+        <li class="day__clause" data-step="1"><button type="button">Dann drei kleine Quests</button></li>
+        <li class="day__clause" data-step="2"><button type="button">Danach sehen, was besser wurde</button></li>
+        <li class="day__clause" data-step="3"><button type="button">Zuletzt die Serie halten</button></li>
+      </ol>
+      <p class="day__note">Kurz genug für zwischendurch, und so gemacht, dass du morgen leicht wieder einsteigst.</p>
+    </div>
+    <div class="day__screen">
+      <div class="frag is-on" data-ui data-step="0">
+        <video class="card-video" autoplay muted loop playsinline preload="metadata" poster="../site/assets/daily-card.webp" width="560" height="204" aria-label="Die Karte der heutigen Tages-Challenge in der App, mit ihrem Ziel und deiner persönlichen Marke."><source src="../site/assets/daily-card.mp4" type="video/mp4"></video>
+        <p class="frag__title">Später diese Woche</p>
+        <ul class="frag__list">
+          <li><span>Klassik-Sprint</span><span>Unter 2:30</span></li>
+          <li><span>Rot sehen</span><span>Rot abwärts, Schwarz aufwärts</span></li>
+          <li><span>Buchstabensuppe</span><span>Buchstaben A bis Y</span></li>
+          <li><span>Weiße Weste</span><span>Gar keine Fehler</span></li>
+          <li><span>Metronom</span><span>Rhythmus von 50 oder mehr</span></li>
+        </ul>
+        <p class="frag__foot">Alle bekommen dieselbe Tafel, so kannst du dich mit Freunden vergleichen.</p>
+      </div>
+      <div class="frag" data-ui data-step="1">
+        <p class="frag__title">Tages-Quests</p>
+        <ul class="frag__quests">
+          <li class="is-done"><span>Beende ein Spiel ohne Fehler</span><span>1 von 1</span><i style="--p:1"></i></li>
+          <li><span>Spiele 3 Spiele</span><span>2 von 3</span><i style="--p:.667"></i></li>
+          <li><span>Erreiche eine ×2-Combo</span><span>0 von 1</span><i style="--p:0"></i></li>
+        </ul>
+        <p class="frag__foot">Schaff alle drei für Bonus-XP.</p>
+      </div>
+      <div class="frag" data-ui data-step="2">
+        <p class="frag__title">Einblicke</p>
+        <p class="frag__big">Deine obere Reihe ist schneller geworden.</p>
+        <p class="frag__foot">Für Zahlen dort brauchst du jetzt 0,3 Sekunden weniger als letzte Woche.</p>
+        <svg class="frag__chart" viewBox="0 0 280 120" role="img" aria-label="Deine Zeiten in Klassisch über sieben Tage, von 1:21 runter auf 1:09.">
+          <polyline points="10,22 55,36 100,31 145,60 190,70 235,65 270,92" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+          <circle cx="270" cy="92" r="6" fill="currentColor"/>
+        </svg>
+        <ul class="frag__axis"><li>1:21</li><li>1:18</li><li>1:19</li><li>1:14</li><li>1:12</li><li>1:13</li><li>1:09</li></ul>
+      </div>
+      <div class="frag" data-ui data-step="3">
+        <p class="frag__title">Serie</p>
+        <p class="frag__big">12 Tage in Folge</p>
+        <ol class="frag__week">
+          <li class="is-done">Mo</li><li class="is-done">Di</li><li class="is-done">Mi</li><li class="is-freeze">Do</li><li class="is-done">Fr</li><li class="is-done">Sa</li><li>So</li>
+        </ol>
+        <p class="frag__foot">Serien-Freezes verdienst du dir, während deine Serie wächst, und sie retten sie an einem Tag, den du verpasst. Eine optionale Erinnerung sorgt dafür, dass sie nie aus Versehen reißt.</p>
+      </div>
+    </div>
+  </div>
+  <div class="day__control">
+    <label class="sr-only" for="day-range">Einen Tag mit 49 durchgehen</label>
+    <div class="day__track" style="--v:0"><input class="day__range" id="day-range" type="range" min="0" max="3" step="1" value="0"></div>
+    <ol class="day__stops">
+      <li class="is-on">Challenge</li><li>Quests</li><li>Einblicke</li><li>Serie</li>
+    </ol>
+  </div>
+</section>
+
+<section class="styles" aria-labelledby="styles-title">
+  <div class="styles__field styles__field--normal">
+    <div class="styles__body">
+      <figure class="phone styles__phone"><video class="phone__screen" autoplay muted loop playsinline preload="metadata" poster="../site/assets/game-normal.webp" width="600" height="1304" aria-label="Ein Spiel im Modus Klassisch im Stil Normal: nur die Uhr und die Tafel."><source src="../site/assets/game-normal.mp4" type="video/mp4"></video></figure>
+      <div class="styles__text">
+        <p class="lead" data-reveal>Ein klares Zeitfahren.</p>
+        <p data-reveal style="--i:1">Nur du, die Tafel und die Uhr. Keine Punkte und keine Effekte, nichts lenkt deinen Blick von den Zahlen ab. Das ist die klassische Schulte-Tabelle und der reinste Test deiner Konzentration.</p>
+        <p data-reveal style="--i:2">Nach jedem Spiel siehst du deine Zeit, dein Tempo und deine Fehler, deine Konzentrationsaussetzer und deinen Rhythmus: wie gleichmäßig du jede Zahl gefunden hast.</p>
+      </div>
+    </div>
+  </div>
+  <div class="styles__field styles__field--comp field-blush">
+    <div class="styles__body">
+      <figure class="phone styles__phone"><video class="phone__screen" autoplay muted loop playsinline preload="metadata" poster="../site/assets/game.webp" width="600" height="1304" aria-label="Ein Spiel im Modus Klassisch im Stil Wettkampf: Punkte, Combo und Multiplikator über der Tafel."><source src="../site/assets/game.mp4" type="video/mp4"></video></figure>
+      <div class="styles__text">
+        <p class="lead" data-reveal>Punkte, Combos, ×3.</p>
+        <p data-reveal style="--i:1">Jede Zahl bringt 100 Punkte, plus bis zu 50 fürs Tempo. Finde die nächste, bevor der Combo-Timer abläuft, und der Multiplikator steigt: ×2 bei einer Combo von 5, ×3 bei 15.</p>
+        <p data-reveal style="--i:2">Ein falscher Tipp halbiert die Combo, kostet aber nie Punkte. Lieber Effekte ohne Druck? Entspannt behält die Sounds und Feiern und lässt die Punkte weg.</p>
+      </div>
+    </div>
+  </div>
+  <h2 class="styles__title" id="styles-title"><span>Normal</span> <span>oder Wettkampf</span></h2>
+</section>
+
+<div class="chapter chapter--app">
+
+  <aside class="stage" aria-label="Die Tafel und die App">
+    <div class="stage__frame">
+
+      <div class="stage__layer is-on field-slate" data-layer="modes">
+        <figure class="phone stage__phone"><video class="phone__screen" autoplay muted loop playsinline preload="metadata" poster="../site/assets/menu.webp" width="600" height="1304" aria-label="Das Hauptmenü von 49: eine Karte der Tages-Challenge, die Stile Normal, Wettkampf und Entspannt und die Modi Klassisch, Endlos und Gegen die Uhr mit ihren Bestwerten."><source src="../site/assets/menu.mp4" type="video/mp4"></video></figure>
+      </div>
+      <div class="stage__layer field-sage" data-layer="friends">
+        <figure class="phone stage__phone"><video class="phone__screen" autoplay muted loop playsinline preload="metadata" poster="../site/assets/match.webp" width="600" height="1304" aria-label="Das Endergebnis eines Gruppenrennens über drei Runden: das Podium, die schnellste Runde und die Tabelle."><source src="../site/assets/match.mp4" type="video/mp4"></video></figure>
+      </div>
+      <div class="stage__layer field-gold" data-layer="steal">
+        <figure class="phone stage__phone"><video class="phone__screen" autoplay muted loop playsinline preload="metadata" poster="../site/assets/steal.webp" width="600" height="1304" aria-label="Eine Partie Klauen in 49: eine Tafel, zwei Spieler, und jede Zahl geht an den, der sie zuerst antippt."><source src="../site/assets/steal.mp4" type="video/mp4"></video></figure>
+      </div>
+      <div class="stage__layer field-blush" data-layer="boards">
+        <div class="rb" data-ui aria-hidden="true" data-rb></div>
+      </div>
+      <div class="stage__layer field-sage" data-layer="ranks">
+        <figure class="phone stage__phone"><video class="phone__screen" autoplay muted loop playsinline preload="metadata" poster="../site/assets/ranks.webp" width="600" height="1304" aria-label="Der Rang-Bildschirm in 49: jeder Rang auf einer eigenen animierten Plakette, vom Neuling bis zur Legende."><source src="../site/assets/ranks.mp4" type="video/mp4"></video></figure>
+      </div>
+      <div class="stage__layer field-gold" data-layer="achievements">
+        <figure class="phone stage__phone"><img class="phone__screen" src="../site/assets/achievements.webp" width="600" height="1304" alt="Der Erfolge-Bildschirm in 49: 88 von 547 freigeschaltet, mit Filtern nach Spielart, Größe, Richtung und Stil." loading="lazy"></figure>
+      </div>
+
+    </div>
+  </aside>
+
+  <div class="read">
+
+    <section class="block" id="modes" data-stage="modes" aria-labelledby="modes-title">
+      <h2 class="head" id="modes-title" data-reveal>Drei Arten zu spielen</h2>
+      <p data-reveal style="--i:1">Zähl von 1 bis 49 aufwärts oder von 49 bis 1 abwärts. Jeder Modus hat eigene Rekorde und einen eigenen Rang.</p>
+      <div class="proofs">
+        <article class="proof" data-reveal>
+          <div class="proof__panel"><video class="card-video" autoplay muted loop playsinline preload="metadata" poster="../site/assets/mode-classic.webp" width="560" height="114" aria-label="Die Karte Klassisch: Bestzeit 57,03, Rang Gold, 28 von 71 Erfolgen."><source src="../site/assets/mode-classic.mp4" type="video/mp4"></video></div>
+          <div class="proof__text">
+            <h3>Klassisch</h3>
+            <p>Eine Tafel, eine Zeit. Schlag deine Bestzeit, steig vom Neuling zur Legende auf und sieh genau, wo die Sekunden geblieben sind.</p>
+          </div>
+        </article>
+        <article class="proof" data-reveal>
+          <div class="proof__panel"><video class="card-video" autoplay muted loop playsinline preload="metadata" poster="../site/assets/mode-endless.webp" width="560" height="112" aria-label="Die Karte Endlos: ein Tempo von 42,7 Zahlen pro Minute, Rang Gold."><source src="../site/assets/mode-endless.mp4" type="video/mp4"></video></div>
+          <div class="proof__text">
+            <h3>Endlos</h3>
+            <p>Kaum ist eine Tafel geschafft, wartet schon die nächste. Dein Ergebnis ist dein Tempo in Zahlen pro Minute. Hör auf, wann du willst.</p>
+          </div>
+        </article>
+        <article class="proof" data-reveal>
+          <div class="proof__panel"><video class="card-video" autoplay muted loop playsinline preload="metadata" poster="../site/assets/mode-clock.webp" width="560" height="112" aria-label="Die Karte Gegen die Uhr: 67 Zahlen, Rang Silber."><source src="../site/assets/mode-clock.mp4" type="video/mp4"></video></div>
+          <div class="proof__text">
+            <h3>Gegen die Uhr</h3>
+            <p>Die Uhr läuft rückwärts. Jede gefundene Zahl gibt dir Zeit zurück, jeder Fehler nimmt dir etwas weg. Wie weit kommst du?</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="block" id="friends" data-stage="friends" aria-labelledby="friends-title">
+      <h2 class="head" id="friends-title" data-reveal>Tritt gegen Freunde an</h2>
+      <p data-reveal style="--i:1">Spiel 1 gegen 1, 2 gegen 2 oder mit einer ganzen Gruppe, von der Schulklasse bis zum Team bei der Arbeit. Alle bekommen genau dieselbe Tafel, den Unterschied macht also nur die Konzentration.</p>
+      <figure class="phone inline-only inline-phone"><video class="phone__screen" autoplay muted loop playsinline preload="metadata" poster="../site/assets/match.webp" width="600" height="1304" aria-label="Das Endergebnis eines Gruppenrennens über drei Runden: das Podium, die schnellste Runde und die Tabelle."><source src="../site/assets/match.mp4" type="video/mp4"></video></figure>
+      <dl class="rooms">
+        <div data-reveal><dt>Rennen</dt><dd>Dieselbe Tafel für alle, Runde für Runde. Der Schnellste gewinnt jede Runde, und die Punkte ergeben die Endwertung.</dd></div>
+        <div data-reveal style="--i:1"><dt>Punkteduell</dt><dd>Gewertet wird nach Wettkampf-Punkten, Tempo und Combos zählen also beide. Eine saubere Serie kann eine schnellere, aber chaotische Runde schlagen.</dd></div>
+        <div data-reveal style="--i:2"><dt>K.-o.-Runde</dt><dd>Für Gruppen. In jeder Runde scheidet der Langsamste aus, bis nur noch einer übrig ist.</dd></div>
+        <div data-reveal style="--i:3"><dt>Geisterrennen</dt><dd>Du spielst zuerst, und deine Runde wird zum Geist. Freunde treten an diesem Tag jederzeit gegen ihn an und sehen live, ob sie vorn oder hinten liegen.</dd></div>
+      </dl>
+      <p data-reveal>Freunde treten mit einem vierstelligen Raumcode, einem QR-Code oder einem Link bei, und alle wählen einen Spitznamen für das Spiel. Nicht genug Handys? Reich deins im Gastmodus herum.</p>
+    </section>
+
+    <section class="block" id="steal" data-stage="steal" aria-labelledby="steal-title">
+      <h2 class="head" id="steal-title" data-reveal>Klauen</h2>
+      <p class="lead" data-reveal style="--i:1">Eine Tafel, live, Kopf an Kopf. Wer eine Zahl zuerst antippt, bekommt sie, und beim anderen verschwindet sie.</p>
+      <figure class="phone inline-only inline-phone"><video class="phone__screen" autoplay muted loop playsinline preload="metadata" poster="../site/assets/steal.webp" width="600" height="1304" aria-label="Eine Partie Klauen in 49: eine Tafel, zwei Spieler, und jede Zahl geht an den, der sie zuerst antippt."><source src="../site/assets/steal.mp4" type="video/mp4"></video></figure>
+    </section>
+
+    <section class="block" id="boards" data-stage="boards" aria-labelledby="boards-title">
+      <h2 class="head" id="boards-title" data-reveal>Vier Arten von Tafeln</h2>
+      <p class="figure-line" data-reveal style="--i:1">5&nbsp;×&nbsp;5 bis 11&nbsp;×&nbsp;11</p>
+      <p data-reveal style="--i:2">Eine schnelle 5&nbsp;×&nbsp;5, die übliche 7&nbsp;×&nbsp;7 und 9&nbsp;×&nbsp;9 oder 11&nbsp;×&nbsp;11 für Profis.</p>
+      <div class="inline-only rb rb--inline" data-ui aria-hidden="true" data-rb></div>
+      <dl class="kinds">
+        <div data-reveal><dt>Zahlen</dt><dd>Die klassische Tabelle. Finde sie der Reihe nach, aufwärts oder abwärts.</dd></div>
+        <div data-reveal style="--i:1"><dt>Buchstaben</dt><dd>A bis Y auf einer 5&nbsp;×&nbsp;5-Tafel, falls dir Ziffern zu leicht sind.</dd></div>
+        <div data-reveal style="--i:2"><dt>Rot &amp; Schwarz</dt><dd>Zähl die roten Zahlen aufwärts und die schwarzen abwärts und wechsle mit jedem Antippen. Eine spielerische Übung, um zwischen Aufgaben zu wechseln, ohne den Faden zu verlieren.</dd></div>
+        <div data-reveal style="--i:3"><dt>Wandernd</dt><dd>Kacheln tauschen beim Spielen die Plätze. Bleib dran.</dd></div>
+      </dl>
+      <p data-reveal>Du steckst fest? Ein Tipp zeigt dir, wo die nächste Zahl ist. Du bekommst jeden Tag ein paar, und jeder kostet 5 Sekunden. Tipps helfen dir also beim Lernen, bringen aber nie einen Rekord.</p>
+    </section>
+
+    <section class="block" id="ranks" data-stage="ranks" aria-labelledby="ranks-title">
       <h2 class="head" id="ranks-title" data-reveal>Was deine Zeit bringt</h2>
       <p data-reveal style="--i:1">Jeder Modus, jede Richtung und jeder Stil hat einen eigenen Rang, bestimmt durch dein bestes Ergebnis dort. Das verlangt jeder Rang auf der Standardtafel 7&nbsp;×&nbsp;7. Für kleinere, größere und schwierigere Tafeln werden die Zeiten angepasst.</p>
       <table class="ranks" data-reveal style="--i:2">
@@ -136,62 +337,6 @@
       <p data-reveal style="--i:4">Dazu kommen 170 globale Game Center-Bestenlisten: schnellste Zeit und meiste Punkte für jede Tafel und Richtung, für heute, diese Woche, diesen Monat und insgesamt. Die Tages-Challenge hat eine eigene Liste, und nur dein erster Versuch zählt.</p>
     </section>
 
-    <section class="block" id="modes" data-stage="modes" aria-labelledby="modes-title">
-      <h2 class="head" id="modes-title" data-reveal>Drei Arten zu spielen</h2>
-      <p data-reveal style="--i:1">Zähl von 1 bis 49 aufwärts oder von 49 bis 1 abwärts. Jeder Modus hat eigene Rekorde und einen eigenen Rang.</p>
-      <div class="proofs">
-        <article class="proof" data-reveal>
-          <div class="proof__panel"><img src="../site/assets/mode-classic.webp" width="560" height="106" alt="Die Karte Klassisch: Bestzeit 57,03, Rang Gold, 28 von 71 Erfolgen." loading="lazy"></div>
-          <div class="proof__text">
-            <h3>Klassisch</h3>
-            <p>Eine Tafel, eine Zeit. Schlag deine Bestzeit, steig vom Neuling zur Legende auf und sieh genau, wo die Sekunden geblieben sind.</p>
-          </div>
-        </article>
-        <article class="proof" data-reveal>
-          <div class="proof__panel"><img src="../site/assets/mode-endless.webp" width="560" height="106" alt="Die Karte Endlos: ein Tempo von 56,5 Zahlen pro Minute, Rang Diamant." loading="lazy"></div>
-          <div class="proof__text">
-            <h3>Endlos</h3>
-            <p>Kaum ist eine Tafel geschafft, wartet schon die nächste. Dein Ergebnis ist dein Tempo in Zahlen pro Minute. Hör auf, wann du willst.</p>
-          </div>
-        </article>
-        <article class="proof" data-reveal>
-          <div class="proof__panel"><img src="../site/assets/mode-clock.webp" width="560" height="106" alt="Die Karte Gegen die Uhr: 67 Zahlen, Rang Silber." loading="lazy"></div>
-          <div class="proof__text">
-            <h3>Gegen die Uhr</h3>
-            <p>Die Uhr läuft rückwärts. Jede gefundene Zahl gibt dir Zeit zurück, jeder Fehler nimmt dir etwas weg. Wie weit kommst du?</p>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="block" id="boards" data-stage="boards" aria-labelledby="boards-title">
-      <h2 class="head" id="boards-title" data-reveal>Vier Arten von Tafeln</h2>
-      <p class="figure-line" data-reveal style="--i:1">5&nbsp;×&nbsp;5 bis 11&nbsp;×&nbsp;11</p>
-      <p data-reveal style="--i:2">Eine schnelle 5&nbsp;×&nbsp;5, die übliche 7&nbsp;×&nbsp;7 und 9&nbsp;×&nbsp;9 oder 11&nbsp;×&nbsp;11 für Profis.</p>
-      <div class="inline-only rb rb--inline" data-ui aria-hidden="true" data-rb></div>
-      <dl class="kinds">
-        <div data-reveal><dt>Zahlen</dt><dd>Die klassische Tabelle. Finde sie der Reihe nach, aufwärts oder abwärts.</dd></div>
-        <div data-reveal style="--i:1"><dt>Buchstaben</dt><dd>A bis Y auf einer 5&nbsp;×&nbsp;5-Tafel, falls dir Ziffern zu leicht sind.</dd></div>
-        <div data-reveal style="--i:2"><dt>Rot &amp; Schwarz</dt><dd>Zähl die roten Zahlen aufwärts und die schwarzen abwärts und wechsle mit jedem Antippen. Eine spielerische Übung, um zwischen Aufgaben zu wechseln, ohne den Faden zu verlieren.</dd></div>
-        <div data-reveal style="--i:3"><dt>Wandernd</dt><dd>Kacheln tauschen beim Spielen die Plätze. Bleib dran.</dd></div>
-      </dl>
-      <p data-reveal>Du steckst fest? Ein Tipp zeigt dir, wo die nächste Zahl ist. Du bekommst jeden Tag ein paar, und jeder kostet 5 Sekunden. Tipps helfen dir also beim Lernen, bringen aber nie einen Rekord.</p>
-    </section>
-
-    <section class="block" id="friends" data-stage="friends" aria-labelledby="friends-title">
-      <h2 class="head" id="friends-title" data-reveal>Tritt gegen Freunde an</h2>
-      <p data-reveal style="--i:1">Spiel 1 gegen 1, 2 gegen 2 oder mit einer ganzen Gruppe, von der Schulklasse bis zum Team bei der Arbeit. Alle bekommen genau dieselbe Tafel, den Unterschied macht also nur die Konzentration.</p>
-      <figure class="inline-only inline-shot"><img src="../site/assets/match-summary.webp" width="600" height="1304" alt="Die Endwertung eines Gruppenrennens über drei Runden in 49: Zoe gewinnt mit 53 Punkten, Artur wird Zweiter mit 52 und Leo Dritter mit 49, darunter die schnellste Runde und die komplette Wertung." loading="lazy"></figure>
-      <dl class="rooms">
-        <div data-reveal><dt>Rennen</dt><dd>Dieselbe Tafel für alle, Runde für Runde. Der Schnellste gewinnt jede Runde, und die Punkte ergeben die Endwertung.</dd></div>
-        <div data-reveal style="--i:1"><dt>Punkteduell</dt><dd>Gewertet wird nach Wettkampf-Punkten, Tempo und Combos zählen also beide. Eine saubere Serie kann eine schnellere, aber chaotische Runde schlagen.</dd></div>
-        <div data-reveal style="--i:2"><dt>K.-o.-Runde</dt><dd>Für Gruppen. In jeder Runde scheidet der Langsamste aus, bis nur noch einer übrig ist.</dd></div>
-        <div data-reveal style="--i:3"><dt>Geisterrennen</dt><dd>Du spielst zuerst, und deine Runde wird zum Geist. Freunde treten an diesem Tag jederzeit gegen ihn an und sehen live, ob sie vorn oder hinten liegen.</dd></div>
-        <div data-reveal style="--i:4"><dt>Klauen</dt><dd>Eine Tafel, live, Kopf an Kopf. Wer eine Zahl zuerst antippt, bekommt sie, und beim anderen verschwindet sie.</dd></div>
-      </dl>
-      <p data-reveal>Freunde treten mit einem vierstelligen Raumcode, einem QR-Code oder einem Link bei, und alle wählen einen Spitznamen für das Spiel. Nicht genug Handys? Reich deins im Gastmodus herum.</p>
-    </section>
-
     <section class="block block--last" id="achievements" data-stage="achievements" aria-labelledby="ach-title">
       <h2 class="giant" id="ach-title" data-reveal><span class="giant__num">547</span><span class="giant__word">Erfolge</span></h2>
       <p data-reveal style="--i:1">Sie belohnen Tempo, Präzision, Konzentration, Combos, Serien und Neugier. Gestufte Erfolge steigen über acht Medaillen auf, von Bronze bis Prismatisch.</p>
@@ -205,7 +350,7 @@
         <li data-reveal style="--i:6"><img src="../assets/medals/medal-6.png" width="160" height="160" alt="" loading="lazy">Rubin</li>
         <li data-reveal style="--i:7"><img src="../assets/medals/medal-7.png" width="160" height="160" alt="" loading="lazy">Prismatisch</li>
       </ul>
-      <figure class="inline-only inline-shot"><img src="../site/assets/achievements.webp" width="600" height="1298" alt="Die Tempo-Erfolge in Klassisch in 49, von Rakete unter 38 Sekunden bis Warpantrieb unter 31, jeweils mit Stufe und Fortschritt." loading="lazy"></figure>
+      <figure class="phone inline-only inline-phone"><img class="phone__screen" src="../site/assets/achievements.webp" width="600" height="1304" alt="Der Erfolge-Bildschirm in 49: 88 von 547 freigeschaltet, mit Filtern nach Spielart, Größe, Richtung und Stil." loading="lazy"></figure>
       <div class="bars">
         <details open>
           <summary><span>Klassisch: Tempo</span><span class="bars__n">36</span></summary>
@@ -292,113 +437,6 @@
 
   </div>
 </div>
-
-<section class="drill" aria-labelledby="drill-title">
-  <div class="drill__head">
-    <h2 class="head" id="drill-title" data-reveal>Training wie im Rennsport</h2>
-    <p data-reveal style="--i:1">Bei Renntempo ist Konzentration alles. Profifahrer trainieren Aufmerksamkeit, visuelles Erfassen und Reaktion so ernsthaft wie ihre Fitness, und manche nutzen dafür Schulte-Tabellen. 49 macht aus genau dieser Übung eine Minute am Tag.</p>
-  </div>
-  <div class="drill__mosaic">
-    <figure class="drill__photo">
-      <img class="drift" src="../site/assets/f1-wheel.jpg" width="1000" height="1000" alt="Das Lenkrad eines Alpine-Formel-1-Wagens von 2021: ein Display, eine Reihe Schaltleuchten und mehr als zwanzig Knöpfe und Drehregler." loading="lazy">
-    </figure>
-    <div class="drill__tile field-gold" data-reveal>
-      <p class="drill__fig">300&nbsp;km/h</p>
-      <p>Wo ein einziger Blick alles um dich herum erfassen muss.</p>
-    </div>
-    <div class="drill__tile field-slate" data-reveal style="--i:1">
-      <p class="drill__fig">1 Minute</p>
-      <p>Am Tag reicht für dieselbe Übung. Ganz ohne Rennwagen.</p>
-    </div>
-  </div>
-</section>
-
-<section class="styles" aria-labelledby="styles-title">
-  <div class="styles__field styles__field--normal">
-    <div class="styles__body">
-      <img class="styles__shot" src="../assets/screens/focus-normal-light.png" width="600" height="1169" alt="Ein Spiel im Modus Klassisch im Stil Normal: die Zeit 0:23.41, Finde 18, und die schon gefundenen Zahlen sind auf der Tafel verblasst." loading="lazy">
-      <div class="styles__text">
-        <p class="lead" data-reveal>Ein klares Zeitfahren.</p>
-        <p data-reveal style="--i:1">Nur du, die Tafel und die Uhr. Keine Punkte und keine Effekte, nichts lenkt deinen Blick von den Zahlen ab. Das ist die klassische Schulte-Tabelle und der reinste Test deiner Konzentration.</p>
-        <p data-reveal style="--i:2">Nach jedem Spiel siehst du deine Zeit, dein Tempo und deine Fehler, deine Konzentrationsaussetzer und deinen Rhythmus: wie gleichmäßig du jede Zahl gefunden hast.</p>
-      </div>
-    </div>
-  </div>
-  <div class="styles__field styles__field--comp field-blush">
-    <div class="styles__body">
-      <img class="styles__shot" src="../site/assets/pitlane-competitive.webp" width="600" height="1169" alt="Ein Spiel im Modus Klassisch im Stil Wettkampf mit dem Look Pit Lane: 2.292 Punkte, Combo 10 bei ×2, Finde 10." loading="lazy">
-      <div class="styles__text">
-        <p class="lead" data-reveal>Punkte, Combos, ×3.</p>
-        <p data-reveal style="--i:1">Jede Zahl bringt 100 Punkte, plus bis zu 50 fürs Tempo. Finde die nächste, bevor der Combo-Timer abläuft, und der Multiplikator steigt: ×2 bei einer Combo von 5, ×3 bei 15.</p>
-        <p data-reveal style="--i:2">Ein falscher Tipp halbiert die Combo, kostet aber nie Punkte. Lieber Effekte ohne Druck? Entspannt behält die Sounds und Feiern und lässt die Punkte weg.</p>
-      </div>
-    </div>
-  </div>
-  <h2 class="styles__title" id="styles-title"><span>Normal</span> <span>oder Wettkampf</span></h2>
-</section>
-
-<section class="day" aria-labelledby="day-title">
-  <div class="day__fields">
-    <div class="day__words field-sage">
-      <h2 class="head" id="day-title">Eine Minute am Tag</h2>
-      <ol class="day__clauses">
-        <li class="day__clause is-on" data-step="0"><button type="button">Zuerst die Challenge des Tages</button></li>
-        <li class="day__clause" data-step="1"><button type="button">Dann drei kleine Quests</button></li>
-        <li class="day__clause" data-step="2"><button type="button">Danach sehen, was besser wurde</button></li>
-        <li class="day__clause" data-step="3"><button type="button">Zuletzt die Serie halten</button></li>
-      </ol>
-      <p class="day__note">Kurz genug für zwischendurch, und so gemacht, dass du morgen leicht wieder einsteigst.</p>
-    </div>
-    <div class="day__screen">
-      <div class="frag is-on" data-ui data-step="0">
-        <img src="../site/assets/daily-card.webp" width="560" height="122" alt="Die Karte der heutigen Tages-Challenge: Countdown. Schaffe es in unter 2:30, mit einem persönlichen Ziel unter 1:16.">
-        <p class="frag__title">Später diese Woche</p>
-        <ul class="frag__list">
-          <li><span>Klassik-Sprint</span><span>Unter 2:30</span></li>
-          <li><span>Rot sehen</span><span>Rot abwärts, Schwarz aufwärts</span></li>
-          <li><span>Buchstabensuppe</span><span>Buchstaben A bis Y</span></li>
-          <li><span>Weiße Weste</span><span>Gar keine Fehler</span></li>
-          <li><span>Metronom</span><span>Rhythmus von 50 oder mehr</span></li>
-        </ul>
-        <p class="frag__foot">Alle bekommen dieselbe Tafel, so kannst du dich mit Freunden vergleichen.</p>
-      </div>
-      <div class="frag" data-ui data-step="1">
-        <p class="frag__title">Tages-Quests</p>
-        <ul class="frag__quests">
-          <li class="is-done"><span>Beende ein Spiel ohne Fehler</span><span>1 von 1</span><i style="--p:1"></i></li>
-          <li><span>Spiele 3 Spiele</span><span>2 von 3</span><i style="--p:.667"></i></li>
-          <li><span>Erreiche eine ×2-Combo</span><span>0 von 1</span><i style="--p:0"></i></li>
-        </ul>
-        <p class="frag__foot">Schaff alle drei für Bonus-XP.</p>
-      </div>
-      <div class="frag" data-ui data-step="2">
-        <p class="frag__title">Einblicke</p>
-        <p class="frag__big">Deine obere Reihe ist schneller geworden.</p>
-        <p class="frag__foot">Für Zahlen dort brauchst du jetzt 0,3 Sekunden weniger als letzte Woche.</p>
-        <svg class="frag__chart" viewBox="0 0 280 120" role="img" aria-label="Deine Zeiten in Klassisch über sieben Tage, von 1:21 runter auf 1:09.">
-          <polyline points="10,22 55,36 100,31 145,60 190,70 235,65 270,92" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
-          <circle cx="270" cy="92" r="6" fill="currentColor"/>
-        </svg>
-        <ul class="frag__axis"><li>1:21</li><li>1:18</li><li>1:19</li><li>1:14</li><li>1:12</li><li>1:13</li><li>1:09</li></ul>
-      </div>
-      <div class="frag" data-ui data-step="3">
-        <p class="frag__title">Serie</p>
-        <p class="frag__big">12 Tage in Folge</p>
-        <ol class="frag__week">
-          <li class="is-done">Mo</li><li class="is-done">Di</li><li class="is-done">Mi</li><li class="is-freeze">Do</li><li class="is-done">Fr</li><li class="is-done">Sa</li><li>So</li>
-        </ol>
-        <p class="frag__foot">Serien-Freezes verdienst du dir, während deine Serie wächst, und sie retten sie an einem Tag, den du verpasst. Eine optionale Erinnerung sorgt dafür, dass sie nie aus Versehen reißt.</p>
-      </div>
-    </div>
-  </div>
-  <div class="day__control">
-    <label class="sr-only" for="day-range">Einen Tag mit 49 durchgehen</label>
-    <div class="day__track" style="--v:0"><input class="day__range" id="day-range" type="range" min="0" max="3" step="1" value="0"></div>
-    <ol class="day__stops">
-      <li class="is-on">Challenge</li><li>Quests</li><li>Einblicke</li><li>Serie</li>
-    </ol>
-  </div>
-</section>
 
 <section class="letter" aria-labelledby="letter-title">
   <div class="letter__col">

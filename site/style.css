@@ -122,6 +122,29 @@ h1, h2, h3 { font-weight: 400; text-wrap: balance; }
 /* Reading column sections. */
 .block { padding-top: var(--section); display: grid; gap: 1.5rem; }
 .block--last { padding-bottom: var(--section); }
+/* In the app chapter each block stays long enough for its screen to play beside it. */
+@media (min-width: 901px) { .chapter--app .read > section { min-height: 75svh; align-content: start; } }
+
+/* The needs, in the visitor's words, then how a game goes. */
+.needs__list { display: grid; gap: 1.5rem; margin-top: 2rem; }
+.needs__list dt { font-size: var(--step-lead); line-height: 1.2; color: var(--gold); }
+.needs__list dd { margin: 0.35rem 0 0; max-width: 40ch; }
+.needs__how { margin-top: 3rem; font-size: var(--step-lead); line-height: 1.2; }
+.needs__steps { display: grid; gap: 0.75rem; margin-top: 1rem; counter-reset: step; max-width: 44rem; }
+.needs__steps li { counter-increment: step; display: grid; grid-template-columns: 2.25rem minmax(0, 1fr); align-items: baseline; }
+.needs__steps li::before { content: counter(step); font-size: var(--step-lead); color: var(--gold); font-variant-numeric: tabular-nums; }
+.needs__note { margin-top: 2rem; font-size: var(--step-small); color: var(--muted); }
+
+/* The app's screens, playing inside an iPhone: a dark body, a thin bezel and the Dynamic Island. */
+.phone { position: relative; margin: 0; padding: 2.4%; border-radius: 13.5% / 6.2%; background: #050505; outline: 2px solid #3a3833; outline-offset: -1px; }
+.phone::after { content: ""; position: absolute; top: 3.6%; left: 50%; width: 31%; height: 2.6%; border-radius: 99px; background: #050505; transform: translateX(-50%); }
+.phone__screen { display: block; width: 100%; height: auto; border-radius: 11.5% / 5.3%; background: #000; }
+.stage__phone { width: auto; height: min(calc(100svh - 2 * var(--margin) - 4rem), 52rem); aspect-ratio: 600 / 1304; padding: 2.4%; transform: scale(0.98); transition: transform 700ms var(--ease-out); }
+.stage__phone .phone__screen { height: 100%; width: 100%; object-fit: cover; }
+.stage__layer.is-on .stage__phone { transform: none; }
+.styles__phone { width: 100%; }
+.inline-phone { width: min(70vw, 18rem); margin: 2rem 0; }
+.card-video { display: block; width: 100%; height: auto; border-radius: 14px; }
 .block > .head { margin-bottom: 0.5rem; }
 .figure-line { font-size: var(--step-head); line-height: 1.05; letter-spacing: -0.02em; color: var(--gold); }
 
