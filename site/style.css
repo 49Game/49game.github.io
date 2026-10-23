@@ -297,10 +297,11 @@ h1, h2, h3 { font-weight: 400; text-wrap: balance; }
 .join { padding: var(--section) var(--margin) 0; display: grid; grid-template-columns: var(--anchor) minmax(0, 1fr); column-gap: 0; row-gap: 4rem; align-items: start; }
 .join__now { display: grid; gap: 1.5rem; align-content: start; padding-right: var(--gutter); }
 .join__line { max-width: 40ch; font-size: var(--step-lead); line-height: 1.35; }
-.join__go { display: flex; align-items: flex-start; gap: 2rem; margin-top: 0.5rem; }
-.join__qr { display: grid; gap: 0.75rem; justify-items: start; }
-.join__qr svg { width: 10rem; }
-.join__qr figcaption { font-size: var(--step-small); color: var(--muted); max-width: 30ch; }
+/* The way in: the button first, then the computer route as one panel (the code beside its caption). */
+.join__go { display: grid; justify-items: start; gap: 1.5rem; margin-top: 0.5rem; }
+.join__qr { display: grid; grid-template-columns: 8.5rem minmax(0, 24ch); align-items: center; gap: 1.5rem; padding: 1.25rem 1.75rem 1.25rem 1.25rem; background: var(--surface); }
+.join__qr svg { width: 8.5rem; }
+.join__qr figcaption { font-size: var(--step-body); line-height: 1.45; }
 .join__lists { display: grid; gap: 1.25rem; align-content: start; }
 .join__wait { font-size: var(--step-lead); }
 .wait { display: grid; gap: 8px; }
