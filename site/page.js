@@ -181,7 +181,7 @@ document.querySelectorAll(".chapter").forEach((chapter) => {
   const menu = document.createElement("details");
   menu.className = "topbar__menu";
   const summary = document.createElement("summary");
-  summary.innerHTML = '<span class="topbar__dot"></span><span class="topbar__name"></span><span class="topbar__caret"></span>';
+  summary.innerHTML = '<span class="topbar__name"></span><span class="topbar__caret"></span>';
   const name = summary.querySelector(".topbar__name");
   name.textContent = document.querySelector(".nav__menu summary")?.textContent.trim() || "";
   const list = document.createElement("nav");

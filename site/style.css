@@ -159,7 +159,6 @@ h1, h2, h3 { font-weight: 400; text-wrap: balance; }
 .topbar__menu summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 0.5rem; min-height: 2.75rem; padding: 0 0.25rem; font-size: var(--step-body); transition: color 200ms ease; }
 .topbar__menu summary::-webkit-details-marker { display: none; }
 .topbar__menu summary:hover { color: var(--gold); }
-.topbar__dot { flex: none; width: 0.5rem; height: 0.5rem; border-radius: 50%; background: var(--gold); }
 .topbar__name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 34vw; }
 .topbar__caret { flex: none; width: 0.45rem; height: 0.45rem; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: translateY(-2px) rotate(45deg); transition: transform 200ms ease; }
 .topbar__menu[open] .topbar__caret { transform: translateY(2px) rotate(225deg); }
