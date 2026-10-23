@@ -178,7 +178,7 @@ document.querySelectorAll(".chapter").forEach((chapter) => {
   // The app icon, as in the page's own header (the same file, so the path fits every language's folder).
   const icon = document.createElement("img");
   icon.className = "nav__icon";
-  icon.src = document.querySelector(".nav__icon")?.getAttribute("src") || "assets/tab-49-64.png?v=5";
+  icon.src = document.querySelector(".nav__icon")?.getAttribute("src") || "assets/app-icon-64.png?v=2";
   icon.width = 32;
   icon.height = 32;
   icon.alt = "49";
