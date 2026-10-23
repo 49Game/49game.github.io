@@ -4,7 +4,6 @@
 
 Key facts:
 
-- [Schulte table online](https://49game.github.io/schulte-table/): a free playable Schulte table (5 × 5 to 7 × 7) in 9 languages, with tips and FAQ
 - Platform: iPhone, iOS 17 or later.
 - Game types: Classic (one board, best time), Endless (boards keep coming), Beat the Clock (every find adds time, every miss costs time).
 - Styles: Normal (a plain time trial), Competitive (points, combos and a multiplier up to ×3), Relax (effects without points).
