@@ -126,6 +126,18 @@
   </div>
 </div>
 
+<section class="letter" id="mission" aria-labelledby="letter-title">
+  <div class="letter__col">
+    <img class="letter__icon" src="assets/app-icon-64.png?v=2" width="64" height="64" alt="">
+    <h2 class="head" id="letter-title" data-reveal>Why I made 49</h2>
+    <p data-reveal style="--i:1">All day, apps compete for our attention, and they are very good at winning. Feeds, notifications and autoplay are built to take it. Almost nothing is built to give it back.</p>
+    <p data-reveal style="--i:2">I think that is backwards. Focus is what lets you read a page without drifting, study without reaching for your phone and do your best work. Like strength or speed, it is something you can practise.</p>
+    <p data-reveal style="--i:3">So I took the Schulte table, a paper drill used for decades to train attention, visual search and speed reading, and made it a game you want to come back to. A minute a game, a new board every day, and after each one a sentence on what got better.</p>
+    <p data-reveal style="--i:4">It is a game, not a medical product, and it won’t diagnose or treat anything. What it gives you is <mark>one minute a day that trains your focus instead of draining it</mark>.</p>
+    <p class="letter__sign" data-reveal style="--i:5"><a class="link-plain" href="https://www.linkedin.com/in/arturperec/" target="_blank" rel="noopener">Artur Pereć</a><small><a class="link-plain" href="mailto:contact49game@icloud.com">contact49game@icloud.com</a></small></p>
+  </div>
+</section>
+
 <section class="drill" id="racing" aria-labelledby="drill-title">
   <div class="drill__head">
     <h2 class="head" id="drill-title" data-reveal>Trained like a racing driver</h2>
@@ -310,9 +322,9 @@
     </section>
 
     <section class="block" id="boards" data-stage="boards" aria-labelledby="boards-title">
-      <h2 class="head" id="boards-title" data-reveal>Four kinds of board</h2>
+      <h2 class="head" id="boards-title" data-reveal>Five sizes, four kinds of board</h2>
       <p class="figure-line" data-reveal style="--i:1">5&nbsp;×&nbsp;5 up to 11&nbsp;×&nbsp;11</p>
-      <p data-reveal style="--i:2">A quick 5&nbsp;×&nbsp;5, the standard 7&nbsp;×&nbsp;7, and 9&nbsp;×&nbsp;9 or 11&nbsp;×&nbsp;11 for tryhards.</p>
+      <p data-reveal style="--i:2">A quick 5&nbsp;×&nbsp;5 or 6&nbsp;×&nbsp;6, the standard 7&nbsp;×&nbsp;7, and 9&nbsp;×&nbsp;9 or 11&nbsp;×&nbsp;11 for tryhards.</p>
       <div class="inline-only rb rb--inline" data-ui aria-hidden="true" data-rb></div>
       <dl class="kinds">
         <div data-reveal><dt>Numbers</dt><dd>The classic table. Find them in order, up or down.</dd></div>
@@ -444,18 +456,6 @@
 
   </div>
 </div>
-
-<section class="letter" id="mission" aria-labelledby="letter-title">
-  <div class="letter__col">
-    <img class="letter__icon" src="assets/app-icon-64.png?v=2" width="64" height="64" alt="">
-    <h2 class="head" id="letter-title" data-reveal>Why I made 49</h2>
-    <p data-reveal style="--i:1">All day, apps compete for your attention, and they are very good at winning. Feeds, notifications and autoplay are built to take it. Almost nothing is built to give it back.</p>
-    <p data-reveal style="--i:2">I think that is backwards. Focus is what lets you read a page without drifting, study without reaching for your phone and do your best work. Like strength or speed, it is something you can practise.</p>
-    <p data-reveal style="--i:3">So I took the Schulte table, a paper drill used for decades to train attention, visual search and speed reading, and made it a game you want to come back to. A minute a game, a new board every day, and after each one a sentence on what got better.</p>
-    <p data-reveal style="--i:4">It is a game, not a medical product, and it won’t diagnose or treat anything. What it gives you is <mark>one minute a day that trains your focus instead of draining it</mark>.</p>
-    <p class="letter__sign" data-reveal style="--i:5"><a class="link-plain" href="https://www.linkedin.com/in/arturperec/" target="_blank" rel="noopener">Artur Pereć</a><small><a class="link-plain" href="mailto:contact49game@icloud.com">contact49game@icloud.com</a></small></p>
-  </div>
-</section>
 
 <section class="price" id="price" aria-labelledby="price-title">
   <div class="price__plan price__plan--free field-gold">
@@ -591,7 +591,7 @@
   <div class="done__body">
     <p class="done__time"><span id="done-time">0:00.0</span></p>
     <h2 class="done__title" id="done-title">Now try all 49.</h2>
-    <p class="done__line" id="done-line">The full boards are 5&nbsp;×&nbsp;5 and 7&nbsp;×&nbsp;7, with a rank for every time.</p>
+    <p class="done__line" id="done-line">The full boards go from 5&nbsp;×&nbsp;5 to 11&nbsp;×&nbsp;11, with a rank for every time.</p>
     <p class="done__pitch">The app keeps every game: a new Daily Challenge each day, a rank for every mode and 547 achievements. It’s free in the open beta.</p>
     <div class="done__actions">
       <a class="button" href="https://testflight.apple.com/join/G4XsUyyB">Join the beta</a>
@@ -606,7 +606,7 @@
   <button class="done__close" type="button" id="done-close" aria-label="Close">Close</button>
 </dialog>
 
-<script type="application/json" id="strings">{"boardLabel": "Schulte table, 4 by 4. Tap the numbers from 1 to 16 in order.", "find": "Find", "foundAll": "Found all", "going": "Keep going. A miss costs you nothing here, but it does in the app.", "doneHint": "Done in <b>{time}</b>. That was 16 numbers. The app has the full boards, up to 49.", "doneLine": "You found all 16 in {time}, with {misses}. The full boards are 5 × 5 and 7 × 7, with a rank for every time.", "missNone": "no misses", "missOne": "1 miss", "missMany": "{n} misses", "s_needs": "Benefits", "s_racing": "Racing", "s_daily": "Daily", "s_styles": "Styles", "s_modes": "Modes", "s_friends": "Multiplayer", "s_steal": "Steal", "s_boards": "Boards", "s_ranks": "Ranks", "s_achievements": "Achievements", "s_mission": "Mission", "s_price": "Price", "s_join": "Play", "s_questions": "Questions"}</script>
+<script type="application/json" id="strings">{"boardLabel": "Schulte table, 4 by 4. Tap the numbers from 1 to 16 in order.", "find": "Find", "foundAll": "Found all", "going": "Keep going. A miss costs you nothing here, but it does in the app.", "doneHint": "Done in <b>{time}</b>. That was 16 numbers. The app has the full boards, up to 49.", "doneLine": "You found all 16 in {time}, with {misses}. The full boards go from 5 × 5 to 11 × 11, with a rank for every time.", "missNone": "no misses", "missOne": "1 miss", "missMany": "{n} misses", "s_needs": "Benefits", "s_racing": "Racing", "s_daily": "Daily", "s_styles": "Styles", "s_modes": "Modes", "s_friends": "Multiplayer", "s_steal": "Steal", "s_boards": "Boards", "s_ranks": "Ranks", "s_achievements": "Achievements", "s_mission": "Mission", "s_price": "Price", "s_join": "Play", "s_questions": "Questions"}</script>
 <script src="site/page.js?v=4" defer></script>
 </body>
 </html>
