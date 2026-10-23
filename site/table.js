@@ -13,10 +13,12 @@
   if (menu) {
     document.addEventListener("click", e => { if (menu.open && !menu.contains(e.target)) menu.open = false; });
     document.addEventListener("keydown", e => { if (e.key === "Escape" && menu.open) { menu.open = false; menu.querySelector("summary").focus(); } });
-    menu.querySelectorAll(".lang-menu a").forEach(a => a.addEventListener("click", () => {
+    menu.querySelectorAll("a[data-lang]").forEach(a => a.addEventListener("click", () => {
       try { localStorage.setItem("lang", a.dataset.lang); } catch (e) {}
     }));
   }
+  // The phone menu closes after a link is chosen.
+  document.querySelectorAll(".nav__sheet a").forEach(a => a.addEventListener("click", () => { a.closest("details").open = false; }));
 
   const board = document.getElementById("board");
   const timeLabel = document.getElementById("time");

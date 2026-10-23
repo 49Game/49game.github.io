@@ -1,0 +1,62 @@
+/* 49 - Focus Booster: the pages around the home page (privacy, terms, support, join, achievements),
+   on the home page's tokens and type. Loaded after style.css. */
+
+/* The header runs the full width here: there is no stage on the left. */
+.doc .nav--page { position: static; left: auto; padding: var(--margin); }
+.doc .nav__home { display: block; margin-right: auto; font-size: var(--step-lead); line-height: 1; text-decoration: none; }
+.doc .nav__links { margin-left: 0; }
+.doc .foot { margin-top: clamp(6rem, 12vw, 10rem); }
+
+/* Text pages: the title on the left, the text in one reading column on the right. */
+.page { display: grid; grid-template-columns: minmax(0, var(--anchor)) minmax(0, 44rem); align-items: start; padding: clamp(3rem, 7vw, 7rem) var(--margin) 0; }
+.page > h1 { padding-right: var(--gutter); font-size: var(--step-head); line-height: 1.02; letter-spacing: -0.025em; }
+.page__body > * + * { margin-top: 1rem; }
+.page__body h2 { margin-top: 2.75rem; font-size: var(--step-lead); line-height: 1.25; color: var(--gold); }
+.page__body h2 + * { margin-top: 0.6rem; }
+.page__body p, .page__body li { max-width: 68ch; line-height: 1.6; }
+.page__body ul { display: grid; gap: 0.5rem; padding-left: 1.25rem; list-style: disc; }
+.page__body li::marker { color: var(--gold); }
+.page__body a:not(.button), .page-wide p a { text-decoration: underline; text-underline-offset: 0.2em; text-decoration-thickness: 0.07em; text-decoration-color: color-mix(in srgb, currentColor 45%, transparent); }
+.page__body a:not(.button):hover { text-decoration-color: var(--accent); }
+.updated { color: var(--muted); }
+.fineprint { font-size: var(--step-small); color: var(--muted); }
+
+/* Join a game: the room code, large. */
+.join-code { color: var(--gold); }
+.join-actions .button, .beta-button { min-height: 3rem; }
+
+/* Achievements: the full list, searchable. */
+.page.page-wide { display: block; }
+.page-wide { padding: clamp(3rem, 7vw, 7rem) var(--margin) 0; }
+.page.page-wide > h1 { position: static; padding: 0; font-size: var(--step-head); line-height: 1.02; letter-spacing: -0.025em; }
+.lede-small { margin-top: 1rem; max-width: 52ch; font-size: var(--step-lead); line-height: 1.3; }
+.medal-ladder { display: flex; flex-wrap: wrap; gap: 1rem 1.5rem; margin-top: 2.5rem; }
+.medal-ladder figure { width: 4.5rem; display: grid; justify-items: center; gap: 0.35rem; font-size: var(--step-small); color: var(--muted); }
+.medal-ladder img { width: 3.5rem; height: 3.5rem; }
+.ach-tools { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem 1.25rem; margin-top: 3rem; }
+.ach-tools input { width: min(26rem, 100%); min-height: 3rem; padding: 0 1rem; border: 0; border-radius: var(--radius); background: var(--surface); color: var(--ink); font: inherit; font-size: var(--step-body); }
+.ach-tools input::placeholder { color: var(--muted); }
+.ach-tools input:focus-visible { outline: 2px solid var(--gold); outline-offset: 0; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 1.25rem; }
+.chip { padding: 0.55rem 0.9rem; background: var(--surface); font-size: var(--step-small); text-decoration: none; transition: background-color 200ms ease, color 200ms ease; }
+.chip:hover { background: var(--gold); color: var(--field-ink); }
+.chip span { color: var(--muted); margin-left: 0.25rem; }
+.chip:hover span { color: var(--field-muted); }
+.ach-group { margin-top: clamp(3.5rem, 6vw, 5.5rem); scroll-margin-top: 1.5rem; }
+.ach-group h2 { font-size: var(--step-lead); line-height: 1.2; }
+.ach-group h2 span { color: var(--gold); margin-left: 0.35rem; }
+.ach-group > p { margin-top: 0.5rem; max-width: 60ch; color: var(--muted); }
+.ach-group > p:empty { display: none; }
+.ach-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(19rem, 100%), 1fr)); gap: 6px; margin-top: 1.25rem; }
+.ach-list li { display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 0.9rem; align-items: start; padding: 0.9rem 1rem; background: var(--surface); }
+.ach-list li[hidden] { display: none; }
+.ach-list div { display: grid; gap: 0.15rem; }
+.ach-list b { font-weight: 600; line-height: 1.3; }
+.ach-list .tier { font-size: var(--step-small); color: var(--gold); }
+.ach-list span:last-child { font-size: 1rem; color: var(--muted); line-height: 1.45; }
+
+@media (max-width: 900px) {
+  .doc .nav--page { padding: 0.75rem var(--margin); }
+  .page { grid-template-columns: minmax(0, 1fr); }
+  .page > h1 { padding: 0 0 1.5rem; }
+}

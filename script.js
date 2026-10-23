@@ -16,7 +16,8 @@ const ROOT = document.currentScript ? new URL(".", document.currentScript.src).h
     document.addEventListener("click", e => { if (menu.open && !menu.contains(e.target)) menu.open = false; });
     document.addEventListener("keydown", e => { if (e.key === "Escape" && menu.open) { menu.open = false; menu.querySelector("summary").focus(); } });
   }
-  if (saved || document.documentElement.lang !== "en" || /bot|crawl|spider/i.test(navigator.userAgent)) return;
+  // Only the live English home page follows the browser (not the archived pages in legacy/).
+  if (saved || document.documentElement.lang !== "en" || location.pathname !== new URL(ROOT).pathname || /bot|crawl|spider/i.test(navigator.userAgent)) return;
   const wanted = (navigator.languages || [navigator.language || "en"]).map(l => l.toLowerCase().split("-")[0]);
   const first = wanted.find(l => l === "en" || supported[l]);
   if (first && first !== "en") location.replace(ROOT + supported[first] + location.hash);

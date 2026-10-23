@@ -3,18 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>49 - Focus Booster：1日1分で集中力をトレーニング</title>
-  <meta name="description" content="1日1分で集中力を磨きましょう。49は、定番の注意力トレーニング「シュルテテーブル」をiPhone向けのゲームにしました。集中力、速読、すばやい視覚探索を練習して、タイムが縮んでいくのを実感できます。">
-  <meta name="theme-color" content="#0b0a1a">
+  <title>49 - Focus Booster：iPhoneで遊ぶ1分間の集中力ゲーム</title>
+  <meta name="description" content="49は、iPhoneで遊べる1分間の集中力ゲームです。シャッフルされたボードで1から49までの数字を順番に、できるだけ速く見つけましょう。ランク、デイリーチャレンジ、友達との対戦がそろったシュルテテーブルです。無料で、TestFlightでオープンベータ公開中です。">
+  <meta name="theme-color" content="#12110f">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="49 - Focus Booster">
-  <meta property="og:title" content="49 - Focus Booster：1日1分で集中力をトレーニング">
-  <meta property="og:description" content="1日1分で集中力を磨きましょう。シュルテテーブルで集中力、速読、すばやい視覚探索を練習できます。iPhone向けに近日公開予定です。">
+  <meta property="og:title" content="49 - Focus Booster：iPhoneで遊ぶ1分間の集中力ゲーム">
+  <meta property="og:description" content="1から49までの数字を順番に、できるだけ速く見つけましょう。iPhone向けのシュルテテーブルゲームで、オープンベータは無料です。">
   <meta property="og:image" content="https://49game.github.io/assets/og.jpg">
   <meta property="og:url" content="https://49game.github.io/ja/">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" type="image/png" href="../assets/favicon.png">
-  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
   <link rel="canonical" href="https://49game.github.io/ja/">
   <link rel="alternate" hreflang="en" href="https://49game.github.io/">
   <link rel="alternate" hreflang="pl" href="https://49game.github.io/pl/">
@@ -26,562 +24,517 @@
   <link rel="alternate" hreflang="ja" href="https://49game.github.io/ja/">
   <link rel="alternate" hreflang="ko" href="https://49game.github.io/ko/">
   <link rel="alternate" hreflang="x-default" href="https://49game.github.io/">
-  <link rel="stylesheet" href="../style.css">
-  <script src="../theme.js"></script>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "49 - Focus Booster", "alternateName": "49 シュルテテーブルゲーム", "url": "https://49game.github.io/"}</script>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "49 - Focus Booster", "operatingSystem": "iOS 17 or later", "applicationCategory": "GameApplication", "genre": "Puzzle", "description": "iPhone向けのシュルテテーブルゲーム：1から49までの数字を順番に、できるだけ速く見つけます。クラシック、エンドレス、タイムチャレンジの各モード、デイリーチャレンジ、ランク、500以上の実績、マルチプレイ、Game Centerリーダーボードを搭載。無料でプレイできます。", "url": "https://49game.github.io/", "image": "https://49game.github.io/assets/icon.png", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "49 - Focus Booster", "url": "https://49game.github.io/"}}</script>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "49はいつリリースされますか？", "acceptedAnswer": {"@type": "Answer", "text": "もうすぐです。49は現在オープンベータ中で、上のボタンからTestFlightで参加できます。その後、iPhone向けにApp Storeで公開予定です。"}}, {"@type": "Question", "name": "ノーマルと競技の違いは何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "ノーマルはシンプルなタイムトライアルです：エフェクトもポイントもなく、タイムだけ。競技ではポイント、コンボ、最大×3の倍率が加わり、プレイが進むにつれてエフェクトとサウンドが盛り上がります。スタイルごとに記録とランクが分かれています。"}}, {"@type": "Question", "name": "競技のスコアはどう計算されますか？", "acceptedAnswer": {"@type": "Answer", "text": "数字は1つ100ポイント。さらに最大50のスピードボーナスがあり、時間がかかるほど減っていきます。コンボ5でポイントが2倍、コンボ15で3倍になります。コンボタイマーが切れるとコンボは消え、ミスタップすると半分になります。ゲームが進むにつれて数字の価値は少しずつ下がるので、始める前にボードを覚えても得にはなりません。"}}, {"@type": "Question", "name": "本当に無料ですか？", "acceptedAnswer": {"@type": "Answer", "text": "はい。すべてのモード、ボード、デザイン、機能が無料です。無料プレイヤーには一部のゲームの合間に広告が表示されますが、プレイ中に表示されることはありません。Premiumで広告がなくなるほか、広告を1本見て30分間広告なしにすることもできます。"}}, {"@type": "Question", "name": "友達と遊べますか？", "acceptedAnswer": {"@type": "Answer", "text": "はい。マルチプレイには1対1、2対2、グループのルームがあり、レース、ポイントバトル、ノックアウト、ゴーストレースで遊べます。全員が同じボードでプレイし、友達はコード、QRコード、リンクで参加できます。ゲストモードでiPhoneを回して遊ぶこともできます。"}}, {"@type": "Question", "name": "プレイに必要なものは何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "iOS 17以降を搭載したiPhoneが必要です。"}}, {"@type": "Question", "name": "シュルテテーブルとは何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "バラバラに並んだ数字を、順番にできるだけ速く見つけていくグリッドです。注意力、視覚探索、速読のための定番トレーニングで、精神科医ヴァルター・シュルテにちなんで名付けられました。"}}, {"@type": "Question", "name": "集中力は上がりますか？", "acceptedAnswer": {"@type": "Answer", "text": "プレイするうちに自分のタイム、ペース、正確さが向上していくのがわかり、インサイトでどこが伸びたかを確認できます。49は集中力を練習するためのゲームであり、医療製品ではありません：いかなる疾患の診断、治療、予防も行いません。"}}, {"@type": "Question", "name": "対応言語は何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "英語、ポーランド語、ドイツ語、フランス語、スペイン語、ポルトガル語（ブラジル）、イタリア語、日本語、韓国語です。"}}, {"@type": "Question", "name": "データは収集されますか？", "acceptedAnswer": {"@type": "Answer", "text": "ゲーム、スコア、統計はiPhoneに保存され、アカウントもありません。ゲーム改善のため、アプリは匿名の利用統計（名前やゲーム履歴は含みません）も送信します。設定でオフにできます。Game Centerの利用は任意です。無料版の広告は広告ネットワークから配信され、広告表示のために一部のデータが収集される場合があります。Premiumでは広告が表示されません。詳しくはプライバシーポリシーをご覧ください。"}}, {"@type": "Question", "name": "新しいiPhoneでPremiumを復元するには？", "acceptedAnswer": {"@type": "Answer", "text": "購入時と同じApple Accountでサインインした状態で、アプリの「設定」→「Premium」を開き、「購入を復元」をタップしてください。"}}, {"@type": "Question", "name": "Android版はありますか？", "acceptedAnswer": {"@type": "Answer", "text": "まだありません。49は今のところiPhone向けです。Androidで遊びたい方はAndroid版の待機リストに登録してください。公開時にメールでお知らせします。"}}]}</script>
+  <link rel="icon" type="image/png" href="../assets/icon-lux-64.png">
+  <link rel="apple-touch-icon" href="../assets/icon-lux-touch.png">
+  <link rel="preload" href="../site/fonts/archivo-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../site/style.css">
+  <script>document.documentElement.classList.add('js')</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "49 - Focus Booster", "operatingSystem": "iOS 17 or later", "applicationCategory": "GameApplication", "genre": "Puzzle", "description": "A Schulte table game for iPhone: find the numbers 1 to 49 in order, as fast as you can. Classic, Endless and Beat the Clock modes, a Daily Challenge, ranks, over 500 achievements, multiplayer and Game Center leaderboards. Free to play.", "url": "https://49game.github.io/", "image": "https://49game.github.io/assets/icon.png", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "49 - Focus Booster", "url": "https://49game.github.io/"}}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "49はいつリリースされますか？", "acceptedAnswer": {"@type": "Answer", "text": "もうすぐです。現在TestFlightでオープンベータ中で、その次にiPhone向けにApp Storeで公開予定です。"}}, {"@type": "Question", "name": "プレイに必要なものは何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "iOS 17以降を搭載したiPhoneが必要です。"}}, {"@type": "Question", "name": "本当に無料ですか？", "acceptedAnswer": {"@type": "Answer", "text": "はい。すべてのモード、ボード、デザイン、機能が無料です。無料プレイヤーには一部のゲームの合間に広告が表示されますが、プレイ中に表示されることはありません。Premiumで広告がなくなるほか、広告を1本見て30分間広告なしにすることもできます。"}}, {"@type": "Question", "name": "シュルテテーブルとは何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "バラバラに並んだ数字を、順番にできるだけ速く見つけていくグリッドです。注意力、視覚探索、速読のための定番トレーニングで、ドイツの精神科医ヴァルター・シュルテにちなんで名付けられました。"}}, {"@type": "Question", "name": "ノーマルと競技の違いは何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "ノーマルはシンプルなタイムトライアルです：エフェクトもポイントもなく、タイムだけ。競技ではポイント、コンボ、最大×3の倍率が加わり、プレイが進むにつれてエフェクトとサウンドが盛り上がります。スタイルごとに記録とランクが分かれています。"}}, {"@type": "Question", "name": "競技のスコアはどう計算されますか？", "acceptedAnswer": {"@type": "Answer", "text": "数字は1つ100ポイント。さらに最大50のスピードボーナスがあり、時間がかかるほど減っていきます。コンボ5でポイントが2倍、コンボ15で3倍になります。コンボタイマーが切れるとコンボは消え、ミスタップすると半分になります。ゲームが進むにつれて数字の価値は少しずつ下がるので、始める前にボードを覚えても得にはなりません。"}}, {"@type": "Question", "name": "友達と遊べますか？", "acceptedAnswer": {"@type": "Answer", "text": "はい。マルチプレイには1対1、2対2、グループのルームがあり、レース、ポイントバトル、ノックアウト、ゴーストレース、スティールで遊べます。友達はコード、QRコード、リンクで参加できます。ゲストモードでiPhoneを回して遊ぶこともできます。"}}, {"@type": "Question", "name": "集中力は上がりますか？", "acceptedAnswer": {"@type": "Answer", "text": "プレイするうちに自分のタイム、ペース、正確さが向上していくのがわかり、インサイトでどこが伸びたかを確認できます。49は集中力を練習するためのゲームであり、医療製品ではありません。いかなる疾患の診断、治療、予防も行いません。"}}, {"@type": "Question", "name": "アクセシビリティに対応していますか？", "acceptedAnswer": {"@type": "Answer", "text": "はい。VoiceOverに完全対応し、「視差効果を減らす」「文字を太くする」、オーディオグラフで聞けるチャートにも対応しています。紙吹雪、フラッシュ、触覚フィードバックはアクセシビリティ設定でオフにできます。"}}, {"@type": "Question", "name": "対応言語は何ですか？", "acceptedAnswer": {"@type": "Answer", "text": "英語、ポーランド語、ドイツ語、フランス語、スペイン語、ポルトガル語（ブラジル）、イタリア語、日本語、韓国語です。"}}, {"@type": "Question", "name": "データは収集されますか？", "acceptedAnswer": {"@type": "Answer", "text": "ゲーム、スコア、統計はiPhoneに保存され、アカウントもありません。アプリは匿名の利用統計（名前やゲーム履歴は含みません）を送信しますが、設定でオフにできます。Game Centerの利用は任意です。無料版の広告は広告ネットワークから配信され、広告表示のために一部のデータが収集される場合があります。Premiumにすると広告はなくなります。詳しくはプライバシーポリシーをご覧ください。"}}, {"@type": "Question", "name": "新しいiPhoneでPremiumを復元するには？", "acceptedAnswer": {"@type": "Answer", "text": "購入時と同じApple Accountでサインインした状態で、アプリの「設定」から「Premium」を開き、「購入を復元」をタップしてください。"}}, {"@type": "Question", "name": "Android版はありますか？", "acceptedAnswer": {"@type": "Answer", "text": "まだありません。49は今のところiPhone向けです。Android版の待機リストに登録していただければ、公開時にメールでお知らせします。"}}]}</script>
 </head>
 <body>
-  <div class="sky" aria-hidden="true"></div>
 
-  <header class="nav">
-    <a class="brand" href="#top" aria-label="49 ホーム">
-      <img src="../assets/icon-64.png" alt="" width="32" height="32">
-      <span>49</span>
-    </a>
-    <nav class="nav-links" aria-label="セクション">
+<header class="nav">
+  <a class="nav__home" href="#top">49</a>
+  <details class="nav__menu">
+    <summary>メニュー</summary>
+    <nav class="nav__sheet" aria-label="セクション">
       <a href="schulte-table/">オンラインで遊ぶ</a>
-      <a href="#benefits">効果</a>
-      <a href="#styles">スタイル</a>
-      <a href="#multiplayer">マルチプレイ</a>
-      <a href="#looks">デザイン</a>
-      <a href="#achievements">実績</a>
-      <a href="#leaderboards">リーダーボード</a>
-      <a href="#faq">FAQ</a>
+      <a href="#ranks">ランク</a>
+      <a href="#modes">モード</a>
+      <a href="#friends">友達</a>
+      <a href="#price">価格</a>
+      <a href="#questions">よくある質問</a>
     </nav>
-    <details class="lang">
-      <summary aria-label="言語"><img class="flag" src="../assets/flags/jp.svg" alt="" width="20" height="15"><span>JA</span></summary>
-      <div class="lang-menu"><a href="/" hreflang="en" lang="en" data-lang="en"><img class="flag" src="../assets/flags/gb.svg" alt="" width="20" height="15">English</a><a href="/pl/" hreflang="pl" lang="pl" data-lang="pl"><img class="flag" src="../assets/flags/pl.svg" alt="" width="20" height="15">Polski</a><a href="/de/" hreflang="de" lang="de" data-lang="de"><img class="flag" src="../assets/flags/de.svg" alt="" width="20" height="15">Deutsch</a><a href="/fr/" hreflang="fr" lang="fr" data-lang="fr"><img class="flag" src="../assets/flags/fr.svg" alt="" width="20" height="15">Français</a><a href="/es/" hreflang="es" lang="es" data-lang="es"><img class="flag" src="../assets/flags/es.svg" alt="" width="20" height="15">Español</a><a href="/pt-br/" hreflang="pt-BR" lang="pt-BR" data-lang="pt-BR"><img class="flag" src="../assets/flags/br.svg" alt="" width="20" height="15">Português (Brasil)</a><a href="/it/" hreflang="it" lang="it" data-lang="it"><img class="flag" src="../assets/flags/it.svg" alt="" width="20" height="15">Italiano</a><a href="/ja/" hreflang="ja" lang="ja" data-lang="ja" aria-current="page"><img class="flag" src="../assets/flags/jp.svg" alt="" width="20" height="15">日本語</a><a href="/ko/" hreflang="ko" lang="ko" data-lang="ko"><img class="flag" src="../assets/flags/kr.svg" alt="" width="20" height="15">한국어</a></div>
-    </details>
-    <a class="button button-small" href="#updates">ベータに参加</a>
-  </header>
+  </details>
+  <nav class="nav__links" aria-label="セクション">
+    <a href="schulte-table/">オンラインで遊ぶ</a>
+    <a href="#ranks">ランク</a>
+    <a href="#modes">モード</a>
+    <a href="#friends">友達</a>
+    <a href="#price">価格</a>
+  </nav>
+  <details class="lang">
+    <summary aria-label="言語：日本語">JA</summary>
+    <ul class="lang__menu"><li><a href="../" hreflang="en" lang="en" data-lang="en">English</a></li><li><a href="../pl/" hreflang="pl" lang="pl" data-lang="pl">Polski</a></li><li><a href="../de/" hreflang="de" lang="de" data-lang="de">Deutsch</a></li><li><a href="../fr/" hreflang="fr" lang="fr" data-lang="fr">Français</a></li><li><a href="../es/" hreflang="es" lang="es" data-lang="es">Español</a></li><li><a href="../pt-br/" hreflang="pt-BR" lang="pt-BR" data-lang="pt-BR">Português (Brasil)</a></li><li><a href="../it/" hreflang="it" lang="it" data-lang="it">Italiano</a></li><li><a href="./" hreflang="ja" lang="ja" data-lang="ja" aria-current="page">日本語</a></li><li><a href="../ko/" hreflang="ko" lang="ko" data-lang="ko">한국어</a></li></ul>
+  </details>
+  <a class="button nav__action" href="https://testflight.apple.com/join/G4XsUyyB">ベータに参加</a>
+</header>
 
-  <main id="top">
-    <!-- Hero -->
-    <section class="hero">
-      <div class="hero-copy">
-        <p class="eyebrow"><span class="dot"></span> iPhone向けオープンベータ公開中</p>
-        <h1>集中力を、研ぎ澄ます。<br><em>1日たった1分で。</em></h1>
-        <p class="lede">
-          49は、定番の注意力トレーニング「シュルテテーブル」を、毎日遊びたくなるゲームにしました。
-          1から49までの数字を順番に、できるだけ速く見つけて、読書や勉強、仕事に必要な集中力を鍛えましょう。
-        </p>
-        <div class="hero-actions">
-          <a class="button" href="https://testflight.apple.com/join/G4XsUyyB" target="_blank" rel="noopener">TestFlightでベータに参加</a>
-          <a class="button button-ghost" href="schulte-table/">オンラインで遊ぶ</a>
+<main id="top">
+
+<div class="chapter">
+
+  <aside class="stage" aria-label="ボードとアプリ">
+    <div class="stage__frame">
+
+      <div class="stage__layer is-on field-gold" data-layer="board">
+        <div class="board" data-ui id="board">
+          <div class="board__bar">
+            <p class="board__find"><span id="board-label">探して</span> <b id="board-next">1</b></p>
+            <p class="board__clock" id="board-clock" aria-hidden="true">0:00.0</p>
+          </div>
+          <div class="board__grid" id="board-grid" role="group" aria-label="シュルテテーブル（4 × 4）。1から16までの数字を順番にタップしてください。" style="--cols:4"><button class="tile" type="button">11</button><button class="tile" type="button">6</button><button class="tile" type="button">13</button><button class="tile" type="button">10</button><button class="tile" type="button">15</button><button class="tile" type="button">4</button><button class="tile" type="button">1</button><button class="tile" type="button">9</button><button class="tile" type="button">14</button><button class="tile" type="button">3</button><button class="tile" type="button">16</button><button class="tile" type="button">7</button><button class="tile" type="button">12</button><button class="tile" type="button">2</button><button class="tile" type="button">5</button><button class="tile" type="button">8</button></div>
+          <div class="board__foot">
+            <p class="board__hint" id="board-hint" aria-live="polite">1をタップしてスタート。視線を中央付近に置いて、数字が目に飛び込んでくるのを待ちましょう。</p>
+            <button class="board__again" id="board-again" type="button" hidden>もう一度プレイ</button>
+          </div>
         </div>
-        <p class="hero-android"><a href="#android">Androidの方は待機リストへ</a></p>
-        <ul class="hero-facts" aria-label="ポイント">
-          <li><strong>約1分</strong><span>1回あたり</span></li>
-          <li><strong>毎日</strong><span>新しいチャレンジ</span></li>
-          <li><strong>記録</strong><span>上達がひと目でわかる</span></li>
+      </div>
+
+      <div class="stage__layer field-slate" data-layer="modes">
+        <img class="stage__shot" src="../assets/screens/p/focus-focusBlue-light-menu.webp" width="600" height="1304" alt="49のメインメニュー：デイリーチャレンジのカード、ノーマル、競技、リラックスの各スタイル、そしてベスト記録付きのクラシック、エンドレス、タイムチャレンジの各モード。" loading="lazy">
+      </div>
+
+      <div class="stage__layer field-blush" data-layer="boards">
+        <div class="rb" data-ui aria-hidden="true" data-rb></div>
+      </div>
+
+      <div class="stage__layer field-sage" data-layer="friends">
+        <img class="stage__shot" src="../site/assets/match-summary.webp" width="600" height="1304" alt="49の3ラウンドのグループレースの最終結果：Zoeが53ポイントで優勝、Arturが52ポイントで2位、Leoが49ポイントで3位。その下に最速ラウンドと全順位。" loading="lazy">
+      </div>
+
+      <div class="stage__layer field-gold" data-layer="achievements">
+        <img class="stage__shot" src="../site/assets/achievements.webp" width="600" height="1298" alt="49のクラシックのスピード実績：38秒未満のロケットから31秒未満のワープドライブまで、それぞれの段階と進み具合。" loading="lazy">
+      </div>
+
+    </div>
+  </aside>
+
+  <div class="read">
+
+    <section class="hero" data-stage="board" aria-labelledby="hero-title">
+      <div class="hero__intro">
+        <p class="hero__line" data-rise style="--i:0">iPhoneで遊ぶ1分間の集中力ゲーム。数字を順番に、できるだけ速く見つけましょう。</p>
+        <div class="hero__actions" data-rise style="--i:1">
+          <a class="button" href="https://testflight.apple.com/join/G4XsUyyB">ベータに参加</a>
+          <a class="link" href="#android">Androidの方は待機リストへ</a>
+        </div>
+      </div>
+      <h1 class="wordmark" id="hero-title" data-rise style="--i:2"><span class="wordmark__name">49</span><span class="wordmark__sub">Focus Booster</span></h1>
+    </section>
+
+    <section class="block" id="ranks" data-stage="board" aria-labelledby="ranks-title">
+      <h2 class="head" id="ranks-title" data-reveal>タイムで決まるランク</h2>
+      <p data-reveal style="--i:1">モード、方向、スタイルごとにランクがあり、それぞれのベスト記録で決まります。標準の7&nbsp;×&nbsp;7ボードで各ランクに必要な条件はこちらです。小さいボード、大きいボード、難しいボードではタイムが調整されます。</p>
+      <table class="ranks" data-reveal style="--i:2">
+        <thead>
+          <tr><th scope="col">ランク</th><th scope="col">クラシック</th><th scope="col">エンドレス</th><th scope="col">タイムチャレンジ</th></tr>
+        </thead>
+        <tbody>
+          <tr data-rank="Rookie"><th scope="row"><img src="../assets/ranks/rookie-dark.png" width="515" height="158" alt="ルーキー"></th><td>1ゲームをクリア</td><td>1ボードをクリア</td><td>1回プレイ</td></tr>
+          <tr data-rank="Bronze" data-under="120"><th scope="row"><img src="../assets/ranks/bronze-dark.png" width="515" height="158" alt="ブロンズ"></th><td>2:00未満</td><td>毎分25個</td><td>30個</td></tr>
+          <tr data-rank="Silver" data-under="90"><th scope="row"><img src="../assets/ranks/silver-dark.png" width="515" height="158" alt="シルバー"></th><td>1:30未満</td><td>毎分32個</td><td>50個</td></tr>
+          <tr data-rank="Gold" data-under="70"><th scope="row"><img src="../assets/ranks/gold-dark.png" width="515" height="158" alt="ゴールド"></th><td>1:10未満</td><td>毎分40個</td><td>70個</td></tr>
+          <tr data-rank="Platinum" data-under="55"><th scope="row"><img src="../assets/ranks/platinum-dark.png" width="515" height="158" alt="プラチナ"></th><td>0:55未満</td><td>毎分48個</td><td>90個</td></tr>
+          <tr data-rank="Diamond" data-under="45"><th scope="row"><img src="../assets/ranks/diamond-dark.png" width="515" height="158" alt="ダイヤモンド"></th><td>0:45未満</td><td>毎分56個</td><td>115個</td></tr>
+          <tr data-rank="Legend" data-under="35"><th scope="row"><img src="../assets/ranks/legend-dark.png" width="515" height="158" alt="レジェンド"></th><td>0:35未満</td><td>毎分65個</td><td>140個</td></tr>
+        </tbody>
+      </table>
+      <p class="ranks__you" data-reveal style="--i:3">上のボードは4&nbsp;×&nbsp;4のお試し版です。ランクはアプリのフルボードから始まります。</p>
+      <p data-reveal style="--i:4">ランクに加えて、Game Centerのグローバルリーダーボードが170個あります。すべてのボードと方向で最速タイムと最多ポイントを、今日、今週、今月、全期間で競えます。デイリーチャレンジには専用のボードがあり、カウントされるのは最初の挑戦だけです。</p>
+    </section>
+
+    <section class="block" id="modes" data-stage="modes" aria-labelledby="modes-title">
+      <h2 class="head" id="modes-title" data-reveal>3つの遊び方</h2>
+      <p data-reveal style="--i:1">1から49へ数え上げても、49から1へ数え下げても遊べます。モードごとに記録とランクが分かれています。</p>
+      <div class="proofs">
+        <article class="proof" data-reveal>
+          <div class="proof__panel"><img src="../site/assets/mode-classic.webp" width="560" height="106" alt="クラシックのカード：ベストタイム57.03、ゴールドランク、実績71個中28個。" loading="lazy"></div>
+          <div class="proof__text">
+            <h3>クラシック</h3>
+            <p>1つのボードで1回のタイム勝負。自己ベストを更新してルーキーからレジェンドを目指し、どこで時間がかかったかを詳しく確認しましょう。</p>
+          </div>
+        </article>
+        <article class="proof" data-reveal>
+          <div class="proof__panel"><img src="../site/assets/mode-endless.webp" width="560" height="106" alt="エンドレスのカード：ペースは毎分56.5個、ダイヤモンドランク。" loading="lazy"></div>
+          <div class="proof__text">
+            <h3>エンドレス</h3>
+            <p>ボードをクリアすると、次のボードがもう待っています。スコアは1分あたりに見つけた数字の数、つまりペースです。好きなときにやめられます。</p>
+          </div>
+        </article>
+        <article class="proof" data-reveal>
+          <div class="proof__panel"><img src="../site/assets/mode-clock.webp" width="560" height="106" alt="タイムチャレンジのカード：67個、シルバーランク。" loading="lazy"></div>
+          <div class="proof__text">
+            <h3>タイムチャレンジ</h3>
+            <p>残り時間はどんどん減っていきます。数字を見つけるたびに時間が戻り、ミスするたびに時間が減ります。どこまで行けるでしょうか？</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="block" id="boards" data-stage="boards" aria-labelledby="boards-title">
+      <h2 class="head" id="boards-title" data-reveal>4種類のボード</h2>
+      <p class="figure-line" data-reveal style="--i:1">5&nbsp;×&nbsp;5から11&nbsp;×&nbsp;11まで</p>
+      <p data-reveal style="--i:2">手軽な5&nbsp;×&nbsp;5、標準の7&nbsp;×&nbsp;7、そしてガチ勢向けの9&nbsp;×&nbsp;9と11&nbsp;×&nbsp;11。</p>
+      <div class="inline-only rb rb--inline" data-ui aria-hidden="true" data-rb></div>
+      <dl class="kinds">
+        <div data-reveal><dt>数字</dt><dd>定番のテーブル。昇順でも降順でも、順番に見つけましょう。</dd></div>
+        <div data-reveal style="--i:1"><dt>アルファベット</dt><dd>5&nbsp;×&nbsp;5ボードでAからYまで。数字では物足りないときに。</dd></div>
+        <div data-reveal style="--i:2"><dt>赤と黒</dt><dd>赤い数字は昇順、黒い数字は降順に数え、タップするたびに切り替えます。混乱せずにタスクを行き来するための、遊び感覚のトレーニングです。</dd></div>
+        <div data-reveal style="--i:3"><dt>スワップ</dt><dd>プレイ中にタイルが入れ替わります。ついてこられますか？</dd></div>
+      </dl>
+      <p data-reveal>行き詰まったら？ヒントで次の数字の場所がわかります。毎日いくつか使えて、1回ごとに5秒加算されるので、学ぶ助けにはなっても記録にはつながりません。</p>
+    </section>
+
+    <section class="block" id="friends" data-stage="friends" aria-labelledby="friends-title">
+      <h2 class="head" id="friends-title" data-reveal>友達と対戦</h2>
+      <p data-reveal style="--i:1">1対1、2対2はもちろん、クラスや職場のチームなど大人数でも遊べます。全員がまったく同じボードなので、差がつくのは集中力だけです。</p>
+      <figure class="inline-only inline-shot"><img src="../site/assets/match-summary.webp" width="600" height="1304" alt="49の3ラウンドのグループレースの最終結果：Zoeが53ポイントで優勝、Arturが52ポイントで2位、Leoが49ポイントで3位。その下に最速ラウンドと全順位。" loading="lazy"></figure>
+      <dl class="rooms">
+        <div data-reveal><dt>レース</dt><dd>全員が同じボードで、何ラウンドも対戦。各ラウンドで一番速い人が勝ち、ポイントの合計で最終順位が決まります。</dd></div>
+        <div data-reveal style="--i:1"><dt>ポイントバトル</dt><dd>競技スタイルのポイントで順位が決まるので、スピードとコンボの両方が大切。ミスのない連続プレイなら、より速くても雑なプレイに勝てることもあります。</dd></div>
+        <div data-reveal style="--i:2"><dt>ノックアウト</dt><dd>グループ向け。各ラウンドで一番遅いプレイヤーが脱落し、最後の1人になるまで続きます。</dd></div>
+        <div data-reveal style="--i:3"><dt>ゴーストレース</dt><dd>まずあなたがプレイし、その記録がゴーストになります。友達はその日のうちならいつでもゴーストと勝負でき、リードかビハインドかがリアルタイムで表示されます。</dd></div>
+        <div data-reveal style="--i:4"><dt>スティール</dt><dd>1つのボードで、リアルタイムの直接対決。先にタップした人がその数字の得点を獲得し、相手の画面からは消えます。</dd></div>
+      </dl>
+      <p data-reveal>友達は4文字のルームコード、QRコード、リンクで参加でき、全員がゲーム用のニックネームを決めます。1人1台ない？ゲストモードなら、あなたのiPhoneを回して遊べます。</p>
+    </section>
+
+    <section class="block block--last" id="achievements" data-stage="achievements" aria-labelledby="ach-title">
+      <h2 class="giant" id="ach-title" data-reveal><span class="giant__num">547</span><span class="giant__word">の実績</span></h2>
+      <p data-reveal style="--i:1">スピード、精度、集中、コンボ、連続記録、好奇心に応える実績です。段階のある実績は、ブロンズからプリズムまで8つのメダルを駆け上がります。</p>
+      <ul class="medals" aria-label="8段階のメダル">
+        <li data-reveal style="--i:0"><img src="../assets/medals/medal-0.png" width="160" height="160" alt="" loading="lazy">ブロンズ</li>
+        <li data-reveal style="--i:1"><img src="../assets/medals/medal-1.png" width="160" height="160" alt="" loading="lazy">シルバー</li>
+        <li data-reveal style="--i:2"><img src="../assets/medals/medal-2.png" width="160" height="160" alt="" loading="lazy">ゴールド</li>
+        <li data-reveal style="--i:3"><img src="../assets/medals/medal-3.png" width="160" height="160" alt="" loading="lazy">プラチナ</li>
+        <li data-reveal style="--i:4"><img src="../assets/medals/medal-4.png" width="160" height="160" alt="" loading="lazy">サファイア</li>
+        <li data-reveal style="--i:5"><img src="../assets/medals/medal-5.png" width="160" height="160" alt="" loading="lazy">アメジスト</li>
+        <li data-reveal style="--i:6"><img src="../assets/medals/medal-6.png" width="160" height="160" alt="" loading="lazy">ルビー</li>
+        <li data-reveal style="--i:7"><img src="../assets/medals/medal-7.png" width="160" height="160" alt="" loading="lazy">プリズム</li>
+      </ul>
+      <figure class="inline-only inline-shot"><img src="../site/assets/achievements.webp" width="600" height="1298" alt="49のクラシックのスピード実績：38秒未満のロケットから31秒未満のワープドライブまで、それぞれの段階と進み具合。" loading="lazy"></figure>
+      <div class="bars">
+        <details open>
+          <summary><span>クラシックのスピード</span><span class="bars__n">36</span></summary>
+          <ul>
+            <li><span>ウォームアップ<small>クラシックを120秒未満でクリアする。</small></span><b>ブロンズ</b></li>
+            <li><span>100の壁突破<small>クラシックを100秒未満でクリアする。</small></span><b>シルバー</b></li>
+            <li><span>快速<small>クラシックを70秒未満でクリアする。</small></span><b>ゴールド</b></li>
+            <li><span>速読家<small>クラシックを60秒未満でクリアする。</small></span><b>プラチナ</b></li>
+            <li><span>稲妻<small>クラシックを45秒未満でクリアする。</small></span><b>サファイア</b></li>
+            <li><span>ロケット<small>クラシックを38秒未満でクリアする。</small></span><b>アメジスト</b></li>
+            <li><span>超人<small>クラシックを35秒未満でクリアする。</small></span><b>ルビー</b></li>
+          </ul>
+        </details>
+        <details>
+          <summary><span>精度と集中</span><span class="bars__n">29</span></summary>
+          <ul>
+            <li><span>ノーミス<small>クラシックをノーミスでクリアする。</small></span><b>ブロンズ</b></li>
+            <li><span>ロックオン<small>集中切れ0回でクラシックをクリアする。</small></span><b>ブロンズ</b></li>
+            <li><span>揺るがない<small>集中切れなしでクラシックを10ゲームクリアする。</small></span><b>ゴールド</b></li>
+            <li><span>メトロノーム IV<small>クラシックでリズム90以上を記録する。</small></span><b>段階制</b></li>
+          </ul>
+        </details>
+        <details>
+          <summary><span>スコアとコンボ</span><span class="bars__n">36</span></summary>
+          <ul>
+            <li><span>ハイスコアラー I<small>クラシックの1ゲームで2,000ポイント獲得する。</small></span><b>ブロンズ</b></li>
+            <li><span>ハイスコアラー III<small>クラシックの1ゲームで6,000ポイント獲得する。</small></span><b>ゴールド</b></li>
+            <li><span>トリプルスレット IV<small>100ゲームで×3倍率に到達する。</small></span><b>段階制</b></li>
+          </ul>
+        </details>
+        <details>
+          <summary><span>エンドレスとタイムチャレンジ</span><span class="bars__n">64</span></summary>
+          <ul>
+            <li><span>ダブルアップ<small>エンドレス1回で2面クリアする。</small></span><b>ブロンズ</b></li>
+            <li><span>長距離走<small>エンドレス1回で4面クリアする。</small></span><b>ゴールド</b></li>
+            <li><span>時を止める者 I<small>タイムチャレンジ1回で25個の数字を見つける。</small></span><b>ブロンズ</b></li>
+            <li><span>時を止める者 III<small>タイムチャレンジ1回で75個の数字を見つける。</small></span><b>ゴールド</b></li>
+          </ul>
+        </details>
+        <details>
+          <summary><span>ボードサイズ</span><span class="bars__n">80</span></summary>
+          <ul>
+            <li><span>6 × 6 常連 I<small>6 × 6で10ゲームクリアする（デイリーを含む）。</small></span><b>ブロンズ</b></li>
+            <li><span>11 × 11 レジェンド<small>11 × 11でレジェンドに到達：136秒未満。</small></span><b>段階制</b></li>
+          </ul>
+        </details>
+        <details>
+          <summary><span>赤と黒、スワップ、アルファベット</span><span class="bars__n">140</span></summary>
+          <ul>
+            <li><span>赤と黒 5 × 5 レジェンド<small>赤と黒 5 × 5で14秒未満。</small></span><b>段階制</b></li>
+            <li><span>スワップ 5 × 5 レジェンド<small>スワップ 5 × 5で11秒未満。</small></span><b>段階制</b></li>
+            <li><span>アルファベット 5 × 5 レジェンド<small>アルファベット 5 × 5で9秒未満。</small></span><b>段階制</b></li>
+          </ul>
+        </details>
+        <details>
+          <summary><span>デイリー、連続記録、継続</span><span class="bars__n">53</span></summary>
+          <ul>
+            <li><span>デイリーデビュー<small>デイリーチャレンジをクリアする。</small></span><b>ブロンズ</b></li>
+            <li><span>また来たね<small>2日連続でプレイする。</small></span><b>ブロンズ</b></li>
+            <li><span>49の1年<small>365日連続でプレイする。</small></span><b>段階制</b></li>
+            <li><span>数字マニア VI<small>累計100,000個の数字を見つける。</small></span><b>段階制</b></li>
+          </ul>
+        </details>
+        <details>
+          <summary><span>ノーマル、競技、リラックス</span><span class="bars__n">47</span></summary>
+          <ul>
+            <li><span>純粋主義者 I<small>ノーマルスタイルで10ゲームプレイする。</small></span><b>ブロンズ</b></li>
+            <li><span>ショータイム I<small>競技スタイルで10ゲームプレイする。</small></span><b>ブロンズ</b></li>
+            <li><span>そよ風 I<small>リラックススタイルで10ゲームプレイする。</small></span><b>ブロンズ</b></li>
+          </ul>
+        </details>
+        <details>
+          <summary><span>はじめの一歩、ランク、探検</span><span class="bars__n">62</span></summary>
+          <ul>
+            <li><span>はじめの一歩<small>初めてのゲームをクリアする。</small></span><b>スタート</b></li>
+            <li><span>両方向<small>クラシックをカウントアップとカウントダウンの両方でクリアする。</small></span><b>スタート</b></li>
+            <li><span>クラシック ゴールド<small>クラシック 7 × 7でゴールドに到達：70秒未満。</small></span><b>ゴールド</b></li>
+            <li><span>早起き<small>朝に1ゲームクリアする。</small></span><b>探検家</b></li>
+          </ul>
+        </details>
+      </div>
+      <p data-reveal><a class="link-plain" href="../achievements.html">547の実績をすべて見る</a></p>
+    </section>
+
+  </div>
+</div>
+
+<section class="drill" aria-labelledby="drill-title">
+  <div class="drill__head">
+    <h2 class="head" id="drill-title" data-reveal>レーサーのように鍛える</h2>
+    <p data-reveal style="--i:1">レースのスピードでは、集中力がすべてです。プロのドライバーは注意力、視覚的なスキャン、反応速度を体力と同じくらい真剣に鍛えていて、そのためにシュルテテーブルを使う人もいます。49は、それと同じトレーニングを1日1分にしました。</p>
+  </div>
+  <div class="drill__mosaic">
+    <figure class="drill__photo">
+      <img class="drift" src="../site/assets/f1-wheel.jpg" width="1000" height="1000" alt="2021年のアルピーヌF1マシンのステアリング：画面、一列に並んだシフトライト、20個以上のボタンとダイヤル。" loading="lazy">
+    </figure>
+    <div class="drill__tile field-gold" data-reveal>
+      <p class="drill__fig">300&nbsp;km/h</p>
+      <p>ひと目で周りのすべてをとらえなければならない世界。</p>
+    </div>
+    <div class="drill__tile field-slate" data-reveal style="--i:1">
+      <p class="drill__fig">1分</p>
+      <p>1日これだけで、同じトレーニングができます。レースカーは要りません。</p>
+    </div>
+  </div>
+</section>
+
+<section class="styles" aria-labelledby="styles-title">
+  <div class="styles__field styles__field--normal">
+    <div class="styles__body">
+      <img class="styles__shot" src="../assets/screens/focus-normal-light.png" width="600" height="1169" alt="ノーマルスタイルのクラシックのゲーム：タイム0:23.41、探して 18、見つけた数字はボード上で薄く表示。" loading="lazy">
+      <div class="styles__text">
+        <p class="lead" data-reveal>シンプルなタイムトライアル。</p>
+        <p data-reveal style="--i:1">あなたとボードと時計だけ。ポイントもエフェクトもなく、数字から目をそらすものは何もありません。これが定番のシュルテテーブルであり、集中力をもっとも純粋に試す方法です。</p>
+        <p data-reveal style="--i:2">毎ゲーム後に、タイム、ペース、ミスの数、集中切れ、そしてリズムが表示されます。リズムとは、数字を見つけるペースがどれだけ均一かを示す値です。</p>
+      </div>
+    </div>
+  </div>
+  <div class="styles__field styles__field--comp field-blush">
+    <div class="styles__body">
+      <img class="styles__shot" src="../site/assets/pitlane-competitive.webp" width="600" height="1169" alt="Pit Laneデザインで遊ぶ競技スタイルのクラシックのゲーム：スコア2,292、コンボ10で×2、探して 10。" loading="lazy">
+      <div class="styles__text">
+        <p class="lead" data-reveal>ポイント、コンボ、×3。</p>
+        <p data-reveal style="--i:1">数字は1つ100ポイント、さらにスピードで最大50ポイント。コンボタイマーが切れる前に次の数字を見つければ、倍率が上がります：コンボ5で×2、15で×3。</p>
+        <p data-reveal style="--i:2">ミスタップでコンボは半分になりますが、ポイントが減ることはありません。エフェクトは楽しみたいけど、プレッシャーは要らない？リラックスなら、サウンドとお祝いの演出はそのままで、ポイントはなしです。</p>
+      </div>
+    </div>
+  </div>
+  <h2 class="styles__title" id="styles-title"><span>ノーマルか</span> <span>競技か</span></h2>
+</section>
+
+<section class="day" aria-labelledby="day-title">
+  <div class="day__fields">
+    <div class="day__words field-sage">
+      <h2 class="head" id="day-title">1日1分</h2>
+      <ol class="day__clauses">
+        <li class="day__clause is-on" data-step="0"><button type="button">まずは今日のチャレンジ</button></li>
+        <li class="day__clause" data-step="1"><button type="button">次に3つの小さなクエスト</button></li>
+        <li class="day__clause" data-step="2"><button type="button">そして上達をチェック</button></li>
+        <li class="day__clause" data-step="3"><button type="button">最後に連続記録をキープ</button></li>
+      </ol>
+      <p class="day__note">どこでも遊べる短さで、明日もまた気軽に始められるように作られています。</p>
+    </div>
+    <div class="day__screen">
+      <div class="frag is-on" data-ui data-step="0">
+        <img src="../site/assets/daily-card.webp" width="560" height="122" alt="今日のデイリーチャレンジのカード：カウントダウン。2:30未満でクリア、個人目標は1:16未満。">
+        <p class="frag__title">今週のチャレンジ</p>
+        <ul class="frag__list">
+          <li><span>クラシックスプリント</span><span>2:30未満</span></li>
+          <li><span>赤に染まる</span><span>赤は降順、黒は昇順</span></li>
+          <li><span>アルファベットスープ</span><span>AからYまでの文字</span></li>
+          <li><span>ノーミス</span><span>ミスは一切なし</span></li>
+          <li><span>メトロノーム</span><span>リズム50以上</span></li>
         </ul>
+        <p class="frag__foot">全員が同じボードなので、友達と比べられます。</p>
       </div>
-
-      <div class="hero-visual" aria-hidden="true">
-        <!-- A recreation of the game screen -->
-        <div class="phone">
-          <div class="phone-screen">
-            <div class="phone-top">
-              <div><small>タイム</small><b>0:23.4</b></div>
-              <div class="phone-find"><small>探して</small><b>18</b></div>
-            </div>
-            <div class="combo"><i></i></div>
-            <div class="combo-label"><span>コンボ 12</span><b>×2</b></div>
-            <div class="mini-board"><span>38</span><span>29</span><span>34</span><span>37</span><span class="found">16</span><span>26</span><span class="found">17</span><span class="found">6</span><span>45</span><span>20</span><span>47</span><span>39</span><span>40</span><span>44</span><span>22</span><span class="found">7</span><span>25</span><span class="found">2</span><span>48</span><span class="found">9</span><span class="found">12</span><span class="found">11</span><span>31</span><span>28</span><span class="found">14</span><span>42</span><span>49</span><span>32</span><span>46</span><span class="found">1</span><span class="found">13</span><span>24</span><span>19</span><span class="found">15</span><span>43</span><span>35</span><span>41</span><span>30</span><span class="found">10</span><span class="next">18</span><span class="found">3</span><span class="found">4</span><span>33</span><span>36</span><span>21</span><span class="found">8</span><span>27</span><span>23</span><span class="found">5</span></div>
-            <div class="phone-bottom"><span>クラシック</span>·<span>1 → 49</span>·<span>競技</span></div>
-          </div>
-        </div>
+      <div class="frag" data-ui data-step="1">
+        <p class="frag__title">今日のクエスト</p>
+        <ul class="frag__quests">
+          <li class="is-done"><span>ノーミスで1ゲームクリア</span><span>1/1</span><i style="--p:1"></i></li>
+          <li><span>3ゲームプレイ</span><span>2/3</span><i style="--p:.667"></i></li>
+          <li><span>コンボで×2に到達</span><span>0/1</span><i style="--p:0"></i></li>
+        </ul>
+        <p class="frag__foot">3つすべて達成でボーナスXP。</p>
       </div>
-    </section>
-
-    <!-- Benefits -->
-    <section class="section" id="benefits">
-      <div class="section-head">
-        <p class="eyebrow">遊ぶ理由</p>
-        <h2>小さなゲームで、<em>大きな</em>力を。</h2>
-        <p>どのボードも、注意を保ち、すばやく見渡し、気が散るものを無視することを脳に求めます。1日1分プレイするだけで、読む、学ぶ、働くときにいつも使う力を練習できます。</p>
+      <div class="frag" data-ui data-step="2">
+        <p class="frag__title">インサイト</p>
+        <p class="frag__big">一番上の列が速くなりました。</p>
+        <p class="frag__foot">そこにある数字を見つける時間が、先週より0.3秒短くなっています。</p>
+        <svg class="frag__chart" viewBox="0 0 280 120" role="img" aria-label="7日間のクラシックのタイム：1:21から1:09まで縮みました。">
+          <polyline points="10,22 55,36 100,31 145,60 190,70 235,65 270,92" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+          <circle cx="270" cy="92" r="6" fill="currentColor"/>
+        </svg>
+        <ul class="frag__axis"><li>1:21</li><li>1:18</li><li>1:19</li><li>1:14</li><li>1:12</li><li>1:13</li><li>1:09</li></ul>
       </div>
-      <div class="benefits">
-        <article class="benefit">
-          <div class="benefit-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/></svg></div>
-          <h3>集中を長く保つ</h3>
-          <p>ボードは最初の数字から最後まで、あなたの注意をすべて必要とします。気をそらさずに保つ練習をして、インサイトで集中切れが減っていくのを確認しましょう。</p>
-        </article>
-        <article class="benefit">
-          <div class="benefit-icon"><svg viewBox="0 0 24 24"><path d="M3 5.5A2.5 2.5 0 0 1 5.5 3H11v17H5.5A2.5 2.5 0 0 1 3 17.5zM21 5.5A2.5 2.5 0 0 0 18.5 3H13v17h5.5a2.5 2.5 0 0 0 2.5-2.5z"/></svg></div>
-          <h3>速く読む</h3>
-          <p>シュルテテーブルは速読講座の定番です。視線を動かさずに、ひと目でボードのより広い範囲をとらえる力は、文章をより大きなまとまりで読む力と同じです。</p>
-        </article>
-        <article class="benefit">
-          <div class="benefit-icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg></div>
-          <h3>すばやく見つける</h3>
-          <p>次の数字をすばやく見つけることは視覚探索です。書類の中の1行、リストの中の名前、道路の標識を見つけるのと同じ力です。</p>
-        </article>
-        <article class="benefit">
-          <div class="benefit-icon"><svg viewBox="0 0 24 24"><path d="M6 9.5h12l-3-3M18 14.5H6l3 3"/></svg></div>
-          <h3>切り替えても崩れない</h3>
-          <p>赤と黒のボードでは、赤は一方向に、黒は逆方向に数え、タップするたびに切り替えます。混乱せずにタスクを行き来するための、遊び感覚のトレーニングです。</p>
-        </article>
-        <article class="benefit">
-          <div class="benefit-icon"><svg viewBox="0 0 24 24"><path d="M12 21s-7-4.4-7-10.5A4.5 4.5 0 0 1 12 7a4.5 4.5 0 0 1 7 3.5C19 16.6 12 21 12 21z"/></svg></div>
-          <h3>プレッシャーの中でも落ち着いて</h3>
-          <p>ミスはタイムのロスになり、焦ったタップはさらに高くつきます。1つのミスを雪だるま式に広げず、ひと呼吸で立て直して続ける力が身につきます。</p>
-        </article>
-        <article class="benefit">
-          <div class="benefit-icon"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></div>
-          <h3>頭のスイッチを入れる</h3>
-          <p>1ボードは、意識を「今」に引き戻す1分間のウォームアップ。勉強の前、集中して作業する前、考えがまとまらないときにどうぞ。</p>
-        </article>
-      </div>
-      <p class="fineprint benefits-note">49は集中力を練習するためのゲームであり、医療製品ではありません。上達の度合いには個人差があります。</p>
-    </section>
-
-    <!-- Daily routine -->
-    <section class="section" id="routine">
-      <div class="routine">
-        <div class="explain-copy">
-          <p class="eyebrow">1日1分</p>
-          <h2>短いセッションで、目に見える上達を。</h2>
-          <p>集中力は継続的な練習で伸びていきます。だから49は習慣になるように作られています。どこでも遊べる短さで、明日もまた遊びたくなる楽しさです。</p>
-          <ul class="routine-list">
-            <li><b>デイリーチャレンジ</b><span>毎日、目標付きの新しいボードが登場。連続記録をつないでいきましょう。</span></li>
-            <li><b>デイリークエスト</b><span>1日3つの小さな目標で追加XP。3つすべてクリアするとボーナスも。</span></li>
-            <li><b>連続記録フリーズ</b><span>連続記録が伸びるともらえて、休んだ日の記録を守ってくれます。</span></li>
-            <li><b>インサイト</b><span>ペースの推移、ボードの死角、一番調子のいい時間帯、よくするミスがわかります。</span></li>
-            <li><b>ランク</b><span>タイムが縮むほど、ルーキーからレジェンドへ昇格します。</span></li>
-            <li><b>リマインダー</b><span>連続記録をうっかり途切れさせないための、任意の通知です。</span></li>
-          </ul>
-        </div>
-        <div class="moments">
-          <div><b>勉強の前に</b><span>頭をすっきりさせて、集中モードへ。</span></div>
-          <div><b>集中作業の前に</b><span>注意力のウォームアップに。</span></div>
-          <div><b>休憩中に</b><span>スマホを眺める代わりに、タスクの合間にリセット。</span></div>
-          <div><b>友達と</b><span>マルチプレイで競ったり、ゲストモードでiPhoneを回したり。</span></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- What is a Schulte table -->
-    <section class="section" id="schulte">
-      <div class="explain">
-        <div class="explain-copy">
-          <p class="eyebrow">しくみ</p>
-          <h2>シュルテテーブルを、楽しく。</h2>
-          <p>シュルテテーブルは、バラバラに並んだ数字を順番に、できるだけ速く見つけていくグリッドです。ドイツの精神科医ヴァルター・シュルテにちなんで名付けられ、注意力、視覚探索、速読の練習に何十年も使われてきました。</p>
-          <p>コツは、数字を1つずつ探し回るのをやめること。視線を中央付近に固定して、次の数字が目に飛び込んでくるのを待ちましょう。プレイするほど注意の視野が広がっていくのを感じ、タイムも速くなります。49には、紙版にはなかったものがそろっています：モード、スコア、連続記録、そしてすべてのゲームの記録です。</p>
-        </div>
-        <ol class="steps">
-          <li><div><b>中央を見る</b><span>視線を安定させて、周辺視野を使いましょう。</span></div></li>
-          <li><div><b>次の数字を探す</b><span>見つけたらタップ。ミスするとタイムのロスになるので、落ち着いて。</span></div></li>
-          <li><div><b>昨日の自分を超える</b><span>タイム、ペース、ミスの数で、どれだけ上達したかがわかります。</span></div></li>
+      <div class="frag" data-ui data-step="3">
+        <p class="frag__title">連続記録</p>
+        <p class="frag__big">12日連続</p>
+        <ol class="frag__week">
+          <li class="is-done">月</li><li class="is-done">火</li><li class="is-done">水</li><li class="is-freeze">木</li><li class="is-done">金</li><li class="is-done">土</li><li>日</li>
         </ol>
+        <p class="frag__foot">連続記録フリーズは記録が伸びるともらえて、休んだ日の記録を守ってくれます。任意のリマインダーがあれば、うっかり途切れることもありません。</p>
       </div>
-    </section>
+    </div>
+  </div>
+  <div class="day__control">
+    <label class="sr-only" for="day-range">49との1日をステップごとに見る</label>
+    <div class="day__track" style="--v:0"><input class="day__range" id="day-range" type="range" min="0" max="3" step="1" value="0"></div>
+    <ol class="day__stops">
+      <li class="is-on">デイリー</li><li>クエスト</li><li>インサイト</li><li>連続記録</li>
+    </ol>
+  </div>
+</section>
 
-    <!-- Looks -->
-    <section class="section" id="looks">
-      <div class="section-head">
-        <p class="eyebrow">デザイン</p>
-        <h2>デザインを選んで、その場でチェック。</h2>
-        <p>テーマ、カラーパレット、ライトかダークかを選んでください。画面にはアプリでの見た目がそのまま表示され、このページ全体もそれに合わせて着替えます。</p>
-      </div>
-      <div class="look-stage">
-        <div class="look-shots"><div class="look-shot"><img id="look-menu" data-alt="{look}（{palette}・{appearance}）" src="../assets/screens/p/classic-classicIndigo-dark-menu.webp" alt="クラシックのデザイン" width="600" height="1304"></div><div class="look-shot"><img id="look-img" data-alt="{look}（{palette}・{appearance}）" src="../assets/screens/p/classic-classicIndigo-dark-game.webp" alt="クラシックのデザイン" width="600" height="1304"></div></div>
-        <div class="look-info">
-          <span class="option-label" id="look-label">デザイン</span>
-          <div class="look-tabs" role="group" aria-labelledby="look-label"><button type="button" data-look="classic" aria-pressed="true"><img src="../assets/looks/classic.png" alt="" width="30" height="30">クラシック</button><button type="button" data-look="focus" aria-pressed="false"><img src="../assets/looks/focus.png" alt="" width="30" height="30">Focus</button><button type="button" data-look="arcade" aria-pressed="false"><img src="../assets/looks/arcade.png" alt="" width="30" height="30">Neon Arcade</button><button type="button" data-look="zen" aria-pressed="false"><img src="../assets/looks/zen.png" alt="" width="30" height="30">Zen Ink</button><button type="button" data-look="pitLane" aria-pressed="false"><img src="../assets/looks/pitLane.png" alt="" width="30" height="30">Pit Lane</button><button type="button" data-look="candy" aria-pressed="false"><img src="../assets/looks/candy.png" alt="" width="30" height="30">Candy Pop</button><button type="button" data-look="blossom" aria-pressed="false"><img src="../assets/looks/blossom.png" alt="" width="30" height="30">Blossom</button></div>
-          <h3 id="look-name">クラシック</h3>
-          <p id="look-tagline">オリジナルの49。すっきりシンプルでおなじみ。</p>
-          <span class="option-label" id="palette-label">カラー</span>
-          <div class="swatches" id="swatches" role="group" aria-labelledby="palette-label"></div>
-          <span class="option-label" id="appearance-label">外観モード</span>
-          <div class="chips" role="group" aria-labelledby="appearance-label">
-            <button class="chip" type="button" data-appearance="light" aria-pressed="true">ライト</button>
-            <button class="chip" type="button" data-appearance="dark" aria-pressed="false">ダーク</button>
-            <button class="chip chip-ghost" type="button" id="theme-reset" hidden>サイトの配色に戻す</button>
-          </div>
-          <p class="look-extra">アプリでは、どのテーマもさらに細かく調整できます：アクセントカラー、タイルと数字の色、タイルの形、フォント、アプリアイコン。7つのステップで、オリジナルテーマを一から作ることもできます。</p>
-        </div>
-      </div>
-      <script type="application/json" id="looks-data">{"classic": {"name": "クラシック", "tagline": "オリジナルの49。すっきりシンプルでおなじみ。", "palettes": [{"id": "classicIndigo", "name": "インディゴ", "swatch": "#5856D6", "swatch2": "#B83A0E"}, {"id": "classicBlue", "name": "ブルー", "swatch": "#0062CC", "swatch2": "#B83A0E"}, {"id": "classicTeal", "name": "ティール", "swatch": "#0B7A6C", "swatch2": "#C2185B"}]}, "focus": {"name": "Focus", "tagline": "スピード重視：コントラストの高い数字で、気が散るものはなし。ノーマルスタイルにおすすめ。", "palettes": [{"id": "focusBlue", "name": "ブルー", "swatch": "#1F5FBF", "swatch2": "#2B3036"}, {"id": "focusGreen", "name": "グリーン", "swatch": "#1B6E46", "swatch2": "#2B3036"}, {"id": "focusGraphite", "name": "グラファイト", "swatch": "#3A3F47", "swatch2": "#1F5FBF"}]}, "arcade": {"name": "Neon Arcade", "tagline": "夜のグリッドに光るネオン。", "palettes": [{"id": "violet", "name": "サイバーバイオレット", "swatch": "#6D28D9", "swatch2": "#0E7490"}, {"id": "lime", "name": "トキシックライム", "swatch": "#4D7C0F", "swatch2": "#0F766E"}, {"id": "sunset", "name": "サンセット", "swatch": "#C2410C", "swatch2": "#BE185D"}, {"id": "pinkNeon", "name": "ピンクネオン", "swatch": "#BE185D", "swatch2": "#6D28D9"}]}, "zen": {"name": "Zen Ink", "tagline": "紙と墨と静けさ。集中だけがここに。", "palettes": [{"id": "sumi", "name": "朱墨", "swatch": "#C8372D", "swatch2": "#1C1B19"}, {"id": "matcha", "name": "抹茶", "swatch": "#47703A", "swatch2": "#1C1B19"}, {"id": "indigo", "name": "インディゴ", "swatch": "#2F4A8A", "swatch2": "#1C1B19"}, {"id": "sakura", "name": "桜", "swatch": "#C2477A", "swatch2": "#1C1B19"}]}, "pitLane": {"name": "Pit Lane", "tagline": "タイミングモニター、スプリット、レースカラー。", "palettes": [{"id": "yellow", "name": "タイミングイエロー", "swatch": "#FFD400", "swatch2": "#7E22CE"}, {"id": "papaya", "name": "パパイヤ", "swatch": "#FF8000", "swatch2": "#7E22CE"}, {"id": "green", "name": "レーシンググリーン", "swatch": "#00875A", "swatch2": "#7E22CE"}, {"id": "rosso", "name": "ロッソ", "swatch": "#D50A0A", "swatch2": "#7E22CE"}]}, "candy": {"name": "Candy Pop", "tagline": "ぽってりタイルで、明るく弾む。", "palettes": [{"id": "bubblegum", "name": "バブルガム", "swatch": "#D42A62", "swatch2": "#2F6FE0"}, {"id": "ocean", "name": "オーシャン", "swatch": "#0B7A7A", "swatch2": "#4757D6"}, {"id": "lemonade", "name": "レモネード", "swatch": "#BF4C00", "swatch2": "#2A7D38"}]}, "blossom": {"name": "Blossom", "tagline": "やわらかな花びら、パステルカラー、エレガントな数字。", "palettes": [{"id": "rose", "name": "ローズ", "swatch": "#C73366", "swatch2": "#8F6A1C"}, {"id": "lavender", "name": "ラベンダー", "swatch": "#8463C9", "swatch2": "#C2477A"}, {"id": "peach", "name": "ピーチ", "swatch": "#BA5236", "swatch2": "#8F6A1C"}, {"id": "mint", "name": "ミント", "swatch": "#267A66", "swatch2": "#C2477A"}]}}</script>
-    </section>
+<section class="letter" aria-labelledby="letter-title">
+  <div class="letter__col">
+    <img class="letter__icon" src="../assets/icon-lux-64.png" width="64" height="64" alt="">
+    <h2 class="head" id="letter-title" data-reveal>49を作った理由</h2>
+    <p data-reveal style="--i:1">アプリは一日中あなたの注意を奪い合っていて、しかもその勝負にとても強いのです。フィード、通知、自動再生は注意を奪うために作られています。注意を取り戻させてくれるものは、ほとんどありません。</p>
+    <p data-reveal style="--i:2">私たちは、それは逆だと考えます。集中力があるからこそ、気がそれずにページを読み、スマホに手を伸ばさずに勉強し、最高の仕事ができます。筋力やスピードと同じように、集中力も練習で伸ばせます。</p>
+    <p data-reveal style="--i:3">そこで私たちは、注意力、視覚探索、速読の訓練に何十年も使われてきた紙のトレーニング「シュルテテーブル」を、また遊びたくなるゲームにしました。1ゲーム1分、毎日新しいボード、そして毎回のゲームのあとには、何が良くなったかを一文でお知らせします。</p>
+    <p data-reveal style="--i:4">これはゲームであり、医療製品ではありません。何かを診断したり治療したりすることもありません。49が届けるのは、<mark>集中力を消耗させるのではなく鍛える、1日1分</mark>です。</p>
+    <p class="letter__sign" data-reveal style="--i:5">49の開発チーム<small><a class="link-plain" href="mailto:contact49game@icloud.com">contact49game@icloud.com</a></small></p>
+  </div>
+</section>
 
-    <!-- Modes -->
-    <section class="section" id="modes">
-      <div class="section-head">
-        <p class="eyebrow">プレイモード</p>
-        <h2>3つのモードで鍛えよう。</h2>
+<section class="price" id="price" aria-labelledby="price-title">
+  <div class="price__plan price__plan--free field-gold">
+    <h2 class="price__name" id="price-title">無料</h2>
+    <p class="price__for">すべての人に。すべてのモード、ボード、デザイン、サウンドが使えて、ロックされたものはありません。</p>
+    <div class="price__foot">
+      <div>
+        <p class="price__amount">$0</p>
+        <p class="price__inc">広告はゲームの合間だけで、プレイ中や最初の数ゲームには表示されません。広告を1本見ると30分間広告なしになります。</p>
       </div>
-      <div class="modes">
-        <article class="mode">
-          <div class="mode-icon"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 4v16M15 4v16M4 9h16M4 15h16"/></svg></div>
-          <h3>クラシック</h3>
-          <p>1つのボードで1回のタイム勝負。自己ベストを更新してルーキーからレジェンドを目指し、どこで時間がかかったかを詳しく確認しましょう。</p>
-        </article>
-        <article class="mode">
-          <div class="mode-icon"><svg viewBox="0 0 24 24"><path d="M12 12c-2-2.67-4-4-6-4a4 4 0 1 0 0 8c2 0 4-1.33 6-4Zm0 0c2 2.67 4 4 6 4a4 4 0 0 0 0-8c-2 0-4 1.33-6 4Z"/></svg></div>
-          <h3>エンドレス</h3>
-          <p>ボードをクリアすると、次のボードがもう待っています。どこまでゾーンに入り続けられるでしょうか？</p>
-        </article>
-        <article class="mode">
-          <div class="mode-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M9.5 2.5h5"/></svg></div>
-          <h3>タイムチャレンジ</h3>
-          <p>残り時間はどんどん減っていきます。数字を見つけるたびに時間が戻り、ミスするたびに時間が減ります。</p>
-        </article>
+      <a class="button button--ink" href="https://testflight.apple.com/join/G4XsUyyB">ベータに参加</a>
+    </div>
+  </div>
+  <div class="price__plan price__plan--premium field-slate">
+    <h3 class="price__name">Premium</h3>
+    <p class="price__for">広告を完全になくしたい方に。アプリ内で購入できます。</p>
+    <div class="price__foot">
+      <div>
+        <p class="price__amount price__amount--words">広告なし</p>
+        <p class="price__inc">週額、月額、年額、買い切りから選べます。年額プランは最初の1週間が無料で、買い切りはファミリー共有に対応しています。小さなインディーゲームの応援にもなります。</p>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <!-- Styles -->
-    <section class="section" id="styles">
-      <div class="section-head">
-        <p class="eyebrow">スタイル</p>
-        <h2>純粋な集中か、スコア狙いか。</h2>
-        <p>どのモードも3つのスタイルで遊べて、スタイルごとに記録とランクが分かれています。</p>
+<section class="join" id="join" aria-labelledby="join-title">
+  <div class="join__now">
+    <h2 class="head" id="join-title" data-reveal>今すぐプレイ</h2>
+    <p class="join__line" data-reveal style="--i:1">49はTestFlight（新しいアプリを試すためのAppleのアプリ）でオープンベータ公開中です。TestFlightをインストールしてから、iPhoneでボタンをタップしてください。</p>
+    <div class="join__go" data-reveal style="--i:2">
+      <a class="button" href="https://testflight.apple.com/join/G4XsUyyB">ベータに参加</a>
+      <figure class="join__qr">
+    <svg viewBox="-2 -2 33 33" width="200" height="200" shape-rendering="crispEdges" role="img" aria-label="TestFlightで49のベータを開くQRコード"><rect x="-2" y="-2" width="33" height="33" fill="#fff"/><path fill="#000" d="M0 0h7v1h-7zM9 0h1v1h-1zM13 0h1v1h-1zM17 0h3v1h-3zM22 0h7v1h-7zM0 1h1v1h-1zM6 1h1v1h-1zM10 1h1v1h-1zM12 1h1v1h-1zM15 1h4v1h-4zM22 1h1v1h-1zM28 1h1v1h-1zM0 2h1v1h-1zM2 2h3v1h-3zM6 2h1v1h-1zM10 2h1v1h-1zM12 2h1v1h-1zM17 2h2v1h-2zM22 2h1v1h-1zM24 2h3v1h-3zM28 2h1v1h-1zM0 3h1v1h-1zM2 3h3v1h-3zM6 3h1v1h-1zM9 3h1v1h-1zM11 3h2v1h-2zM14 3h3v1h-3zM18 3h3v1h-3zM22 3h1v1h-1zM24 3h3v1h-3zM28 3h1v1h-1zM0 4h1v1h-1zM2 4h3v1h-3zM6 4h1v1h-1zM9 4h2v1h-2zM12 4h2v1h-2zM15 4h1v1h-1zM18 4h1v1h-1zM22 4h1v1h-1zM24 4h3v1h-3zM28 4h1v1h-1zM0 5h1v1h-1zM6 5h1v1h-1zM8 5h3v1h-3zM14 5h3v1h-3zM18 5h3v1h-3zM22 5h1v1h-1zM28 5h1v1h-1zM0 6h7v1h-7zM8 6h1v1h-1zM10 6h1v1h-1zM12 6h1v1h-1zM14 6h1v1h-1zM16 6h1v1h-1zM18 6h1v1h-1zM20 6h1v1h-1zM22 6h7v1h-7zM11 7h1v1h-1zM14 7h1v1h-1zM17 7h2v1h-2zM0 8h1v1h-1zM3 8h1v1h-1zM5 8h2v1h-2zM8 8h1v1h-1zM10 8h1v1h-1zM14 8h1v1h-1zM16 8h1v1h-1zM18 8h1v1h-1zM20 8h2v1h-2zM23 8h1v1h-1zM1 9h3v1h-3zM8 9h9v1h-9zM20 9h3v1h-3zM25 9h1v1h-1zM28 9h1v1h-1zM0 10h1v1h-1zM3 10h2v1h-2zM6 10h3v1h-3zM10 10h1v1h-1zM13 10h1v1h-1zM16 10h2v1h-2zM19 10h1v1h-1zM21 10h1v1h-1zM24 10h4v1h-4zM2 11h1v1h-1zM4 11h1v1h-1zM9 11h1v1h-1zM11 11h3v1h-3zM16 11h1v1h-1zM19 11h5v1h-5zM26 11h2v1h-2zM0 12h2v1h-2zM6 12h2v1h-2zM11 12h3v1h-3zM15 12h3v1h-3zM20 12h4v1h-4zM25 12h1v1h-1zM27 12h2v1h-2zM0 13h1v1h-1zM2 13h1v1h-1zM5 13h1v1h-1zM7 13h1v1h-1zM13 13h2v1h-2zM16 13h2v1h-2zM19 13h3v1h-3zM2 14h5v1h-5zM8 14h3v1h-3zM12 14h1v1h-1zM16 14h1v1h-1zM18 14h1v1h-1zM21 14h1v1h-1zM25 14h4v1h-4zM0 15h2v1h-2zM5 15h1v1h-1zM7 15h2v1h-2zM11 15h4v1h-4zM16 15h3v1h-3zM20 15h2v1h-2zM23 15h1v1h-1zM25 15h1v1h-1zM27 15h1v1h-1zM2 16h1v1h-1zM4 16h1v1h-1zM6 16h2v1h-2zM10 16h3v1h-3zM15 16h1v1h-1zM17 16h1v1h-1zM20 16h2v1h-2zM23 16h1v1h-1zM27 16h1v1h-1zM4 17h1v1h-1zM7 17h1v1h-1zM9 17h4v1h-4zM16 17h2v1h-2zM20 17h4v1h-4zM25 17h1v1h-1zM28 17h1v1h-1zM0 18h1v1h-1zM2 18h2v1h-2zM5 18h3v1h-3zM10 18h2v1h-2zM14 18h1v1h-1zM17 18h1v1h-1zM20 18h1v1h-1zM23 18h2v1h-2zM27 18h2v1h-2zM2 19h2v1h-2zM10 19h1v1h-1zM14 19h5v1h-5zM20 19h1v1h-1zM22 19h1v1h-1zM27 19h2v1h-2zM0 20h1v1h-1zM2 20h1v1h-1zM4 20h3v1h-3zM12 20h1v1h-1zM14 20h3v1h-3zM20 20h5v1h-5zM26 20h1v1h-1zM8 21h1v1h-1zM13 21h1v1h-1zM16 21h1v1h-1zM20 21h1v1h-1zM24 21h1v1h-1zM26 21h3v1h-3zM0 22h7v1h-7zM9 22h1v1h-1zM12 22h1v1h-1zM14 22h1v1h-1zM16 22h1v1h-1zM20 22h1v1h-1zM22 22h1v1h-1zM24 22h1v1h-1zM27 22h1v1h-1zM0 23h1v1h-1zM6 23h1v1h-1zM8 23h1v1h-1zM13 23h2v1h-2zM16 23h1v1h-1zM18 23h1v1h-1zM20 23h1v1h-1zM24 23h5v1h-5zM0 24h1v1h-1zM2 24h3v1h-3zM6 24h1v1h-1zM12 24h1v1h-1zM14 24h5v1h-5zM20 24h5v1h-5zM0 25h1v1h-1zM2 25h3v1h-3zM6 25h1v1h-1zM8 25h1v1h-1zM10 25h1v1h-1zM12 25h1v1h-1zM22 25h6v1h-6zM0 26h1v1h-1zM2 26h3v1h-3zM6 26h1v1h-1zM9 26h1v1h-1zM11 26h3v1h-3zM16 26h1v1h-1zM20 26h1v1h-1zM24 26h3v1h-3zM28 26h1v1h-1zM0 27h1v1h-1zM6 27h1v1h-1zM9 27h2v1h-2zM14 27h1v1h-1zM17 27h4v1h-4zM23 27h1v1h-1zM27 27h1v1h-1zM0 28h7v1h-7zM8 28h1v1h-1zM11 28h2v1h-2zM14 28h2v1h-2zM17 28h1v1h-1zM20 28h5v1h-5zM27 28h1v1h-1z"/></svg>
+    <figcaption>パソコンで見ていますか？iPhoneのカメラでこのコードを読み取って参加しましょう。</figcaption>
+  </figure>
+    </div>
+  </div>
+  <div class="join__lists">
+    <h3 class="join__wait">App Storeでの公開を待ちますか？</h3>
+    <div class="wait" id="android-wait">
+      <div class="wait__card">
+        <p class="wait__label">iPhone</p>
+        <p>メールアドレスを登録すると、49がApp Storeで公開されたときにお知らせします。それ以外のメールは送りません。</p>
+        <form class="waitlist" data-key="be2021f9-fa01-4d43-9539-5df4bd62df36">
+          <input type="checkbox" name="botcheck" class="waitlist-trap" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <label class="sr-only" for="wait-ios">App Storeのお知らせ用メールアドレス</label>
+          <input class="field" id="wait-ios" type="email" name="email" required autocomplete="email" placeholder="メールアドレス">
+          <button class="button button--quiet" type="submit">お知らせを受け取る</button>
+        </form>
+        <p class="waitlist-done" role="status" hidden>登録しました。49がApp Storeで公開されたらメールでお知らせします。</p>
+        <p class="waitlist-error" role="alert" hidden>送信できませんでした。もう一度お試しいただくか、contact49game@icloud.com までご連絡ください。</p>
       </div>
-      <div class="style-split">
-        <article class="style-card">
-          <div>
-            <span class="tag tag-normal">◎ ノーマル</span>
-            <h3>シンプルなタイムトライアル。</h3>
-            <p>あなたとボードと時計だけ。エフェクトもポイントもなく、数字から目をそらすものは何もありません。これが定番のシュルテテーブルであり、集中力をもっとも純粋に試す方法です。</p>
-            <ul style="--dot:#64748b">
-              <li>タイム、ペース、ミスの数</li>
-              <li>集中切れとリズム：数字を見つけるペースがどれだけ均一か</li>
-              <li>Focusデザインと相性抜群：コントラストの高い数字だけ</li>
-            </ul>
-          </div>
-          <img src="../assets/screens/focus-normal-light.png" alt="ノーマルスタイルでのFocusデザイン" width="300" height="584" loading="lazy">
-        </article>
-        <article class="style-card">
-          <div>
-            <span class="tag tag-competitive">🔥 競技</span>
-            <h3>ポイント、コンボ、×3。</h3>
-            <p>数字は1つ100ポイント。さらに最大50のスピードボーナスがあり、見つけるまでに時間がかかるほど減っていきます。コンボタイマーが切れる前に次の数字を見つければ、倍率が上がります。</p>
-            <div class="multipliers" aria-label="倍率">
-              <div><b>×1</b><span>スタート時</span></div>
-              <div><b>×2</b><span>コンボ 5</span></div>
-              <div><b>×3</b><span>コンボ 15</span></div>
-            </div>
-            <ul style="--dot:#ef4444">
-              <li>タイマーが切れるとコンボは消えます</li>
-              <li>ミスタップでコンボは半分になりますが、ポイントが減ることはありません</li>
-              <li>ゲームが進むほど数字の価値は少しずつ下がるので、先にボードを覚えても得にはなりません</li>
-              <li>コンボに合わせてエフェクトとサウンドが盛り上がり、×3ではバーが燃え上がります</li>
-            </ul>
-          </div>
-          <img src="../assets/screens/classic-dark.png" alt="コンボバーと倍率が表示された競技スタイルのゲーム" width="300" height="584" loading="lazy">
-        </article>
+      <div class="wait__card" id="android">
+        <p class="wait__label">Android</p>
+        <p>Androidをお使いですか？Android版が出たら、一度だけメールでお知らせします。</p>
+        <form class="waitlist" data-key="be2021f9-fa01-4d43-9539-5df4bd62df36" data-list="android">
+          <input type="checkbox" name="botcheck" class="waitlist-trap" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <label class="sr-only" for="wait-android">Android版のお知らせ用メールアドレス</label>
+          <input class="field" id="wait-android" type="email" name="email" required autocomplete="email" placeholder="メールアドレス">
+          <button class="button button--quiet" type="submit">お知らせを受け取る</button>
+        </form>
+        <p class="waitlist-done" role="status" hidden>Androidのリストに登録しました。Android版が出たらメールでお知らせします。</p>
+        <p class="waitlist-error" role="alert" hidden>送信できませんでした。もう一度お試しいただくか、contact49game@icloud.com までご連絡ください。</p>
       </div>
-      <p class="relax-note">エフェクトは楽しみたいけど、プレッシャーは要らない？<b>リラックス</b>なら、サウンドとお祝いの演出はそのままで、ポイントはなしです。</p>
-    </section>
+    </div>
+    <p class="small muted">公開に関するご連絡のみお送りし、ご希望があればいつでもリストから削除します。<a class="link-plain" href="../privacy.html">プライバシーポリシー</a></p>
+  </div>
+</section>
 
-    <!-- Features -->
-    <section class="section" id="features">
-      <div class="section-head">
-        <p class="eyebrow">機能</p>
-        <h2>小さなゲームに、<em>深い</em>こだわり。</h2>
-      </div>
-      <div class="grid">
-        <article class="card">
-          <div class="card-icon"><svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg></div>
-          <h3>デイリーチャレンジ</h3>
-          <p>毎日、全員に同じボードと達成目標。連続記録を途切れさせないようにしましょう。</p>
-        </article>
-        <article class="card">
-          <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0z"/><path d="M17 5h3v2a3 3 0 0 1-3 3M7 5H4v2a3 3 0 0 0 3 3"/></svg></div>
-          <h3>ランクと547の実績</h3>
-          <p>すべてのモードにブロンズ、シルバー、ゴールド、プラチナ、ダイヤモンド、レジェンドのランク。さらにスピード、連続記録、コンボ、ノーミスのゲームで実績を獲得できます。</p>
-        </article>
-        <article class="card">
-          <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M12 3l2.4 4.9 5.4.8-3.9 3.8.9 5.4L12 15.4 7.2 17.9l.9-5.4-3.9-3.8 5.4-.8z"/><path d="M5 21h14"/></svg></div>
-          <h3>レベルとXP</h3>
-          <p>どのゲームでも、うまくできたことに応じてXPを獲得：ノーミス、コンボ、速いペース、自己ベスト更新、クエスト。バーを満たしてレベルアップしましょう。</p>
-        </article>
-        <article class="card">
-          <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg></div>
-          <h3>インサイト</h3>
-          <p>ボードの死角、一番速く解ける時間帯、プレイの均一さ、よくするミスがわかります。</p>
-        </article>
-        <article class="card">
-          <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M12 2l2.6 6.3L21 9l-5 4.5L17.5 20 12 16.6 6.5 20 8 13.5 3 9l6.4-.7z"/></svg></div>
-          <h3>リーダーボード</h3>
-          <p>すべてのモードとボードにGame Centerリーダーボードを用意。今日、今週、今月、全期間で競えます。友達に自分のタイムを超えられるか挑戦しましょう。</p>
-        </article>
-        <article class="card">
-          <div class="card-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><path d="M14 17.5h7M17.5 14v7"/></svg></div>
-          <h3>4種類のボード</h3>
-          <p>数字、アルファベット、赤と黒（2方向を同時に数える）、そしてプレイ中にタイルが入れ替わるスワップ。5 × 5から7 × 7まで、さらにやり込み派には9 × 9と11 × 11も。</p>
-        </article>
-        <article class="card">
-          <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></div>
-          <h3>42種類のサウンド</h3>
-          <p>落ち着いたウォームベルとやわらかなピアノ、見つけるたびに音階が上がるメロディ、楽しいポップ音やしずく音、歯切れのいいクリック音、そしてクラシックな楽器。ご褒美の瞬間にはピアノが響きます。</p>
-        </article>
-        <article class="card">
-          <div class="card-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="2.5"/><path d="M5 9.5l7 1.5 7-1.5M12 11v4l-3 6M12 15l3 6"/></svg></div>
-          <h3>上達したポイントがわかる</h3>
-          <p>毎ゲーム後、一番の成長を一文でお知らせ：速くなった苦手エリア、減った集中切れ、安定したリズムなど。タイムだけではありません。</p>
-        </article>
-        <article class="card">
-          <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-3.5 10.9c.6.4 1 1.1 1 1.8V16h5v-.3c0-.7.4-1.4 1-1.8A6 6 0 0 0 12 3z"/></svg></div>
-          <h3>行き詰まったらヒント</h3>
-          <p>ヒントは次の数字の場所を教えてくれます。毎日いくつか使えて、1回ごとに5秒加算されるので、学ぶ助けにはなっても記録にはつながりません。</p>
-        </article>
-        <article class="card">
-          <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 9 9"/><path d="M12 7v5l3 2"/></svg></div>
-          <h3>すべての人のために</h3>
-          <p>VoiceOverに完全対応し、「視差効果を減らす」「文字を太くする」、オーディオグラフで聞けるチャートにも対応。紙吹雪、フラッシュ、触覚フィードバックはアクセシビリティ設定でオフにできます。</p>
-        </article>
-        <article class="card">
-          <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-          <h3>あなたのゲームはあなたのもの</h3>
-          <p>アカウントは不要。ゲーム、スコア、統計はiPhoneに保存されます。友達が遊びたいときは、いつでもゲストとしてプレイできます。</p>
-        </article>
-      </div>
-    </section>
+<section class="faq" id="questions" aria-labelledby="faq-title">
+  <div class="faq__side">
+    <h2 class="head" id="faq-title">よくある質問</h2>
+    <p>ほかにご質問があれば、<a class="link-plain" href="../support.html">サポートページ</a>からお気軽にどうぞ。</p>
+  </div>
+  <div class="faq__list">
+    <div class="faq__col">
+      <details class="faq__item"><summary>49はいつリリースされますか？<i aria-hidden="true"></i></summary><p>もうすぐです。現在TestFlightでオープンベータ中で、その次にiPhone向けにApp Storeで公開予定です。</p></details>
+      <details class="faq__item"><summary>プレイに必要なものは何ですか？<i aria-hidden="true"></i></summary><p>iOS 17以降を搭載したiPhoneが必要です。</p></details>
+      <details class="faq__item"><summary>本当に無料ですか？<i aria-hidden="true"></i></summary><p>はい。すべてのモード、ボード、デザイン、機能が無料です。無料プレイヤーには一部のゲームの合間に広告が表示されますが、プレイ中に表示されることはありません。Premiumで広告がなくなるほか、広告を1本見て30分間広告なしにすることもできます。</p></details>
+      <details class="faq__item"><summary>シュルテテーブルとは何ですか？<i aria-hidden="true"></i></summary><p>バラバラに並んだ数字を、順番にできるだけ速く見つけていくグリッドです。注意力、視覚探索、速読のための定番トレーニングで、ドイツの精神科医ヴァルター・シュルテにちなんで名付けられました。</p></details>
+      <details class="faq__item"><summary>ノーマルと競技の違いは何ですか？<i aria-hidden="true"></i></summary><p>ノーマルはシンプルなタイムトライアルです：エフェクトもポイントもなく、タイムだけ。競技ではポイント、コンボ、最大×3の倍率が加わり、プレイが進むにつれてエフェクトとサウンドが盛り上がります。スタイルごとに記録とランクが分かれています。</p></details>
+      <details class="faq__item"><summary>競技のスコアはどう計算されますか？<i aria-hidden="true"></i></summary><p>数字は1つ100ポイント。さらに最大50のスピードボーナスがあり、時間がかかるほど減っていきます。コンボ5でポイントが2倍、コンボ15で3倍になります。コンボタイマーが切れるとコンボは消え、ミスタップすると半分になります。ゲームが進むにつれて数字の価値は少しずつ下がるので、始める前にボードを覚えても得にはなりません。</p></details>
+      <details class="faq__item"><summary>友達と遊べますか？<i aria-hidden="true"></i></summary><p>はい。マルチプレイには1対1、2対2、グループのルームがあり、レース、ポイントバトル、ノックアウト、ゴーストレース、スティールで遊べます。友達はコード、QRコード、リンクで参加できます。ゲストモードでiPhoneを回して遊ぶこともできます。</p></details>
+    </div>
+    <div class="faq__col">
+      <details class="faq__item"><summary>集中力は上がりますか？<i aria-hidden="true"></i></summary><p>プレイするうちに自分のタイム、ペース、正確さが向上していくのがわかり、インサイトでどこが伸びたかを確認できます。49は集中力を練習するためのゲームであり、医療製品ではありません。いかなる疾患の診断、治療、予防も行いません。</p></details>
+      <details class="faq__item"><summary>アクセシビリティに対応していますか？<i aria-hidden="true"></i></summary><p>はい。VoiceOverに完全対応し、「視差効果を減らす」「文字を太くする」、オーディオグラフで聞けるチャートにも対応しています。紙吹雪、フラッシュ、触覚フィードバックはアクセシビリティ設定でオフにできます。</p></details>
+      <details class="faq__item"><summary>対応言語は何ですか？<i aria-hidden="true"></i></summary><p>英語、ポーランド語、ドイツ語、フランス語、スペイン語、ポルトガル語（ブラジル）、イタリア語、日本語、韓国語です。</p></details>
+      <details class="faq__item"><summary>データは収集されますか？<i aria-hidden="true"></i></summary><p>ゲーム、スコア、統計はiPhoneに保存され、アカウントもありません。アプリは匿名の利用統計（名前やゲーム履歴は含みません）を送信しますが、設定でオフにできます。Game Centerの利用は任意です。無料版の広告は広告ネットワークから配信され、広告表示のために一部のデータが収集される場合があります。Premiumにすると広告はなくなります。詳しくは<a class="link-plain" href="../privacy.html">プライバシーポリシー</a>をご覧ください。</p></details>
+      <details class="faq__item"><summary>新しいiPhoneでPremiumを復元するには？<i aria-hidden="true"></i></summary><p>購入時と同じApple Accountでサインインした状態で、アプリの「設定」から「Premium」を開き、「購入を復元」をタップしてください。</p></details>
+      <details class="faq__item"><summary>Android版はありますか？<i aria-hidden="true"></i></summary><p>まだありません。49は今のところiPhone向けです。<a class="link-plain" href="#android">Android版の待機リスト</a>に登録していただければ、公開時にメールでお知らせします。</p></details>
+    </div>
+  </div>
+</section>
 
-    <!-- Achievements and ranks -->
-    <section class="section" id="achievements">
-      <div class="section-head">
-        <p class="eyebrow">ランクと実績</p>
-        <h2>ルーキーから<em>レジェンド</em>へ。</h2>
-        <p>モード、方向、スタイルごとにランクがあり、それぞれのベスト記録で決まります。さらに547の実績が、スピード、精度、集中、コンボ、連続記録、好奇心に応えてくれます。</p>
-      </div>
-      <div class="ranks-wrap">
-        <div class="panel">
-          <h3>ランク</h3>
-          <p>標準の7 × 7ボードで各ランクに必要な条件です。小さいボード、大きいボード、難しいボードではタイムが調整されます。</p>
-          <div class="table-scroll">
-            <table class="rank-table">
-              <thead><tr><th scope="col">ランク</th><th scope="col">クラシック</th><th scope="col">エンドレスのペース</th><th scope="col">タイムチャレンジ</th></tr></thead>
-              <tbody><tr><th scope="row"><picture><source srcset="../assets/ranks/rookie-dark.png" media="(prefers-color-scheme: dark)"><img src="../assets/ranks/rookie.png" alt="ルーキー" width="94" height="22"></picture></th><td>1ゲームをクリア</td><td>1ボードをクリア</td><td>1回プレイ</td></tr><tr><th scope="row"><picture><source srcset="../assets/ranks/bronze-dark.png" media="(prefers-color-scheme: dark)"><img src="../assets/ranks/bronze.png" alt="ブロンズ" width="91" height="22"></picture></th><td>2:00未満</td><td>25/分</td><td>30</td></tr><tr><th scope="row"><picture><source srcset="../assets/ranks/silver-dark.png" media="(prefers-color-scheme: dark)"><img src="../assets/ranks/silver.png" alt="シルバー" width="80" height="22"></picture></th><td>1:30未満</td><td>32/分</td><td>50</td></tr><tr><th scope="row"><picture><source srcset="../assets/ranks/gold-dark.png" media="(prefers-color-scheme: dark)"><img src="../assets/ranks/gold.png" alt="ゴールド" width="72" height="22"></picture></th><td>1:10未満</td><td>40/分</td><td>70</td></tr><tr><th scope="row"><picture><source srcset="../assets/ranks/platinum-dark.png" media="(prefers-color-scheme: dark)"><img src="../assets/ranks/platinum.png" alt="プラチナ" width="108" height="22"></picture></th><td>0:55未満</td><td>48/分</td><td>90</td></tr><tr><th scope="row"><picture><source srcset="../assets/ranks/diamond-dark.png" media="(prefers-color-scheme: dark)"><img src="../assets/ranks/diamond.png" alt="ダイヤモンド" width="105" height="22"></picture></th><td>0:45未満</td><td>56/分</td><td>115</td></tr><tr><th scope="row"><picture><source srcset="../assets/ranks/legend-dark.png" media="(prefers-color-scheme: dark)"><img src="../assets/ranks/legend.png" alt="レジェンド" width="104" height="22"></picture></th><td>0:35未満</td><td>65/分</td><td>140</td></tr></tbody>
-            </table>
-          </div>
-        </div>
-        <div class="panel">
-          <h3>547の実績</h3>
-          <p>段階のある実績は、ブロンズからプリズムまで8つのメダルを駆け上がります。</p>
-          <div class="medal-strip"><img src="../assets/medals/medal-0.png" alt="ブロンズ" title="ブロンズ" width="44" height="44" loading="lazy"><img src="../assets/medals/medal-1.png" alt="シルバー" title="シルバー" width="44" height="44" loading="lazy"><img src="../assets/medals/medal-2.png" alt="ゴールド" title="ゴールド" width="44" height="44" loading="lazy"><img src="../assets/medals/medal-3.png" alt="プラチナ" title="プラチナ" width="44" height="44" loading="lazy"><img src="../assets/medals/medal-4.png" alt="サファイア" title="サファイア" width="44" height="44" loading="lazy"><img src="../assets/medals/medal-5.png" alt="アメジスト" title="アメジスト" width="44" height="44" loading="lazy"><img src="../assets/medals/medal-6.png" alt="ルビー" title="ルビー" width="44" height="44" loading="lazy"><img src="../assets/medals/medal-7.png" alt="プリズム" title="プリズム" width="44" height="44" loading="lazy"></div>
-          <div class="ach-groups"><span>はじめに<b>8</b></span><span>クラシック：スピード<b>36</b></span><span>精度<b>14</b></span><span>集中<b>15</b></span><span>ランク<b>18</b></span><span>スコアとコンボ<b>36</b></span><span>エンドレス<b>38</b></span><span>タイムチャレンジ<b>26</b></span><span>ボードとバリエーション<b>16</b></span><span>ボードサイズ<b>80</b></span><span>赤と黒<b>60</b></span><span>スワップ<b>60</b></span><span>アルファベット<b>20</b></span><span>デイリーチャレンジ<b>22</b></span><span>ノーマル<b>17</b></span><span>競技<b>17</b></span><span>リラックス<b>13</b></span><span>継続<b>19</b></span><span>連続記録<b>12</b></span><span>探検家<b>20</b></span></div>
-          <a class="button" href="../achievements.html">547の実績をすべて見る</a>
-        </div>
-      </div>
-    </section>
+</main>
 
-    <!-- Daily Challenge -->
-    <section class="section" id="daily">
-      <div class="daily-wrap">
-        <div class="explain-copy">
-          <p class="eyebrow">デイリーチャレンジ</p>
-          <h2>1つのボードを、全員で、毎日。</h2>
-          <p>毎日、ひとひねりある新しいチャレンジと目標が登場します：タイムを切る、ノーミスでクリアする、集中を保つ、一定のリズムを守る。全員が同じボードなので、友達と比べられます。</p>
-          <p>目標を達成して連続記録をつなぎ、カレンダーで振り返りましょう。さらに自分だけの目標を設定することもできます。</p>
-        </div>
-        <div class="daily-themes"><div><b>クラシックスプリント</b><span>2:30未満</span></div><div><b>赤に染まる</b><span>赤は降順、黒は昇順</span></div><div><b>アルファベットスープ</b><span>AからYまでの文字</span></div><div><b>流砂</b><span>ミス3回以下</span></div><div><b>クイックファイブ</b><span>バブルの小さなボード</span></div><div><b>ノーミス</b><span>ミスは一切なし</span></div><div><b>虹の道</b><span>タイルはすべて違う色</span></div><div><b>カウントダウン</b><span>49から1へ</span></div><div><b>バラバラ</b><span>大きさも傾きもバラバラの数字</span></div><div><b>揺るがぬ集中</b><span>集中切れ3回以下</span></div><div><b>ネオンナイト</b><span>光る数字</span></div><div><b>赤方偏移</b><span>ネオンの赤と黒</span></div><div><b>メトロノーム</b><span>リズム50以上</span></div><div><b>スモールスワップ</b><span>入れ替わる小さなボード</span></div></div>
-      </div>
-    </section>
+<footer class="foot">
+  <p class="foot__what">49：iPhone向けの集中力ゲーム</p>
+  <p class="foot__links"><a href="schulte-table/">シュルテテーブル オンライン</a><a href="../achievements.html">実績</a><a href="../support.html">サポート</a><a href="../terms.html">利用規約</a></p>
+  <p class="foot__legal">© 2026 <a href="../privacy.html">プライバシー</a></p>
+  <nav class="foot__langs" aria-label="言語"><a href="../" hreflang="en" lang="en" data-lang="en">English</a><a href="../pl/" hreflang="pl" lang="pl" data-lang="pl">Polski</a><a href="../de/" hreflang="de" lang="de" data-lang="de">Deutsch</a><a href="../fr/" hreflang="fr" lang="fr" data-lang="fr">Français</a><a href="../es/" hreflang="es" lang="es" data-lang="es">Español</a><a href="../pt-br/" hreflang="pt-BR" lang="pt-BR" data-lang="pt-BR">Português (Brasil)</a><a href="../it/" hreflang="it" lang="it" data-lang="it">Italiano</a><a href="./" hreflang="ja" lang="ja" data-lang="ja" aria-current="page">日本語</a><a href="../ko/" hreflang="ko" lang="ko" data-lang="ko">한국어</a></nav>
+  <p class="foot__credits">ステアリングの写真：Declan M Martin撮影「Alpine F1 steering wheel」、パブリックドメイン、<a href="https://commons.wikimedia.org/wiki/File:Alpine_F1_steering_wheel.jpg">Wikimedia Commons</a>より、トリミング済み。iPhone、Game Center、VoiceOverはApple Inc.の商標です。49はAppleとは提携していません。</p>
+</footer>
 
-    <!-- Multiplayer -->
-    <section class="section" id="multiplayer">
-      <div class="section-head">
-        <p class="eyebrow">マルチプレイ</p>
-        <h2>同じボード。<em>速いのは誰？</em></h2>
-        <p>1対1、2対2はもちろん、クラスや職場のチームなど大人数でも遊べます。全員がまったく同じボードなので、差がつくのは集中力だけ。ルームを作ってコード、QRコード、リンクを共有し、ゲーム用のニックネームを決めましょう。</p>
-      </div>
-      <div class="grid">
-        <article class="card">
-          <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M5 21V4M5 4h11l-2 4 2 4H5"/></svg></div>
-          <h3>レース</h3>
-          <p>全員が同じボードで、何ラウンドも対戦。各ラウンドで一番速い人が勝ち、ポイントの合計で最終順位が決まります。</p>
-        </article>
-        <article class="card">
-          <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M12 3c2 3 5 5 5 9a5 5 0 0 1-10 0c0-2 1-3 2-4 0 2 1 3 2 3 0-3-1-5 1-8z"/></svg></div>
-          <h3>ポイントバトル</h3>
-          <p>競技スタイルのポイントで順位が決まるので、スピードとコンボの両方が大切。ミスのない速い連続プレイなら、より速くても雑なプレイに勝てることも。</p>
-        </article>
-        <article class="card">
-          <div class="card-icon"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M16 8l5 5M21 8l-5 5"/></svg></div>
-          <h3>ノックアウト</h3>
-          <p>グループ向け：各ラウンドで一番遅いプレイヤーが脱落し、最後の1人になるまで続きます。</p>
-        </article>
-        <article class="card">
-          <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M6 20V10a6 6 0 0 1 12 0v10l-2-2-2 2-2-2-2 2-2-2z"/><circle cx="10" cy="10" r="1" fill="currentColor"/><circle cx="14" cy="10" r="1" fill="currentColor"/></svg></div>
-          <h3>ゴーストレース</h3>
-          <p>あなたがボードをプレイすると、その日のうちなら友達がいつでもあなたの記録と勝負できます。プレイ中は「リードかビハインドか」がリアルタイムで表示されます。</p>
-        </article>
-        <article class="card">
-          <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></div>
-          <h3>スティール</h3>
-          <p>1つのボードで、リアルタイムの直接対決。先にタップした人がその数字の得点を獲得し、相手の画面からは消えます。</p>
-        </article>
-        <article class="card">
-          <div class="card-icon"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="6" height="6"/><rect x="14" y="4" width="6" height="6"/><rect x="4" y="14" width="6" height="6"/><path d="M14 14h2v2h-2zM18 18h2v2h-2zM14 18h2M18 14h2"/></svg></div>
-          <h3>かんたんに参加</h3>
-          <p>4文字のルームコード、読み取るだけのQRコード、タップするだけのリンク。Game Centerの名前はランダムなことが多いので、ゲームごとに自分のニックネームを付けられます。</p>
-        </article>
-      </div>
-    </section>
-    <!-- Leaderboards -->
-    <section class="section" id="leaderboards">
-      <div class="section-head">
-        <p class="eyebrow">リーダーボード</p>
-        <h2>自分の実力をチェック。</h2>
-        <p>すべての遊び方にGame Centerのグローバルリーダーボード。さらに、iPhone上では自分のスコアのランキングも。</p>
-      </div>
-      <div class="lb-grid">
-        <article class="lb-card">
-          <div class="big">170</div>
-          <h3>グローバルリーダーボード</h3>
-          <p>すべてのボードで最速タイムと最多ポイント：スタンダード、赤と黒、スワップ、アルファベット、5 × 5から11 × 11まで、昇順も降順も。エンドレスではベストペース、タイムチャレンジでは見つけた数字の最多記録。</p>
-        </article>
-        <article class="lb-card">
-          <div class="big">毎日</div>
-          <h3>今日のボード</h3>
-          <p>デイリーチャレンジには専用の最速タイムと最多ポイントのボードがあり、毎日リセットされます。カウントされるのは最初の挑戦だけです。</p>
-        </article>
-        <article class="lb-card">
-          <div class="big">自分</div>
-          <h3>自分のスコア</h3>
-          <p>プレイしたすべてのゲームが、iPhone上でもタイムまたはポイントでランク付けされます。アカウントは不要です。ゲストのゲームは、あなたのスコアにもグローバルボードにも影響しません。</p>
-        </article>
-      </div>
-      <div class="periods" aria-label="期間"><span>今日</span><span>今週</span><span>今月</span><span>今年</span><span>全期間</span></div>
-    </section>
+<dialog class="done" id="done" aria-labelledby="done-title">
+  <div class="done__body">
+    <p class="done__time"><span id="done-time">0:00.0</span></p>
+    <h2 class="done__title" id="done-title">次は49個すべてに挑戦。</h2>
+    <p class="done__line" id="done-line">アプリのフルボードは5&nbsp;×&nbsp;5と7&nbsp;×&nbsp;7で、どのタイムにもランクがつきます。</p>
+    <p class="done__pitch">アプリにはすべてがそろっています：毎日新しいデイリーチャレンジ、モードごとのランク、547の実績。オープンベータなら無料です。</p>
+    <div class="done__actions">
+      <a class="button" href="https://testflight.apple.com/join/G4XsUyyB">ベータに参加</a>
+      <button class="done__again" type="button" id="done-again">もう一度プレイ</button>
+    </div>
+    <p class="done__android"><a class="link-plain" href="#android" id="done-android">Androidの方は待機リストへ</a></p>
+  </div>
+  <figure class="done__qr">
+    <svg viewBox="-2 -2 33 33" width="160" height="160" shape-rendering="crispEdges" role="img" aria-label="TestFlightで49のベータを開くQRコード"><rect x="-2" y="-2" width="33" height="33" fill="#fff"/><path fill="#000" d="M0 0h7v1h-7zM9 0h1v1h-1zM13 0h1v1h-1zM17 0h3v1h-3zM22 0h7v1h-7zM0 1h1v1h-1zM6 1h1v1h-1zM10 1h1v1h-1zM12 1h1v1h-1zM15 1h4v1h-4zM22 1h1v1h-1zM28 1h1v1h-1zM0 2h1v1h-1zM2 2h3v1h-3zM6 2h1v1h-1zM10 2h1v1h-1zM12 2h1v1h-1zM17 2h2v1h-2zM22 2h1v1h-1zM24 2h3v1h-3zM28 2h1v1h-1zM0 3h1v1h-1zM2 3h3v1h-3zM6 3h1v1h-1zM9 3h1v1h-1zM11 3h2v1h-2zM14 3h3v1h-3zM18 3h3v1h-3zM22 3h1v1h-1zM24 3h3v1h-3zM28 3h1v1h-1zM0 4h1v1h-1zM2 4h3v1h-3zM6 4h1v1h-1zM9 4h2v1h-2zM12 4h2v1h-2zM15 4h1v1h-1zM18 4h1v1h-1zM22 4h1v1h-1zM24 4h3v1h-3zM28 4h1v1h-1zM0 5h1v1h-1zM6 5h1v1h-1zM8 5h3v1h-3zM14 5h3v1h-3zM18 5h3v1h-3zM22 5h1v1h-1zM28 5h1v1h-1zM0 6h7v1h-7zM8 6h1v1h-1zM10 6h1v1h-1zM12 6h1v1h-1zM14 6h1v1h-1zM16 6h1v1h-1zM18 6h1v1h-1zM20 6h1v1h-1zM22 6h7v1h-7zM11 7h1v1h-1zM14 7h1v1h-1zM17 7h2v1h-2zM0 8h1v1h-1zM3 8h1v1h-1zM5 8h2v1h-2zM8 8h1v1h-1zM10 8h1v1h-1zM14 8h1v1h-1zM16 8h1v1h-1zM18 8h1v1h-1zM20 8h2v1h-2zM23 8h1v1h-1zM1 9h3v1h-3zM8 9h9v1h-9zM20 9h3v1h-3zM25 9h1v1h-1zM28 9h1v1h-1zM0 10h1v1h-1zM3 10h2v1h-2zM6 10h3v1h-3zM10 10h1v1h-1zM13 10h1v1h-1zM16 10h2v1h-2zM19 10h1v1h-1zM21 10h1v1h-1zM24 10h4v1h-4zM2 11h1v1h-1zM4 11h1v1h-1zM9 11h1v1h-1zM11 11h3v1h-3zM16 11h1v1h-1zM19 11h5v1h-5zM26 11h2v1h-2zM0 12h2v1h-2zM6 12h2v1h-2zM11 12h3v1h-3zM15 12h3v1h-3zM20 12h4v1h-4zM25 12h1v1h-1zM27 12h2v1h-2zM0 13h1v1h-1zM2 13h1v1h-1zM5 13h1v1h-1zM7 13h1v1h-1zM13 13h2v1h-2zM16 13h2v1h-2zM19 13h3v1h-3zM2 14h5v1h-5zM8 14h3v1h-3zM12 14h1v1h-1zM16 14h1v1h-1zM18 14h1v1h-1zM21 14h1v1h-1zM25 14h4v1h-4zM0 15h2v1h-2zM5 15h1v1h-1zM7 15h2v1h-2zM11 15h4v1h-4zM16 15h3v1h-3zM20 15h2v1h-2zM23 15h1v1h-1zM25 15h1v1h-1zM27 15h1v1h-1zM2 16h1v1h-1zM4 16h1v1h-1zM6 16h2v1h-2zM10 16h3v1h-3zM15 16h1v1h-1zM17 16h1v1h-1zM20 16h2v1h-2zM23 16h1v1h-1zM27 16h1v1h-1zM4 17h1v1h-1zM7 17h1v1h-1zM9 17h4v1h-4zM16 17h2v1h-2zM20 17h4v1h-4zM25 17h1v1h-1zM28 17h1v1h-1zM0 18h1v1h-1zM2 18h2v1h-2zM5 18h3v1h-3zM10 18h2v1h-2zM14 18h1v1h-1zM17 18h1v1h-1zM20 18h1v1h-1zM23 18h2v1h-2zM27 18h2v1h-2zM2 19h2v1h-2zM10 19h1v1h-1zM14 19h5v1h-5zM20 19h1v1h-1zM22 19h1v1h-1zM27 19h2v1h-2zM0 20h1v1h-1zM2 20h1v1h-1zM4 20h3v1h-3zM12 20h1v1h-1zM14 20h3v1h-3zM20 20h5v1h-5zM26 20h1v1h-1zM8 21h1v1h-1zM13 21h1v1h-1zM16 21h1v1h-1zM20 21h1v1h-1zM24 21h1v1h-1zM26 21h3v1h-3zM0 22h7v1h-7zM9 22h1v1h-1zM12 22h1v1h-1zM14 22h1v1h-1zM16 22h1v1h-1zM20 22h1v1h-1zM22 22h1v1h-1zM24 22h1v1h-1zM27 22h1v1h-1zM0 23h1v1h-1zM6 23h1v1h-1zM8 23h1v1h-1zM13 23h2v1h-2zM16 23h1v1h-1zM18 23h1v1h-1zM20 23h1v1h-1zM24 23h5v1h-5zM0 24h1v1h-1zM2 24h3v1h-3zM6 24h1v1h-1zM12 24h1v1h-1zM14 24h5v1h-5zM20 24h5v1h-5zM0 25h1v1h-1zM2 25h3v1h-3zM6 25h1v1h-1zM8 25h1v1h-1zM10 25h1v1h-1zM12 25h1v1h-1zM22 25h6v1h-6zM0 26h1v1h-1zM2 26h3v1h-3zM6 26h1v1h-1zM9 26h1v1h-1zM11 26h3v1h-3zM16 26h1v1h-1zM20 26h1v1h-1zM24 26h3v1h-3zM28 26h1v1h-1zM0 27h1v1h-1zM6 27h1v1h-1zM9 27h2v1h-2zM14 27h1v1h-1zM17 27h4v1h-4zM23 27h1v1h-1zM27 27h1v1h-1zM0 28h7v1h-7zM8 28h1v1h-1zM11 28h2v1h-2zM14 28h2v1h-2zM17 28h1v1h-1zM20 28h5v1h-5zM27 28h1v1h-1z"/></svg>
+    <figcaption>パソコンの方は、iPhoneのカメラで読み取ってください。</figcaption>
+  </figure>
+  <button class="done__close" type="button" id="done-close" aria-label="閉じる">閉じる</button>
+</dialog>
 
-    <!-- Pricing -->
-    <section class="section" id="price">
-      <div class="section-head">
-        <p class="eyebrow">価格</p>
-        <h2>無料。すべて込み。</h2>
-        <p>すべてのモード、ボード、デザイン、サウンドが無料。ロックされたものはありません。</p>
-      </div>
-      <div class="pricing-card">
-        <div class="plan">
-          <h3>無料</h3>
-          <div class="price">$0</div>
-          <ul>
-            <li>すべてのモード、ボード、機能</li>
-            <li>広告はゲームの合間だけ、プレイ中は表示されません</li>
-            <li>最初の数ゲームは広告なし</li>
-            <li>広告を1本見て30分間広告なし</li>
-          </ul>
-        </div>
-        <div class="plan">
-          <h3>Premium</h3>
-          <div class="price">広告なし</div>
-          <ul>
-            <li>週額、月額、年額、買い切り</li>
-            <li>年額プランは最初の1週間が無料</li>
-            <li>買い切りはファミリー共有に対応</li>
-            <li>小さなインディーゲームの応援になります</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- Updates -->
-    <section class="section" id="updates">
-      <div class="updates-card">
-        <img src="../assets/icon.png" alt="" width="80" height="80">
-        <h2>今すぐプレイ。</h2>
-        <p>49はTestFlight（新しいアプリを試すためのAppleのアプリ）でオープンベータ公開中です。無料です。TestFlightをインストールしてから、iPhoneで下のボタンをタップしてください。</p>
-        <a class="button beta-button" href="https://testflight.apple.com/join/G4XsUyyB" target="_blank" rel="noopener">TestFlightでベータに参加</a>
-        <div class="waitlists">
-          <div class="waitlist-box">
-            <p class="waitlist-platform"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M8 2h8a3 3 0 0 1 3 3v14a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3V5a3 3 0 0 1 3-3zm0 2a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1H8zm2 14h4v1.5h-4z"/></svg> iPhone</p>
-            <p class="waitlist-intro">App Storeでの公開を待ちたい方は、メールアドレスを登録してください。49の公開時にお知らせします。それ以外のメールは送りません。</p>
-            <form class="waitlist" data-key="be2021f9-fa01-4d43-9539-5df4bd62df36">
-              <input type="checkbox" name="botcheck" class="waitlist-trap" tabindex="-1" autocomplete="off" aria-hidden="true">
-              <input type="email" name="email" required autocomplete="email" placeholder="メールアドレス" aria-label="メールアドレス">
-              <button class="button button-ghost" type="submit">お知らせを受け取る</button>
-            </form>
-            <p class="waitlist-done" role="status" hidden>登録しました！49がApp Storeで公開されたらメールでお知らせします。</p>
-            <p class="waitlist-error" role="alert" hidden>送信できませんでした。もう一度お試しいただくか、contact49game@icloud.com までご連絡ください。</p>
-          </div>
-          <div class="waitlist-box waitlist-android" id="android">
-            <p class="waitlist-platform"><svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M8 2h8a3 3 0 0 1 3 3v14a3 3 0 0 1-3 3H8a3 3 0 0 1-3-3V5a3 3 0 0 1 3-3zm0 2a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1H8zm2 14h4v1.5h-4z"/></svg> Android</p>
-            <p class="waitlist-intro">Androidをお使いですか？Android版が出たらメールでお知らせします。</p>
-            <form class="waitlist" data-key="be2021f9-fa01-4d43-9539-5df4bd62df36" data-list="android">
-              <input type="checkbox" name="botcheck" class="waitlist-trap" tabindex="-1" autocomplete="off" aria-hidden="true">
-              <input type="email" name="email" required autocomplete="email" placeholder="メールアドレス" aria-label="メールアドレス">
-              <button class="button button-ghost" type="submit">お知らせを受け取る</button>
-              </form>
-            <p class="waitlist-done" role="status" hidden>Androidのリストに登録しました！Android版が出たらメールでお知らせします。</p>
-            <p class="waitlist-error" role="alert" hidden>送信できませんでした。もう一度お試しいただくか、contact49game@icloud.com までご連絡ください。</p>
-          </div>
-        </div>
-        <p class="fineprint">公開に関するご連絡のみお送りします。ご希望があればいつでもリストから削除します。 <a href="../privacy.html">プライバシーポリシー</a></p>
-      </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="section faq" id="faq">
-      <div class="section-head">
-        <p class="eyebrow">よくある質問</p>
-        <h2>疑問にお答えします。</h2>
-      </div>
-      <div class="faq-list">
-        <details>
-          <summary>49はいつリリースされますか？</summary>
-          <p>もうすぐです。49は現在オープンベータ中で、上のボタンからTestFlightで参加できます。その後、iPhone向けにApp Storeで公開予定です。</p>
-        </details>
-        <details>
-          <summary>ノーマルと競技の違いは何ですか？</summary>
-          <p>ノーマルはシンプルなタイムトライアルです：エフェクトもポイントもなく、タイムだけ。競技ではポイント、コンボ、最大×3の倍率が加わり、プレイが進むにつれてエフェクトとサウンドが盛り上がります。スタイルごとに記録とランクが分かれています。</p>
-        </details>
-        <details>
-          <summary>競技のスコアはどう計算されますか？</summary>
-          <p>数字は1つ100ポイント。さらに最大50のスピードボーナスがあり、時間がかかるほど減っていきます。コンボ5でポイントが2倍、コンボ15で3倍になります。コンボタイマーが切れるとコンボは消え、ミスタップすると半分になります。ゲームが進むにつれて数字の価値は少しずつ下がるので、始める前にボードを覚えても得にはなりません。</p>
-        </details>
-        <details>
-          <summary>本当に無料ですか？</summary>
-          <p>はい。すべてのモード、ボード、デザイン、機能が無料です。無料プレイヤーには一部のゲームの合間に広告が表示されますが、プレイ中に表示されることはありません。Premiumで広告がなくなるほか、広告を1本見て30分間広告なしにすることもできます。</p>
-        </details>
-        <details>
-          <summary>友達と遊べますか？</summary>
-          <p>はい。マルチプレイには1対1、2対2、グループのルームがあり、レース、ポイントバトル、ノックアウト、ゴーストレースで遊べます。全員が同じボードでプレイし、友達はコード、QRコード、リンクで参加できます。ゲストモードでiPhoneを回して遊ぶこともできます。</p>
-        </details>
-        <details>
-          <summary>プレイに必要なものは何ですか？</summary>
-          <p>iOS 17以降を搭載したiPhoneが必要です。</p>
-        </details>
-        <details>
-          <summary>シュルテテーブルとは何ですか？</summary>
-          <p>バラバラに並んだ数字を、順番にできるだけ速く見つけていくグリッドです。注意力、視覚探索、速読のための定番トレーニングで、精神科医ヴァルター・シュルテにちなんで名付けられました。</p>
-        </details>
-        <details>
-          <summary>集中力は上がりますか？</summary>
-          <p>プレイするうちに自分のタイム、ペース、正確さが向上していくのがわかり、インサイトでどこが伸びたかを確認できます。49は集中力を練習するためのゲームであり、医療製品ではありません：いかなる疾患の診断、治療、予防も行いません。</p>
-        </details>
-        <details>
-          <summary>対応言語は何ですか？</summary>
-          <p>英語、ポーランド語、ドイツ語、フランス語、スペイン語、ポルトガル語（ブラジル）、イタリア語、日本語、韓国語です。</p>
-        </details>
-        <details>
-          <summary>データは収集されますか？</summary>
-          <p>ゲーム、スコア、統計はiPhoneに保存され、アカウントもありません。ゲーム改善のため、アプリは匿名の利用統計（名前やゲーム履歴は含みません）も送信します。設定でオフにできます。Game Centerの利用は任意です。無料版の広告は広告ネットワークから配信され、広告表示のために一部のデータが収集される場合があります。Premiumでは広告が表示されません。詳しくはプライバシーポリシーをご覧ください。</p>
-        </details>
-        <details>
-          <summary>新しいiPhoneでPremiumを復元するには？</summary>
-          <p>購入時と同じApple Accountでサインインした状態で、アプリの「設定」→「Premium」を開き、「購入を復元」をタップしてください。</p>
-        </details>
-        <details>
-          <summary>Android版はありますか？</summary>
-          <p>まだありません。49は今のところiPhone向けです。Androidで遊びたい方は<a href="#android">Android版の待機リストに登録</a>してください。公開時にメールでお知らせします。</p>
-        </details>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="footer-brand"><img src="../assets/icon-64.png" alt="" width="24" height="24"> 49 - Focus Booster</div>
-    <p>© 2026 49 - Focus Booster. 集中力を磨くすべての人へ。</p>
-    <p class="footer-links"><a href="schulte-table/">シュルテ表オンライン</a> · <a href="../achievements.html">実績</a> · <a href="../support.html">サポート</a> · <a href="../privacy.html">プライバシー</a> · <a href="../terms.html">利用規約</a> · <a href="https://github.com/49Game/49game.github.io/issues">GitHub</a></p>
-    <p class="fineprint">iPhone、Game Center、VoiceOverはApple Inc.の商標です。49はAppleとは提携していません。</p>
-  </footer>
-
-  <script src="../script.js"></script>
+<script type="application/json" id="strings">{"boardLabel": "シュルテテーブル（4 × 4）。1から16までの数字を順番にタップしてください。", "find": "探して", "foundAll": "すべて発見", "going": "その調子。ここではミスしてもペナルティはありませんが、アプリではタイムに響きます。", "doneHint": "<b>{time}</b>でクリア。今回は16個でした。アプリには49個までのフルボードがあります。", "doneLine": "{time}、{misses}で16個すべてを見つけました。アプリのフルボードは5 × 5と7 × 7で、どのタイムにもランクがつきます。", "missNone": "ミスなし", "missOne": "ミス1回", "missMany": "ミス{n}回"}</script>
+<script src="../site/page.js" defer></script>
 </body>
 </html>

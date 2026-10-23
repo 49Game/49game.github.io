@@ -49,7 +49,9 @@ img, svg { display: block; max-width: 100%; height: auto; }
 h1, h2, h3, p, dl, dd, ul, ol, figure { margin: 0; }
 ul, ol { padding: 0; list-style: none; }
 a { color: inherit; }
-p { text-wrap: pretty; }
+p { text-wrap: pretty; overflow-wrap: break-word; }
+/* German compounds are long: let narrow columns hyphenate them. */
+:lang(de) p, :lang(de) li, :lang(de) dd { hyphens: auto; }
 h1, h2, h3 { font-weight: 400; text-wrap: balance; }
 :focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
 [class*="field-"] :focus-visible { outline-color: var(--field-ink); }
@@ -85,6 +87,15 @@ h1, h2, h3 { font-weight: 400; text-wrap: balance; }
 .nav__links a:hover { color: var(--gold); }
 .nav__action { min-height: 2.75rem; font-size: var(--step-small); }
 .nav__menu { display: none; }
+.lang { position: relative; }
+.lang summary { list-style: none; cursor: pointer; min-height: 2.75rem; display: flex; align-items: center; padding: 0 0.25rem; transition: color 200ms ease; }
+.lang summary::-webkit-details-marker { display: none; }
+.lang summary:hover { color: var(--gold); }
+.lang:not([open]) .lang__menu { display: none; }
+.lang__menu { position: absolute; right: 0; top: 3rem; z-index: 6; width: max-content; min-width: 12rem; display: grid; padding: 0.5rem 0; background: var(--surface); }
+.lang__menu a { display: block; padding: 0.55rem 1.25rem; text-decoration: none; }
+.lang__menu a:hover { color: var(--gold); }
+.lang__menu a[aria-current] { color: var(--gold); }
 
 /* The chapter: a sticky stage on the left, the reading column on the right. */
 .chapter { display: grid; grid-template-columns: var(--stage) minmax(0, 1fr); }
@@ -326,6 +337,8 @@ h1, h2, h3 { font-weight: 400; text-wrap: balance; }
 .foot a:hover { text-decoration: underline; text-underline-offset: 0.2em; }
 .foot__links { display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; justify-content: center; }
 .foot__legal { justify-self: end; display: flex; gap: 1rem; }
+.foot__langs { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; }
+.foot__langs a[aria-current] { color: var(--gold); }
 .foot__credits { grid-column: 1 / -1; max-width: 90ch; }
 .foot__credits a { color: var(--muted); text-decoration: underline; text-underline-offset: 0.2em; }
 
@@ -402,6 +415,7 @@ h1, h2, h3 { font-weight: 400; text-wrap: balance; }
   .price { grid-template-columns: 1fr; }
   .price__plan { min-height: 70svh; padding-block: 3rem; }
   .price__amount { font-size: 30vw; }
+  .price__amount--words { font-size: var(--step-head); }
   .price__foot .button { width: 100%; }
   .join { grid-template-columns: 1fr; row-gap: 3rem; }
   .join__qr { display: none; }

@@ -9,6 +9,29 @@ const shuffle = (list) => {
   return a;
 };
 
+// The page's own wording (each language page carries its translation), with English as the fallback.
+const T = (() => { try { return JSON.parse(document.getElementById("strings").textContent); } catch (e) { return {}; } })();
+const say = (key, values = {}) => (T[key] || key).replace(/\{(\w+)\}/g, (_, k) => values[k]);
+
+// Language: remember a pick from the menus; on a first visit to the English home page, follow the browser's language.
+(() => {
+  const homes = { pl: "pl/", de: "de/", fr: "fr/", es: "es/", pt: "pt-br/", it: "it/", ja: "ja/", ko: "ko/" };
+  document.querySelectorAll("a[data-lang]").forEach((a) => a.addEventListener("click", () => {
+    try { localStorage.setItem("lang", a.dataset.lang); } catch (e) {}
+  }));
+  const menu = document.querySelector("details.lang");
+  if (menu) {
+    document.addEventListener("click", (e) => { if (menu.open && !menu.contains(e.target)) menu.open = false; });
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape" && menu.open) { menu.open = false; menu.querySelector("summary").focus(); } });
+  }
+  let saved = null;
+  try { saved = localStorage.getItem("lang"); } catch (e) {}
+  if (saved || document.documentElement.lang !== "en" || /bot|crawl|spider/i.test(navigator.userAgent)) return;
+  const wanted = (navigator.languages || [navigator.language || "en"]).map((l) => l.toLowerCase().split("-")[0]);
+  const first = wanted.find((l) => l === "en" || homes[l]);
+  if (first && first !== "en") location.replace(homes[first] + location.hash);
+})();
+
 const fmt = (s) => {
   const m = Math.floor(s / 60);
   const rest = (s - m * 60).toFixed(1).padStart(4, "0");
@@ -36,13 +59,13 @@ const fmt = (s) => {
   const deal = () => {
     const count = size * size;
     grid.style.setProperty("--cols", size);
-    grid.setAttribute("aria-label", `Schulte table, ${size} by ${size}. Tap the numbers from 1 to ${count} in order.`);
+    grid.setAttribute("aria-label", say("boardLabel"));
     grid.innerHTML = shuffle(Array.from({ length: count }, (_, i) => i + 1))
       .map((n, i) => `<button class="tile" type="button" style="--t:${i}">${n}</button>`).join("");
     tiles = [...grid.children];
     next = 1; misses = 0; done = false; start = 0;
     cancelAnimationFrame(frame);
-    label.textContent = "Find";
+    label.textContent = say("find");
     nextOut.textContent = "1";
     clock.textContent = "0:00.0";
     hint.textContent = intro;
@@ -54,13 +77,13 @@ const fmt = (s) => {
     done = true;
     const seconds = (performance.now() - start) / 1000;
     clock.textContent = fmt(seconds);
-    const missText = misses === 0 ? "no misses" : misses === 1 ? "1 miss" : `${misses} misses`;
-    hint.innerHTML = `Done in <b>${fmt(seconds)}</b>. That was 16 numbers. The app has the full boards, up to 49.`;
-    label.textContent = "Found all";
+    const missText = misses === 0 ? say("missNone") : misses === 1 ? say("missOne") : say("missMany", { n: misses });
+    hint.innerHTML = say("doneHint", { time: fmt(seconds) });
+    label.textContent = say("foundAll");
     nextOut.textContent = size * size;
     again.hidden = false;
     again.focus({ preventScroll: true });
-    showDone(seconds, `You found all 16 in ${fmt(seconds)}, with ${missText}. The full boards are 5 × 5 and 7 × 7, with a rank for every time.`);
+    showDone(seconds, say("doneLine", { time: fmt(seconds), misses: missText }));
   };
 
   // The pop-up after a finished board: the result, then the way to the app.
@@ -84,7 +107,7 @@ const fmt = (s) => {
     if (!t || done || t.classList.contains("is-found")) return;
     const n = Number(t.textContent);
     if (n === next) {
-      if (next === 1) { start = performance.now(); frame = requestAnimationFrame(tick); hint.textContent = "Keep going. A miss costs you nothing here, but it does in the app."; }
+      if (next === 1) { start = performance.now(); frame = requestAnimationFrame(tick); hint.textContent = say("going"); }
       t.classList.add("is-found");
       t.disabled = true;
       next += 1;

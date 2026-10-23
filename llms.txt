@@ -23,7 +23,7 @@ Key facts:
 
 ## Pages
 
-- [49 - Focus Booster](https://49game.github.io/): features, styles, looks, ranks, leaderboards and FAQ
-- [All 539 achievements](https://49game.github.io/achievements.html): the full catalog by group, with the medal ladder
+- [49 - Focus Booster](https://49game.github.io/): a playable 4 × 4 taster, ranks, modes, multiplayer, achievements and FAQ, in 9 languages
+- [All 547 achievements](https://49game.github.io/achievements.html): the full catalog by group, with the medal ladder
 - [Support](https://49game.github.io/support.html)
 - [Privacy policy](https://49game.github.io/privacy.html), [Terms of use](https://49game.github.io/terms.html)

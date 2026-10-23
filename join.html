@@ -6,28 +6,41 @@
   <meta name="robots" content="noindex">
   <title>Join a game - 49 - Focus Booster</title>
   <meta name="description" content="You're invited to a 49 multiplayer game. Open it in the app with the room code.">
-  <meta name="theme-color" content="#0b0a1a">
+  <meta name="theme-color" content="#12110f">
   <meta property="og:title" content="Join my 49 game">
   <meta property="og:image" content="https://49game.github.io/assets/og.jpg">
-  <link rel="icon" type="image/png" href="assets/favicon.png">
-  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
-  <link rel="stylesheet" href="style.css">
-  <script src="theme.js"></script>
+  <link rel="icon" type="image/png" href="assets/icon-lux-64.png">
+  <link rel="apple-touch-icon" href="assets/icon-lux-touch.png">
+  <link rel="preload" href="site/fonts/archivo-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="site/style.css">
+  <link rel="stylesheet" href="site/pages.css">
   <style>
     .join-code { font: 800 clamp(44px, 14vw, 72px) var(--font); letter-spacing: .12em; color: var(--accent); margin: 8px 0 20px; }
     .join-actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 24px 0; }
   </style>
 </head>
-<body>
-  <div class="sky" aria-hidden="true"></div>
-  <header class="nav">
-    <a class="brand" href="index.html" aria-label="49 home">
-      <img src="assets/icon-64.png" alt="" width="32" height="32">
-      <span>49</span>
-    </a>
-  </header>
+<body class="doc">
+<header class="nav nav--page">
+  <a class="nav__home" href="./">49</a>
+  <details class="nav__menu">
+    <summary>Menu</summary>
+    <nav class="nav__sheet" aria-label="Pages">
+      <a href="./">Home</a>
+      <a href="schulte-table/">Play online</a>
+      <a href="achievements.html">Achievements</a>
+      <a href="support.html">Support</a>
+    </nav>
+  </details>
+  <nav class="nav__links" aria-label="Pages">
+    <a href="schulte-table/">Play online</a>
+    <a href="achievements.html">Achievements</a>
+    <a href="support.html">Support</a>
+  </nav>
+  <a class="button nav__action" href="https://testflight.apple.com/join/G4XsUyyB">Join the beta</a>
+</header>
   <main class="page">
     <h1>Join a game</h1>
+    <div class="page__body">
     <div id="invite" hidden>
       <p id="kind">You're invited to a multiplayer game. Your room code:</p>
       <p class="join-code" id="code"></p>
@@ -40,11 +53,15 @@
     <h2>Don't have 49 yet?</h2>
     <p>49 is a focus game for iPhone. It's in open beta now: install it from TestFlight, then come back to this link.</p>
     <p><a class="button beta-button" href="https://testflight.apple.com/join/G4XsUyyB" target="_blank" rel="noopener">Join the beta on TestFlight</a></p>
+    </div>
   </main>
-  <footer class="footer">
-    <div class="footer-brand"><img src="assets/icon-64.png" alt="" width="24" height="24"> 49 - Focus Booster</div>
-    <p class="footer-links"><a href="index.html">Home</a> · <a href="support.html">Support</a> · <a href="privacy.html">Privacy</a></p>
-  </footer>
+<footer class="foot">
+  <p class="foot__what">49, a focus game for iPhone</p>
+  <p class="foot__links"><a href="./">Home</a><a href="schulte-table/">Schulte table online</a><a href="achievements.html">Achievements</a><a href="support.html">Support</a><a href="terms.html">Terms</a></p>
+  <p class="foot__legal">© 2026 <a href="privacy.html">Privacy</a></p>
+  <p class="foot__credits">iPhone, Game Center and VoiceOver are trademarks of Apple Inc. 49 is not affiliated with Apple.</p>
+</footer>
+<script>document.querySelectorAll(".nav__sheet a").forEach((a) => a.addEventListener("click", () => a.closest("details").open = false))</script>
   <script>
     // join.html#K7Q2M: only a well-formed code (the app's alphabet and length) is shown or passed on.
     (() => {

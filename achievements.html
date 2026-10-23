@@ -5,32 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>All 547 achievements - 49 - Focus Booster</title>
   <meta name="description" content="Every achievement in 49 - Focus Booster: speed, precision, focus, combos, Endless, Beat the Clock, Daily Challenges, streaks and more, with ranks from Rookie to Legend.">
-  <meta name="theme-color" content="#0b0a1a">
+  <meta name="theme-color" content="#12110f">
   <meta property="og:title" content="All 547 achievements - 49 - Focus Booster">
   <meta property="og:image" content="https://49game.github.io/assets/og.jpg">
-  <link rel="icon" type="image/png" href="assets/favicon.png">
-  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="canonical" href="https://49game.github.io/achievements.html">
-  <link rel="stylesheet" href="style.css">
-  <script src="theme.js"></script>
+  <link rel="icon" type="image/png" href="assets/icon-lux-64.png">
+  <link rel="apple-touch-icon" href="assets/icon-lux-touch.png">
+  <link rel="preload" href="site/fonts/archivo-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="site/style.css">
+  <link rel="stylesheet" href="site/pages.css">
 </head>
-<body>
-  <div class="sky" aria-hidden="true"></div>
-  <header class="nav">
-    <a class="brand" href="index.html" aria-label="49 home">
-      <img src="assets/icon-64.png" alt="" width="32" height="32">
-      <span>49</span>
-    </a>
-    <nav class="nav-links" aria-label="Pages">
-      <a href="index.html#styles">Styles</a>
-      <a href="index.html#faq">FAQ</a>
-      <a href="index.html#achievements">Ranks</a>
+<body class="doc">
+<header class="nav nav--page">
+  <a class="nav__home" href="./">49</a>
+  <details class="nav__menu">
+    <summary>Menu</summary>
+    <nav class="nav__sheet" aria-label="Pages">
+      <a href="./">Home</a>
+      <a href="schulte-table/">Play online</a>
+      <a href="achievements.html">Achievements</a>
       <a href="support.html">Support</a>
     </nav>
-    <a class="button button-small" href="index.html#updates">Get notified</a>
-  </header>
+  </details>
+  <nav class="nav__links" aria-label="Pages">
+    <a href="schulte-table/">Play online</a>
+    <a href="achievements.html">Achievements</a>
+    <a href="support.html">Support</a>
+  </nav>
+  <a class="button nav__action" href="https://testflight.apple.com/join/G4XsUyyB">Join the beta</a>
+</header>
     <main class="page page-wide">
-    <p class="eyebrow">Achievements</p>
     <h1><!-- count -->547<!-- /count --> achievements</h1>
     <p class="lede-small">Every one of them, straight from the game. Tiered achievements climb a ladder of eight medals, from bronze to prismatic.</p>
 
@@ -46,7 +50,7 @@
     </div>
 
     <div class="ach-tools">
-      <label class="visually-hidden" for="ach-search">Search achievements</label>
+      <label class="sr-only" for="ach-search">Search achievements</label>
       <input type="search" id="ach-search" placeholder="Search achievements" autocomplete="off">
       <p class="fineprint" id="ach-count" role="status"></p>
     </div>
@@ -88,10 +92,12 @@
     });
   </script>
 
-  <footer class="footer">
-    <div class="footer-brand"><img src="assets/icon-64.png" alt="" width="24" height="24"> 49 - Focus Booster</div>
-    <p class="footer-links"><a href="index.html">Home</a> · <a href="achievements.html">Achievements</a> · <a href="support.html">Support</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a> · <a href="https://github.com/49Game/49game.github.io/issues">GitHub</a></p>
-    <p class="fineprint">iPhone, Game Center and VoiceOver are trademarks of Apple Inc. 49 is not affiliated with Apple.</p>
-  </footer>
+<footer class="foot">
+  <p class="foot__what">49, a focus game for iPhone</p>
+  <p class="foot__links"><a href="./">Home</a><a href="schulte-table/">Schulte table online</a><a href="achievements.html">Achievements</a><a href="support.html">Support</a><a href="terms.html">Terms</a></p>
+  <p class="foot__legal">© 2026 <a href="privacy.html">Privacy</a></p>
+  <p class="foot__credits">iPhone, Game Center and VoiceOver are trademarks of Apple Inc. 49 is not affiliated with Apple.</p>
+</footer>
+<script>document.querySelectorAll(".nav__sheet a").forEach((a) => a.addEventListener("click", () => a.closest("details").open = false))</script>
 </body>
 </html>
