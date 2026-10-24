@@ -107,7 +107,15 @@ h1, h2, h3 { font-weight: 400; text-wrap: balance; }
 /* The chapter: a sticky stage on the left, the reading column on the right. */
 /* The promo film opens the page, below the navigation, and never taller than the screen. */
 .promo { padding: calc(var(--margin) + 3.75rem) var(--margin) 0; }
-.promo__video { display: block; width: min(100%, calc((100svh - 6rem) * 16 / 9)); height: auto; margin-inline: auto; background: var(--gold); }
+.promo__video { display: block; width: min(100%, calc((100svh - 11rem) * 16 / 9)); height: auto; margin-inline: auto; background: var(--gold); }
+/* Says there is more below: the next thing is a board to play. */
+.promo__next { display: flex; width: fit-content; min-height: 2.75rem; align-items: center; gap: 0.6rem; margin: 0.75rem auto 0; padding: 0 0.5rem; color: var(--muted); text-decoration: none; font-size: var(--step-small); transition: color 200ms ease; }
+.promo__next:hover { color: var(--ink); }
+.promo__next svg { flex: none; color: var(--gold); }
+@media (prefers-reduced-motion: no-preference) {
+  .promo__next svg { animation: promo-nudge 2.4s var(--ease-out) infinite; }
+  @keyframes promo-nudge { 0%, 55%, 100% { transform: none; } 25% { transform: translateY(4px); } }
+}
 @media (max-width: 900px) { .promo { padding-top: 0; } }
 .chapter { display: grid; grid-template-columns: var(--stage) minmax(0, 1fr); }
 .stage { position: sticky; top: 0; height: 100svh; padding: var(--margin) 0 var(--margin) var(--margin); }
