@@ -105,6 +105,10 @@ h1, h2, h3 { font-weight: 400; text-wrap: balance; }
 .lang__menu a[aria-current] { color: var(--gold); }
 
 /* The chapter: a sticky stage on the left, the reading column on the right. */
+/* The promo film opens the page, below the navigation, and never taller than the screen. */
+.promo { padding: calc(var(--margin) + 3.75rem) var(--margin) 0; }
+.promo__video { display: block; width: min(100%, calc((100svh - 6rem) * 16 / 9)); height: auto; margin-inline: auto; background: var(--gold); }
+@media (max-width: 900px) { .promo { padding-top: 0; } }
 .chapter { display: grid; grid-template-columns: var(--stage) minmax(0, 1fr); }
 .stage { position: sticky; top: 0; height: 100svh; padding: var(--margin) 0 var(--margin) var(--margin); }
 .stage__frame { position: relative; height: 100%; overflow: hidden; }
