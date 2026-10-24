@@ -222,7 +222,16 @@ h1, h2, h3 { font-weight: 400; text-wrap: balance; }
 .ranks tbody tr { transition: background-color 300ms ease; }
 .ranks tbody tr:nth-child(odd) { background: var(--surface); }
 .ranks tbody th { padding-left: 0.75rem; }
-.ranks tbody th img { height: 1.5rem; width: auto; }
+.ranks tbody th img { height: 1.5rem; width: auto; max-width: none; }
+/* Phones: the badge keeps its shape on its own line, its three times beneath, under the three headings. */
+@media (max-width: 480px) {
+  .ranks, .ranks thead, .ranks tbody { display: block; }
+  .ranks tr { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 0.75rem; padding: 0.7rem 0.75rem; }
+  .ranks th, .ranks td, .ranks thead th, .ranks tbody th { padding: 0; }
+  .ranks thead th:first-child { display: none; }
+  .ranks thead tr { padding-bottom: 0.9rem; }
+  .ranks tbody th { grid-column: 1 / -1; margin-bottom: 0.45rem; }
+}
 .ranks__you { font-size: var(--step-lead); line-height: 1.3; color: var(--gold); }
 
 /* Modes: small proof beside text. */
