@@ -258,8 +258,9 @@ document.querySelectorAll(".chapter").forEach((chapter) => {
 })();
 
 // Screen recordings play only while on screen, and never for people who asked for less motion.
+// The promo comes in two cuts and only the one shown is ever loaded, so it waits for this (data-autoplay).
 (() => {
-  const videos = [...document.querySelectorAll("video[autoplay]")];
+  const videos = [...document.querySelectorAll("video[autoplay], video[data-autoplay]")];
   const still = matchMedia("(prefers-reduced-motion: reduce)");
   const stop = () => videos.forEach((v) => { v.pause(); v.removeAttribute("autoplay"); });
   if (still.matches) return stop();

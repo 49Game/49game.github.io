@@ -33,8 +33,9 @@
   <link rel="icon" type="image/png" sizes="32x32" href="assets/tab-49b-32.png">
   <link rel="apple-touch-icon" href="assets/home-icon-180.png">
   <link rel="preload" href="site/fonts/archivo-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="site/assets/promo.webp" as="image" type="image/webp" fetchpriority="high">
-  <link rel="stylesheet" href="site/style.css?v=6">
+  <link rel="preload" href="site/assets/promo.webp" as="image" type="image/webp" fetchpriority="high" media="(min-width: 601px)">
+  <link rel="preload" href="site/assets/promo-mobile.webp" as="image" type="image/webp" fetchpriority="high" media="(max-width: 600px)">
+  <link rel="stylesheet" href="site/style.css?v=7">
   <script>document.documentElement.classList.add('js')</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "49 - Focus Booster", "alternateName": "49 Schulte table game", "url": "https://49game.github.io/"}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "SoftwareApplication", "name": "49 - Focus Booster", "operatingSystem": "iOS 17 or later", "applicationCategory": "GameApplication", "genre": "Puzzle", "description": "A Schulte table game for iPhone: find the numbers 1 to 49 in order, as fast as you can. Classic, Endless and Beat the Clock modes, a Daily Challenge, ranks, over 500 achievements, multiplayer and Game Center leaderboards. Free to play.", "url": "https://49game.github.io/", "image": "https://49game.github.io/assets/icon.png", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}, "publisher": {"@type": "Organization", "name": "49 - Focus Booster", "url": "https://49game.github.io/"}}</script>
@@ -72,7 +73,8 @@
 <main id="top">
 
 <div class="promo">
-  <video class="promo__video" autoplay muted loop playsinline controls preload="metadata" poster="site/assets/promo.webp" width="1280" height="720" aria-label="Promo video for 49 - Focus Booster"><source src="site/assets/promo.mp4" type="video/mp4"></video>
+  <video class="promo__video promo__video--wide" data-autoplay muted loop playsinline controls preload="none" poster="site/assets/promo.webp" width="1280" height="720" aria-label="Promo video for 49 - Focus Booster"><source src="site/assets/promo.mp4" type="video/mp4"></video>
+  <video class="promo__video promo__video--tall" data-autoplay muted loop playsinline controls preload="none" poster="site/assets/promo-mobile.webp" width="720" height="1280" aria-label="Promo video for 49 - Focus Booster"><source src="site/assets/promo-mobile.mp4" type="video/mp4"></video>
   <a class="promo__next" href="#play"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M8 2v11M3 8.5 8 13.5l5-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Try a board right below</span></a>
 </div>
 
@@ -613,6 +615,6 @@
 </dialog>
 
 <script type="application/json" id="strings">{"boardLabel": "Schulte table, 4 by 4. Tap the numbers from 1 to 16 in order.", "find": "Find", "foundAll": "Found all", "going": "Keep going. A miss costs you nothing here, but it does in the app.", "doneHint": "Done in <b>{time}</b>. That was 16 numbers. The app has the full boards, up to 49.", "doneLine": "You found all 16 in {time}, with {misses}. The full boards go from 5 × 5 to 11 × 11, with a rank for every time.", "missNone": "no misses", "missOne": "1 miss", "missMany": "{n} misses", "s_needs": "Benefits", "s_racing": "Racing", "s_daily": "Daily", "s_styles": "Styles", "s_modes": "Modes", "s_friends": "Multiplayer", "s_steal": "Steal", "s_boards": "Boards", "s_ranks": "Ranks", "s_achievements": "Achievements", "s_mission": "Mission", "s_price": "Price", "s_join": "Play", "s_questions": "Questions"}</script>
-<script src="site/page.js?v=5" defer></script>
+<script src="site/page.js?v=6" defer></script>
 </body>
 </html>
