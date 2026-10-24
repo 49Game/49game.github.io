@@ -212,6 +212,8 @@ h1, h2, h3 { font-weight: 400; text-wrap: balance; }
 [data-ui].rb span { aspect-ratio: 1; display: grid; place-items: center; border-radius: 8px; background: #f7f3ec; font: 600 calc(var(--size) / 19)/1 var(--font); color: #1c1b19; font-variant-numeric: tabular-nums; }
 [data-ui].rb span.r { color: #c8372d; }
 [data-ui].rb span.gone { background: transparent; color: rgba(18, 17, 15, 0.22); }
+/* Found tiles draw their number as decoration, so it is not read as text. */
+[data-ui].rb span.gone::before { content: attr(data-n); }
 
 /* Ranks table. */
 .ranks { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; font-size: var(--step-body); }
@@ -291,7 +293,8 @@ h1, h2, h3 { font-weight: 400; text-wrap: balance; }
 .day__words { padding: clamp(2rem, 4vw, 4rem) var(--margin); display: grid; grid-template-rows: auto 1fr auto; gap: 2rem; }
 .day__clauses { display: grid; align-content: center; gap: 0.6rem; }
 .day__clause button { padding: 0.35rem 0; border: 0; background: none; color: inherit; font: inherit; font-size: var(--step-lead); line-height: 1.25; text-align: left; cursor: pointer; transition: opacity 300ms ease, transform 300ms var(--ease-out); }
-.js .day__clause button { opacity: 0.45; }
+/* Faded, yet still 4.5:1 against the sage field. */
+.js .day__clause button { opacity: 0.68; }
 .js .day__clause.is-on button { opacity: 1; }
 .day__clause button:hover { opacity: 1; }
 .day__note { max-width: 36ch; }

@@ -131,7 +131,9 @@ document.querySelectorAll("[data-rb]").forEach((root) => {
     ...Array.from({ length: 25 }, (_, i) => ({ n: i + 1, red: true, done: i < 6 })),
     ...Array.from({ length: 24 }, (_, i) => ({ n: i + 1, red: false, done: i > 18 })),
   ];
-  root.innerHTML = shuffle(cells).map((c) => `<span class="${c.red ? "r" : ""}${c.done ? " gone" : ""}">${c.n}</span>`).join("");
+  root.innerHTML = shuffle(cells).map((c) => c.done
+    ? `<span class="${c.red ? "r " : ""}gone" data-n="${c.n}"></span>`
+    : `<span class="${c.red ? "r" : ""}">${c.n}</span>`).join("");
 });
 
 // Each chapter's stage follows its own reading column on wide screens.
