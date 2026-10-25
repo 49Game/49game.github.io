@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Page not found - 49 - Focus Booster</title>
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#12110f">
+  <link rel="icon" type="image/png" sizes="64x64" href="/assets/tab-49b-64.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/tab-49b-32.png">
+  <link rel="apple-touch-icon" href="/assets/home-icon-180.png">
+  <link rel="preload" href="/site/fonts/archivo-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/site/style.css?v=9">
+  <link rel="stylesheet" href="/site/pages.css?v=2">
+  <style>.nowrap { white-space: nowrap; }</style>
+</head>
+<body class="doc">
+<!-- GitHub Pages shows this page for any missing address, at any depth, so every link starts at the root. -->
+<header class="nav nav--page">
+  <a class="nav__home" href="/"><img class="nav__icon" src="/assets/app-icon-64.png?v=2" width="32" height="32" alt="49"></a>
+  <details class="nav__menu">
+    <summary>Menu</summary>
+    <nav class="nav__sheet" aria-label="Pages">
+      <a href="/">Home</a>
+      <a href="/#needs">Benefits</a>
+      <a href="/achievements.html">Achievements</a>
+      <a href="/support.html">Support</a>
+    </nav>
+  </details>
+  <nav class="nav__links" aria-label="Pages">
+    <a href="/#needs">Benefits</a>
+    <a href="/achievements.html">Achievements</a>
+    <a href="/support.html">Support</a>
+  </nav>
+  <a class="button nav__action" href="https://testflight.apple.com/join/G4XsUyyB">Join the beta</a>
+</header>
+  <main class="page">
+    <h1>Page not found</h1>
+    <div class="page__body">
+    <p class="updated">This page doesn't exist, or it has moved.</p>
+    <p><a href="/">Go to the home page</a> to play a board right away, see <a href="/achievements.html">all the achievements</a>, or ask us on the <a href="/support.html">support page</a>.</p>
+    <p>In your language: <a href="/pl/" lang="pl" class="nowrap">Polski</a>, <a href="/de/" lang="de" class="nowrap">Deutsch</a>, <a href="/fr/" lang="fr" class="nowrap">Français</a>, <a href="/es/" lang="es" class="nowrap">Español</a>, <a href="/pt-br/" lang="pt-BR" class="nowrap">Português (Brasil)</a>, <a href="/it/" lang="it" class="nowrap">Italiano</a>, <a href="/ja/" lang="ja" class="nowrap">日本語</a>, <a href="/ko/" lang="ko" class="nowrap">한국어</a>.</p>
+    </div>
+  </main>
+<footer class="foot">
+  <p class="foot__what">49, a focus game for iPhone</p>
+  <p class="foot__links"><a href="/">Home</a><a href="/#board">Schulte table online</a><a href="/achievements.html">Achievements</a><a href="/support.html">Support</a><a href="/terms.html">Terms</a></p>
+  <p class="foot__legal">© 2026 <a href="/privacy.html">Privacy</a></p>
+  <p class="foot__credits">iPhone, Game Center and VoiceOver are trademarks of Apple Inc. 49 is not affiliated with Apple.</p>
+</footer>
+<script>
+  // The phone menu closes after a link is chosen, on a click anywhere else, or Escape.
+  (() => {
+    const menu = document.querySelector("details.nav__menu");
+    if (!menu) return;
+    menu.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => { menu.open = false; }));
+    document.addEventListener("click", (e) => { if (menu.open && !menu.contains(e.target)) menu.open = false; });
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape" && menu.open) { menu.open = false; menu.querySelector("summary").focus(); } });
+  })();
+</script>
+</body>
+</html>
