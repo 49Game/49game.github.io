@@ -80,8 +80,9 @@ h1, h2, h3 { font-weight: 400; text-wrap: balance; }
 .link:hover, .link-plain:hover { text-decoration-color: var(--accent); }
 
 /* Navigation: wordmark, four links and the action, no bar. */
-.nav { position: absolute; z-index: 5; top: 0; right: 0; left: calc(var(--stage) + var(--margin)); display: flex; align-items: center; gap: 1.75rem; padding: var(--margin) var(--margin) 0 clamp(2rem, 4.5vw, 4.5rem); font-size: var(--step-small); }
-.nav__home { display: none; }
+/* The promo film opens the page, so the bar spans the full width with the icon at the left. */
+.nav { position: absolute; z-index: 5; top: 0; right: 0; left: 0; display: flex; align-items: center; gap: 1.75rem; padding: var(--margin) var(--margin) 0; font-size: var(--step-small); }
+.nav__home { display: block; margin-right: auto; }
 .nav__icon { display: block; width: 2rem; height: 2rem; }
 .nav__links { display: flex; gap: 1.5rem; margin-left: auto; }
 .nav__links a, .nav__sheet a { text-decoration: none; padding-block: 0.6rem; transition: color 200ms ease; }

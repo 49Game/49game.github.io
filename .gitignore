@@ -9,3 +9,5 @@ skills-lock.json
 
 # /brag launch video working files
 brag-output*/
+# Promo videos and their working files (renamed from brag-output)
+videos/
