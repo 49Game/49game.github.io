@@ -310,9 +310,11 @@ h1, h2, h3 { font-weight: 400; text-wrap: balance; }
 .styles { position: relative; display: grid; grid-template-columns: 1fr 1fr; margin-top: var(--section); }
 .styles__field { min-height: 90svh; padding: clamp(2rem, 4vw, 4rem) var(--margin) 8rem; }
 .styles__field--normal { background: var(--surface); }
-.styles__body { display: grid; grid-template-columns: minmax(0, 15rem) minmax(0, 1fr); gap: clamp(1.25rem, 2.5vw, 2.5rem); align-items: start; }
+/* The phone and the words grow with wide screens, the phone never taller than the screen. */
+.styles__body { display: grid; grid-template-columns: minmax(0, clamp(15rem, min(19vw, (100svh - 14rem) * 0.46), 26rem)) minmax(0, 1fr); gap: clamp(1.25rem, 2.5vw, 3rem); align-items: start; }
 .styles__shot { width: 100%; }
-.styles__text { display: grid; gap: 1rem; max-width: 34ch; }
+.styles__text { display: grid; gap: 1em; max-width: 34ch; font-size: clamp(var(--step-body), 0.6rem + 0.75vw, 1.5rem); }
+.styles__text .lead { font-size: clamp(var(--step-lead), 0.5rem + 1.3vw, 2.25rem); }
 .styles__title { position: absolute; left: var(--margin); right: var(--margin); bottom: 2rem; display: flex; justify-content: space-between; font-size: var(--step-head); line-height: 1; letter-spacing: -0.03em; pointer-events: none; }
 .styles__title span:last-child { color: var(--field-ink); }
 
