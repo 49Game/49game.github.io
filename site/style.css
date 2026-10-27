@@ -151,7 +151,9 @@ h1, h2, h3 { font-weight: 400; text-wrap: balance; }
 .block--last { padding-bottom: var(--section); }
 /* A jump from the menu skips a section's top padding, so its heading lands just under the bar
    and the end of the section before never peeks out above it. */
-.block[id], .letter[id], .faq[id] { scroll-margin-top: calc(1rem - var(--section)); }
+.block[id], .letter[id], .faq[id], .drill[id], .join[id] { scroll-margin-top: calc(1rem - var(--section)); }
+/* Sections with no top padding of their own start right under the bar. */
+.day[id], .styles[id], .price[id] { scroll-margin-top: -1rem; }
 /* In the app chapter each block stays long enough for its screen to play beside it. */
 @media (min-width: 901px) { .chapter--app .read > section { min-height: 75svh; align-content: start; } }
 
