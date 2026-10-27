@@ -13,7 +13,7 @@ Key facts:
 - Daily Challenge: the same board for everyone each day. Most days the board itself moves or changes its look (for example Spin Up, a board that turns faster with every find, or fog, blinds and reshuffles), with a still version for players who use Reduce Motion. Special days bring a board of their own: a heart on Valentine's Day (69 Mode), a pumpkin on Halloween (Jack-o'-Lantern), a ball of yarn on Cat Day (17 February and 8 August) and a bone on Dog Day (1 July and 26 August). On April Fools' Day there is Totally Normal Mode.
 - Every day: three quests, XP and levels, a streak with streak freezes and an optional reminder.
 - Ranks from Rookie to Legend for every mode, direction, style and board.
-- 483 achievements in 19 groups, tiered on eight medals from bronze to prismatic.
+- 498 achievements in 20 groups, tiered on eight medals from bronze to prismatic.
 - 94 Game Center leaderboards: fastest time and most points by board and direction, for today, this week, this month and all time. The Daily has its own board, where a player's best attempt counts.
 - Multiplayer: 1 v 1, 2 v 2 and group rooms with Race, Points battle, Knockout and Ghost race, all on the same board for everyone, plus Steal (one board, live: whoever taps a number first scores it). Friends join with a five-character room code, a QR code or a link, with a nickname per game. A lobby lists public rooms, quick pairing finds an opponent, and ranked games have their own ratings. Guest mode lets friends play on one phone.
 - Hints: 3 free a day, and more after every 10 games. Each adds 5 seconds, so hints never set a record.
@@ -27,6 +27,6 @@ Key facts:
 ## Pages
 
 - [49 - Focus Booster](https://49game.github.io/): a playable 4 × 4 taster, the promo film, modes, multiplayer, ranks, achievements and questions, in 9 languages
-- [All 483 achievements](https://49game.github.io/achievements.html): the full catalog by group, with the medal ladder
+- [All 498 achievements](https://49game.github.io/achievements.html): the full catalog by group, with the medal ladder
 - [Support](https://49game.github.io/support.html)
 - [Privacy policy](https://49game.github.io/privacy.html), [Terms of use](https://49game.github.io/terms.html)
