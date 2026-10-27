@@ -149,6 +149,9 @@ h1, h2, h3 { font-weight: 400; text-wrap: balance; }
 /* Reading column sections. */
 .block { padding-top: var(--section); display: grid; gap: 1.5rem; }
 .block--last { padding-bottom: var(--section); }
+/* A jump from the menu skips a section's top padding, so its heading lands just under the bar
+   and the end of the section before never peeks out above it. */
+.block[id], .letter[id], .faq[id] { scroll-margin-top: calc(1rem - var(--section)); }
 /* In the app chapter each block stays long enough for its screen to play beside it. */
 @media (min-width: 901px) { .chapter--app .read > section { min-height: 75svh; align-content: start; } }
 
