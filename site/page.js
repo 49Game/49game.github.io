@@ -163,9 +163,10 @@ document.querySelectorAll(".chapter").forEach((chapter) => {
   document.fonts?.ready.then(fit);
 })();
 
-// The way in stays in reach: once the hero's own buttons scroll away, a bar slides down at the top with
+// The way in stays in reach: once the page's own header scrolls away, a bar slides down at the top with
 // the section you are in (a one-word name from the page's strings, tap it for every section), the
 // language menu and "Join the beta" (with the QR code on computers), all in the page's language.
+// It follows the header, not the hero's buttons, so the promo above the hero never leaves you without it.
 (() => {
   const heroActions = document.querySelector(".hero__actions");
   const join = heroActions?.querySelector('a.button[href*="testflight"]');
@@ -243,7 +244,8 @@ document.querySelectorAll(".chapter").forEach((chapter) => {
     if (!on) menus.forEach((m) => { m.open = false; });
   };
   show(false);
-  new IntersectionObserver(([e]) => show(!e.isIntersecting && e.boundingClientRect.top < 0)).observe(heroActions);
+  const header = document.querySelector("header.nav") || heroActions;
+  new IntersectionObserver(([e]) => show(!e.isIntersecting && e.boundingClientRect.top < 0)).observe(header);
 
   // The name follows the section crossing the middle of the screen.
   const io = new IntersectionObserver((entries) => {
