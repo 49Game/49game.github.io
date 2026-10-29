@@ -405,6 +405,8 @@ h1, h2, h3 { font-weight: 400; text-wrap: balance; }
 .join__qr { display: grid; grid-template-columns: 8.5rem minmax(0, 24ch); align-items: center; gap: 1.5rem; padding: 1.25rem 1.75rem 1.25rem 1.25rem; background: var(--surface); }
 .join__qr svg { width: 8.5rem; }
 .join__qr figcaption { font-size: var(--step-body); line-height: 1.45; }
+/* The caption speaks to whoever holds the screen: on a computer, scan it yourself; on a phone, a friend scans it. */
+.join__qr-phone { display: none; }
 .join__lists { display: grid; gap: 1.25rem; align-content: start; }
 .join__wait { font-size: var(--step-lead); }
 .wait { display: grid; gap: 8px; }
@@ -522,7 +524,10 @@ h1, h2, h3 { font-weight: 400; text-wrap: balance; }
   .price__amount--words { font-size: var(--step-head); }
   .price__foot .button { width: 100%; }
   .join { grid-template-columns: 1fr; row-gap: 3rem; }
-  .join__qr { display: none; }
+  .join__qr { grid-template-columns: 7rem minmax(0, 1fr); gap: 1.25rem; padding: 1rem 1.25rem 1rem 1rem; }
+  .join__qr svg { width: 7rem; }
+  .join__qr-desk { display: none; }
+  .join__qr-phone { display: inline; }
   .faq { gap: 1.5rem; }
   .faq__list { grid-template-columns: 1fr; }
   .foot { margin-top: 20svh; grid-template-columns: 1fr; gap: 0.5rem; }
