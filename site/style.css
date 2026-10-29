@@ -405,8 +405,6 @@ h1, h2, h3 { font-weight: 400; text-wrap: balance; }
 .join__qr { display: grid; grid-template-columns: 8.5rem minmax(0, 24ch); align-items: center; gap: 1.5rem; padding: 1.25rem 1.75rem 1.25rem 1.25rem; background: var(--surface); }
 .join__qr svg { width: 8.5rem; }
 .join__qr figcaption { font-size: var(--step-body); line-height: 1.45; }
-/* The caption speaks to whoever holds the screen: on a computer, scan it yourself; on a phone, a friend scans it. */
-.join__qr-phone { display: none; }
 .join__lists { display: grid; gap: 1.25rem; align-content: start; }
 .join__wait { font-size: var(--step-lead); }
 .wait { display: grid; gap: 8px; }
@@ -526,8 +524,6 @@ h1, h2, h3 { font-weight: 400; text-wrap: balance; }
   .join { grid-template-columns: 1fr; row-gap: 3rem; }
   .join__qr { grid-template-columns: 7rem minmax(0, 1fr); gap: 1.25rem; padding: 1rem 1.25rem 1rem 1rem; }
   .join__qr svg { width: 7rem; }
-  .join__qr-desk { display: none; }
-  .join__qr-phone { display: inline; }
   .faq { gap: 1.5rem; }
   .faq__list { grid-template-columns: 1fr; }
   .foot { margin-top: 20svh; grid-template-columns: 1fr; gap: 0.5rem; }
@@ -557,7 +553,25 @@ h1, h2, h3 { font-weight: 400; text-wrap: balance; }
 .qr__body { display: grid; justify-items: center; gap: 1rem; }
 .qr__body svg { width: 15rem; }
 .qr__body figcaption { max-width: 22ch; text-align: center; font-size: var(--step-body); }
-@media (max-width: 900px), (hover: none) { .hero__qr { display: none; } }
+/* The icon that opens it: beside its words on computers, on its own on phones and tablets. */
+.hero__qr { gap: 0.55rem; }
+.qr-glyph { width: 1.15rem; height: 1.15rem; flex: none; }
+.done__qr-open { display: none; }
+@media (max-width: 900px), (hover: none) {
+  .hero__qr { width: 3rem; padding: 0; }
+  .hero__qr-label { display: none; }
+  .done__qr-open { display: inline-flex; align-items: center; justify-content: center; flex: none; width: 3rem; min-height: 3rem; border: 0; border-radius: 0; background: rgba(18, 17, 15, 0.12); color: var(--field-ink); cursor: pointer; transition: background-color 200ms ease, transform 140ms var(--ease-out); }
+  .done__qr-open:hover { background: rgba(18, 17, 15, 0.2); }
+  .done__qr-open:active { transform: scale(0.97); }
+}
+/* The phone's top bar has no room for it: the hero and the Join section show it. */
+@media (max-width: 480px) { .topbar .hero__qr { display: none; } }
+/* Captions that speak to whoever holds the screen: on a computer you scan the code yourself, on a phone or tablet a friend does. */
+.on-phone { display: none; }
+@media (max-width: 900px), (hover: none) {
+  .on-desk { display: none; }
+  .on-phone { display: inline; }
+}
 .done__body { padding: clamp(1.5rem, 4vw, 2.75rem); display: grid; gap: 1rem; align-content: start; }
 .done__time { font-size: var(--step-head); line-height: 1; letter-spacing: -0.03em; font-variant-numeric: tabular-nums; }
 .done__title { font-size: var(--step-lead); line-height: 1.2; font-weight: 600; }
@@ -586,5 +600,6 @@ h1, h2, h3 { font-weight: 400; text-wrap: balance; }
   .done__qr { display: none; }
 }
 @media (max-width: 900px) {
-  .done .button, .done__again { flex: 1 1 100%; }
+  .done .button { flex: 1 1 0; }
+  .done__again { flex: 1 1 100%; }
 }
