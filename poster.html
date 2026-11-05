@@ -8,13 +8,14 @@
   <meta name="theme-color" content="#12110f">
   <!-- The QR code on the printed posters (marketing/posters in the source repo) opens this page. It sends
        TelemetryDeck one anonymous Poster.opened event (a random number made for this visit only, no cookie),
-       then forwards to TestFlight. stats/collect.py counts the events as poster scans, apart from players.
+       then forwards to the posters' own TestFlight link (the Poster group, from 2026-11-04), so Apple counts who joined
+       through a poster. stats/collect.py counts the events as poster scans, apart from players.
        At App Store launch, point TARGET at the App Store with a campaign tag (ct=poster): printed posters keep
        working and App Analytics counts their downloads. -->
-  <meta http-equiv="refresh" content="3; url=https://testflight.apple.com/join/G4XsUyyB">
+  <meta http-equiv="refresh" content="3; url=https://testflight.apple.com/join/GywX8ZwT">
   <script>
     (function () {
-      var TARGET = 'https://testflight.apple.com/join/G4XsUyyB'
+      var TARGET = 'https://testflight.apple.com/join/GywX8ZwT'
       var gone = false
       function go() { if (!gone) { gone = true; location.replace(TARGET) } }
       setTimeout(go, 800)
@@ -45,7 +46,7 @@
 <body>
   <main>
     <p>Otwieram betę 49 w TestFlight.</p>
-    <a class="button" href="https://testflight.apple.com/join/G4XsUyyB">Dołącz do bety</a>
+    <a class="button" href="https://testflight.apple.com/join/GywX8ZwT">Dołącz do bety</a>
     <small>Więcej o grze: <a href="pl/">49game.github.io/pl</a></small>
   </main>
 </body>
