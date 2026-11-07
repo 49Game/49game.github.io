@@ -7,15 +7,30 @@
   <title>49 - Focus Booster</title>
   <meta name="theme-color" content="#12110f">
   <!-- The QR code on the printed posters (marketing/posters in the source repo) opens this page. It sends
-       TelemetryDeck one anonymous Poster.opened event (a random number made for this visit only, no cookie),
-       then forwards to the posters' own TestFlight link (the Poster group, from 2026-11-04), so Apple counts who joined
-       through a poster. stats/collect.py counts the events as poster scans, apart from players.
-       At App Store launch, point TARGET at the App Store with a campaign tag (ct=poster): printed posters keep
-       working and App Analytics counts their downloads. -->
+       TelemetryDeck one anonymous Poster.opened event (a random number made for this visit only, no cookie,
+       with the kind of phone: ios, android or other), then forwards: an Android phone to the Android waiting list
+       on the Polish home page, anything else to the posters' own TestFlight link (the Poster group, from 2026-11-04),
+       so Apple counts who joined through a poster. One code serves both phones.
+       stats/collect.py counts the events as poster scans, apart from players.
+       At App Store launch, point IPHONE at the App Store with a campaign tag (ct=poster): printed posters keep
+       working and App Analytics counts their downloads. When 49 comes to Android, point ANDROID at Google Play. -->
   <meta http-equiv="refresh" content="3; url=https://testflight.apple.com/join/GywX8ZwT">
   <script>
     (function () {
-      var TARGET = 'https://testflight.apple.com/join/GywX8ZwT'
+      var IPHONE = 'https://testflight.apple.com/join/GywX8ZwT'
+      var ANDROID = 'pl/#android'
+      var ua = navigator.userAgent
+      var platform = /Android/i.test(ua) ? 'android'
+        : (/iPhone|iPad|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)) ? 'ios' : 'other'
+      var TARGET = platform === 'android' ? ANDROID : IPHONE
+      if (platform === 'android') {
+        document.addEventListener('DOMContentLoaded', function () {
+          document.getElementById('going').textContent = 'Otwieram listę oczekujących na Androida.'
+          var button = document.getElementById('go')
+          button.textContent = 'Zapisz się na listę'
+          button.href = ANDROID
+        })
+      }
       var gone = false
       function go() { if (!gone) { gone = true; location.replace(TARGET) } }
       setTimeout(go, 800)
@@ -23,7 +38,8 @@
         var visit = crypto.randomUUID()
         crypto.subtle.digest('SHA-256', new TextEncoder().encode(visit)).then(function (hash) {
           var user = Array.from(new Uint8Array(hash), function (b) { return b.toString(16).padStart(2, '0') }).join('')
-          var signal = { appID: '361CD1BB-D313-4E3A-9185-B3752B50B3E1', clientUser: user, sessionID: visit, type: 'Poster.opened' }
+          var signal = { appID: '361CD1BB-D313-4E3A-9185-B3752B50B3E1', clientUser: user, sessionID: visit, type: 'Poster.opened',
+                         payload: { platform: platform } }
           if (location.hostname !== '49game.github.io') signal.isTestMode = true
           return fetch('https://nom.telemetrydeck.com/v2/', {
             method: 'POST', mode: 'cors', keepalive: true,
@@ -45,8 +61,9 @@
 </head>
 <body>
   <main>
-    <p>Otwieram betę 49 w TestFlight.</p>
-    <a class="button" href="https://testflight.apple.com/join/GywX8ZwT">Dołącz do bety</a>
+    <p id="going">Otwieram betę 49 w TestFlight.</p>
+    <a class="button" id="go" href="https://testflight.apple.com/join/GywX8ZwT">Dołącz do bety</a>
+    <small>Masz Androida? <a href="pl/#android">Zapisz się na listę oczekujących</a></small>
     <small>Więcej o grze: <a href="pl/">49game.github.io/pl</a></small>
   </main>
 </body>
