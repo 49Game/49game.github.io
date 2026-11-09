@@ -1,0 +1,27 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.arturperec.fortynine",
+      "sha256_cert_fingerprints": [
+        "CF:93:45:1A:DB:66:76:2E:D5:8E:AC:1F:7F:6D:23:45:26:D8:F2:F7:8D:D6:FE:12:46:B0:6C:96:1D:FC:90:58",
+        "6A:9C:30:47:47:13:15:D2:CA:3E:E9:81:55:EA:EC:9E:EB:2A:53:F1:52:B9:96:55:69:24:55:74:D2:66:74:AA"
+      ]
+    }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.arturperec.fortynine.dev",
+      "sha256_cert_fingerprints": [
+        "FC:E2:67:47:0F:16:4D:EB:06:7E:A1:02:0E:CA:DA:42:FB:81:0E:D1:EC:0E:31:EA:88:57:9D:E4:17:1E:D6:99"
+      ]
+    }
+  }
+]

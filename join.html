@@ -59,6 +59,13 @@
       </div>
       <p>Nothing happens? Open 49, tap Multiplayer, and type the code.</p>
     </div>
+    <div id="friend" hidden>
+      <p>A friend wants to add you on 49. Open the link in 49 to see their profile and add them.</p>
+      <div class="join-actions">
+        <a class="button" id="open-friend" href="index.html">Open in 49</a>
+      </div>
+      <p>Friend links work in 49 for Android.</p>
+    </div>
     <p id="no-code" hidden>This invite link has no room code. Ask your friend for the code, then open 49 and tap Multiplayer.</p>
     <h2>Don't have 49 yet?</h2>
     <p>49 is a focus game for iPhone. It's in open beta now: install it from TestFlight, then come back to this link.</p>
@@ -86,6 +93,14 @@
     (() => {
       let raw = location.hash.slice(1);
       try { raw = decodeURIComponent(raw); } catch (e) {}
+      // "friend-fb-abc123" is a friend link (49 for Android): it opens that player's profile in the app.
+      const friend = /^friend-([A-Za-z0-9_-]{4,140})$/.exec(raw);
+      if (friend && friend[1].includes("-")) {
+        document.querySelector("h1").textContent = "Add a friend";
+        document.getElementById("open-friend").href = "fortynine://friend/" + friend[1];
+        document.getElementById("friend").hidden = false;
+        return;
+      }
       // "steal-K7Q2M" is a Steal code (a 1 v 1 through Game Center); a plain code is a room.
       const steal = /^steal-/i.test(raw);
       const code = raw.replace(/^steal-/i, "").toUpperCase().replace(/[\s-]/g, "");
