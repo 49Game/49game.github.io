@@ -232,7 +232,8 @@ document.querySelectorAll(".chapter").forEach((chapter) => {
     // The copy keeps aria-controls="qr", so the QR script below opens the window from it too.
     actions.append(qr.cloneNode(true));
   }
-  actions.append(join.cloneNode(true));
+  // The header's own button (on computers it opens the choice between iPhone and Android), else the hero's.
+  actions.append((document.querySelector(".nav__action") || join).cloneNode(true));
   bar.append(home, actions);
   document.body.append(bar);
 
@@ -360,6 +361,24 @@ document.querySelectorAll(".chapter").forEach((chapter) => {
     if (!link || dialog.contains(link)) return;
     e.preventDefault();
     open();
+  });
+  dialog.querySelector("[data-close]").addEventListener("click", () => dialog.close());
+  dialog.addEventListener("click", (e) => { if (e.target === dialog) dialog.close(); });
+})();
+
+// On a computer, the header's "Join the beta" (and the bar's copy of it) asks which phone: iPhone (TestFlight) or
+// Android (the test's steps, the window above). Phones go straight to their own way in.
+(() => {
+  const dialog = document.getElementById("join-pop");
+  if (!dialog || typeof dialog.showModal !== "function") return;
+  dialog.tabIndex = -1;
+  document.addEventListener("click", (e) => {
+    const link = e.target.closest("a[data-join]");
+    if (!link || !document.documentElement.classList.contains("on-desktop")) return;
+    e.preventDefault();
+    document.querySelectorAll("dialog[open]").forEach((d) => d.close());
+    dialog.showModal();
+    dialog.focus();
   });
   dialog.querySelector("[data-close]").addEventListener("click", () => dialog.close());
   dialog.addEventListener("click", (e) => { if (e.target === dialog) dialog.close(); });
