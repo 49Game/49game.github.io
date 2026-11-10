@@ -15,7 +15,7 @@ const say = (key, values = {}) => (T[key] || key).replace(/\{(\w+)\}/g, (_, k) =
 
 // The phone decides the way in: on Android, every "Join the beta" opens the Android test's steps (the window below)
 // instead of TestFlight, and the hero's Android link and QR button step aside for an "On iPhone?" link that keeps
-// TestFlight (data-keep). iPhones and computers see the Android link.
+// TestFlight (data-keep). iPhones see the Android link, computers a Join on Android button beside Join the beta.
 (() => {
   const ua = navigator.userAgent;
   const root = document.documentElement;
@@ -24,6 +24,8 @@ const say = (key, values = {}) => (T[key] || key).replace(/\{(\w+)\}/g, (_, k) =
     document.querySelectorAll('a[href^="https://testflight.apple.com/"]:not([data-keep])').forEach((a) => a.setAttribute("href", "#android"));
   } else if (/iPhone|iPad|iPod/.test(ua) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1)) {
     root.classList.add("on-ios");
+  } else {
+    root.classList.add("on-desktop");
   }
 })();
 
