@@ -75,6 +75,8 @@ h1, h2, h3 { font-weight: 400; text-wrap: balance; }
 .button--ink:hover { background: #2a2824; }
 .button--quiet { background: var(--ink); color: var(--bg); }
 .button--quiet:hover { background: #fff; }
+.on-android .hero__actions .link[href="#android"], .on-android .hero__qr { display: none; }
+html:not(.on-android) .link--iphone { display: none; }
 .link, .link-plain { text-decoration: underline; text-underline-offset: 0.2em; text-decoration-thickness: 0.07em; transition: text-decoration-color 200ms ease, color 200ms ease; }
 .link { text-decoration-color: color-mix(in srgb, currentColor 45%, transparent); }
 .link:hover, .link-plain:hover { text-decoration-color: var(--accent); }
@@ -409,7 +411,10 @@ h1, h2, h3 { font-weight: 400; text-wrap: balance; }
 .join__wait { font-size: var(--step-lead); }
 .wait { display: grid; gap: 8px; }
 .wait__card { background: var(--surface); padding: clamp(1.25rem, 2.5vw, 2rem); display: grid; gap: 1rem; align-content: start; }
-.wait__card:last-child { background: #1d2420; }
+.wait__card--android { background: #1d2420; }
+.wait__steps { display: grid; gap: 0.6rem; padding-left: 1.4rem; list-style: decimal; line-height: 1.4; }
+.wait__steps a { font-weight: 600; text-decoration: underline; text-underline-offset: 0.15em; }
+.wait__small { font-size: var(--step-small); color: var(--muted, inherit); }
 .wait__label { font-weight: 600; }
 .waitlist { display: flex; flex-wrap: wrap; gap: 0.5rem; }
 .waitlist .field { flex: 1 1 14rem; min-height: 3rem; padding: 0.7rem 0.9rem; border: 0; border-radius: 0; background: var(--bg); color: var(--ink); font: inherit; font-size: max(1rem, var(--step-body)); }
@@ -553,6 +558,8 @@ h1, h2, h3 { font-weight: 400; text-wrap: balance; }
 .android .waitlist-done, .android .waitlist-error { color: var(--field-ink); font-weight: 600; }
 .android__note { font-size: var(--step-small); color: var(--field-muted); }
 .android__note a { color: var(--field-ink); }
+.android .wait__steps a { color: var(--field-ink); }
+.android .wait__small { color: var(--field-muted); }
 @media (prefers-reduced-motion: no-preference) { .android[open] { animation: done-in 450ms var(--ease-out); } }
 .qr__body { display: grid; justify-items: center; gap: 1rem; }
 .qr__body svg { width: 15rem; }

@@ -8,7 +8,7 @@
   <meta name="theme-color" content="#12110f">
   <!-- The QR code on the printed posters (marketing/posters in the source repo) opens this page. It sends
        TelemetryDeck one anonymous Poster.opened event (a random number made for this visit only, no cookie,
-       with the kind of phone: ios, android or other), then forwards: an Android phone to the Android waiting list
+       with the kind of phone: ios, android or other), then forwards: an Android phone to the Android test's steps (the closed test on Google Play)
        on the Polish home page, anything else to the posters' own TestFlight link (the Poster group, from 2026-11-04),
        so Apple counts who joined through a poster. One code serves both phones.
        stats/collect.py counts the events as poster scans, apart from players.
@@ -25,9 +25,9 @@
       var TARGET = platform === 'android' ? ANDROID : IPHONE
       if (platform === 'android') {
         document.addEventListener('DOMContentLoaded', function () {
-          document.getElementById('going').textContent = 'Otwieram listę oczekujących na Androida.'
+          document.getElementById('going').textContent = 'Otwieram testy na Androida.'
           var button = document.getElementById('go')
-          button.textContent = 'Zapisz się na listę'
+          button.textContent = 'Pokaż, jak dołączyć'
           button.href = ANDROID
         })
       }
@@ -63,7 +63,7 @@
   <main>
     <p id="going">Otwieram betę 49 w TestFlight.</p>
     <a class="button" id="go" href="https://testflight.apple.com/join/GywX8ZwT">Dołącz do bety</a>
-    <small>Masz Androida? <a href="pl/#android">Zapisz się na listę oczekujących</a></small>
+    <small>Masz Androida? <a href="pl/#android">Dołącz do testów</a></small>
     <small>Więcej o grze: <a href="pl/">49game.github.io/pl</a></small>
   </main>
 </body>

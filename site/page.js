@@ -13,6 +13,20 @@ const shuffle = (list) => {
 const T = (() => { try { return JSON.parse(document.getElementById("strings").textContent); } catch (e) { return {}; } })();
 const say = (key, values = {}) => (T[key] || key).replace(/\{(\w+)\}/g, (_, k) => values[k]);
 
+// The phone decides the way in: on Android, every "Join the beta" opens the Android test's steps (the window below)
+// instead of TestFlight, and the hero's Android link and QR button step aside for an "On iPhone?" link that keeps
+// TestFlight (data-keep). iPhones and computers see the Android link.
+(() => {
+  const ua = navigator.userAgent;
+  const root = document.documentElement;
+  if (/Android/i.test(ua)) {
+    root.classList.add("on-android");
+    document.querySelectorAll('a[href^="https://testflight.apple.com/"]:not([data-keep])').forEach((a) => a.setAttribute("href", "#android"));
+  } else if (/iPhone|iPad|iPod/.test(ua) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1)) {
+    root.classList.add("on-ios");
+  }
+})();
+
 // Language: remember a pick from the menus; on a first visit to the English home page, follow the browser's language.
 (() => {
   const homes = { pl: "pl/", de: "de/", fr: "fr/", es: "es/", pt: "pt-br/", it: "it/", ja: "ja/", ko: "ko/" };
