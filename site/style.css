@@ -82,6 +82,8 @@ html:not(.on-android) .link--iphone { display: none; }
 .hero__android { display: none; }
 .on-desktop .hero__android { display: inline-flex; }
 .on-desktop .hero__actions .link[href="#android"] { display: none; }
+.for-desktop, .on-desktop .for-phone { display: none; }
+.on-desktop .for-desktop { display: inline; }
 .link, .link-plain { text-decoration: underline; text-underline-offset: 0.2em; text-decoration-thickness: 0.07em; transition: text-decoration-color 200ms ease, color 200ms ease; }
 .link { text-decoration-color: color-mix(in srgb, currentColor 45%, transparent); }
 .link:hover, .link-plain:hover { text-decoration-color: var(--accent); }
