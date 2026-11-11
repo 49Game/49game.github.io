@@ -626,3 +626,11 @@ html:not(.on-android) .link--iphone { display: none; }
   .done .button { flex: 1 1 0; }
   .done__again { flex: 1 1 100%; }
 }
+
+/* Apple's official "Download on the App Store" badge, in the page's language (site/assets/badges), unchanged as
+   Apple's rules ask: at least 40 px tall, with clear space of a quarter of its height around it. It only ever links
+   to the App Store, so Android phones (where every "Get 49" opens the Android steps) keep the text button instead. */
+.store-badge { display: inline-flex; align-items: center; padding: 12px; margin: -12px 0; line-height: 0; flex: none; }
+.store-badge img { display: block; height: 48px; width: auto; }
+.on-android .store-badge { display: none; }
+html:not(.on-android) .button--store { display: none; }
