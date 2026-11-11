@@ -14,7 +14,7 @@ const T = (() => { try { return JSON.parse(document.getElementById("strings").te
 const say = (key, values = {}) => (T[key] || key).replace(/\{(\w+)\}/g, (_, k) => values[k]);
 
 // The phone decides the way in: on Android, every "Get 49" opens the Android test's steps (the window below)
-// instead of the App Store, and the hero's Android link and QR button step aside for an "On iPhone?" link that keeps
+// instead of the App Store, and the hero's Android link steps aside for an "On iPhone?" link that keeps
 // the App Store (data-keep). iPhones see the Android link, computers a Join on Android button beside Get it on iPhone.
 // The quiet TestFlight line (early features) keeps its link everywhere.
 (() => {
