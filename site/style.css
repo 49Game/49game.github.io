@@ -579,6 +579,16 @@ html:not(.on-android) .link--iphone { display: none; }
 /* The icon that opens it: beside its words on computers, on its own on phones and tablets. */
 .hero__qr { gap: 0.55rem; }
 .qr-glyph { width: 1.15rem; height: 1.15rem; flex: none; }
+/* The Android robot, Google's CC BY 3.0 artwork (credited in the footer), before the words on Join on Android. */
+.android-glyph { width: 1.6rem; height: auto; flex: none; margin-right: 0.55rem; }
+/* With the robot, the longest labels (German, French) need about 32rem to keep the badge, Join on Android and the QR button on one row. */
+.on-desktop .hero__intro { max-width: 33rem; }
+/* A narrower hero (laptop windows around 1000 px) gets a tighter Android button so the row still fits where it did before the robot. */
+@container (max-width: 32.9rem) {
+  html:not(.on-android) .hero__actions { column-gap: 0.75rem; }
+  .hero__android { padding: 0 1rem; }
+  .hero__android .android-glyph { width: 1.35rem; margin-right: 0.4rem; }
+}
 .done__qr-open { display: none; }
 @media (max-width: 900px), (hover: none) {
   .hero__qr { width: 3rem; padding: 0; }
