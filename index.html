@@ -276,7 +276,7 @@
 
     <section class="block" id="modes" data-stage="modes" aria-labelledby="modes-title">
       <h2 class="head" id="modes-title" data-reveal>Three ways to play</h2>
-      <p data-reveal style="--i:1">Count up from 1 to 49 or down from 49 to 1, or play Number Madness in Classic, where the next number is random. Each mode keeps its own records and its own rank.</p>
+      <p data-reveal style="--i:1">Count up from 1 to 49, down from 49 to 1, or in random order, in every mode. Each mode keeps its own records and its own rank.</p>
       <div class="proofs">
         <article class="proof" data-reveal>
           <div class="proof__panel"><video class="card-video" data-autoplay muted loop playsinline preload="none" poster="site/assets/mode-classic.webp?v=3" width="560" height="112" aria-label="The Classic card: a best time of 41.90, Diamond rank, 43 of 78 achievements."><source src="site/assets/mode-classic.mp4?v=3" type="video/mp4"></video></div>
@@ -322,13 +322,13 @@
     </section>
 
     <section class="block" id="boards" data-stage="boards" aria-labelledby="boards-title">
-      <h2 class="head" id="boards-title" data-reveal>Five sizes, three kinds of board</h2>
-      <p class="figure-line" data-reveal style="--i:1">5&nbsp;×&nbsp;5 up to 11&nbsp;×&nbsp;11</p>
-      <p data-reveal style="--i:2">A quick 5&nbsp;×&nbsp;5 or 6&nbsp;×&nbsp;6, the standard 7&nbsp;×&nbsp;7, and 9&nbsp;×&nbsp;9 or 11&nbsp;×&nbsp;11 for tryhards.</p>
+      <h2 class="head" id="boards-title" data-reveal>Seven sizes, three kinds of board</h2>
+      <p class="figure-line" data-reveal style="--i:1">3&nbsp;×&nbsp;3 up to 11&nbsp;×&nbsp;11</p>
+      <p data-reveal style="--i:2">A tiny 3&nbsp;×&nbsp;3 or 4&nbsp;×&nbsp;4, a quick 5&nbsp;×&nbsp;5 or 6&nbsp;×&nbsp;6, the standard 7&nbsp;×&nbsp;7, and 9&nbsp;×&nbsp;9 or 11&nbsp;×&nbsp;11 for tryhards.</p>
       <div class="inline-only rb rb--inline" data-ui aria-hidden="true" data-rb></div>
       <dl class="kinds">
         <div data-reveal><dt>Numbers</dt><dd>The classic table. Find them in order, up or down.</dd></div>
-        <div data-reveal style="--i:1"><dt>Letters</dt><dd>A to Y on a 5&nbsp;×&nbsp;5 board, for when digits feel too easy.</dd></div>
+        <div data-reveal style="--i:1"><dt>Letters</dt><dd>A to Y on 5&nbsp;×&nbsp;5, then capital and small letters on 6&nbsp;×&nbsp;6 and 7&nbsp;×&nbsp;7. For when digits feel too easy.</dd></div>
         <div data-reveal style="--i:2"><dt>Red &amp; Black</dt><dd>Count the red numbers up and the black ones down, switching with every tap. A playful drill for moving between tasks without losing track.</dd></div>
       </dl>
       <p data-reveal>Stuck? A hint shows where the next number is. You get a few each day, and each one adds 5 seconds, so hints help you learn but never set a record.</p>
@@ -351,8 +351,8 @@
           <tr data-rank="Legend" data-under="35"><th scope="row"><img src="assets/ranks/legend-dark.png" width="718" height="152" alt="Legend"></th><td>Under 0:35</td><td>65 a minute</td><td>140 numbers</td></tr>
         </tbody>
       </table>
-      <p class="ranks__you" data-reveal style="--i:3">The board up top is a 4&nbsp;×&nbsp;4 taster. Ranks start on the full boards, in the app.</p>
-      <p data-reveal style="--i:4">On top of the ranks sit 94 global Game Center leaderboards: fastest time and most points by board and direction, for today, this week, this month and all time. The Daily Challenge has its own board, and your best attempt counts.</p>
+      <p class="ranks__you" data-reveal style="--i:3">The board up top is a 4&nbsp;×&nbsp;4 taster. Ranks start in the app, on every board size.</p>
+      <p data-reveal style="--i:4">On top of the ranks sit 100 global Game Center leaderboards: fastest time and most points by board and direction, for today, this week, this month and all time. The Daily Challenge has its own board, and your best attempt counts.</p>
     </section>
 
     <section class="block block--last" id="achievements" data-stage="achievements" aria-labelledby="ach-title">
@@ -614,7 +614,7 @@
   <div class="done__body">
     <p class="done__time"><span id="done-time">0:00.0</span></p>
     <h2 class="done__title" id="done-title">Now try all 49.</h2>
-    <p class="done__line" id="done-line">The full boards go from 5&nbsp;×&nbsp;5 to 11&nbsp;×&nbsp;11, with a rank for every time.</p>
+    <p class="done__line" id="done-line">In the app, boards go from 3&nbsp;×&nbsp;3 to 11&nbsp;×&nbsp;11, with a rank for every time.</p>
     <p class="done__pitch">The app keeps every game: a new Daily Challenge each day, a rank for every mode and 578 achievements. And it’s free.</p>
     <div class="done__actions">
       <a class="store-badge" href="https://apps.apple.com/app/id6823997426" data-keep><img src="site/assets/badges/app-store-en.svg" alt="Download on the App Store" width="144" height="48"></a><a class="button button--store" href="https://apps.apple.com/app/id6823997426">Get 49 free</a>
@@ -630,7 +630,7 @@
   <button class="done__close" type="button" id="done-close" aria-label="Close">Close</button>
 </dialog>
 
-<script type="application/json" id="strings">{"boardLabel": "Schulte table, 4 by 4. Tap the numbers from 1 to 16 in order.", "find": "Find", "foundAll": "Found all", "going": "Keep going. A miss costs you nothing here, but it does in the app.", "doneHint": "Done in <b>{time}</b>. That was 16 numbers. The app has the full boards, up to 49.", "doneLine": "You found all 16 in {time}, with {misses}. The full boards go from 5 × 5 to 11 × 11, with a rank for every time.", "missNone": "no misses", "missOne": "1 miss", "missMany": "{n} misses", "s_needs": "Benefits", "s_racing": "Racing", "s_daily": "Daily", "s_styles": "Styles", "s_modes": "Modes", "s_friends": "Multiplayer", "s_steal": "Steal", "s_boards": "Boards", "s_ranks": "Ranks", "s_achievements": "Achievements", "s_mission": "Mission", "s_price": "Price", "s_join": "Play", "s_questions": "Questions"}</script>
+<script type="application/json" id="strings">{"boardLabel": "Schulte table, 4 by 4. Tap the numbers from 1 to 16 in order.", "find": "Find", "foundAll": "Found all", "going": "Keep going. A miss costs you nothing here, but it does in the app.", "doneHint": "Done in <b>{time}</b>. That was 16 numbers. The app has the full boards, up to 49.", "doneLine": "You found all 16 in {time}, with {misses}. In the app, boards go from 3 × 3 to 11 × 11, with a rank for every time.", "missNone": "no misses", "missOne": "1 miss", "missMany": "{n} misses", "s_needs": "Benefits", "s_racing": "Racing", "s_daily": "Daily", "s_styles": "Styles", "s_modes": "Modes", "s_friends": "Multiplayer", "s_steal": "Steal", "s_boards": "Boards", "s_ranks": "Ranks", "s_achievements": "Achievements", "s_mission": "Mission", "s_price": "Price", "s_join": "Play", "s_questions": "Questions"}</script>
 <script src="site/page.js?v=11" defer></script>
 </body>
 </html>
