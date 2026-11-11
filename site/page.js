@@ -13,15 +13,16 @@ const shuffle = (list) => {
 const T = (() => { try { return JSON.parse(document.getElementById("strings").textContent); } catch (e) { return {}; } })();
 const say = (key, values = {}) => (T[key] || key).replace(/\{(\w+)\}/g, (_, k) => values[k]);
 
-// The phone decides the way in: on Android, every "Join the beta" opens the Android test's steps (the window below)
-// instead of TestFlight, and the hero's Android link and QR button step aside for an "On iPhone?" link that keeps
-// TestFlight (data-keep). iPhones see the Android link, computers a Join on Android button beside Join the beta.
+// The phone decides the way in: on Android, every "Get 49" opens the Android test's steps (the window below)
+// instead of the App Store, and the hero's Android link and QR button step aside for an "On iPhone?" link that keeps
+// the App Store (data-keep). iPhones see the Android link, computers a Join on Android button beside Get it on iPhone.
+// The quiet TestFlight line (early features) keeps its link everywhere.
 (() => {
   const ua = navigator.userAgent;
   const root = document.documentElement;
   if (/Android/i.test(ua)) {
     root.classList.add("on-android");
-    document.querySelectorAll('a[href^="https://testflight.apple.com/"]:not([data-keep])').forEach((a) => a.setAttribute("href", "#android"));
+    document.querySelectorAll('a[href^="https://apps.apple.com/"]:not([data-keep])').forEach((a) => a.setAttribute("href", "#android"));
   } else if (/iPhone|iPad|iPod/.test(ua) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1)) {
     root.classList.add("on-ios");
   } else {
@@ -181,11 +182,11 @@ document.querySelectorAll(".chapter").forEach((chapter) => {
 
 // The way in stays in reach: once the page's own header scrolls away, a bar slides down at the top with
 // the section you are in (a one-word name from the page's strings, tap it for every section), the
-// language menu and "Join the beta" (with the QR code on computers), all in the page's language.
+// language menu and "Get 49" (with the QR code on computers), all in the page's language.
 // It follows the header, not the hero's buttons, so the promo above the hero never leaves you without it.
 (() => {
   const heroActions = document.querySelector(".hero__actions");
-  const join = heroActions?.querySelector('a.button[href*="testflight"]');
+  const join = heroActions?.querySelector('a.button[href*="apps.apple.com"]');
   if (!heroActions || !join || !("IntersectionObserver" in window)) return;
   const sections = [...document.querySelectorAll("main section[id]")].filter((s) => T["s_" + s.id]);
   const bar = document.createElement("div");
@@ -366,7 +367,7 @@ document.querySelectorAll(".chapter").forEach((chapter) => {
   dialog.addEventListener("click", (e) => { if (e.target === dialog) dialog.close(); });
 })();
 
-// On a computer, the header's "Join the beta" (and the bar's copy of it) asks which phone: iPhone (TestFlight) or
+// On a computer, the header's "Get 49" (and the bar's copy of it) asks which phone: iPhone (the App Store) or
 // Android (the test's steps, the window above). Phones go straight to their own way in.
 (() => {
   const dialog = document.getElementById("join-pop");

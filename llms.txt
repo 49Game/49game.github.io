@@ -4,7 +4,7 @@
 
 Key facts:
 
-- Platform: iPhone, iOS 17 or later.
+- Platform: iPhone, iOS 17 or later. Free on the App Store: https://apps.apple.com/app/id6823997426
 - Game types: Classic (one board, best time), Endless (boards keep coming, scored by pace), Beat the Clock (every find adds time, every miss costs time).
 - Orders: count up from 1 to 49, down from 49 to 1, or Number Madness in Classic (the next number is random).
 - Styles: Normal (a plain time trial), Competitive (points, combos and a multiplier up to ×3), Relax (effects and sounds, without points, records or ranks, and 3 free hints a game).
@@ -21,7 +21,7 @@ Key facts:
 - Eight looks (Classic, Focus, Neon Arcade, Zen Ink, Pit Lane, Candy Pop, Blossom, Black Gold), a theme builder and 42 sound styles. App icons: the standard icon, Arcade, Pit Lane and Blossom.
 - Accessibility: VoiceOver, Reduce Motion, Bold Text, Audio Graphs, Color vision (colors that stay easy to tell apart), Hide found numbers, and switches for confetti, flashes and haptics.
 - Languages: English, Polish, German, French, Spanish, Brazilian Portuguese, Italian, Japanese, Korean.
-- Data: games and stats are kept on the iPhone and sync through the player's own iCloud, and there is no account to create. Multiplayer rooms and player profiles (nickname, ratings, recent games) are stored in iCloud so other players can see them. Anonymous usage statistics (TelemetryDeck, no names or game history) can be turned off in Settings. Game Center is optional. The free version shows ads from Google AdMob. The TestFlight beta is open to everyone: https://testflight.apple.com/join/G4XsUyyB. A waiting list for the App Store launch collects emails (sent through Web3Forms to the support inbox).
+- Data: games and stats are kept on the iPhone and sync through the player's own iCloud, and there is no account to create. Multiplayer rooms and player profiles (nickname, ratings, recent games) are stored in iCloud so other players can see them. Anonymous usage statistics (TelemetryDeck, no names or game history) can be turned off in Settings. Game Center is optional. The free version shows ads from Google AdMob. New features come first to the open TestFlight beta: https://testflight.apple.com/join/G4XsUyyB.
 - Support: contact49game@icloud.com (or https://github.com/49Game/49game.github.io/issues)
 
 ## Pages

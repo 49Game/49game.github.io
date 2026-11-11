@@ -77,6 +77,7 @@ h1, h2, h3 { font-weight: 400; text-wrap: balance; }
 .button--quiet:hover { background: #fff; }
 .on-android .hero__actions .link[href="#android"], .on-android .hero__qr { display: none; }
 html:not(.on-android) .link--iphone { display: none; }
+.on-android .join__beta { display: none; }
 .button--line { background: transparent; color: var(--ink); box-shadow: inset 0 0 0 2px var(--ink); }
 .button--line:hover { background: var(--ink); color: var(--bg); }
 .hero__android { display: none; }

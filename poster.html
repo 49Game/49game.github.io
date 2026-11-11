@@ -9,15 +9,15 @@
   <!-- The QR code on the printed posters (marketing/posters in the source repo) opens this page. It sends
        TelemetryDeck one anonymous Poster.opened event (a random number made for this visit only, no cookie,
        with the kind of phone: ios, android or other), then forwards: an Android phone to the Android test's steps (the closed test on Google Play)
-       on the Polish home page, anything else to the posters' own TestFlight link (the Poster group, from 2026-11-04),
-       so Apple counts who joined through a poster. One code serves both phones.
+       on the Polish home page, anything else to the App Store (since the launch on 2026-11-11; before that the
+       posters' own TestFlight link, the Poster group). One code serves both phones.
        stats/collect.py counts the events as poster scans, apart from players.
-       At App Store launch, point IPHONE at the App Store with a campaign tag (ct=poster): printed posters keep
-       working and App Analytics counts their downloads. When 49 comes to Android, point ANDROID at Google Play. -->
-  <meta http-equiv="refresh" content="3; url=https://testflight.apple.com/join/GywX8ZwT">
+       To have App Analytics count poster downloads, add the campaign tags to IPHONE and the refresh below:
+       ?pt=<provider id from App Analytics, Campaigns>&ct=poster&mt=8. When 49 comes to Android, point ANDROID at Google Play. -->
+  <meta http-equiv="refresh" content="3; url=https://apps.apple.com/app/id6823997426">
   <script>
     (function () {
-      var IPHONE = 'https://testflight.apple.com/join/GywX8ZwT'
+      var IPHONE = 'https://apps.apple.com/app/id6823997426'
       var ANDROID = 'pl/#android'
       var ua = navigator.userAgent
       var platform = /Android/i.test(ua) ? 'android'
@@ -61,8 +61,8 @@
 </head>
 <body>
   <main>
-    <p id="going">Otwieram betę 49 w TestFlight.</p>
-    <a class="button" id="go" href="https://testflight.apple.com/join/GywX8ZwT">Dołącz do bety</a>
+    <p id="going">Otwieram 49 w App Store.</p>
+    <a class="button" id="go" href="https://apps.apple.com/app/id6823997426">Pobierz 49</a>
     <small>Masz Androida? <a href="pl/#android">Dołącz do testów</a></small>
     <small>Więcej o grze: <a href="pl/">49game.github.io/pl</a></small>
   </main>
