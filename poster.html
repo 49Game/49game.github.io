@@ -12,12 +12,12 @@
        on the Polish home page, tagged ?from=poster so page.js counts taps on those steps (Poster.androidStep), anything else to the App Store (since the launch on 2026-11-11; before that the
        posters' own TestFlight link, the Poster group). One code serves both phones.
        stats/collect.py counts the events as poster scans, apart from players.
-       To have App Analytics count poster downloads, add the campaign tags to IPHONE and the refresh below:
-       ?pt=<provider id from App Analytics, Campaigns>&ct=poster&mt=8. When 49 comes to Android, point ANDROID at Google Play. -->
-  <meta http-equiv="refresh" content="3; url=https://apps.apple.com/app/id6823997426">
+       The App Store link carries App Analytics' campaign tags (pt=129629049, the provider id; ct=poster, since
+       2026-11-12), so poster downloads show under Analytics, Acquisition, Campaigns. Keep the three copies alike. When 49 comes to Android, point ANDROID at Google Play. -->
+  <meta http-equiv="refresh" content="3; url=https://apps.apple.com/app/apple-store/id6823997426?pt=129629049&ct=poster&mt=8">
   <script>
     (function () {
-      var IPHONE = 'https://apps.apple.com/app/id6823997426'
+      var IPHONE = 'https://apps.apple.com/app/apple-store/id6823997426?pt=129629049&ct=poster&mt=8'
       var ANDROID = 'pl/?from=poster#android'
       var ua = navigator.userAgent
       var platform = /Android/i.test(ua) ? 'android'
@@ -62,7 +62,7 @@
 <body>
   <main>
     <p id="going">Otwieram 49 w App Store.</p>
-    <a class="button" id="go" href="https://apps.apple.com/app/id6823997426">Pobierz 49</a>
+    <a class="button" id="go" href="https://apps.apple.com/app/apple-store/id6823997426?pt=129629049&ct=poster&mt=8">Pobierz 49</a>
     <small>Masz Androida? <a href="pl/?from=poster#android">Dołącz do testów</a></small>
     <small>Więcej o grze: <a href="pl/">49game.github.io/pl</a></small>
   </main>
