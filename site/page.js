@@ -30,6 +30,42 @@ const say = (key, values = {}) => (T[key] || key).replace(/\{(\w+)\}/g, (_, k) =
   }
 })();
 
+// Android phones that came from the poster's QR code (/poster forwards them here with ?from=poster): each tap on
+// a step of the Android test (the testers group, Become a tester, Install) sends TelemetryDeck one anonymous
+// Poster.androidStep, with a random number made for this visit only and no cookie. Nothing for anyone else.
+(() => {
+  if (new URLSearchParams(location.search).get("from") !== "poster") return;
+  const steps = [
+    ["https://groups.google.com/g/49-android-testers", "group"],
+    ["https://play.google.com/apps/testing/", "tester"],
+    ["https://play.google.com/store/apps/details", "install"],
+  ];
+  let visit, user;
+  try {
+    visit = crypto.randomUUID();
+    // Hashed now, not on the tap: the link leaves the page at once, so the tap has to send without waiting.
+    crypto.subtle.digest("SHA-256", new TextEncoder().encode(visit)).then((hash) => {
+      user = Array.from(new Uint8Array(hash), (b) => b.toString(16).padStart(2, "0")).join("");
+    }).catch(() => {});
+  } catch (e) { return; }
+  const sent = new Set();
+  document.addEventListener("click", (e) => {
+    const a = e.target.closest("a[href]");
+    const step = a && (steps.find(([prefix]) => a.href.startsWith(prefix)) || [])[1];
+    if (!step || !user || sent.has(step)) return;
+    sent.add(step);
+    const signal = { appID: "361CD1BB-D313-4E3A-9185-B3752B50B3E1", clientUser: user, sessionID: visit,
+                     type: "Poster.androidStep", payload: { step } };
+    if (location.hostname !== "49game.github.io") signal.isTestMode = true;
+    try {
+      fetch("https://nom.telemetrydeck.com/v2/", {
+        method: "POST", mode: "cors", keepalive: true,
+        headers: { "Content-Type": "application/json" }, body: JSON.stringify([signal]),
+      }).catch(() => {});
+    } catch (e) {}
+  });
+})();
+
 // Language: remember a pick from the menus; on a first visit to the English home page, follow the browser's language.
 (() => {
   const homes = { pl: "pl/", de: "de/", fr: "fr/", es: "es/", pt: "pt-br/", it: "it/", ja: "ja/", ko: "ko/" };
