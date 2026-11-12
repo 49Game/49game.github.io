@@ -1,10 +1,10 @@
 # 49 - Focus Booster
 
-> 49 - Focus Booster is a focus-training game for iPhone built on the Schulte table, a classic attention exercise. Players find the numbers 1 to 49, shuffled on a 7 × 7 board, in order and as fast as they can. A game takes about a minute. A minute a day lets players practise sustained attention, faster reading (wider eye span), visual search and calm under pressure, and see their progress in Insights. It is a game, not a medical product. It is free to play with ads between games. Premium (weekly, monthly, yearly with a free week, or lifetime) removes the ads. Nothing is locked behind a purchase. In open beta on TestFlight, coming soon to the App Store. Made by Artur Pereć (https://www.linkedin.com/in/arturperec/).
+> 49 - Focus Booster is a focus-training game for iPhone and Android built on the Schulte table, a classic attention exercise. Players find the numbers 1 to 49, shuffled on a 7 × 7 board, in order and as fast as they can. A game takes about a minute. A minute a day lets players practise sustained attention, faster reading (wider eye span), visual search and calm under pressure, and see their progress in Insights. It is a game, not a medical product. It is free to play with ads between games. Premium (weekly, monthly, yearly with a free week, or lifetime) removes the ads. Nothing is locked behind a purchase. Out now, free on the App Store for iPhone. On Android it is in testing on Google Play, and anyone can join. Made by Artur Pereć (https://www.linkedin.com/in/arturperec/).
 
 Key facts:
 
-- Platform: iPhone, iOS 17 or later. Free on the App Store: https://apps.apple.com/app/id6823997426
+- Platforms: iPhone with iOS 17 or later, free on the App Store: https://apps.apple.com/app/id6823997426. Android 9 or later, in testing on Google Play that anyone can join: https://49game.github.io/#android
 - Game types: Classic (one board, best time), Endless (boards keep coming, scored by pace), Beat the Clock (every find adds time, every miss costs time).
 - Orders: count up from 1 to 49, down from 49 to 1, or Number Madness in Classic (the next number is random).
 - Styles: Normal (a plain time trial), Competitive (points, combos and a multiplier up to ×3), Relax (effects and sounds, without points, records or ranks, and 3 free hints a game).
