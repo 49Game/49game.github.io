@@ -212,7 +212,13 @@ document.querySelectorAll(".chapter").forEach((chapter) => {
     nav.classList.toggle("is-compact", nav.scrollWidth > nav.clientWidth + 1 || right > innerWidth + 1);
   };
   fit();
-  addEventListener("resize", fit);
+  // Once a frame at most: fit measures every link, and a resize fires many times a frame.
+  let fitting = false;
+  addEventListener("resize", () => {
+    if (fitting) return;
+    fitting = true;
+    requestAnimationFrame(() => { fitting = false; fit(); });
+  });
   document.fonts?.ready.then(fit);
 })();
 
@@ -342,7 +348,11 @@ document.querySelectorAll(".chapter").forEach((chapter) => {
     queued = true;
     requestAnimationFrame(() => { queued = false; sweep(); });
   }, { passive: true });
-  addEventListener("resize", sweep);
+  addEventListener("resize", () => {
+    if (queued) return;
+    queued = true;
+    requestAnimationFrame(() => { queued = false; sweep(); });
+  });
   addEventListener("load", () => setTimeout(sweep, 300));
   sweep();
 })();
@@ -423,33 +433,3 @@ document.querySelectorAll(".chapter").forEach((chapter) => {
 
 // The phone menu closes after a link is chosen.
 document.querySelectorAll(".nav__sheet a").forEach((a) => a.addEventListener("click", () => a.closest("details").open = false));
-
-// Waiting lists: the email goes to our inbox through Web3Forms (the key only says which inbox).
-document.querySelectorAll("form.waitlist").forEach((form) => form.addEventListener("submit", async (event) => {
-  event.preventDefault();
-  const card = form.parentElement;
-  const button = form.querySelector("button");
-  const error = card.querySelector(".waitlist-error");
-  if (form.botcheck.checked) return;
-  button.disabled = true;
-  error.hidden = true;
-  try {
-    const data = new FormData();
-    data.append("access_key", form.dataset.key);
-    const list = form.dataset.list || "app-store";
-    data.append("subject", (list === "android" ? "49 Android waiting list: " : "49 waiting list: ") + document.documentElement.lang);
-    data.append("list", list);
-    data.append("from_name", "49 website");
-    data.append("email", form.email.value.trim());
-    data.append("language", document.documentElement.lang);
-    data.append("page", location.pathname);
-    const response = await fetch("https://api.web3forms.com/submit", { method: "POST", body: data, headers: { Accept: "application/json" } });
-    const result = await response.json();
-    if (!result.success) throw new Error(result.message || "failed");
-    form.hidden = true;
-    card.querySelector(".waitlist-done").hidden = false;
-  } catch (e) {
-    error.hidden = false;
-    button.disabled = false;
-  }
-}));
