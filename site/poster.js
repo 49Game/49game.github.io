@@ -16,6 +16,14 @@
   var gone = false
   function go() { if (!gone) { gone = true; location.replace(TARGET) } }
   setTimeout(go, 800)
+  // Our own scan counter (stats/poster-counter in the source repo): one count for today and this kind of phone,
+  // nothing else. Only from the real site, so previews don't count.
+  if (location.hostname === '49game.github.io') {
+    try {
+      fetch('https://fortynine-poster-scans.fortynine-push.workers.dev/scan?p=' + platform, { method: 'POST', mode: 'cors', keepalive: true })
+        .catch(function () {})
+    } catch (e) {}
+  }
   try {
     var visit = crypto.randomUUID()
     crypto.subtle.digest('SHA-256', new TextEncoder().encode(visit)).then(function (hash) {
