@@ -6,15 +6,15 @@ Key facts:
 
 - Platforms: iPhone with iOS 17 or later, free on the App Store: https://apps.apple.com/app/id6823997426. Android 9 or later, in testing on Google Play that anyone can join: https://49game.github.io/#android
 - Game types: Classic (one board, best time), Endless (boards keep coming, scored by pace), Beat the Clock (every find adds time, every miss costs time).
-- Orders: count up from 1 to 49, down from 49 to 1, or Number Madness in Classic (the next number is random).
+- Orders: count up from 1 to 49, down from 49 to 1, or in random order, in every game type.
 - Styles: Normal (a plain time trial), Competitive (points, combos and a multiplier up to ×3), Relax (effects and sounds, without points, records or ranks, and 3 free hints a game).
-- Boards: Numbers from 5 × 5 to 11 × 11 (5, 6, 7, 9 and 11 tiles a side), Red & Black (count red up and black down) up to 7 × 7, and Letters (A to Y on 5 × 5).
+- Boards: Numbers from 3 × 3 to 11 × 11 (3, 4, 5, 6, 7, 9 and 11 tiles a side), Red & Black (count red up and black down) from 5 × 5 to 7 × 7, and Letters from 5 × 5 to 7 × 7 (A to Y on 5 × 5, then capital and small letters).
 - Competitive scoring: 100 points per number plus a speed bonus of up to 50 that shrinks with time. ×2 from a combo of 5, ×3 from 15. The combo is lost when its timer runs out and halved by a wrong tap, which never takes points away.
 - Daily Challenge: the same board for everyone each day. Most days the board itself moves or changes its look (for example Spin Up, a board that turns faster with every find, or fog, blinds and reshuffles), with a still version for players who use Reduce Motion. Special days bring a board of their own: a heart on Valentine's Day (69 Mode), a pumpkin on Halloween (Jack-o'-Lantern), a ball of yarn on Cat Day (17 February and 8 August) and a bone on Dog Day (1 July and 26 August). On April Fools' Day there is Totally Normal Mode.
 - Every day: three quests, XP and levels, a streak with streak freezes and an optional reminder.
 - Ranks from Rookie to Legend for every mode, direction, style and board.
 - 578 achievements in 20 groups, tiered on eight medals from bronze to prismatic.
-- 94 Game Center leaderboards: fastest time and most points by board and direction, for today, this week, this month and all time. The Daily has its own board, where a player's best attempt counts.
+- 100 Game Center leaderboards: fastest time and most points by board and direction, for today, this week, this month and all time. The Daily has its own board, where a player's best attempt counts.
 - Multiplayer: 1 v 1, 2 v 2 and group rooms with Race, Points battle, Knockout and Ghost race, all on the same board for everyone, plus Steal (one board, live: whoever taps a number first scores it). Friends join with a five-character room code, a QR code or a link, with a nickname per game. A lobby lists public rooms, quick pairing finds an opponent, and ranked games have their own ratings. Guest mode lets friends play on one phone.
 - Hints: 3 free a day, and more after every 10 games. Each adds 5 seconds, so hints never set a record.
 - Insights: blind spots on the board, time of day, rhythm and the most common mistakes. After every game, one sentence on the biggest improvement.
