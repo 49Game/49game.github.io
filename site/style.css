@@ -123,9 +123,15 @@ html:not(.on-android) .link--iphone { display: none; }
 /* The promo film opens the page, below the navigation, and never taller than the screen. */
 .promo { padding: calc(var(--margin) + 3.75rem) var(--margin) 0; }
 .promo__video { display: block; height: auto; margin-inline: auto; background: var(--gold); }
-.promo__video--wide { width: min(100%, calc((100svh - 11rem) * 16 / 9)); }
+.promo__video--wide { aspect-ratio: 16 / 9; width: min(100%, calc((100svh - 11rem) * 16 / 9)); }
 /* Phones get the vertical cut, still short enough to show the cue beneath it. */
-.promo__video--tall { display: none; width: min(100%, calc((100svh - 9rem) * 9 / 16)); }
+.promo__video--tall { aspect-ratio: 9 / 16; display: none; width: min(100%, calc((100svh - 9rem) * 9 / 16)); }
+/* While the promo autoplays, the browser's own control bar stays hidden. It comes back on the first tap, click or focus
+   (page.js adds .is-touched): appearing on its own during the autoplay, it counted as a layout shift (PageSpeed CLS 0.57).
+   Without JavaScript, or with less motion (no autoplay), the bar is there from the start, as before. */
+@media (prefers-reduced-motion: no-preference) {
+  html.js .promo__video:not(.is-touched)::-webkit-media-controls { display: none !important; }
+}
 @media (max-width: 600px) {
   .promo__video--wide { display: none; }
   .promo__video--tall { display: block; }

@@ -323,6 +323,12 @@ document.querySelectorAll(".chapter").forEach((chapter) => {
 // The promo comes in two cuts and only the one shown is ever loaded, so it waits for this (data-autoplay).
 (() => {
   const videos = [...document.querySelectorAll("video[autoplay], video[data-autoplay]")];
+  // The promo's own control bar shows from the first tap, click or focus on it (style.css hides it until then).
+  document.querySelectorAll(".promo__video").forEach((v) => {
+    const touched = () => v.classList.add("is-touched");
+    v.addEventListener("pointerdown", touched, { once: true });
+    v.addEventListener("focus", touched, { once: true });
+  });
   const still = matchMedia("(prefers-reduced-motion: reduce)");
   const stop = () => videos.forEach((v) => { v.pause(); v.removeAttribute("autoplay"); });
   if (still.matches) return stop();
