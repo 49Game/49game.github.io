@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self'; media-src 'self'; font-src 'self'; connect-src 'self' https://nom.telemetrydeck.com; object-src 'none'; base-uri 'self'; form-action 'self'">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Support - 49 - Focus Booster</title>
   <meta name="description" content="Help with 49 - Focus Booster: contact, Premium, Game Center and common questions.">
@@ -23,10 +24,11 @@
   <link rel="icon" type="image/png" sizes="32x32" href="assets/tab-49b-32.png">
   <link rel="apple-touch-icon" href="assets/home-icon-180.png">
   <link rel="preload" href="site/fonts/archivo-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="site/style.css?v=15">
-  <link rel="stylesheet" href="site/pages.css?v=2">
+  <link rel="stylesheet" href="site/style.css?v=8605de50">
+  <link rel="stylesheet" href="site/pages.css?v=cfab110c">
 </head>
 <body class="doc">
+<!-- partial:header -->
 <header class="nav nav--page">
   <a class="nav__home" href="./"><img class="nav__icon" src="assets/app-icon-64.png?v=2" width="32" height="32" alt="49"></a>
   <details class="nav__menu">
@@ -45,6 +47,7 @@
   </nav>
   <a class="button nav__action" href="https://apps.apple.com/app/id6823997426">Get 49</a>
 </header>
+<!-- /partial:header -->
   <main class="page">
     <h1>Support</h1>
     <div class="page__body">
@@ -72,21 +75,14 @@
     <p>Tell us what happened at <a href="mailto:contact49game@icloud.com">contact49game@icloud.com</a>. A screenshot or screen recording helps a lot.</p>
     </div>
   </main>
+<!-- partial:footer -->
 <footer class="foot">
   <p class="foot__what">49, a focus game for iPhone and Android</p>
   <p class="foot__links"><a href="./">Home</a><a href="./#board">Schulte table online</a><a href="achievements.html">Achievements</a><a href="support.html">Support</a><a href="terms.html">Terms</a></p>
   <p class="foot__legal">© 2026 <a href="privacy.html">Privacy</a></p>
   <p class="foot__credits">iPhone, Game Center and VoiceOver are trademarks of Apple Inc. 49 is not affiliated with Apple. Android and Google Play are trademarks of Google LLC.</p>
 </footer>
-<script>
-  // The phone menu closes after a link is chosen, on a click anywhere else, or Escape.
-  (() => {
-    const menu = document.querySelector("details.nav__menu");
-    if (!menu) return;
-    menu.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => { menu.open = false; }));
-    document.addEventListener("click", (e) => { if (menu.open && !menu.contains(e.target)) menu.open = false; });
-    document.addEventListener("keydown", (e) => { if (e.key === "Escape" && menu.open) { menu.open = false; menu.querySelector("summary").focus(); } });
-  })();
-</script>
+<script src="site/menu.js?v=5f640a8e"></script>
+<!-- /partial:footer -->
 </body>
 </html>

@@ -2,6 +2,7 @@
 <html lang="pl">
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self'; media-src 'self'; font-src 'self'; connect-src 'self' https://nom.telemetrydeck.com; object-src 'none'; base-uri 'self'; form-action 'self'">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="robots" content="noindex">
   <title>49 - Focus Booster</title>
@@ -14,41 +15,8 @@
        stats/collect.py counts the events as poster scans, apart from players.
        The App Store link carries App Analytics' campaign tags (pt=129629049, the provider id; ct=poster, since
        2026-11-12), so poster downloads show under Analytics, Acquisition, Campaigns. Keep the three copies alike. When 49 comes to Android, point ANDROID at Google Play. -->
-  <meta http-equiv="refresh" content="3; url=https://apps.apple.com/app/apple-store/id6823997426?pt=129629049&ct=poster&mt=8">
-  <script>
-    (function () {
-      var IPHONE = 'https://apps.apple.com/app/apple-store/id6823997426?pt=129629049&ct=poster&mt=8'
-      var ANDROID = 'pl/?from=poster#android'
-      var ua = navigator.userAgent
-      var platform = /Android/i.test(ua) ? 'android'
-        : (/iPhone|iPad|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)) ? 'ios' : 'other'
-      var TARGET = platform === 'android' ? ANDROID : IPHONE
-      if (platform === 'android') {
-        document.addEventListener('DOMContentLoaded', function () {
-          document.getElementById('going').textContent = 'Otwieram testy na Androida.'
-          var button = document.getElementById('go')
-          button.textContent = 'Pokaż, jak dołączyć'
-          button.href = ANDROID
-        })
-      }
-      var gone = false
-      function go() { if (!gone) { gone = true; location.replace(TARGET) } }
-      setTimeout(go, 800)
-      try {
-        var visit = crypto.randomUUID()
-        crypto.subtle.digest('SHA-256', new TextEncoder().encode(visit)).then(function (hash) {
-          var user = Array.from(new Uint8Array(hash), function (b) { return b.toString(16).padStart(2, '0') }).join('')
-          var signal = { appID: '361CD1BB-D313-4E3A-9185-B3752B50B3E1', clientUser: user, sessionID: visit, type: 'Poster.opened',
-                         payload: { platform: platform } }
-          if (location.hostname !== '49game.github.io') signal.isTestMode = true
-          return fetch('https://nom.telemetrydeck.com/v2/', {
-            method: 'POST', mode: 'cors', keepalive: true,
-            headers: { 'Content-Type': 'application/json' }, body: JSON.stringify([signal])
-          })
-        }).then(go, go)
-      } catch (e) { go() }
-    })()
-  </script>
+  <meta http-equiv="refresh" content="3; url=https://apps.apple.com/app/apple-store/id6823997426?pt=129629049&amp;ct=poster&amp;mt=8">
+<script src="site/poster.js?v=0b6dde74"></script>
   <link rel="icon" type="image/png" sizes="64x64" href="assets/tab-49b-64.png">
   <link rel="apple-touch-icon" href="assets/home-icon-180.png">
   <style>
@@ -62,7 +30,7 @@
 <body>
   <main>
     <p id="going">Otwieram 49 w App Store.</p>
-    <a class="button" id="go" href="https://apps.apple.com/app/apple-store/id6823997426?pt=129629049&ct=poster&mt=8">Pobierz 49</a>
+    <a class="button" id="go" href="https://apps.apple.com/app/apple-store/id6823997426?pt=129629049&amp;ct=poster&amp;mt=8">Pobierz 49</a>
     <small>Masz Androida? <a href="pl/?from=poster#android">Dołącz do testów</a></small>
     <small>Więcej o grze: <a href="pl/">49game.github.io/pl</a></small>
   </main>
