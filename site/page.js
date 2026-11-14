@@ -327,10 +327,31 @@ document.querySelectorAll(".chapter").forEach((chapter) => {
   const stop = () => videos.forEach((v) => { v.pause(); v.removeAttribute("autoplay"); });
   if (still.matches) return stop();
   if (!("IntersectionObserver" in window)) return;
+  // One button pauses every looping recording on the page, and keeps them paused while scrolling.
+  const words = {
+    en: ["Pause the videos", "Play the videos"], pl: ["Zatrzymaj wideo", "Odtwórz wideo"],
+    de: ["Videos anhalten", "Videos abspielen"], es: ["Pausar los vídeos", "Reproducir los vídeos"],
+    fr: ["Mettre les vidéos en pause", "Lire les vidéos"], it: ["Metti in pausa i video", "Riproduci i video"],
+    ja: ["動画を一時停止", "動画を再生"], ko: ["동영상 일시정지", "동영상 재생"], pt: ["Pausar os vídeos", "Reproduzir os vídeos"],
+  }[document.documentElement.lang.toLowerCase().split("-")[0]] || ["Pause the videos", "Play the videos"];
+  let paused = false;
   const io = new IntersectionObserver((entries) => {
-    for (const e of entries) e.isIntersecting ? e.target.play().catch(() => {}) : e.target.pause();
+    for (const e of entries) e.isIntersecting && !paused ? e.target.play().catch(() => {}) : e.target.pause();
   });
   videos.forEach((v) => io.observe(v));
+  const toggle = document.createElement("button");
+  toggle.type = "button";
+  toggle.className = "motion-toggle";
+  toggle.setAttribute("aria-pressed", "false");
+  toggle.setAttribute("aria-label", words[0]);
+  toggle.addEventListener("click", () => {
+    paused = !paused;
+    toggle.setAttribute("aria-pressed", String(paused));
+    toggle.setAttribute("aria-label", words[paused ? 1 : 0]);
+    if (paused) videos.forEach((v) => v.pause());
+    else videos.forEach((v) => { const r = v.getBoundingClientRect(); if (r.bottom > 0 && r.top < innerHeight) v.play().catch(() => {}); });
+  });
+  document.body.appendChild(toggle);
 })();
 
 // Reveal once as a section enters. Never leaves content hidden: anything already above the

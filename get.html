@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self'; media-src 'self'; font-src 'self'; connect-src 'self' https://nom.telemetrydeck.com; object-src 'none'; base-uri 'self'; form-action 'self'">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="robots" content="noindex">
   <title>49 - Focus Booster</title>
@@ -9,24 +10,7 @@
   <!-- The QR codes on the home pages open this page, so one code serves every phone: an iPhone goes to the App
        Store, an Android phone to the Android test's steps on the home page in its language, a computer to the home
        page. Nothing is counted or stored. When 49 comes to Android, point ANDROID at Google Play. -->
-  <script>
-    (function () {
-      var IPHONE = 'https://apps.apple.com/app/id6823997426'
-      var pages = ['pl', 'de', 'fr', 'es', 'pt-br', 'it', 'ja', 'ko']
-      var wanted = (navigator.languages || [navigator.language || 'en']).map(function (l) { return l.toLowerCase() })
-      var home = ''
-      for (var i = 0; i < wanted.length && !home; i++) {
-        var l = wanted[i]
-        if (l.indexOf('en') === 0) break
-        if (l.indexOf('pt') === 0) { home = 'pt-br/'; break }
-        for (var j = 0; j < pages.length; j++) if (l.split('-')[0] === pages[j]) { home = pages[j] + '/'; break }
-      }
-      var ua = navigator.userAgent
-      var android = /Android/i.test(ua)
-      var iphone = /iPhone|iPad|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)
-      location.replace(iphone ? IPHONE : android ? (home || './') + '#android' : (home || './'))
-    })()
-  </script>
+<script src="site/get.js?v=bca3e688"></script>
   <link rel="icon" type="image/png" sizes="64x64" href="assets/tab-49b-64.png">
   <link rel="apple-touch-icon" href="assets/home-icon-180.png">
   <style>
