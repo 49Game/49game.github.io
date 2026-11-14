@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self'; media-src 'self'; font-src 'self'; connect-src 'self' https://nom.telemetrydeck.com; object-src 'none'; base-uri 'self'; form-action 'self'">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="robots" content="noindex">
   <title>Join a game - 49 - Focus Booster</title>
@@ -23,15 +22,14 @@
   <link rel="icon" type="image/png" sizes="32x32" href="assets/tab-49b-32.png">
   <link rel="apple-touch-icon" href="assets/home-icon-180.png">
   <link rel="preload" href="site/fonts/archivo-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="site/style.css?v=8605de50">
-  <link rel="stylesheet" href="site/pages.css?v=cfab110c">
+  <link rel="stylesheet" href="site/style.css?v=13">
+  <link rel="stylesheet" href="site/pages.css?v=2">
   <style>
     .join-code { font: 800 clamp(44px, 14vw, 72px) var(--font); letter-spacing: .12em; color: var(--accent); margin: 8px 0 20px; }
     .join-actions { display: flex; flex-wrap: wrap; gap: 12px; margin: 24px 0; }
   </style>
 </head>
 <body class="doc">
-<!-- partial:header -->
 <header class="nav nav--page">
   <a class="nav__home" href="./"><img class="nav__icon" src="assets/app-icon-64.png?v=2" width="32" height="32" alt="49"></a>
   <details class="nav__menu">
@@ -50,7 +48,6 @@
   </nav>
   <a class="button nav__action" href="https://apps.apple.com/app/id6823997426">Get 49</a>
 </header>
-<!-- /partial:header -->
   <main class="page">
     <h1>Join a game</h1>
     <div class="page__body">
@@ -73,18 +70,49 @@
     <h2>Don't have 49 yet?</h2>
     <p>49 is a focus game for iPhone, free on the App Store. Install it, then come back to this link.</p>
     <p><a class="button beta-button" href="https://apps.apple.com/app/id6823997426" target="_blank" rel="noopener">Get 49 on the App Store</a></p>
-    <p>On Android? 49 is on Google Play as a test that anyone can join. <a class="link-plain" href="./#android">See how to join</a>.</p>
     </div>
   </main>
-<!-- partial:footer -->
 <footer class="foot">
   <p class="foot__what">49, a focus game for iPhone and Android</p>
   <p class="foot__links"><a href="./">Home</a><a href="./#board">Schulte table online</a><a href="achievements.html">Achievements</a><a href="support.html">Support</a><a href="terms.html">Terms</a></p>
   <p class="foot__legal">© 2026 <a href="privacy.html">Privacy</a></p>
   <p class="foot__credits">iPhone, Game Center and VoiceOver are trademarks of Apple Inc. 49 is not affiliated with Apple. Android and Google Play are trademarks of Google LLC.</p>
 </footer>
-<script src="site/menu.js?v=5f640a8e"></script>
-<!-- /partial:footer -->
-<script src="site/join.js?v=db318b11"></script>
+<script>
+  // The phone menu closes after a link is chosen, on a click anywhere else, or Escape.
+  (() => {
+    const menu = document.querySelector("details.nav__menu");
+    if (!menu) return;
+    menu.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => { menu.open = false; }));
+    document.addEventListener("click", (e) => { if (menu.open && !menu.contains(e.target)) menu.open = false; });
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape" && menu.open) { menu.open = false; menu.querySelector("summary").focus(); } });
+  })();
+</script>
+  <script>
+    // join.html#K7Q2M: only a well-formed code (the app's alphabet and length) is shown or passed on.
+    (() => {
+      let raw = location.hash.slice(1);
+      try { raw = decodeURIComponent(raw); } catch (e) {}
+      // "friend-fb-abc123" is a friend link (49 for Android): it opens that player's profile in the app.
+      const friend = /^friend-([A-Za-z0-9_-]{4,140})$/.exec(raw);
+      if (friend && friend[1].includes("-")) {
+        document.querySelector("h1").textContent = "Add a friend";
+        document.getElementById("open-friend").href = "fortynine://friend/" + friend[1];
+        document.getElementById("friend").hidden = false;
+        return;
+      }
+      // "steal-K7Q2M" is a Steal code (a 1 v 1 through Game Center); a plain code is a room.
+      const steal = /^steal-/i.test(raw);
+      const code = raw.replace(/^steal-/i, "").toUpperCase().replace(/[\s-]/g, "");
+      if (/^[ABCDEFGHJKMNPQRSTUVWXYZ2-9]{5}$/.test(code)) {
+        document.getElementById("code").textContent = code;
+        document.getElementById("open").href = (steal ? "fortynine://steal/" : "fortynine://join/") + code;
+        if (steal) document.getElementById("kind").textContent = "You're invited to a game of Steal: one board, whoever taps first scores. Your code:";
+        document.getElementById("invite").hidden = false;
+      } else {
+        document.getElementById("no-code").hidden = false;
+      }
+    })();
+  </script>
 </body>
 </html>

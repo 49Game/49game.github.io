@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self'; media-src 'self'; font-src 'self'; connect-src 'self' https://nom.telemetrydeck.com; object-src 'none'; base-uri 'self'; form-action 'self'">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Privacy Policy - 49 - Focus Booster</title>
   <meta name="description" content="How 49 - Focus Booster handles your data on iPhone and Android: your games and their backup, multiplayer profiles and leaderboards, your skills, anonymous statistics, Game Center, Google Play Games and ads.">
@@ -24,11 +23,10 @@
   <link rel="icon" type="image/png" sizes="32x32" href="assets/tab-49b-32.png">
   <link rel="apple-touch-icon" href="assets/home-icon-180.png">
   <link rel="preload" href="site/fonts/archivo-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="site/style.css?v=8605de50">
-  <link rel="stylesheet" href="site/pages.css?v=cfab110c">
+  <link rel="stylesheet" href="site/style.css?v=13">
+  <link rel="stylesheet" href="site/pages.css?v=2">
 </head>
 <body class="doc">
-<!-- partial:header -->
 <header class="nav nav--page">
   <a class="nav__home" href="./"><img class="nav__icon" src="assets/app-icon-64.png?v=2" width="32" height="32" alt="49"></a>
   <details class="nav__menu">
@@ -47,7 +45,6 @@
   </nav>
   <a class="button nav__action" href="https://apps.apple.com/app/id6823997426">Get 49</a>
 </header>
-<!-- /partial:header -->
   <main class="page">
     <h1>Privacy Policy</h1>
     <div class="page__body">
@@ -131,7 +128,7 @@
     <p>If you contact us, we use your message to help you and keep the conversation only as long as it is useful for that.</p>
 
     <h2>This website</h2>
-    <p>This website is hosted on GitHub Pages. GitHub may log technical data such as your IP address to keep the service secure, as described in the <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">GitHub privacy statement</a>. The website sets no cookies and loads nothing from third parties. When you pick a language, your browser keeps that choice in its local storage on your device, so the site opens in it next time. It is never sent anywhere. It uses no analytics, with one exception: the page that the QR code on our posters opens (49game.github.io/poster) tells TelemetryDeck that it was opened and on which kind of phone (iPhone, Android or other), then forwards you to the App Store, or on Android to the steps for joining the Android test. Arriving from the poster, a tap on one of those steps tells TelemetryDeck which step it was. Each message carries a random number made for that one visit, nothing about you or your device, and no cookie is set. It only lets us count how many people the posters bring. The site remembers the language you pick in your own browser only, and nothing is sent to us.</p>
+    <p>This website is hosted on GitHub Pages. GitHub may log technical data such as your IP address to keep the service secure, as described in the <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">GitHub privacy statement</a>. The website sets no cookies and loads nothing from third parties. It uses no analytics, with one exception: the page that the QR code on our posters opens (49game.github.io/poster) tells TelemetryDeck that it was opened and on which kind of phone (iPhone, Android or other), then forwards you to the App Store, or on Android to the steps for joining the Android test. Arriving from the poster, a tap on one of those steps tells TelemetryDeck which step it was. Each message carries a random number made for that one visit, nothing about you or your device, and no cookie is set. It only lets us count how many people the posters bring. The site remembers the language you pick in your own browser only, and nothing is sent to us.</p>
 
     <h2>Transfers outside the EU</h2>
     <p>Apple, Google, Cloudflare, GitHub and Web3Forms may process data outside the European Economic Area. On Android, 49's records stay in the EU (Warsaw, and Belgium for live Steal matches), but Firebase's sign-in runs in the United States, and Firebase Cloud Messaging and Cloudflare work worldwide. They rely on safeguards recognised under the GDPR, such as the European Commission's standard contractual clauses or the EU-U.S. Data Privacy Framework.</p>
@@ -143,14 +140,21 @@
     <p>If this policy changes, we will update this page and the date above.</p>
     </div>
   </main>
-<!-- partial:footer -->
 <footer class="foot">
   <p class="foot__what">49, a focus game for iPhone and Android</p>
   <p class="foot__links"><a href="./">Home</a><a href="./#board">Schulte table online</a><a href="achievements.html">Achievements</a><a href="support.html">Support</a><a href="terms.html">Terms</a></p>
   <p class="foot__legal">© 2026 <a href="privacy.html">Privacy</a></p>
   <p class="foot__credits">iPhone, Game Center and VoiceOver are trademarks of Apple Inc. 49 is not affiliated with Apple. Android and Google Play are trademarks of Google LLC.</p>
 </footer>
-<script src="site/menu.js?v=5f640a8e"></script>
-<!-- /partial:footer -->
+<script>
+  // The phone menu closes after a link is chosen, on a click anywhere else, or Escape.
+  (() => {
+    const menu = document.querySelector("details.nav__menu");
+    if (!menu) return;
+    menu.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => { menu.open = false; }));
+    document.addEventListener("click", (e) => { if (menu.open && !menu.contains(e.target)) menu.open = false; });
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape" && menu.open) { menu.open = false; menu.querySelector("summary").focus(); } });
+  })();
+</script>
 </body>
 </html>
