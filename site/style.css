@@ -129,12 +129,13 @@ html:not(.on-android) .link--iphone { display: none; }
 .top__num { font-size: min(clamp(6rem, 3rem + 9vw, 12rem), 16svh); line-height: 0.78; letter-spacing: -0.045em; margin-left: -0.05em; }
 .top__name { margin-top: min(0.75rem, 1svh); font-size: min(var(--step-head), 7.5svh); line-height: 1.05; letter-spacing: -0.025em; color: var(--gold); }
 .top .hero__line { margin-top: min(1.5rem, 2.5svh); max-width: 34ch; hyphens: manual; }
-/* The App Store rating, under the name, on the pages of the countries where players have rated 49 (so far Poland). */
+/* The App Store rating, under the name, on the pages whose country's store has enough ratings (website/.github/rating.py). */
 .top__rating { margin: min(0.5rem, 1svh) 0 0; font-size: var(--step-small); color: var(--muted); }
 .top__rating a { display: inline-flex; align-items: center; gap: 0.5rem; min-height: 2rem; text-decoration: none; }
 .top__rating a:hover { color: var(--ink); }
 .top__rating b { color: var(--ink); font-weight: 600; }
-.top__stars { color: var(--gold); font-size: 1.15em; letter-spacing: 0.08em; }
+/* Gold up to the average (--fill, set by rating.py), so a 4.3 doesn't show five full stars. */
+.top__stars { background: linear-gradient(90deg, var(--gold) var(--fill, 100%), color-mix(in srgb, var(--ink) 25%, transparent) 0); -webkit-background-clip: text; background-clip: text; color: transparent; font-size: 1.15em; letter-spacing: 0.08em; }
 .top__facts { list-style: none; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: min(1.5rem, 2.5svh) 2.5rem; margin: min(2.5rem, 3svh) 0 0; padding: min(1.5rem, 2.5svh) 0 0; border-top: 1px solid color-mix(in srgb, var(--ink) 15%, transparent); }
 .top .hero__actions { margin-top: min(2rem, 3.5svh); }
 .top__facts li { display: grid; align-content: start; gap: 0.3rem; }
