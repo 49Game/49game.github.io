@@ -1,8 +1,11 @@
-# Every day: the App Store rating on the home pages (.github/rating.py), published only when it changed.
+# Every day at 4:00 Polish time: the App Store rating on the home pages (.github/rating.py), published only when it changed.
+# GitHub's schedules are in UTC, and 4:00 in Poland is 03:00 UTC in winter (CET) and 02:00 UTC in summer (CEST),
+# so both are scheduled and the run that isn't 4:00 in Poland that day stops at the first step.
 name: App Store rating
 on:
   schedule:
-    - cron: '23 5 * * *'
+    - cron: '0 2 * * *'
+    - cron: '0 3 * * *'
   workflow_dispatch:
 permissions:
   contents: write
@@ -11,9 +14,23 @@ jobs:
   rating:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - run: python3 .github/rating.py
+      - name: Only at 4:00 in Poland
+        id: when
+        run: |
+          if [ "${{ github.event_name }}" != "schedule" ]; then echo "run=yes" >> "$GITHUB_OUTPUT"; exit 0; fi
+          offset=$(TZ=Europe/Warsaw date +%z)
+          if { [ "$offset" = "+0100" ] && [ "${{ github.event.schedule }}" = "0 3 * * *" ]; } || \
+             { [ "$offset" = "+0200" ] && [ "${{ github.event.schedule }}" = "0 2 * * *" ]; }; then
+            echo "run=yes" >> "$GITHUB_OUTPUT"
+          else
+            echo "Not 4:00 in Poland today on this schedule, the other one runs"
+          fi
+      - if: steps.when.outputs.run == 'yes'
+        uses: actions/checkout@v4
+      - if: steps.when.outputs.run == 'yes'
+        run: python3 .github/rating.py
       - name: Publish if it changed
+        if: steps.when.outputs.run == 'yes'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
