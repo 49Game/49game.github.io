@@ -408,6 +408,38 @@ document.querySelectorAll(".chapter").forEach((chapter) => {
   set(0);
 })();
 
+// The trailer: the hero's front phone plays it on mute, and a click on the phone plays it full screen, from the start,
+// with sound. It closes when it ends, when full screen is left, or by its button or Escape. On an iPhone the video's
+// own player goes full screen as it starts (the video has no playsinline), so full screen is only asked for elsewhere.
+(() => {
+  const dialog = document.getElementById("watch");
+  if (!dialog || typeof dialog.showModal !== "function") return;
+  const video = dialog.querySelector("video");
+  const full = () => document.fullscreenElement || document.webkitFullscreenElement;
+  const leave = () => {
+    if (!full()) return;
+    if (document.exitFullscreen) document.exitFullscreen().catch(() => {});
+    else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
+  };
+  const open = () => {
+    document.querySelectorAll("dialog[open]").forEach((d) => d.close());
+    dialog.showModal();
+    video.currentTime = 0;
+    video.play().catch(() => {});
+    if (video.requestFullscreen) video.requestFullscreen().catch(() => {});
+    else if (video.webkitRequestFullscreen) video.webkitRequestFullscreen();
+  };
+  document.querySelectorAll('[aria-controls="watch"]').forEach((b) => b.addEventListener("click", open));
+  const shut = () => { if (dialog.open) dialog.close(); };
+  dialog.addEventListener("close", () => { video.pause(); leave(); });
+  dialog.querySelector("[data-close]").addEventListener("click", shut);
+  video.addEventListener("ended", shut);
+  video.addEventListener("webkitendfullscreen", shut);
+  const left = () => { if (!full()) shut(); };
+  document.addEventListener("fullscreenchange", left);
+  document.addEventListener("webkitfullscreenchange", left);
+})();
+
 // The QR code for the beta: opened from the hero, closed by its button, Escape or a click outside.
 (() => {
   const dialog = document.getElementById("qr");
