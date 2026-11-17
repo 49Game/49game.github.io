@@ -17,17 +17,11 @@ const say = (key, values = {}) => (T[key] || key).replace(/\{(\w+)\}/g, (_, k) =
 // instead of the App Store, and the hero's Android link steps aside for an "On iPhone?" link that keeps
 // the App Store (data-keep). iPhones see the Android link, computers a Join on Android button beside Get it on iPhone.
 // The quiet TestFlight line (early features) keeps its link everywhere.
+// (jsflag.js, in the head, has already marked the device on <html>: on-android, on-ios or on-desktop, so the right
+// buttons are there on the first paint.)
 (() => {
-  const ua = navigator.userAgent;
-  const root = document.documentElement;
-  if (/Android/i.test(ua)) {
-    root.classList.add("on-android");
-    document.querySelectorAll('a[href^="https://apps.apple.com/"]:not([data-keep])').forEach((a) => a.setAttribute("href", "#android"));
-  } else if (/iPhone|iPad|iPod/.test(ua) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1)) {
-    root.classList.add("on-ios");
-  } else {
-    root.classList.add("on-desktop");
-  }
+  if (!document.documentElement.classList.contains("on-android")) return;
+  document.querySelectorAll('a[href^="https://apps.apple.com/"]:not([data-keep])').forEach((a) => a.setAttribute("href", "#android"));
 })();
 
 // Android phones that came from the poster's QR code (/poster forwards them here with ?from=poster): each tap on
