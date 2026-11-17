@@ -701,3 +701,9 @@ html:not(.on-android) .hero__actions .hero__qr-label { display: none; }
 /* Each looping recording pauses on a click, tap, Enter or Space, and plays again the same way (WCAG 2.2.2, page.js). */
 .is-pausable { cursor: pointer; }
 .is-pausable:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
+
+/* Everything below the top is laid out and painted only as it nears the screen, so the first screen's work stays
+   small (PageSpeed's blocking time). Each block keeps its last size once seen, so the scrollbar doesn't jump.
+   .laid-out turns it off for good wherever a jump needs true positions: a jump link (page.js), a visit straight to a
+   section, a reload or Back (jsflag.js). */
+html:not(.laid-out) main#top > :not(.top) { content-visibility: auto; contain-intrinsic-size: auto 1200px; }

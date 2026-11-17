@@ -201,6 +201,13 @@ document.querySelectorAll(".chapter").forEach((chapter) => {
   sections.forEach((s) => io.observe(s));
 });
 
+// A jump within the page needs every section's true size first (style.css lays out far sections only near the
+// screen), so the first jump link turns that off before the browser scrolls.
+document.addEventListener("click", (e) => {
+  const link = e.target.closest && e.target.closest('a[href*="#"]');
+  if (link && link.pathname === location.pathname) document.documentElement.classList.add("laid-out");
+}, true);
+
 // The header shows every link when they fit beside the board, else its menu button.
 (() => {
   const nav = document.querySelector("header.nav");
@@ -382,9 +389,10 @@ document.querySelectorAll(".chapter").forEach((chapter) => {
 (() => {
   const waiting = new Set(document.querySelectorAll("[data-reveal]"));
   const sweep = () => {
-    for (const el of waiting) {
-      if (el.getBoundingClientRect().top < innerHeight * 0.92) { el.classList.add("is-in"); waiting.delete(el); }
-    }
+    // Every position first, then every change: one layout, however many there are.
+    const line = innerHeight * 0.92;
+    const seen = [...waiting].filter((el) => el.getBoundingClientRect().top < line);
+    seen.forEach((el) => { el.classList.add("is-in"); waiting.delete(el); });
   };
   let queued = false;
   addEventListener("scroll", () => {
