@@ -319,39 +319,47 @@ document.querySelectorAll(".chapter").forEach((chapter) => {
   sections.forEach((s) => io.observe(s));
 })();
 
-// Screen recordings play only while on screen, and never for people who asked for less motion.
+// Screen recordings play only while on screen, and never by themselves for people who asked for less motion.
+// A click or tap on one (or Enter or Space on it) pauses it, and again plays it. A video paused that way is "held":
+// scrolling doesn't start it again, only another click does. The hero's front phone has its own button for the same.
 (() => {
   const videos = [...document.querySelectorAll("video[autoplay], video[data-autoplay]")];
   if (!videos.length) return;
-  const still = matchMedia("(prefers-reduced-motion: reduce)");
-  const stop = () => videos.forEach((v) => { v.pause(); v.removeAttribute("autoplay"); });
-  if (still.matches) return stop();
-  if (!("IntersectionObserver" in window)) return;
-  // One button pauses every looping recording on the page, and keeps them paused while scrolling.
   const words = {
-    en: ["Pause the videos", "Play the videos"], pl: ["Zatrzymaj wideo", "Odtwórz wideo"],
-    de: ["Videos anhalten", "Videos abspielen"], es: ["Pausar los vídeos", "Reproducir los vídeos"],
-    fr: ["Mettre les vidéos en pause", "Lire les vidéos"], it: ["Metti in pausa i video", "Riproduci i video"],
-    ja: ["動画を一時停止", "動画を再生"], ko: ["동영상 일시정지", "동영상 재생"], pt: ["Pausar os vídeos", "Reproduzir os vídeos"],
-  }[document.documentElement.lang.toLowerCase().split("-")[0]] || ["Pause the videos", "Play the videos"];
-  let paused = false;
+    en: ["Pause the video", "Play the video"], pl: ["Zatrzymaj wideo", "Odtwórz wideo"],
+    de: ["Video anhalten", "Video abspielen"], es: ["Pausar el vídeo", "Reproducir el vídeo"],
+    fr: ["Mettre la vidéo en pause", "Lire la vidéo"], it: ["Metti in pausa il video", "Riproduci il video"],
+    ja: ["動画を一時停止", "動画を再生"], ko: ["동영상 일시정지", "동영상 재생"], pt: ["Pausar o vídeo", "Reproduzir o vídeo"],
+  }[document.documentElement.lang.toLowerCase().split("-")[0]] || ["Pause the video", "Play the video"];
+  videos.forEach((v) => {
+    const show = () => { v.title = words[v.paused ? 1 : 0]; };
+    const flip = () => {
+      v.held = !v.paused;
+      v.held ? v.pause() : v.play().catch(() => {});
+    };
+    v.classList.add("is-pausable");
+    v.addEventListener("play", show);
+    v.addEventListener("pause", show);
+    show();
+    v.addEventListener("click", flip);
+    // Keyboards reach the ones screen readers see (the hero's front phone has its own button instead).
+    if (v.closest("[aria-hidden='true']")) v.tabIndex = -1;
+    else {
+      v.tabIndex = 0;
+      v.addEventListener("keydown", (e) => {
+        if (e.key !== "Enter" && e.key !== " ") return;
+        e.preventDefault();
+        flip();
+      });
+    }
+  });
+  const still = matchMedia("(prefers-reduced-motion: reduce)");
+  if (still.matches) return videos.forEach((v) => { v.pause(); v.removeAttribute("autoplay"); });
+  if (!("IntersectionObserver" in window)) return;
   const io = new IntersectionObserver((entries) => {
-    for (const e of entries) e.isIntersecting && !paused && !e.target.held ? e.target.play().catch(() => {}) : e.target.pause();
+    for (const e of entries) e.isIntersecting && !e.target.held ? e.target.play().catch(() => {}) : e.target.pause();
   });
   videos.forEach((v) => io.observe(v));
-  const toggle = document.createElement("button");
-  toggle.type = "button";
-  toggle.className = "motion-toggle";
-  toggle.setAttribute("aria-pressed", "false");
-  toggle.setAttribute("aria-label", words[0]);
-  toggle.addEventListener("click", () => {
-    paused = !paused;
-    toggle.setAttribute("aria-pressed", String(paused));
-    toggle.setAttribute("aria-label", words[paused ? 1 : 0]);
-    if (paused) videos.forEach((v) => v.pause());
-    else videos.forEach((v) => { const r = v.getBoundingClientRect(); if (!v.held && r.bottom > 0 && r.top < innerHeight) v.play().catch(() => {}); });
-  });
-  document.body.appendChild(toggle);
 })();
 
 // Reveal once as a section enters. Never leaves content hidden: anything already above the
@@ -402,9 +410,8 @@ document.querySelectorAll(".chapter").forEach((chapter) => {
   set(0);
 })();
 
-// The trailer on the hero's front phone has its own pause button. A video paused there is "held": scrolling or the
-// page's play-all button doesn't start it again, only its own button does (also with less motion, where nothing starts
-// by itself).
+// The trailer on the hero's front phone has its own pause button. A video paused there is "held": scrolling doesn't
+// start it again, only its own button (or a click on it) does (also with less motion, where nothing starts by itself).
 document.querySelectorAll("[data-hold]").forEach((button) => {
   const video = button.closest("figure").querySelector("video");
   const show = () => button.setAttribute("aria-pressed", String(video.paused));
