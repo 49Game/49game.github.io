@@ -225,7 +225,7 @@ document.querySelectorAll(".chapter").forEach((chapter) => {
 // The way in stays in reach: once the page's own header scrolls away, a bar slides down at the top with
 // the section you are in (a one-word name from the page's strings, tap it for every section), the
 // language menu and "Get 49" (with the QR code on computers), all in the page's language.
-// It follows the header, not the hero's buttons, so the promo above the hero never leaves you without it.
+// It follows the header, not the hero's buttons.
 (() => {
   const heroActions = document.querySelector(".hero__actions");
   const join = heroActions?.querySelector('a.button[href*="apps.apple.com"]');
@@ -320,15 +320,9 @@ document.querySelectorAll(".chapter").forEach((chapter) => {
 })();
 
 // Screen recordings play only while on screen, and never for people who asked for less motion.
-// The promo comes in two cuts and only the one shown is ever loaded, so it waits for this (data-autoplay).
 (() => {
   const videos = [...document.querySelectorAll("video[autoplay], video[data-autoplay]")];
-  // The promo's own control bar shows from the first tap, click or focus on it (style.css hides it until then).
-  document.querySelectorAll(".promo__video").forEach((v) => {
-    const touched = () => v.classList.add("is-touched");
-    v.addEventListener("pointerdown", touched, { once: true });
-    v.addEventListener("focus", touched, { once: true });
-  });
+  if (!videos.length) return;
   const still = matchMedia("(prefers-reduced-motion: reduce)");
   const stop = () => videos.forEach((v) => { v.pause(); v.removeAttribute("autoplay"); });
   if (still.matches) return stop();
@@ -342,7 +336,7 @@ document.querySelectorAll(".chapter").forEach((chapter) => {
   }[document.documentElement.lang.toLowerCase().split("-")[0]] || ["Pause the videos", "Play the videos"];
   let paused = false;
   const io = new IntersectionObserver((entries) => {
-    for (const e of entries) e.isIntersecting && !paused ? e.target.play().catch(() => {}) : e.target.pause();
+    for (const e of entries) e.isIntersecting && !paused && !e.target.held ? e.target.play().catch(() => {}) : e.target.pause();
   });
   videos.forEach((v) => io.observe(v));
   const toggle = document.createElement("button");
@@ -355,7 +349,7 @@ document.querySelectorAll(".chapter").forEach((chapter) => {
     toggle.setAttribute("aria-pressed", String(paused));
     toggle.setAttribute("aria-label", words[paused ? 1 : 0]);
     if (paused) videos.forEach((v) => v.pause());
-    else videos.forEach((v) => { const r = v.getBoundingClientRect(); if (r.bottom > 0 && r.top < innerHeight) v.play().catch(() => {}); });
+    else videos.forEach((v) => { const r = v.getBoundingClientRect(); if (!v.held && r.bottom > 0 && r.top < innerHeight) v.play().catch(() => {}); });
   });
   document.body.appendChild(toggle);
 })();
@@ -408,36 +402,40 @@ document.querySelectorAll(".chapter").forEach((chapter) => {
   set(0);
 })();
 
-// The trailer: the hero's front phone plays it on mute, and a click on the phone plays it full screen, from the start,
-// with sound. It closes when it ends, when full screen is left, or by its button or Escape. On an iPhone the video's
-// own player goes full screen as it starts (the video has no playsinline), so full screen is only asked for elsewhere.
+// The trailer on the hero's front phone has its own pause button. A video paused there is "held": scrolling or the
+// page's play-all button doesn't start it again, only its own button does (also with less motion, where nothing starts
+// by itself).
+document.querySelectorAll("[data-hold]").forEach((button) => {
+  const video = button.closest("figure").querySelector("video");
+  const show = () => button.setAttribute("aria-pressed", String(video.paused));
+  video.addEventListener("play", show);
+  video.addEventListener("pause", show);
+  // With less motion nothing plays by itself, so the button offers play from the start.
+  if (matchMedia("(prefers-reduced-motion: reduce)").matches) show();
+  button.addEventListener("click", () => {
+    video.held = !video.paused;
+    video.held ? video.pause() : video.play().catch(() => {});
+  });
+});
+
+// The trailer page: the film asked for comes first and starts (from the menu, the promo film, from the hero's phone,
+// ?gameplay, the trailer playing there). With sound when the browser allows it, else muted, its controls turn the sound
+// on. "Back" goes back in the history when we came from the site, so the home page is where it was left.
 (() => {
-  const dialog = document.getElementById("watch");
-  if (!dialog || typeof dialog.showModal !== "function") return;
-  const video = dialog.querySelector("video");
-  const full = () => document.fullscreenElement || document.webkitFullscreenElement;
-  const leave = () => {
-    if (!full()) return;
-    if (document.exitFullscreen) document.exitFullscreen().catch(() => {});
-    else if (document.webkitExitFullscreen) document.webkitExitFullscreen();
-  };
-  const open = () => {
-    document.querySelectorAll("dialog[open]").forEach((d) => d.close());
-    dialog.showModal();
-    video.currentTime = 0;
-    video.play().catch(() => {});
-    if (video.requestFullscreen) video.requestFullscreen().catch(() => {});
-    else if (video.webkitRequestFullscreen) video.webkitRequestFullscreen();
-  };
-  document.querySelectorAll('[aria-controls="watch"]').forEach((b) => b.addEventListener("click", open));
-  const shut = () => { if (dialog.open) dialog.close(); };
-  dialog.addEventListener("close", () => { video.pause(); leave(); });
-  dialog.querySelector("[data-close]").addEventListener("click", shut);
-  video.addEventListener("ended", shut);
-  video.addEventListener("webkitendfullscreen", shut);
-  const left = () => { if (!full()) shut(); };
-  document.addEventListener("fullscreenchange", left);
-  document.addEventListener("webkitfullscreenchange", left);
+  const film = document.querySelector(".film");
+  if (!film) return;
+  const gameplay = document.getElementById("gameplay");
+  if (location.search === "?gameplay") film.insertBefore(gameplay, document.getElementById("film"));
+  const first = [...film.querySelector(".film__part").querySelectorAll("video")].find((v) => v.getClientRects().length);
+  if (first && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    first.play().catch(() => { first.muted = true; first.play().catch(() => {}); });
+  }
+  const back = film.querySelector("[data-back]");
+  back.addEventListener("click", (e) => {
+    let ours = false;
+    try { ours = new URL(document.referrer).origin === location.origin; } catch (_) {}
+    if (ours && history.length > 1) { e.preventDefault(); history.back(); }
+  });
 })();
 
 // The QR code for the beta: opened from the hero, closed by its button, Escape or a click outside.

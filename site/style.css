@@ -120,8 +120,8 @@ html:not(.on-android) .link--iphone { display: none; }
 .lang__menu a[aria-current] { color: var(--gold); }
 
 /* The chapter: a sticky stage on the left, the reading column on the right. */
-/* The top of the page: what 49 is, where to get it and a few facts, with the app beside it. The promo film follows. */
-.top { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); align-items: center; gap: clamp(2rem, 5vw, 5rem); min-height: min(100svh, 62vw); padding: calc((var(--margin) + 4.5rem) * var(--zoom, 1)) var(--margin) clamp(2rem, 6svh, 4rem) clamp(var(--margin), 12vw - 4.5rem, 16rem); }
+/* The top of the page: what 49 is, where to get it and a few facts, with the app beside it. */
+.top { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); align-items: center; gap: clamp(2rem, 5vw, 5rem); min-height: min(100svh, 62vw); padding: calc((var(--margin) + 4.5rem) * var(--zoom, 1)) var(--margin) clamp(3rem, 6svh, 4rem) clamp(var(--margin), 12vw - 4.5rem, 16rem); position: relative; }
 .top__text { container-type: inline-size; max-width: 40rem; }
 .top__tag { display: inline-flex; align-items: center; gap: 0.6rem; min-height: 2.25rem; margin: 0; padding: 0 0.9rem; background: var(--surface); font-size: var(--step-small); }
 .top__tag::before { content: ""; width: 0.5rem; height: 0.5rem; flex: none; background: var(--gold); }
@@ -146,38 +146,24 @@ html:not(.on-android) .link--iphone { display: none; }
 .top__phones .phone { position: absolute; inset: 0; margin: auto; width: auto; height: min(80cqh, 105cqw); aspect-ratio: 600 / 1304; padding: 2.4%; box-shadow: 0 30px 60px rgba(18, 17, 15, 0.35); }
 .top__phones .top__phone--back { transform: translateX(-32%) rotate(-7deg) scale(0.9); }
 .top__phones .top__phone--front { transform: translateX(30%) rotate(5deg); }
-/* The front phone plays the trailer on mute. The whole phone is a button: it opens the trailer full screen, with sound. */
-.top__watch { position: absolute; inset: 0; display: flex; align-items: flex-end; justify-content: center; padding: 0 0 9%; border: 0; border-radius: inherit; background: transparent; color: inherit; cursor: pointer; }
-.top__watch-pill { display: inline-flex; align-items: center; gap: 0.45rem; min-height: 2.5rem; padding: 0 1.15rem 0 0.95rem; border-radius: 99px; background: rgba(255, 255, 255, 0.94); color: #12110f; font: 600 var(--step-small)/1 var(--font); box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4); transition: transform 200ms var(--ease-out); }
-.top__watch:hover .top__watch-pill { transform: scale(1.06); }
-.top__watch:focus-visible { outline: 3px solid var(--field-ink); outline-offset: 4px; }
-/* The promo film follows the top, never taller than the screen. */
-.promo { padding: 0 var(--margin); }
-.promo__video { display: block; height: auto; margin-inline: auto; background: var(--gold); }
-.promo__video--wide { aspect-ratio: 16 / 9; width: min(100%, calc((100svh - 11rem) * 16 / 9)); }
-/* Phones get the vertical cut, still short enough to show the cue beneath it. */
-.promo__video--tall { aspect-ratio: 9 / 16; display: none; width: min(100%, calc((100svh - 9rem) * 9 / 16)); }
-/* While the promo autoplays, the browser's own control bar stays hidden. It comes back on the first tap, click or focus
-   (page.js adds .is-touched): appearing on its own during the autoplay, it counted as a layout shift (PageSpeed CLS 0.57).
-   Without JavaScript, or with less motion (no autoplay), the bar is there from the start, as before. */
+/* The front phone plays the trailer on mute, with two buttons on it: pause or play, and full screen with sound. */
+.top__controls { position: absolute; left: 0; right: 0; bottom: 8%; display: flex; justify-content: center; gap: 0.75rem; }
+.top__control { display: grid; place-items: center; width: 2.75rem; height: 2.75rem; padding: 0; border: 0; border-radius: 50%; background: rgba(255, 255, 255, 0.94); color: #12110f; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4); cursor: pointer; transition: transform 200ms var(--ease-out); }
+.top__control:hover { transform: scale(1.08); }
+.top__control:focus-visible { outline: 3px solid var(--field-ink); outline-offset: 3px; }
+.top__control[aria-pressed="true"] .i-pause, .top__control[aria-pressed="false"] .i-play { display: none; }
+/* At the foot of the top, in the middle: there is more below, and a board to play on this page. */
+.top__next { position: absolute; left: 50%; bottom: 0.25rem; display: flex; width: max-content; max-width: calc(100% - 2 * var(--margin)); min-height: 2.75rem; align-items: center; gap: 0.6rem; padding: 0 0.5rem; color: var(--muted); text-decoration: none; font-size: var(--step-small); transform: translateX(-50%); transition: color 200ms ease; }
+.top__next:hover { color: var(--ink); }
+.top__next svg { flex: none; color: var(--gold); }
 @media (prefers-reduced-motion: no-preference) {
-  html.js .promo__video:not(.is-touched)::-webkit-media-controls { display: none !important; }
-}
-@media (max-width: 600px) {
-  .promo__video--wide { display: none; }
-  .promo__video--tall { display: block; }
-}
-/* Says there is more below: the next thing is a board to play. */
-.promo__next { display: flex; width: fit-content; min-height: 2.75rem; align-items: center; gap: 0.6rem; margin: 0.75rem auto 0; padding: 0 0.5rem; color: var(--muted); text-decoration: none; font-size: var(--step-small); transition: color 200ms ease; }
-.promo__next:hover { color: var(--ink); }
-.promo__next svg { flex: none; color: var(--gold); }
-@media (prefers-reduced-motion: no-preference) {
-  .promo__next svg { animation: promo-nudge 2.4s var(--ease-out) infinite; }
+  .top__next svg { animation: promo-nudge 2.4s var(--ease-out) infinite; }
   @keyframes promo-nudge { 0%, 55%, 100% { transform: none; } 25% { transform: translateY(4px); } }
 }
 /* Phones: one column. A bigger 49, the buttons and the facts on the first screen, then the two phones on their gold field. */
 @media (max-width: 600px) {
   .top { display: flex; flex-direction: column; align-items: stretch; gap: 0; container-type: inline-size; padding-bottom: 2.5rem; }
+  .top__next { position: static; order: 3; align-self: center; margin-top: 1rem; transform: none; }
   .top__text { display: contents; }
   .top__tag { align-self: flex-start; }
   .top__num { font-size: min(38vw, 11.5svh); }
@@ -601,13 +587,25 @@ html:not(.on-android) .link--iphone { display: none; }
 .done { width: min(44rem, calc(100vw - 2 * var(--margin))); max-height: calc(100svh - 2 * var(--margin)); padding: 0; border: 0; border-radius: 0; background: var(--gold); color: var(--field-ink); overflow: auto; }
 .done[open] { display: grid; grid-template-columns: minmax(0, 1fr) auto; }
 .done::backdrop { background: rgba(18, 17, 15, 0.78); }
-/* The trailer, full screen: black all around, the video as large as it fits, a close button in the corner. */
-.watch { width: 100%; height: 100%; max-width: none; max-height: none; margin: 0; padding: 0; border: 0; background: #000; color: #fff; }
-.watch[open] { display: grid; place-items: center; }
-.watch::backdrop { background: #000; }
-.watch__video { display: block; width: 100%; height: 100%; object-fit: contain; background: #000; }
-.watch__close { position: absolute; top: max(0.75rem, env(safe-area-inset-top)); right: max(0.75rem, env(safe-area-inset-right)); display: grid; place-items: center; width: 2.75rem; height: 2.75rem; border: 0; border-radius: 50%; background: rgba(255, 255, 255, 0.16); color: #fff; cursor: pointer; }
-.watch__close:hover { background: rgba(255, 255, 255, 0.28); }
+/* The trailer page (trailer.html beside each home page): the home page's header, a way back, then the films one under
+   the other, each as large as the screen allows. The one asked for comes first (page.js), and starts. */
+.film { --head: calc((var(--margin) + 3.25rem) * var(--zoom, 1)); --room: calc(100svh - var(--head) - 5.5rem); display: grid; gap: 0.5rem; padding: var(--head) var(--margin) 4rem; }
+.film__part + .film__part { margin-top: clamp(2.5rem, 6svh, 4rem); }
+.film__back { justify-self: start; display: inline-flex; align-items: center; gap: 0.5rem; min-height: 2.75rem; color: var(--muted); text-decoration: none; font-size: var(--step-small); transition: color 200ms ease; }
+.film__back:hover { color: var(--ink); }
+.film__back svg { color: var(--gold); }
+.film__part { display: grid; justify-items: center; }
+.film__video { display: block; height: auto; background: #000; }
+.film__video--wide { aspect-ratio: 16 / 9; width: min(100%, calc(var(--room) * 16 / 9)); }
+.film__video--tall { aspect-ratio: 9 / 16; display: none; width: min(100%, calc(var(--room) * 9 / 16)); }
+.film__video--phone { aspect-ratio: 886 / 1920; width: min(100%, calc(var(--room) * 886 / 1920)); border-radius: 1.5rem; }
+/* Up to 900px the header is in the flow, not over the page: the room for a film is the screen less the header, "Back"
+   and a little space beneath. */
+@media (max-width: 900px) { .film { --head: 0.25rem; --room: calc(100svh - 9rem); } }
+@media (max-width: 600px) {
+  .film__video--wide { display: none; }
+  .film__video--tall { display: block; }
+}
 /* The QR code for the beta, from the hero (computers only: on an iPhone the button opens TestFlight itself). */
 .qr { padding: 3.75rem clamp(2rem, 4vw, 3rem) clamp(2rem, 4vw, 3rem); border: 0; border-radius: 0; background: var(--gold); color: var(--field-ink); }
 .qr::backdrop { background: rgba(18, 17, 15, 0.78); }
