@@ -373,27 +373,17 @@ document.addEventListener("click", (e) => {
   const still = matchMedia("(prefers-reduced-motion: reduce)");
   if (still.matches) return videos.forEach((v) => { v.pause(); v.removeAttribute("autoplay"); });
   if (!("IntersectionObserver" in window)) return;
-  // They start at the visitor's first scroll, touch, mouse move or key, once the page has loaded. Until then each shows
-  // its poster (its first frame), so the page holds still while it loads and their bytes never compete with the page's
-  // own. (A timer was tried: PageSpeed's run is long enough to see it fire, and its Speed Index counts every changing
-  // frame as loading.)
-  let started = false;
+  // They play once the page has loaded, each while at least half of it is on screen. (So on a phone the hero's
+  // phones, peeking in at the foot of the first screen, wait for the first bit of scrolling: the first screen holds
+  // still while it loads, which is what PageSpeed's Speed Index measures.) Their bytes wait for the load too, so they
+  // never compete with the page's own.
   const start = () => {
-    if (started) return;
-    started = true;
-    signals.forEach((s) => removeEventListener(s, nudge, true));
     const io = new IntersectionObserver((entries) => {
-      for (const e of entries) e.isIntersecting && !e.target.held ? e.target.play().catch(() => {}) : e.target.pause();
-    });
+      for (const e of entries) e.intersectionRatio >= 0.5 && !e.target.held ? e.target.play().catch(() => {}) : e.target.pause();
+    }, { threshold: [0, 0.5] });
     videos.forEach((v) => io.observe(v));
   };
-  // A visitor who moves before the load has finished gets them as soon as it has.
-  const signals = ["scroll", "wheel", "pointerdown", "pointermove", "touchstart", "keydown"];
-  let moved = false;
-  const loaded = () => document.readyState === "complete";
-  const nudge = () => { moved = true; if (loaded()) start(); };
-  signals.forEach((s) => addEventListener(s, nudge, { capture: true, passive: true }));
-  if (!loaded()) addEventListener("load", () => { if (moved) start(); }, { once: true });
+  document.readyState === "complete" ? start() : addEventListener("load", start, { once: true });
 })();
 
 // Reveal once as a section enters. Never leaves content hidden: anything already above the
