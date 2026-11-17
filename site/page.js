@@ -325,6 +325,16 @@ document.querySelectorAll(".chapter").forEach((chapter) => {
 (() => {
   const videos = [...document.querySelectorAll("video[autoplay], video[data-autoplay]")];
   if (!videos.length) return;
+  // Posters below the top come as the page nears them (tools/website.py moved them to data-poster).
+  const later = [...document.querySelectorAll("video[data-poster]")];
+  const show = (v) => { v.poster = v.dataset.poster; v.removeAttribute("data-poster"); };
+  if (!("IntersectionObserver" in window)) later.forEach(show);
+  else {
+    const near = new IntersectionObserver((entries) => {
+      for (const e of entries) if (e.isIntersecting) { show(e.target); near.unobserve(e.target); }
+    }, { rootMargin: "100% 0px" });
+    later.forEach((v) => near.observe(v));
+  }
   const words = {
     en: ["Pause the video", "Play the video"], pl: ["Zatrzymaj wideo", "Odtwórz wideo"],
     de: ["Video anhalten", "Video abspielen"], es: ["Pausar el vídeo", "Reproducir el vídeo"],
@@ -356,10 +366,15 @@ document.querySelectorAll(".chapter").forEach((chapter) => {
   const still = matchMedia("(prefers-reduced-motion: reduce)");
   if (still.matches) return videos.forEach((v) => { v.pause(); v.removeAttribute("autoplay"); });
   if (!("IntersectionObserver" in window)) return;
-  const io = new IntersectionObserver((entries) => {
-    for (const e of entries) e.isIntersecting && !e.target.held ? e.target.play().catch(() => {}) : e.target.pause();
-  });
-  videos.forEach((v) => io.observe(v));
+  // They start once the page itself has loaded, so their bytes never compete with the page's own (the posters show
+  // until then, each the video's first frame).
+  const start = () => {
+    const io = new IntersectionObserver((entries) => {
+      for (const e of entries) e.isIntersecting && !e.target.held ? e.target.play().catch(() => {}) : e.target.pause();
+    });
+    videos.forEach((v) => io.observe(v));
+  };
+  document.readyState === "complete" ? start() : addEventListener("load", start, { once: true });
 })();
 
 // Reveal once as a section enters. Never leaves content hidden: anything already above the

@@ -35,8 +35,8 @@
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/tab-49b-32.png">
   <link rel="apple-touch-icon" href="../assets/home-icon-180.png">
   <link rel="preload" href="../site/fonts/archivo-normal.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="../site/assets/promo.webp?v=2" as="image" type="image/webp" fetchpriority="high" media="(min-width: 601px)">
-  <link rel="preload" href="../site/assets/promo-mobile.webp?v=2" as="image" type="image/webp" fetchpriority="high" media="(max-width: 600px)">
+  <link rel="preload" href="../site/assets/preview.webp?v=2" as="image" type="image/webp" fetchpriority="high">
+  <link rel="preload" href="../site/assets/menu.webp?v=4" as="image" type="image/webp">
   <link rel="stylesheet" href="../site/style.css?v=8cd39406">
   <script src="../site/jsflag.js?v=747d2002"></script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "49 - Focus Booster : un jeu de concentration d’une minute pour iPhone et Android", "url": "https://49game.github.io/fr/", "inLanguage": "fr", "primaryImageOfPage": {"@type": "ImageObject", "url": "https://49game.github.io/assets/og-49-square.jpg", "width": 1200, "height": 1200}, "image": ["https://49game.github.io/assets/og-49-square.jpg", "https://49game.github.io/assets/og-49f-fr.jpg"]}</script>
@@ -99,7 +99,7 @@
   <div class="top__phones field-gold">
     <figure class="phone top__phone top__phone--back" aria-hidden="true"><video class="phone__screen" data-autoplay muted loop playsinline preload="none" poster="../site/assets/menu.webp?v=4" width="600" height="1304" aria-label="Le menu principal de 49 : une carte Défi du jour, les styles Normal, Compétition et Détente, et les modes Classique, Infini et Contre la montre avec leurs meilleurs résultats."><source src="../site/assets/menu.mp4?v=4" type="video/mp4"></video></figure>
     <figure class="phone top__phone top__phone--front">
-      <video class="phone__screen" data-autoplay muted loop playsinline preload="none" poster="../site/assets/preview.webp" width="600" height="1300" aria-hidden="true"><source src="../site/assets/preview.mp4" type="video/mp4"></video>
+      <video class="phone__screen" data-autoplay muted loop playsinline preload="none" poster="../site/assets/preview.webp?v=2" width="600" height="1300" aria-hidden="true"><source src="../site/assets/preview.mp4?v=2" type="video/mp4"></video>
       <div class="top__controls">
         <button class="top__control" type="button" data-hold aria-pressed="false" aria-label="Mettre la bande-annonce en pause"><svg class="i-pause" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M4.5 3h2.2v10H4.5zM9.3 3h2.2v10H9.3z" fill="currentColor"/></svg><svg class="i-play" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M5 3.2v9.6a.6.6 0 0 0 .9.5l7.6-4.8a.6.6 0 0 0 0-1L5.9 2.7a.6.6 0 0 0-.9.5z" fill="currentColor"/></svg></button>
         <a class="top__control" href="trailer.html?gameplay" aria-label="Regarder la bande-annonce"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="M2.5 6V2.5H6M10 2.5h3.5V6M13.5 10v3.5H10M6 13.5H2.5V10" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
@@ -160,7 +160,7 @@
   </div>
   <div class="drill__mosaic">
     <figure class="drill__photo">
-      <img class="drift" src="../site/assets/f1-wheel.webp" width="1000" height="1000" alt="Le volant d’une Formule 1 Alpine de 2021 : un écran, une rangée de témoins de changement de rapport et plus de vingt boutons et molettes." loading="lazy">
+      <img class="drift" src="../site/assets/f1-wheel.webp" srcset="../site/assets/f1-wheel-480.webp 480w, ../site/assets/f1-wheel-720.webp 720w, ../site/assets/f1-wheel.webp 1000w" sizes="(max-width: 900px) 96vw, 64vw" width="1000" height="1000" alt="Le volant d’une Formule 1 Alpine de 2021 : un écran, une rangée de témoins de changement de rapport et plus de vingt boutons et molettes." loading="lazy">
     </figure>
     <div class="drill__tile field-gold" data-reveal>
       <p class="drill__fig">300&nbsp;km/h</p>
@@ -187,7 +187,7 @@
     </div>
     <div class="day__screen">
       <div class="frag is-on" data-ui data-step="0">
-        <video class="card-video" data-autoplay muted loop playsinline preload="none" poster="../site/assets/daily-card.webp?v=3" width="560" height="206" aria-label="La carte du Défi du jour dans l’app, avec son objectif et ton record perso à battre."><source src="../site/assets/daily-card.mp4?v=3" type="video/mp4"></video>
+        <video class="card-video" data-autoplay muted loop playsinline preload="none" data-poster="../site/assets/daily-card.webp?v=3" width="560" height="206" aria-label="La carte du Défi du jour dans l’app, avec son objectif et ton record perso à battre."><source src="../site/assets/daily-card.mp4?v=3" type="video/mp4"></video>
         <p class="frag__title">À venir cette semaine</p>
         <ul class="frag__list">
           <li><span>Sprint classique</span><span>Moins de 2:30</span></li>
@@ -239,7 +239,7 @@
 <section class="styles" id="styles" aria-labelledby="styles-title">
   <div class="styles__field styles__field--normal">
     <div class="styles__body">
-      <figure class="phone styles__phone"><video class="phone__screen" data-autoplay muted loop playsinline preload="none" poster="../site/assets/game-normal.webp" width="600" height="1304" aria-label="Une partie Classique en style Normal : juste le chrono et la grille."><source src="../site/assets/game-normal.mp4" type="video/mp4"></video></figure>
+      <figure class="phone styles__phone"><video class="phone__screen" data-autoplay muted loop playsinline preload="none" data-poster="../site/assets/game-normal.webp" width="600" height="1304" aria-label="Une partie Classique en style Normal : juste le chrono et la grille."><source src="../site/assets/game-normal.mp4" type="video/mp4"></video></figure>
       <div class="styles__text">
         <p class="lead" data-reveal>Un contre-la-montre épuré.</p>
         <p data-reveal style="--i:1">Juste toi, la grille et le chrono. Pas de points, pas d’effets, rien pour détourner tes yeux des nombres. C’est la table de Schulte classique, et le test le plus pur de ta concentration.</p>
@@ -249,7 +249,7 @@
   </div>
   <div class="styles__field styles__field--comp field-blush">
     <div class="styles__body">
-      <figure class="phone styles__phone"><video class="phone__screen" data-autoplay muted loop playsinline preload="none" poster="../site/assets/game.webp" width="600" height="1304" aria-label="Une partie Classique en style Compétition : score, combo et multiplicateur au-dessus de la grille."><source src="../site/assets/game.mp4" type="video/mp4"></video></figure>
+      <figure class="phone styles__phone"><video class="phone__screen" data-autoplay muted loop playsinline preload="none" data-poster="../site/assets/game.webp" width="600" height="1304" aria-label="Une partie Classique en style Compétition : score, combo et multiplicateur au-dessus de la grille."><source src="../site/assets/game.mp4" type="video/mp4"></video></figure>
       <div class="styles__text">
         <p class="lead" data-reveal>Points, combos et ×3.</p>
         <p data-reveal style="--i:1">Chaque nombre vaut 100 points, plus jusqu’à 50 pour la vitesse. Trouve le suivant avant la fin du chrono de combo et le multiplicateur grimpe : ×2 à un combo de 5, ×3 à 15.</p>
@@ -266,19 +266,19 @@
     <div class="stage__frame">
 
       <div class="stage__layer is-on field-slate" data-layer="modes">
-        <figure class="phone stage__phone"><video class="phone__screen" data-autoplay muted loop playsinline preload="none" poster="../site/assets/menu.webp?v=4" width="600" height="1304" aria-label="Le menu principal de 49 : une carte Défi du jour, les styles Normal, Compétition et Détente, et les modes Classique, Infini et Contre la montre avec leurs meilleurs résultats."><source src="../site/assets/menu.mp4?v=4" type="video/mp4"></video></figure>
+        <figure class="phone stage__phone"><video class="phone__screen" data-autoplay muted loop playsinline preload="none" data-poster="../site/assets/menu.webp?v=4" width="600" height="1304" aria-label="Le menu principal de 49 : une carte Défi du jour, les styles Normal, Compétition et Détente, et les modes Classique, Infini et Contre la montre avec leurs meilleurs résultats."><source src="../site/assets/menu.mp4?v=4" type="video/mp4"></video></figure>
       </div>
       <div class="stage__layer field-sage" data-layer="friends">
-        <figure class="phone stage__phone"><video class="phone__screen" data-autoplay muted loop playsinline preload="none" poster="../site/assets/match.webp" width="600" height="1304" aria-label="Les résultats finaux d’une course de groupe en trois manches : le podium, la manche la plus rapide et le classement."><source src="../site/assets/match.mp4" type="video/mp4"></video></figure>
+        <figure class="phone stage__phone"><video class="phone__screen" data-autoplay muted loop playsinline preload="none" data-poster="../site/assets/match.webp" width="600" height="1304" aria-label="Les résultats finaux d’une course de groupe en trois manches : le podium, la manche la plus rapide et le classement."><source src="../site/assets/match.mp4" type="video/mp4"></video></figure>
       </div>
       <div class="stage__layer field-gold" data-layer="steal">
-        <figure class="phone stage__phone"><video class="phone__screen" data-autoplay muted loop playsinline preload="none" poster="../site/assets/steal.webp" width="600" height="1304" aria-label="Une partie de Vol dans 49 : une grille, deux joueurs, et chaque nombre revient à celui qui le touche en premier."><source src="../site/assets/steal.mp4" type="video/mp4"></video></figure>
+        <figure class="phone stage__phone"><video class="phone__screen" data-autoplay muted loop playsinline preload="none" data-poster="../site/assets/steal.webp" width="600" height="1304" aria-label="Une partie de Vol dans 49 : une grille, deux joueurs, et chaque nombre revient à celui qui le touche en premier."><source src="../site/assets/steal.mp4" type="video/mp4"></video></figure>
       </div>
       <div class="stage__layer field-blush" data-layer="boards">
         <div class="rb" data-ui aria-hidden="true" data-rb></div>
       </div>
       <div class="stage__layer field-sage" data-layer="ranks">
-        <figure class="phone stage__phone"><video class="phone__screen" data-autoplay muted loop playsinline preload="none" poster="../site/assets/ranks.webp?v=3" width="600" height="1304" aria-label="L’écran des rangs dans 49 : chaque rang sur sa propre plaque animée, de Débutant à Légende."><source src="../site/assets/ranks.mp4?v=3" type="video/mp4"></video></figure>
+        <figure class="phone stage__phone"><video class="phone__screen" data-autoplay muted loop playsinline preload="none" data-poster="../site/assets/ranks.webp?v=3" width="600" height="1304" aria-label="L’écran des rangs dans 49 : chaque rang sur sa propre plaque animée, de Débutant à Légende."><source src="../site/assets/ranks.mp4?v=3" type="video/mp4"></video></figure>
       </div>
       <div class="stage__layer field-gold" data-layer="achievements">
         <figure class="phone stage__phone"><img class="phone__screen" src="../site/assets/achievements.webp?v=5" width="600" height="1304" alt="L’écran des succès dans 49 : 99 sur 578 débloqués, avec des filtres par type de partie, taille, sens et style." loading="lazy"></figure>
@@ -294,21 +294,21 @@
       <p data-reveal style="--i:1">Compte de 1 à 49 en montant, de 49 à 1 en descendant, ou dans un ordre aléatoire, dans chaque mode. Chaque mode a ses propres records et son propre rang.</p>
       <div class="proofs">
         <article class="proof" data-reveal>
-          <div class="proof__panel"><video class="card-video" data-autoplay muted loop playsinline preload="none" poster="../site/assets/mode-classic.webp?v=3" width="560" height="112" aria-label="La carte Classique : un meilleur temps de 41.90, rang Diamant, 43 succès sur 78."><source src="../site/assets/mode-classic.mp4?v=3" type="video/mp4"></video></div>
+          <div class="proof__panel"><video class="card-video" data-autoplay muted loop playsinline preload="none" data-poster="../site/assets/mode-classic.webp?v=3" width="560" height="112" aria-label="La carte Classique : un meilleur temps de 41.90, rang Diamant, 43 succès sur 78."><source src="../site/assets/mode-classic.mp4?v=3" type="video/mp4"></video></div>
           <div class="proof__text">
             <h3>Classique</h3>
             <p>Une grille, un temps. Bats ton record, grimpe de Débutant à Légende et vois exactement où sont passées les secondes.</p>
           </div>
         </article>
         <article class="proof" data-reveal>
-          <div class="proof__panel"><video class="card-video" data-autoplay muted loop playsinline preload="none" poster="../site/assets/mode-endless.webp?v=3" width="560" height="112" aria-label="La carte Infini : un rythme de 54,0 nombres par minute, rang Platine."><source src="../site/assets/mode-endless.mp4?v=3" type="video/mp4"></video></div>
+          <div class="proof__panel"><video class="card-video" data-autoplay muted loop playsinline preload="none" data-poster="../site/assets/mode-endless.webp?v=3" width="560" height="112" aria-label="La carte Infini : un rythme de 54,0 nombres par minute, rang Platine."><source src="../site/assets/mode-endless.mp4?v=3" type="video/mp4"></video></div>
           <div class="proof__text">
             <h3>Infini</h3>
             <p>Termine une grille et la suivante t’attend déjà. Ton score, c’est ton rythme en nombres par minute. Arrête quand tu veux.</p>
           </div>
         </article>
         <article class="proof" data-reveal>
-          <div class="proof__panel"><video class="card-video" data-autoplay muted loop playsinline preload="none" poster="../site/assets/mode-clock.webp?v=3" width="560" height="112" aria-label="La carte Contre la montre : 82 nombres, rang Or."><source src="../site/assets/mode-clock.mp4?v=3" type="video/mp4"></video></div>
+          <div class="proof__panel"><video class="card-video" data-autoplay muted loop playsinline preload="none" data-poster="../site/assets/mode-clock.webp?v=3" width="560" height="112" aria-label="La carte Contre la montre : 82 nombres, rang Or."><source src="../site/assets/mode-clock.mp4?v=3" type="video/mp4"></video></div>
           <div class="proof__text">
             <h3>Contre la montre</h3>
             <p>Le chrono tourne à rebours. Chaque nombre trouvé te rend du temps, chaque erreur t’en retire. Jusqu’où iras-tu ?</p>
@@ -320,7 +320,7 @@
     <section class="block" id="friends" data-stage="friends" aria-labelledby="friends-title">
       <h2 class="head" id="friends-title" data-reveal>Défie tes amis</h2>
       <p data-reveal style="--i:1">Joue en 1 contre 1, en 2 contre 2 ou avec tout un groupe, d’une classe à une équipe au bureau. Tout le monde a exactement la même grille, alors seule la concentration fait la différence.</p>
-      <figure class="phone inline-only inline-phone"><video class="phone__screen" data-autoplay muted loop playsinline preload="none" poster="../site/assets/match.webp" width="600" height="1304" aria-label="Les résultats finaux d’une course de groupe en trois manches : le podium, la manche la plus rapide et le classement."><source src="../site/assets/match.mp4" type="video/mp4"></video></figure>
+      <figure class="phone inline-only inline-phone"><video class="phone__screen" data-autoplay muted loop playsinline preload="none" data-poster="../site/assets/match.webp" width="600" height="1304" aria-label="Les résultats finaux d’une course de groupe en trois manches : le podium, la manche la plus rapide et le classement."><source src="../site/assets/match.mp4" type="video/mp4"></video></figure>
       <dl class="rooms">
         <div data-reveal><dt>Course</dt><dd>La même grille pour tout le monde, manche après manche. Le plus rapide gagne chaque manche, et les points s’additionnent jusqu’au classement final.</dd></div>
         <div data-reveal style="--i:1"><dt>Bataille de points</dt><dd>Classement selon les points du style Compétition, donc la vitesse et les combos comptent tous les deux. Une série sans faute peut battre une partie plus rapide mais brouillonne.</dd></div>
@@ -333,7 +333,7 @@
     <section class="block" id="steal" data-stage="steal" aria-labelledby="steal-title">
       <h2 class="head" id="steal-title" data-reveal>Vol</h2>
       <p class="lead" data-reveal style="--i:1">Une seule grille, en direct, en face à face. Le premier qui touche un nombre le marque, et il disparaît pour l’autre joueur.</p>
-      <figure class="phone inline-only inline-phone"><video class="phone__screen" data-autoplay muted loop playsinline preload="none" poster="../site/assets/steal.webp" width="600" height="1304" aria-label="Une partie de Vol dans 49 : une grille, deux joueurs, et chaque nombre revient à celui qui le touche en premier."><source src="../site/assets/steal.mp4" type="video/mp4"></video></figure>
+      <figure class="phone inline-only inline-phone"><video class="phone__screen" data-autoplay muted loop playsinline preload="none" data-poster="../site/assets/steal.webp" width="600" height="1304" aria-label="Une partie de Vol dans 49 : une grille, deux joueurs, et chaque nombre revient à celui qui le touche en premier."><source src="../site/assets/steal.mp4" type="video/mp4"></video></figure>
     </section>
 
     <section class="block" id="boards" data-stage="boards" aria-labelledby="boards-title">
@@ -648,6 +648,6 @@
 </dialog>
 
 <script type="application/json" id="strings">{"boardLabel": "Table de Schulte, 4 sur 4. Touche les nombres de 1 à 16 dans l’ordre.", "find": "Trouve", "foundAll": "Tout trouvé", "going": "Continue. Ici, une erreur ne te coûte rien, mais dans l’app, si.", "doneHint": "Terminé en <b>{time}</b>. C’était 16 nombres. L’app a les grilles complètes, jusqu’à 49.", "doneLine": "Tu as trouvé les 16 en {time}, avec {misses}. Dans l’app, les grilles vont de 3 × 3 à 11 × 11, avec un rang pour chaque temps.", "missNone": "zéro erreur", "missOne": "1 erreur", "missMany": "{n} erreurs", "s_needs": "Bienfaits", "s_racing": "Course", "s_daily": "Quotidien", "s_styles": "Styles", "s_modes": "Modes", "s_friends": "Multijoueur", "s_steal": "Vol", "s_boards": "Grilles", "s_ranks": "Rangs", "s_achievements": "Succès", "s_mission": "Mission", "s_price": "Prix", "s_join": "Jouer", "s_questions": "Questions"}</script>
-<script src="../site/page.js?v=27960158" defer></script>
+<script src="../site/page.js?v=3d524bc6" defer></script>
 </body>
 </html>
