@@ -373,15 +373,25 @@ document.addEventListener("click", (e) => {
   const still = matchMedia("(prefers-reduced-motion: reduce)");
   if (still.matches) return videos.forEach((v) => { v.pause(); v.removeAttribute("autoplay"); });
   if (!("IntersectionObserver" in window)) return;
-  // They start once the page itself has loaded, so their bytes never compete with the page's own (the posters show
-  // until then, each the video's first frame).
+  // They start once the page has loaded and settled: at the first scroll, touch, mouse move or key, or 3 seconds
+  // after the load. Until then each shows its poster (its first frame), so the page holds still while it loads, and
+  // their bytes never compete with the page's own (PageSpeed's Speed Index counts every changing frame as loading).
+  let started = false;
   const start = () => {
+    if (started) return;
+    started = true;
+    signals.forEach((s) => removeEventListener(s, start, true));
     const io = new IntersectionObserver((entries) => {
       for (const e of entries) e.isIntersecting && !e.target.held ? e.target.play().catch(() => {}) : e.target.pause();
     });
     videos.forEach((v) => io.observe(v));
   };
-  document.readyState === "complete" ? start() : addEventListener("load", start, { once: true });
+  const signals = ["scroll", "wheel", "pointerdown", "pointermove", "touchstart", "keydown"];
+  const settle = () => {
+    signals.forEach((s) => addEventListener(s, start, { capture: true, passive: true }));
+    setTimeout(start, 3000);
+  };
+  document.readyState === "complete" ? settle() : addEventListener("load", settle, { once: true });
 })();
 
 // Reveal once as a section enters. Never leaves content hidden: anything already above the
