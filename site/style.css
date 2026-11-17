@@ -504,7 +504,8 @@ html:not(.on-android) .link--iphone { display: none; }
 
 /* Motion. Content is in place on first paint; these only move what is already there. */
 @media (prefers-reduced-motion: no-preference) {
-  .js [data-rise] { opacity: 0; transform: translateY(20px); animation: rise 900ms var(--ease-out) forwards; animation-delay: calc(var(--i, 0) * 90ms + 120ms); }
+  /* The top has no entrance: it is all there on the first paint. (Its rise, 1.4 s of fading in, made PageSpeed's
+     Speed Index count the page as still loading. data-rise in the markup is left over from it.) */
   /* Entrances only where a mouse scrolls in steps: on a phone a block still gliding after the finger stops reads as lag. */
   @media (hover: hover) and (pointer: fine) and (min-width: 901px) {
     .js [data-reveal] { transform: translateY(16px); transition: transform 500ms var(--ease-out); transition-delay: calc(var(--i, 0) * 50ms); }
@@ -512,7 +513,6 @@ html:not(.on-android) .link--iphone { display: none; }
   }
   .js .stage .tile { animation: tile-in 600ms var(--ease-out) backwards; animation-delay: calc(var(--t, 0) * 12ms + 200ms); }
 }
-@keyframes rise { to { opacity: 1; transform: none; } }
 @keyframes tile-in { from { opacity: 0; transform: scale(0.85); } }
 @supports (animation-timeline: view()) {
   @media (prefers-reduced-motion: no-preference) {
